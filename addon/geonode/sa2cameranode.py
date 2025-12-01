@@ -1,0 +1,173 @@
+import bpy
+from . import GeometryNodeManager
+from .geonodebase import GeoNodeBase
+
+class SA2CameraNode(GeoNodeBase):
+    '''SA2 Camera Node'''
+
+    modifier_name: str      = 'SA2CameraNode'
+
+    camera_mode: str        = 'Socket_2'
+    collision_shape: str    = 'Socket_3'
+
+    collision_x_angle: str  = 'Socket_4'
+    collision_y_angle: str  = 'Socket_5'
+    collision_z_angle: str  = 'Socket_6'
+    collision_x_scale: str  = 'Socket_7'
+    collision_y_scale: str  = 'Socket_8'
+    collision_z_scale: str  = 'Socket_9'
+
+    camera_x_angle: str     = 'Socket_10'
+    camera_y_angle: str     = 'Socket_11'
+    camera_z_angle: str     = 'Socket_12'
+    camera_x_position: str  = 'Socket_13'
+    camera_y_position: str  = 'Socket_14'
+    camera_z_position: str  = 'Socket_15'
+    target_x_position: str  = 'Socket_16'
+    target_y_position: str  = 'Socket_17'
+    target_z_position: str  = 'Socket_18'
+
+    @staticmethod
+    def poll(obj: bpy.types.Object) -> bool:
+        return GeometryNodeManager.has_geometry_node(obj, SA2CameraNode.modifier_name)
+
+    @staticmethod
+    def make(obj: bpy.types.Object) -> bpy.types.NodesModifier:
+        if (obj.type == 'MESH'):
+            return GeometryNodeManager.create_node(obj, SA2CameraNode.modifier_name)
+
+    def reset_properties(self):
+        self.set_collision_shape(0)
+        self.set_collision_x_scale(10)
+        self.set_collision_y_scale(10)
+        self.set_collision_z_scale(10)
+        self.set_collision_x_angle(0)
+        self.set_collision_y_angle(0)
+        self.set_collision_z_angle(0)
+        self.set_camera_x_position(0)
+        self.set_camera_y_position(0)
+        self.set_camera_z_position(0)
+        self.set_camera_x_angle(0)
+        self.set_camera_y_angle(0)
+        self.set_camera_z_angle(0)
+        self.set_target_x_position(0)
+        self.set_target_y_position(0)
+        self.set_target_z_position(0)
+
+    def draw_ui(self, layout: bpy.types.UILayout, cammode: str):
+        '''Draws the properties menu.'''
+        layout.prop(data=self.node, property=self.get_layout_prop(self.collision_shape), text='Volume Shape')
+        layout.separator()
+        match (cammode):
+            case _:
+                layout.label(text='This camera mode does not have custom properties.')
+
+    def update_camera_mode(self, cammode: str):
+        match (cammode):
+            case 'Ashland':
+                self.set_camera_mode(3)
+            case 'Point':
+                self.set_camera_mode(2)
+            case 'Collision':
+                self.set_camera_mode(1)
+            case _:
+                self.set_camera_mode(0)
+
+    def set_camera_mode(self, value: int):
+        self.node[self.camera_mode] = value
+
+    def set_collision_shape(self, value: int):
+        self.node[self.collision_shape] = value
+
+    def set_collision_x_angle(self, value: float):
+        self.node[self.collision_x_angle] = value
+
+    def set_collision_y_angle(self, value: float):
+        self.node[self.collision_y_angle] = value
+
+    def set_collision_z_angle(self, value: float):
+        self.node[self.collision_z_angle] = value
+
+    def set_collision_x_scale(self, value: float):
+        self.node[self.collision_x_scale] = value
+
+    def set_collision_y_scale(self, value: float):
+        self.node[self.collision_y_scale] = value
+
+    def set_collision_z_scale(self, value: float):
+        self.node[self.collision_z_scale] = value
+
+    def set_camera_x_angle(self, value: float):
+        self.node[self.camera_x_angle] = value
+
+    def set_camera_y_angle(self, value: float):
+        self.node[self.camera_y_angle] = value
+
+    def set_camera_z_angle(self, value: float):
+        self.node[self.camera_z_angle] = value
+
+    def set_camera_x_position(self, value: float):
+        self.node[self.camera_x_position] = value
+
+    def set_camera_y_position(self, value: float):
+        self.node[self.camera_y_position] = value
+
+    def set_camera_z_position(self, value: float):
+        self.node[self.camera_z_position] = value
+        
+    def set_target_x_position(self, value: float):
+        self.node[self.target_x_position] = value
+
+    def set_target_y_position(self, value: float):
+        self.node[self.target_y_position] = value
+
+    def set_target_z_position(self, value: float):
+        self.node[self.target_z_position] = value
+
+    def get_collision_shape(self):
+        return self.node[self.collision_shape]
+
+    def get_collision_x_angle(self) -> float:
+        return self.node[self.collision_x_angle]
+    
+    def get_collision_y_angle(self) -> float:
+        return self.node[self.collision_y_angle]
+    
+    def get_collision_z_angle(self) -> float:
+        return self.node[self.collision_z_angle]
+    
+    def get_collision_x_scale(self) -> float:
+        return self.node[self.collision_x_scale]
+    
+    def get_collision_y_scale(self) -> float:
+        return self.node[self.collision_y_scale]
+    
+    def get_collision_z_scale(self) -> float:
+        return self.node[self.collision_z_scale]
+    
+    def get_camera_x_angle(self) -> float:
+        return self.node[self.camera_x_angle]
+    
+    def get_camera_y_angle(self) -> float:
+        return self.node[self.camera_y_angle]
+    
+    def get_camera_z_angle(self) -> float:
+        return self.node[self.camera_z_angle]
+    
+    def get_camera_x_position(self) -> float:
+        return self.node[self.camera_x_position]
+    
+    def get_camera_y_position(self) -> float:
+        return self.node[self.camera_y_position]
+    
+    def get_camera_z_position(self) -> float:
+        return self.node[self.camera_z_position]
+    
+    def get_target_x_position(self) -> float:
+        return self.node[self.target_x_position]
+    
+    def get_target_y_position(self) -> float:
+        return self.node[self.target_y_position]
+    
+    def get_target_z_position(self) -> float:
+        return self.node[self.target_z_position]
