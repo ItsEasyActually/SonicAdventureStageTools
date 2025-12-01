@@ -396,3 +396,9 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+
+# Blender
+*.blend1
+
+# Repo Specific
+build/*
