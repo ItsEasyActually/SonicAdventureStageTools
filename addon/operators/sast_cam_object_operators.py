@@ -1,8 +1,11 @@
 import bpy
 from ..geonode import GeometryNodeManager
+from ..geonode.sa2cameranode import SA2CameraNode
+from ..geonode.sa2pointnode import SA2PointNode
 from ..geonode.sa1cameranode import SA1CameraNode
 from ..properties.sast_object_properties import SASTObjectProperties
 from ..properties.sast_cam_object_properties import SASTCAMObjectProperties
+from ..properties.sast_scene_properties import SASTSceneProperties
 
 class SASTCamObjectOperators:
     '''Wrapping class to run the draw function for the operators in this file.'''
@@ -23,8 +26,8 @@ class SASTAddGeometryNode(bpy.types.Operator):
         obj: bpy.types.Object = context.active_object
         props: SASTObjectProperties = SASTObjectProperties.get_properties(obj)
         if (props is not None):
-            if (props.objtype == 'CAM'):
-                if (SA1CameraNode.poll(obj)):
+            if (props.objtype == 'CAM' or props.objtype == 'POINT'):
+                if (SA1CameraNode.poll(obj) or SA2CameraNode.poll(obj) or SA2PointNode.poll(obj)):
                     return False
                 else:
                     return True
@@ -33,8 +36,18 @@ class SASTAddGeometryNode(bpy.types.Operator):
     
     def execute(self, context: bpy.types.Context):
         obj: bpy.types.Object = context.active_object
+        props: SASTObjectProperties = SASTObjectProperties.get_properties(obj)
         GeometryNodeManager.clear_geometry_node(obj)
-        SA1CameraNode.make(obj)
+        scene_props: SASTSceneProperties = SASTSceneProperties.get_properties()
+        match (scene_props):
+            case 'SADXPC':
+                if (props.objtype == 'CAM'):
+                    SA1CameraNode.make(obj)
+            case 'SA2BPC':
+                if (props.objtype == 'CAM'):
+                    SA2CameraNode.make(obj)
+                elif (props.objtype == 'POINT'):
+                    SA2PointNode.make(obj)
 
         return {'FINISHED'}
 

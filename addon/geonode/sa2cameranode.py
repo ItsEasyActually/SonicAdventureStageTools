@@ -57,8 +57,23 @@ class SA2CameraNode(GeoNodeBase):
     def draw_ui(self, layout: bpy.types.UILayout, cammode: str):
         '''Draws the properties menu.'''
         layout.prop(data=self.node, property=self.get_layout_prop(self.collision_shape), text='Volume Shape')
-        layout.separator()
+        layout.separator(factor=1, type='LINE')
         match (cammode):
+            case 'Fix':
+                layout.prop(data=self.node, property=self.get_layout_prop(self.camera_x_position), text='Camera X Position')
+                layout.prop(data=self.node, property=self.get_layout_prop(self.camera_z_position), text='Camera Y Position')
+                layout.prop(data=self.node, property=self.get_layout_prop(self.camera_y_position), text='Camera Z Position')
+                layout.prop(data=self.node, property=self.get_layout_prop(self.target_x_position), text='Target X Position')
+                layout.prop(data=self.node, property=self.get_layout_prop(self.target_z_position), text='Target Y Position')
+                layout.prop(data=self.node, property=self.get_layout_prop(self.target_y_position), text='Target Z Position')
+            case 'Ashland':
+                layout.prop(data=self.node, property=self.get_layout_prop(self.camera_x_position), text='Camera X Position')
+                layout.prop(data=self.node, property=self.get_layout_prop(self.camera_z_position), text='Camera Y Position')
+                layout.prop(data=self.node, property=self.get_layout_prop(self.camera_y_position), text='Camera Z Position')
+            case 'Point':
+                layout.prop(data=self.node, property=self.get_layout_prop(self.target_x_position), text='Target X Position')
+                layout.prop(data=self.node, property=self.get_layout_prop(self.target_z_position), text='Target Y Position')
+                layout.prop(data=self.node, property=self.get_layout_prop(self.target_y_position), text='Target Z Position')
             case _:
                 layout.label(text='This camera mode does not have custom properties.')
 

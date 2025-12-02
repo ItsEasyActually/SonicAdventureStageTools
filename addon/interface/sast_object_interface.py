@@ -59,21 +59,21 @@ class SASTObjectInterface(SASTViewportPanel):
                         cam_properties: SASTCAMObjectProperties = SASTCAMObjectProperties.get_properties(obj)
                         if (cam_properties is not None):
                             cam_properties.draw_ui(body, context)
-                            if (scene_properties.game_id == 'SA2BPC'):
-                                cam_properties.draw_sa2props_ui(body, context)
-                        match (scene_properties.game_id):
-                            case 'SADXPC':
-                                cam_node: SA1CameraNode = SA1CameraNode(obj)
-                            case 'SA2BPC':
-                                cam_node: SA2CameraNode = SA2CameraNode(obj)
-                        if (cam_node.node is not None):
-                            cam_node.draw_ui(body, cam_properties.cameramode)
-                    opheader: bpy.types.UILayout
-                    opbody: bpy.types.UILayout
-                    opheader, opbody = layout.panel('pt_camops',default_closed=False)
-                    opheader.label(text='Camera Item Tools', icon='TOOL_SETTINGS')
-                    if (opbody != None):
-                        SASTCamObjectOperators.draw_ui(opbody, context)
+                            match (scene_properties.game_id):
+                                case 'SADXPC':
+                                    cam_node: SA1CameraNode = SA1CameraNode(obj)
+                                case 'SA2BPC':
+                                    cam_node: SA2CameraNode = SA2CameraNode(obj)
+                            if (cam_node.node is not None):
+                                cam_node.draw_ui(body, cam_properties.cameramode)
+                                if (scene_properties.game_id == 'SA2BPC'):
+                                    cam_properties.draw_sa2props_ui(body, context)
+                        opheader: bpy.types.UILayout
+                        opbody: bpy.types.UILayout
+                        opheader, opbody = layout.panel('pt_camops',default_closed=False)
+                        opheader.label(text='Camera Item Tools', icon='TOOL_SETTINGS')
+                        if (opbody != None):
+                            SASTCamObjectOperators.draw_ui(opbody, context)
                 case 'SET':
                     layout.separator(factor=2, type='LINE')
 
