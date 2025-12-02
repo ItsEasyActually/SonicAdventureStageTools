@@ -74,8 +74,6 @@ class SASTPointObjectProperties(bpy.types.PropertyGroup):
                 layout.prop(data=self, property='link1', text='Previous Link')
                 layout.prop(data=self, property='link2', text='Next Link')
 
-            layout.prop(data=self, property='pathlink', text='Path Link')
-
     @classmethod
     def register(cls):
         bpy.types.Object.sast_point_properties = bpy.props.PointerProperty(type=cls)
