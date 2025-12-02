@@ -74,6 +74,9 @@ class SASTImportManager:
         obj.lock_rotation[0] = True
         obj.lock_rotation[1] = True
         obj.lock_rotation[2] = True
+        obj.lock_scale[0] = True
+        obj.lock_scale[1] = True
+        obj.lock_scale[2] = True
         props: SASTObjectProperties = SASTObjectProperties.get_properties(obj)
         props.objtype = 'CAM'
         SASTImportManager.get_object_flag(props, collection.name)
@@ -173,6 +176,9 @@ class SASTImportManager:
             obj.lock_rotation[0] = True
             obj.lock_rotation[1] = True
             obj.lock_rotation[2] = True
+            obj.lock_scale[0] = True
+            obj.lock_scale[1] = True
+            obj.lock_scale[2] = True
             props: SASTObjectProperties = SASTObjectProperties.get_properties(obj)
             props.objtype = 'CAM'
             SASTImportManager.get_object_flag(props, collection.name)
@@ -253,6 +259,9 @@ class SASTImportManager:
             obj.lock_rotation[0] = True
             obj.lock_rotation[1] = True
             obj.lock_rotation[2] = True
+            obj.lock_scale[0] = True
+            obj.lock_scale[1] = True
+            obj.lock_scale[2] = True
             props: SASTObjectProperties = SASTObjectProperties.get_properties(obj)
             props.objtype = 'POINT'
             SASTImportManager.get_object_flag(props, collection.name)
