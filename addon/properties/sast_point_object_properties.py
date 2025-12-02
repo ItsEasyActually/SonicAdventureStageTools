@@ -8,50 +8,64 @@ from gpu.types import (
 )
 from gpu_extras.batch import batch_for_shader
 from ..geonode.sa2pointnode import SA2PointNode
+from ..geonode import GeometryNodeManager
 
 class SASTPointObjectProperties(bpy.types.PropertyGroup):
     '''Sonic Adventure Stage Tools Point Object Properties'''
+
+    def valid_object(self, object: bpy.types.Object):
+        if (GeometryNodeManager.has_geometry_node(object, SA2PointNode.modifier_name)):
+            return True
+        else:
+            return False
 
     link1: PointerProperty(
         type=bpy.types.Object,
         name='Linked Point',
         description='A point linked to this point.',
+        poll=valid_object
     )
 
     link2: PointerProperty(
         type=bpy.types.Object,
         name='Linked Point',
         description='A point linked to this point.',
+        poll=valid_object
     )
 
     link3: PointerProperty(
         type=bpy.types.Object,
         name='Linked Point',
         description='A point linked to this point.',
+        poll=valid_object
     )
 
     link4: PointerProperty(
         type=bpy.types.Object,
         name='Linked Point',
         description='A point linked to this point.',
+        poll=valid_object
     )
 
     link5: PointerProperty(
         type=bpy.types.Object,
         name='Linked Point',
         description='A point linked to this point.',
+        poll=valid_object
     )
 
     link6: PointerProperty(
         type=bpy.types.Object,
         name='Linked Point',
         description='A point linked to this point.',
+        poll=valid_object
     )
 
     pathlink: PointerProperty(
         type=bpy.types.Object,
         name='Direction Point',
         description='A point indicating the direction of the connected points.',
+        poll=valid_object
     )
 
     def draw_ui(self, layout: bpy.types.UILayout):
