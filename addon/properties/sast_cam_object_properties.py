@@ -220,8 +220,10 @@ class SASTCAMObjectProperties(bpy.types.PropertyGroup):
 
     def draw_ui(self, layout: bpy.types.UILayout, context: bpy.types.Context):
         '''Draws the corresponding UI element for the selected object.'''
+        scene_props: SASTSceneProperties = SASTSceneProperties.get_properties()
         layout.prop(data=self, property='cameramode')
-        layout.prop(data=self, property='cameralevel')
+        if (scene_props.game_id == 'SADXPC'):
+            layout.prop(data=self, property='cameralevel')
         layout.prop(data=self, property='adjustmode')
         layout.prop(data=self, property='priority')
 
