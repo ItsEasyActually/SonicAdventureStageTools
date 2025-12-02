@@ -21,11 +21,11 @@ class SASTObjectProperties(bpy.types.PropertyGroup):
                 case 'SADXPC':
                     items.append(('NONE','None','Object is not an SAST Object.', 'X', 0))
                     items.append(('CAM','Camera Object','Object represents an SAST Camera Object.', 'OUTLINER_OB_CAMERA', 1))
-                    items.append(('SET','Set Object','Object represents an SAST Set Object.', 'GEOMETRY_SET', 2))
+                    items.append(('SET','Set Object','CURRENTLY NOT SUPPORTED', 'GEOMETRY_SET', 2))
                 case 'SA2BPC':
                     items.append(('NONE','None','Object is not an SAST Object.', 'X', 0))
                     items.append(('CAM','Camera Object','Object represents an SAST Camera Object.', 'OUTLINER_OB_CAMERA', 1))
-                    items.append(('SET','Set Object','Object represents an SAST Set Object.', 'GEOMETRY_SET', 2))
+                    items.append(('SET','Set Object','CURRENTLY NOT SUPPORTED.', 'GEOMETRY_SET', 2))
                     items.append(('POINT','Camera Point', 'Object represents an SAST Camera Point. Only used in SA2.', 'OUTLINER_OB_POINTCLOUD', 3))
 
         return items
