@@ -167,9 +167,9 @@ class StageInfo:
         ('MissionStreet2P', 'Mission Street (2P)',      ''),
         ('WildCanyon2P',    'Wild Canyon (2P)',         ''),
 
-        ('StoryKart',       'Kart Race (Story)',        ''),
-        ('KartRace',        'Kart Race (Minigame)',     ''),
-        ('ChaoWorld',       'Chao World',               ''),
+        #('StoryKart',       'Kart Race (Story)',        ''),
+        #('KartRace',        'Kart Race (Minigame)',     ''),
+        #('ChaoWorld',       'Chao World',               ''),
 
         ('TestStage',       'Test Stage',               ''),
         ('SonicTest',       'Sonic Test',               ''),
