@@ -59,6 +59,9 @@ class SA2CameraNode(GeoNodeBase):
         layout.prop(data=self.node, property=self.get_layout_prop(self.collision_shape), text='Volume Shape')
         layout.separator(factor=1, type='LINE')
         match (cammode):
+            case 'Klamath':
+                layout.prop(data=self.node, property=self.get_layout_prop(self.target_x_position), text='Target X Position')
+                layout.prop(data=self.node, property=self.get_layout_prop(self.target_z_position), text='Target Y Position')
             case 'Fix':
                 layout.prop(data=self.node, property=self.get_layout_prop(self.camera_x_position), text='Camera X Position')
                 layout.prop(data=self.node, property=self.get_layout_prop(self.camera_z_position), text='Camera Y Position')
@@ -75,7 +78,7 @@ class SA2CameraNode(GeoNodeBase):
                 layout.prop(data=self.node, property=self.get_layout_prop(self.target_z_position), text='Target Y Position')
                 layout.prop(data=self.node, property=self.get_layout_prop(self.target_y_position), text='Target Z Position')
             case _:
-                layout.label(text='This camera mode does not have custom properties.')
+                layout.label(text='This camera mode does not make use of the default properties.')
 
     def update_camera_mode(self, cammode: str):
         match (cammode):
