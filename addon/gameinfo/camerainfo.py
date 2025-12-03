@@ -69,34 +69,38 @@ class CameraInfo:
 
     #region SA2 Information
     sa2_cameramodes = [
-        ('None',        'None',         ''),
-        ('User',        'User',         ''),
-        ('Follow',      'Follow',       ''),
-        ('Knuckles',    'Knuckles',     ''),
-        ('Editor',      'Editor',       ''),
-        ('Editor2',     'Editor2',      ''),
-        ('SnapShot',    'SnapShot',     ''),
-        ('Klamath',     'Klamath',      ''),
-        ('Point',       'Point',        ''),
-        ('Ashland',     'Ashland',      ''),
-        ('Fix',         'Fix',          ''),
-        ('Leave',       'Leave',        ''),
-        ('Space',       'Space',        ''),
-        ('Carmel',      'Carmel',       ''),
-        ('Motion',      'Motion',       ''),
-        ('BossInit',    'BossInit',     ''),
-        ('BossPoint',   'BossPoint',    ''),
-        ('Collision',   'Collision',    ''),
-        ('PStone',      'PStone',       ''),
-        ('Init',        'Init',         ''),
-        ('EasySet',     'EasySet',      ''),
-        ('BossKlamath', 'BossKlamath',  ''),
-        ('GakuGaku',    'GakuGaku',     ''),
-        ('Knuckles_L',  'KnucklesL',    ''),
-        ('Fix2',        'Fix2',         ''),
-        ('PStone2',     'PStone2',      ''),
-        ('SS',          'SS',           ''),
-        ('Colli_LR',    'Colli_LR',     '')
+        ('None',        'None',         'No Camera'),
+        ('User',        'User',         'User specified camera (Usage unknown)'),
+        ('Follow',      'Follow',       'Follows the player, no LR controls.'),
+        ('Knuckles',    'Knuckles',     'Follows the player with respect to the player movement.'),
+        ('Carmel',      'Carmel',       'Similar to Knuckles but has slightly better level geometry collision detection.'),
+        ('Knuckles_L',  'KnucklesL',    'Same as the Knuckles mode except it is further away from the player and turns more smoothly.'),
+        ('Klamath',     'Klamath',      'Target based camera using the XY Target positions.'),
+        ('Point',       'Point',        'Points to a specified target while keeping the player in view.'),
+        ('Ashland',     'Ashland',      'Fixed point camera that tracks the player.'),
+        ('Fix',         'Fix',          'Fixed camera that focuses on a single target. Does not move with the player.'),
+        ('Space',       'Space',        'Utilizes any Points in the scene that the player enters to create a camera that moves along a spline when camera mode is active.'),
+        ('Leave',       'Leave',        'Locks the camera position to where it was when volume is activated. Camera tracks player like the Ashland mode.'),
+        ('GakuGaku',    'GakuGaku',     'Locks the camera position and rotation to where it was when the volume is activated.'),
+
+        ('Collision',   'Collision',    'Camera Collider'),
+        ('Colli_LR',    'Colli_LR',     'Camera Collider when using the LR triggers to rotate the camera. Does not collide with the camera unless the Triggers are pressed.'),
+
+        ('PStone',      'PStone',       'Similar to the Leave camera except it eases to a stop while the player moves.'),
+        ('Fix2',        'Fix2',         'Similar to the Leave camera except it eases to a stop while the player moves.'),
+        ('SnapShot',    'SnapShot',     'Special camera that the player can control with the DPad. Not advised for use in normal play.'),
+        ('Init',        'Init',         'Immediate reaction camera, follows the rotation of the joystick. Not advised for use in normal play.')        
+
+        # The below cameras are commented out as using them is not advised. Some crash, some do not work properly.
+        #('Editor',      'Editor',       ''),
+        #('Editor2',     'Editor2',      ''),
+        #('Motion',      'Motion',       ''),
+        #('BossInit',    'BossInit',     ''),
+        #('BossPoint',   'BossPoint',    ''),
+        #('EasySet',     'EasySet',      ''),
+        #('BossKlamath', 'BossKlamath',  ''),
+        #('PStone2',     'PStone2',      ''),
+        #('SS',          'SS',           ''),
     ]
 
     sa2_adjustmentmodes = [

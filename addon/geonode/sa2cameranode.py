@@ -79,13 +79,15 @@ class SA2CameraNode(GeoNodeBase):
 
     def update_camera_mode(self, cammode: str):
         match (cammode):
+            case 'Klamath':
+                self.set_camera_mode(5)
             case 'Fix':
                 self.set_camera_mode(4)
             case 'Ashland':
                 self.set_camera_mode(3)
             case 'Point':
                 self.set_camera_mode(2)
-            case 'Collision':
+            case 'Collision' | 'Colli_LR':
                 self.set_camera_mode(1)
             case _:
                 self.set_camera_mode(0)

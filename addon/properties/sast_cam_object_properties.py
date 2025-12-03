@@ -200,23 +200,33 @@ class SASTCAMObjectProperties(bpy.types.PropertyGroup):
         '''Draws the SA2 Specific Properties'''
         # TODO: Add in cases per camera mode to show/hide properties that are actively used once research on this is done.
         match (self.cameramode):
+            case 'Ashland':
+                layout.prop(data=self, property='int_prop1', text='Camera FOV')
+            case 'Point':
+                layout.prop(data=self, property='float_prop1', text='Distance to Player')
+                layout.prop(data=self, property='float_prop2', text='Additional Vertical Height')
+            case 'Klamath':
+                layout.prop(data=self, property='float_prop1', text='Distance to Player')
+                layout.prop(data=self, property='float_prop2', text='Vertical Height')
             case _:
-                layout.prop(data=self, property='float_prop1')
-                layout.prop(data=self, property='float_prop2')
-                layout.prop(data=self, property='float_prop3')
-                layout.prop(data=self, property='float_prop4')
-                layout.prop(data=self, property='float_prop5')
-                layout.prop(data=self, property='float_prop6')
-                layout.prop(data=self, property='float_prop7')
-                layout.prop(data=self, property='float_prop8')
-                layout.prop(data=self, property='int_prop1')
-                layout.prop(data=self, property='int_prop2')
-                layout.prop(data=self, property='int_prop3')
-                layout.prop(data=self, property='int_prop4')
-                layout.prop(data=self, property='int_prop5')
-                layout.prop(data=self, property='int_prop6')
-                layout.prop(data=self, property='int_prop7')
-                layout.prop(data=self, property='int_prop8')
+                header, body = layout.panel(idname='pt_sa2props')
+                header.label(text='Additional SA2 Properties')
+                body.prop(data=self, property='float_prop1')
+                body.prop(data=self, property='float_prop2')
+                body.prop(data=self, property='float_prop3')
+                body.prop(data=self, property='float_prop4')
+                body.prop(data=self, property='float_prop5')
+                body.prop(data=self, property='float_prop6')
+                body.prop(data=self, property='float_prop7')
+                body.prop(data=self, property='float_prop8')
+                body.prop(data=self, property='int_prop1')
+                body.prop(data=self, property='int_prop2')
+                body.prop(data=self, property='int_prop3')
+                body.prop(data=self, property='int_prop4')
+                body.prop(data=self, property='int_prop5')
+                body.prop(data=self, property='int_prop6')
+                body.prop(data=self, property='int_prop7')
+                body.prop(data=self, property='int_prop8')
 
     def draw_ui(self, layout: bpy.types.UILayout, context: bpy.types.Context):
         '''Draws the corresponding UI element for the selected object.'''
