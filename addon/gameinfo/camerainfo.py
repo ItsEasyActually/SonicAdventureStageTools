@@ -4,28 +4,31 @@ class CameraInfo:
     #region SA1 Information
     sa1_cameramodes = [
         ('Follow',      'Follow',                       'Follows the Player, can be rotated using the triggers.'),
+        ('FollowG',     'Follow (General)',             'Functions identically to the Follow mode.'),
+        ('LeftRight',   'Follow (Controllable)',        'Functions the same as Follow except it has additional checks for level geometry and object collision.'),
         ('Knuckles',    'Knuckles',                     'Follows the Player and adjusts the rotation based on the player movement.'),
-        ('Knuckles2',   'Kncukles2',                    'Same as Knuckles but with some additional calculations'),
+        ('Knuckles2',   'Knuckles2',                    'Same as Knuckles but with some additional calculations'),
         ('Magonote',    'Magonote',                     'Close camera to the Player, will calculate its focal point to just ahead of the Player.'),
         ('Sonic',       'Sonic',                        'Follows the Player with respect to their rotation. Zooms out based on Player speed.'),
+        ('SonicP',      'Sonic (Parameter)',            'Same as Sonic except the parameters can be customized.'),
+        ('Point',       'Point',                        'Camera focuses on a target point while keeping the player in the center of the view.'),
         ('Ashland',     'Ashland',                      'Fixed point that focuses on the Player when active.'),
         ('AshlandI',    'Ashland I',                    'Same as Ashland without the LR controls check.'),
         ('Fixed',       'Fixed',                        'Fixed camera position that will focus on the target point.'),
         ('Klamath',     'Klamath',                      'Focuses on a target in the horizontal plane while keeping the Player within the center of the view.'),
         ('Line',        'Line',                         'Follows the player similarly to Kalamth, utilizes a target point on the horizontal plane.'),
-        ('NewFollow',   'New Follow',                   ''),
-        ('Point',       'Point',                        'Camera focuses on a target point while keeping the player in the center of the view.'),
-        ('SonicP',      'Sonic (Parameter)',            'Same as Sonic except the parameters can be customized.'),
+        
+        ('Survey',      'Survey',                       'Top down camera view of the player in a level.'),
+
+        ('Collision',   'Collision',                    'Volume Collider.'),
+
+        ('Leave',       'Leave',                        ''),
+        ('Avoid',       'Avoid',                        'Changes the camera mode based on what the current avoid flag is set to.'),
         ('Building',    'Speed Highway Act 2 Building', 'Used in Speed Highway Act 2.'),
         ('Cart',        'Twinkle Cart',                 'Used in Twinkle Park Act 1 and Twinkle Circuit.'),
-        ('FollowG',     'Follow (General)',             'Functions identically to the Follow mode.'),
-        ('LeftRight',   'Follow (Controllable)',        'Functions the same as Follow except it has additional checks for level geometry and object collision.'),
-        ('Collision',   'Collision',                    'Acts as a collision obstacle to prevent the camera from entering the volume.'),
         ('Snowboard',   'Snowboard',                    'Used for Snowboarding in game (Icecap Act 3 and Sandboarding).'),
-        ('Survey',      'Survey',                       'Top down camera view of the player in a level.'),
         ('Tornado',     'Tornado',                      'Used in Windy Valley Act 2, The Tornado.'),
-        ('Leave',       'Leave',                        ''),
-        ('Avoid',       'Avoid',                        'Changes the camera mode based on what the current avoid flag is set to.')
+        ('NewFollow',   'New Follow',                   'DO NOT USE')
     ]
 
     sa1_cameralevels = [
@@ -104,20 +107,20 @@ class CameraInfo:
     ]
 
     sa2_adjustmentmodes = [
-        ('None','None',             ''),
-        ('User','User',             ''),
-        ('Half','Half',             ''),
-        ('Three1','Three1',         ''),
-        ('Three2','Three2',         ''),
-        ('Three3','Three3',         ''),
-        ('Three4','Three4',         ''),
-        ('Three5','Three5',         ''),
-        ('Relative1','Relative1',   ''),
-        ('Relative2','Relative2',   ''),
-        ('Relative3','Relative3',   ''),
-        ('Relative4','Relative4',   ''),
-        ('Relative5','Relative5',   ''),
-        ('Relative6','Relative6',   '')
+        ('None',        'None',        ''),
+        ('User',        'User',        ''),
+        ('Half',        'Half',        ''),
+        ('Three1',      'Three1',      ''),
+        ('Three2',      'Three2',      ''),
+        ('Three3',      'Three3',      ''),
+        ('Three4',      'Three4',      ''),
+        ('Three5',      'Three5',      ''),
+        ('Relative1',   'Relative1',   ''),
+        ('Relative2',   'Relative2',   ''),
+        ('Relative3',   'Relative3',   ''),
+        ('Relative4',   'Relative4',   ''),
+        ('Relative5',   'Relative5',   ''),
+        ('Relative6',   'Relative6',   '')
     ]
     #endregion
 
