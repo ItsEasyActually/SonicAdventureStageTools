@@ -1,3 +1,4 @@
+from ..logger.sast_logger import SASTLogger
 import bpy
 import pip
 
@@ -18,8 +19,10 @@ class PyNetInstallOperator(bpy.types.Operator):
         
     def execute(self, context: bpy.types.Context):
         if (hasattr(pip, 'main')):
+            SASTLogger.log('Attempting to install PythonNET.')
             pip.main(['install', 'pythonnet'])
         else:
+            SASTLogger.log('Attempting to install PythonNET.')
             pip._internal.main(['install','pythonnet'])
             
         return {'FINISHED'}

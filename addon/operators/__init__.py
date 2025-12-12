@@ -12,10 +12,15 @@ from .sast_scene_operators import (
     SASTImportSETAutomatic,
     SASTImportSETManual
 )
+from .sast_settings_operators import (
+    SASTDebugSave,
+    SASTClearLogger
+)
 
 to_register = [
     SASTAddGeometryNode,
     SASTResetProperties,
+    
     SASTExportCameraAutomatic,
     SASTExportCameraManual,
     SASTExportSETAutomatic,
@@ -23,5 +28,8 @@ to_register = [
     SASTImportCameraAutomatic,
     SASTImportCameraManual,
     SASTImportSETAutomatic,
-    SASTImportSETManual
+    SASTImportSETManual,
+
+    SASTDebugSave,
+    SASTClearLogger
 ]

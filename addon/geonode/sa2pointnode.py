@@ -1,6 +1,7 @@
 import bpy
 from . import GeometryNodeManager
 from .geonodebase import GeoNodeBase
+from ..logger.sast_logger import SASTLogger
 
 class SA2PointNode(GeoNodeBase):
     '''Class to handle the SA2PointNode from Blender.'''
@@ -23,10 +24,14 @@ class SA2PointNode(GeoNodeBase):
     @staticmethod
     def make(obj: bpy.types.Object) -> bpy.types.NodesModifier:
         if (obj.type == 'MESH'):
+            SASTLogger.log(f'Valid object, adding {SA2PointNode.modifier_name} Geometry Node')
             return GeometryNodeManager.create_node(obj, SA2PointNode.modifier_name)
+        else:
+            SASTLogger.log('Object Data Type is not MESH. Invalid Object!')
 
     def reset_properties(self):
         '''Resets the properties of the SA2 Point Node'''
+        SASTLogger.log('Resetting Geometry Node Properties')
         self.set_player_point_radius(10)
         self.set_camera_x_point(0)
         self.set_camera_y_point(0)

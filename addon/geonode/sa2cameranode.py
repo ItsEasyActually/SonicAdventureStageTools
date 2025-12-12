@@ -1,6 +1,7 @@
 import bpy
 from . import GeometryNodeManager
 from .geonodebase import GeoNodeBase
+from ..logger.sast_logger import SASTLogger
 
 class SA2CameraNode(GeoNodeBase):
     '''SA2 Camera Node'''
@@ -34,9 +35,13 @@ class SA2CameraNode(GeoNodeBase):
     @staticmethod
     def make(obj: bpy.types.Object) -> bpy.types.NodesModifier:
         if (obj.type == 'MESH'):
+            SASTLogger.log(f'Valid object, adding {SA2CameraNode.modifier_name} Geometry Node')
             return GeometryNodeManager.create_node(obj, SA2CameraNode.modifier_name)
+        else:
+            SASTLogger.log('Object Data Type is not MESH. Invalid Object!')
 
     def reset_properties(self):
+        SASTLogger.log('Resetting Geometry Node Properties')
         self.set_collision_shape(0)
         self.set_collision_x_scale(10)
         self.set_collision_y_scale(10)
@@ -81,6 +86,7 @@ class SA2CameraNode(GeoNodeBase):
                 layout.label(text='This camera mode does not make use of the default properties.')
 
     def update_camera_mode(self, cammode: str):
+        SASTLogger.log(f'Updating Camera Mode: {cammode}')
         match (cammode):
             case 'Klamath':
                 self.set_camera_mode(5)

@@ -6,6 +6,7 @@ from ..geonode.sa2pointnode import SA2PointNode
 from ..properties.sast_scene_properties import SASTSceneProperties
 from ..properties.sast_point_object_properties import SASTPointObjectProperties
 from ..properties.sast_cam_object_properties import SASTCAMObjectProperties
+from ..logger.sast_logger import SASTLogger
 
 class SASTExportManager:
     '''Export management'''
@@ -73,6 +74,7 @@ class SASTExportManager:
         PyNetManager.load_dll()
         scene_props: SASTSceneProperties = SASTSceneProperties.get_properties()
         if (scene_props is not None):
+            SASTLogger.log('Exporting SA1 Camera: MANUAL MODE')
             from SAST.Lib.Blender import ExportManager
             
             output = SASTExportManager.process_sa1_cameras(objs)
@@ -87,6 +89,7 @@ class SASTExportManager:
 
         PyNetManager.load_dll()
         if (scene_props is not None):
+            SASTLogger.log('Exporting SA1 Camera: AUTO MODE')
             from System.Collections.Generic import Dictionary
             from SAST.Lib.CAM.SA1 import SA1CAMFile
             from SAST.Lib.Blender import ExportManager
@@ -135,22 +138,31 @@ class SASTExportManager:
                     lastobjs.append(obj)
 
             if (len(sonicobjs) > 0):
+                SASTLogger.log('Processing Sonic Cameras')
                 output.Add('Sonic', SASTExportManager.process_sa1_cameras(sonicobjs))
             if (len(tailsobjs) > 0):
+                SASTLogger.log('Processing Tails Cameras')
                 output.Add('Tails', SASTExportManager.process_sa1_cameras(tailsobjs))
             if (len(knucklesobjs) > 0):
+                SASTLogger.log('Processing Knuckles Cameras')
                 output.Add('Knuckles', SASTExportManager.process_sa1_cameras(knucklesobjs))
             if (len(amyobjs) > 0):
+                SASTLogger.log('Processing Amy Cameras')
                 output.Add('Amy', SASTExportManager.process_sa1_cameras(amyobjs))
             if (len(gammaobjs) > 0):
+                SASTLogger.log('Processing Gamma Cameras')
                 output.Add('Gamma', SASTExportManager.process_sa1_cameras(gammaobjs))
             if (len(bigobjs) > 0):
+                SASTLogger.log('Processing Big Cameras')
                 output.Add('Big', SASTExportManager.process_sa1_cameras(bigobjs))
             if (len(eggmanobjs) > 0):
+                SASTLogger.log('Processing Eggman Cameras')
                 output.Add('Eggman', SASTExportManager.process_sa1_cameras(eggmanobjs))
             if (len(tikalobjs) > 0):
+                SASTLogger.log('Processing Tikal Cameras')
                 output.Add('Tikal', SASTExportManager.process_sa1_cameras(tikalobjs))
             if (len(lastobjs) > 0):
+                SASTLogger.log('Processing Last Story Cameras')
                 output.Add('Last', SASTExportManager.process_sa1_cameras(lastobjs))
 
             ExportManager.ExportSA1CamFileAuto(output, path, scene_props.stage_id, scene_props.act_id, False)
@@ -311,8 +323,11 @@ class SASTExportManager:
             
         camfile = SA2CAMFile()
 
+        SASTLogger.log('Export Single Player Cameras and Points')
         camfile.SinglePlayerCameraGroup = SASTExportManager.process_sa2_group(sp_cams, sp_points)
+        SASTLogger.log('Export Demo Cameras and Points')
         camfile.DemoPlayerCameraGroup = SASTExportManager.process_sa2_group(dm_cams, dm_points)
+        SASTLogger.log('Export Multiplayer Cameras and Points')
         camfile.MultiplayerCameraGroup = SASTExportManager.process_sa2_group(mp_cams, mp_points)
 
         return camfile
@@ -320,10 +335,10 @@ class SASTExportManager:
     @staticmethod
     def export_sa2_camera(path: str, objs: list[bpy.types.Object]):
         '''Manually export an SA2 Camera'''
-
         PyNetManager.load_dll()
         scene_props: SASTSceneProperties = SASTSceneProperties.get_properties()
         if (scene_props is not None):
+            SASTLogger.log('Exporting SA2 Camera: MANUAL MODE')
             from SAST.Lib.Blender import ExportManager
             
             output = SASTExportManager.process_sa2_file(objs)
@@ -337,6 +352,7 @@ class SASTExportManager:
         '''Automatically Export an SA2 Camera'''
         PyNetManager.load_dll()
         if (scene_props is not None):
+            SASTLogger.log('Exporting SA2 Camera: AUTO MODE')
             from System.Collections.Generic import List
             from SAST.Lib.CAM.SA2 import SA2CAMFile
             from SAST.Lib.Blender import ExportManager
@@ -357,6 +373,7 @@ class SASTExportManager:
     def export_camera(path: str, objs: list[bpy.types.Object]):
         '''Export a Camera File'''
         scene_props: SASTSceneProperties = SASTSceneProperties.get_properties()
+        SASTLogger.log(f'Exporting Camera File for {scene_props.game_id}')
         match (scene_props.game_id):
             case 'SADXPC':
                 SASTExportManager.export_sa1_camera(path, objs)
@@ -366,6 +383,7 @@ class SASTExportManager:
     @staticmethod
     def export_camera_auto(path: str, objs: list[bpy.types.Object]):
         scene_props: SASTSceneProperties = SASTSceneProperties.get_properties()
+        SASTLogger.log(f'Exporting Camera File for {scene_props.game_id}')
         match (scene_props.game_id):
             case 'SADXPC':
                 SASTExportManager.export_sa1_camera_auto(path, objs, scene_props)

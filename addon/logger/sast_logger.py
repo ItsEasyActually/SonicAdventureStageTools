@@ -6,7 +6,7 @@ class SASTLogger:
 
     enabled: bool = False
 
-    logtext = [str]
+    logtext: list[type[str]] = []
 
     @staticmethod
     def write(text: str = ''):
@@ -44,7 +44,7 @@ class SASTLogger:
 
     @staticmethod
     def save_log(path: str):
-        SASTLogger.log(f'Writing to file @ {path}')
-        with open(path, 'w') as file:
+        outpath = path + '.txt'
+        with open(outpath, 'w') as file:
             file.writelines(SASTLogger.logtext)
 

@@ -1,3 +1,4 @@
+from ..logger.sast_logger import SASTLogger
 import bpy
 import os
 from .pynet_install_operator import PyNetInstallOperator
@@ -30,10 +31,12 @@ class PyNetManager:
         global _LOADED
         if _LOADED:
             print('pythonnet is loaded!')
+            SASTLogger.log('PythonNET is Loaded!')
             return
         
         if (PyNetManager.is_installed() == False):
             print('pythonnet is not installed')
+            SASTLogger.log('PythonNET is not installed!')
             return
         
         from .. import get_directory
@@ -42,6 +45,7 @@ class PyNetManager:
         dll_path: str = os.path.join(path, 'SAST.Lib.dll')
 
         print(f'Loaded DLL Path {dll_path}')
+        SASTLogger.log(f'Loaded DLL Path {dll_path}')
         
         import pythonnet
         pythonnet.load("coreclr", runtime_config=runtime_path)
@@ -52,10 +56,12 @@ class PyNetManager:
         _LOADED = True
 
         print('SAST Library Loaded!')
+        SASTLogger.log('SAST Library is Loaded!')
 
     @staticmethod
     def unload_dll():
         '''Unloads the SAST DLL.'''
+        SASTLogger.log('Unloading PtyhonNET')
 
         global _LOADED
         if not _LOADED:

@@ -1,6 +1,7 @@
 import bpy
 import os
 
+from ..logger.sast_logger import SASTLogger
 from ..properties.sast_scene_properties import SASTSceneProperties
 from ..pynet import PyNetManager
 from ..properties.sast_object_properties import SASTObjectProperties
@@ -15,6 +16,7 @@ class SASTImportManager:
     def get_mesh() -> bpy.types.Mesh:
         '''Gets the default mesh to use for any object.'''
         mesh: bpy.types.Mesh
+        SASTLogger.log('Getting SACAM Mesh')
         if (bpy.data.meshes.__contains__('sacam')):
             mesh = bpy.data.meshes.get('sacam')
         else:
@@ -24,6 +26,7 @@ class SASTImportManager:
     
     @staticmethod
     def get_object_flag(props: SASTObjectProperties, name: str):
+        SASTLogger.log(f'Processing Flags for {name}')
         match (name):
             case 'Sonic':
                 props.for_sonic = True
@@ -66,7 +69,9 @@ class SASTImportManager:
     #region SA1 Camera
     @staticmethod
     def process_sa1_camera(camobject, index: int, mesh: bpy.types.Mesh, collection: bpy.types.Collection, context: bpy.types.Context):
+        SASTLogger.log('Processing Camera Object...')
         cam_name: str = f'{index:03d}_SA1CAM_{camobject.Mode.ToString()}'
+        SASTLogger.log(f'Camera Name: {cam_name}')
         obj: bpy.types.Object = bpy.data.objects.new(cam_name, mesh)
         obj.location[0] = camobject.Collision.Position.X
         obj.location[1] = -camobject.Collision.Position.Z
@@ -87,7 +92,6 @@ class SASTImportManager:
             modes: list[str] = str.split(camobject.Mode.ToString(), "_")
             geonode.update_camera_mode(modes[0])
             if (len(modes) > 1):
-                print(f'Camera Level: {modes[1]}')
                 geonode.update_camera_level(modes[1])
             match (camobject.CollisionShape.ToString()):
                 case 'Sphere':
@@ -128,11 +132,13 @@ class SASTImportManager:
             camprops.adjustmode = camobject.AdjustMode.ToString()
             camprops.priority = camobject.Priority
 
+        SASTLogger.log(f'Linking {obj} to {collection}')
         collection.objects.link(obj)
 
     @staticmethod
     def import_sa1_camera(file, mesh: bpy.types.Mesh, collection: bpy.types.Collection, context: bpy.types.Context):
         '''Imports an SA1 Camera File'''
+        SASTLogger.log(f'Importing SA1 Camera File: {file}')
         PyNetManager.load_dll()
         from SAST.Lib.Blender import ImportManager
         index: int = 0
@@ -149,6 +155,7 @@ class SASTImportManager:
 
         files = ImportManager.ImportSA1CAMFileAuto(directory, stage_id, act_id)
         for file in files:
+            SASTLogger.log(f'Importing SA1 Camera File: {file}')
             file_collection: bpy.types.Collection = bpy.data.collections.new(name=file.Key)
             mesh: bpy.types.Mesh = SASTImportManager.get_mesh()
             index: int = 0
@@ -349,6 +356,7 @@ class SASTImportManager:
         PyNetManager.load_dll()
         from SAST.Lib.Blender import ImportManager
         
+        SASTLogger.log(f'Importing SA1 Camera File: {file}')
         camfile = ImportManager.ImportSA2CAMFile(file)
         SASTImportManager.process_sa2_cam_groups(camfile, mesh, collection, context)     
 
@@ -360,6 +368,7 @@ class SASTImportManager:
 
         files = ImportManager.ImportSA2CAMFileAuto(directory, stage_id, sub_id)
         for file in files:
+            SASTLogger.log(f'Importing SA1 Camera File: {file}')
             SASTImportManager.process_sa2_cam_groups(file, SASTImportManager.get_mesh(), base_collection, context)
         
     #endregion
@@ -371,6 +380,7 @@ class SASTImportManager:
     def import_cam_manual(files, directory: str, context: bpy.types.Context):
         '''Manual Camera Import'''
         SASTImportManager.importing = True
+        SASTLogger.log(f'Importing {len(files)} Camera Files: MANUAL MODE')
 
         if (len(files) > 0):
             for file in files:
@@ -386,6 +396,7 @@ class SASTImportManager:
                         SASTImportManager.import_sa2_camera(path, mesh, collection, context)
 
         SASTImportManager.importing = False
+        SASTLogger.log('Camera Import Complete!')
 
     @staticmethod
     def import_cam_auto(context: bpy.types.Context, directory: str, stage_id: str, act_id: str, base_collection_name: str = ""):
@@ -396,11 +407,13 @@ class SASTImportManager:
             scene_props: SASTSceneProperties = SASTSceneProperties.get_properties()
             match (scene_props.game_id):
                 case 'SADXPC':
+                    SASTLogger.log(f'Importing {stage_id} {act_id} Camera Files: AUTO MODE')
                     if (len(base_collection_name) <= 0):
                         base_collection_name = f'{stage_id}_{act_id}'
                     base_collection: bpy.types.Collection = bpy.data.collections.new(name=base_collection_name)
                     SASTImportManager.import_sa1_camera_auto(context, directory, stage_id, act_id, base_collection)
                 case 'SA2BPC':
+                    SASTLogger.log(f'Importing {stage_id} Camera Files: AUTO MODE')
                     if (len(base_collection_name) <= 0):
                         base_collection_name = f'{stage_id}'
                     base_collection: bpy.types.Collection = bpy.data.collections.new(name=base_collection_name)
@@ -409,6 +422,7 @@ class SASTImportManager:
             context.scene.collection.children.link(base_collection)
 
         SASTImportManager.importing = False
+        SASTLogger.log('Camera Import Complete!')
 
     #endregion
 

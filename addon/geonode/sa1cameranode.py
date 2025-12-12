@@ -1,3 +1,4 @@
+from ..logger.sast_logger import SASTLogger
 import bpy
 from . import GeometryNodeManager
 from .geonodebase import GeoNodeBase
@@ -24,7 +25,7 @@ class SA1CameraNode(GeoNodeBase):
     target_x_position: str      = 'Socket_16'
     target_y_position: str      = 'Socket_17'
     target_z_position: str      = 'Socket_18'
-    camera_distance: str    = 'Socket_19'
+    camera_distance: str        = 'Socket_19'
 
     @staticmethod
     def poll(obj: bpy.types.Object) -> bool:
@@ -33,9 +34,13 @@ class SA1CameraNode(GeoNodeBase):
     @staticmethod
     def make(obj: bpy.types.Object) -> bpy.types.NodesModifier:
         if (obj.type == 'MESH'):
+            SASTLogger.log(f'Valid object, adding {SA1CameraNode.modifier_name} Geometry Node')
             return GeometryNodeManager.create_node(obj, SA1CameraNode.modifier_name)
+        else:
+            SASTLogger.log('Object Data Type is not MESH. Invalid Object!')
 
     def reset_properties(self):
+        SASTLogger.log('Resetting Geometry Node Properties')
         self.set_collision_shape(0)
         self.set_collision_x_scale(10)
         self.set_collision_y_scale(10)
@@ -99,6 +104,7 @@ class SA1CameraNode(GeoNodeBase):
                 layout.label(text='This camera mode does not have custom properties.')
 
     def update_camera_mode(self, cammode: str):
+        SASTLogger.log(f'Updating Camera Mode: {cammode}')
         match (cammode):
             case 'Klamath' | 'Line':
                 # Camera Mode has XZ Target controls.
@@ -120,6 +126,7 @@ class SA1CameraNode(GeoNodeBase):
                 self.set_camera_mode(0)
 
     def update_camera_level(self, camlevel: str):
+        SASTLogger.log(f'Updating Camera Level: {camlevel}')
         match (camlevel):
                 case 'Normal':
                     self.set_camera_level(0)
