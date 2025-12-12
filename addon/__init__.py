@@ -1,8 +1,9 @@
+from .logger.sast_logger import SASTLogger
 bl_info = {
 	"name": "Sonic Adventure Stage Tools",
 	"author": "ItsEasyActually",
 	"description": "Stage Editor Toolset for Sonic Adventure and Sonic Adventure 2.",
-	"version": (0, 1, 0),
+	"version": (0, 3, 0),
 	"blender": (5, 0, 0),
 	"location": "Tools Sidbar",
 	"category": "Tools"
@@ -26,6 +27,7 @@ def compare_paths(a: str, b: str):
     return a == absolute
 
 def link_assets():
+    SASTLogger.log('Linking Assets')
     path: str = os.path.join(ADDON_DIR, 'blend', 'Cameras.blend')
     found: bool = False
     for library in bpy.data.libraries:
@@ -35,8 +37,12 @@ def link_assets():
     
     if not found:
         path = f'{path}{os.path.sep}NodeTree{os.path.sep}'
+        SASTLogger.log(f'Linking from {path}')
+        SASTLogger.log('Linking SA1 Camera Node')
         bpy.ops.wm.link(filename='SA1CameraNode', directory=path)
+        SASTLogger.log('Linking SA2 Camera Node')
         bpy.ops.wm.link(filename='SA2CameraNode', directory=path)
+        SASTLogger.log('Linking SA2 Point Node')
         bpy.ops.wm.link(filename='SA2PointNode', directory=path)
         # TODO: Add other Nodes to be linked as they are created.
     
