@@ -8,10 +8,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="SET\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="AuroraLib.Compression" Version="1.5.3" />
     <PackageReference Include="EndianBinaryIO" Version="2.1.1" />
   </ItemGroup>

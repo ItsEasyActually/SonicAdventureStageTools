@@ -1,9 +1,5 @@
 ﻿using Kermalis.EndianBinaryIO;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using SAST.Lib.DataTypes;
 
 namespace SAST.Lib.Extensions
 {
@@ -95,6 +91,20 @@ namespace SAST.Lib.Extensions
 
 		#endregion
 
+		#region Custom Object Readers
+		public static RotationVector ReadShortRotationVector(this EndianBinaryReader reader)
+		{
+			RotationVector rotation = new RotationVector();
+
+			rotation.X = new Rotation(reader.ReadInt16());
+			rotation.Y = new Rotation(reader.ReadInt16());
+			rotation.Z = new Rotation(reader.ReadInt16());
+
+			return rotation;
+		}
+
+		#endregion
+
 		#endregion
 
 		#region EndianBinaryWriter
@@ -110,6 +120,16 @@ namespace SAST.Lib.Extensions
 		/// </summary>
 		/// <param name="writer"></param>
 		public static void SetAsBigEndian(this EndianBinaryWriter writer) { writer.Endianness = Endianness.BigEndian; }
+
+		#endregion
+
+		#region Custom Object Writers
+		public static void WriteShortRotationVector(this EndianBinaryWriter writer, RotationVector rotation)
+		{
+			writer.WriteInt16(rotation.X.ToInt16());
+			writer.WriteInt16(rotation.Y.ToInt16());
+			writer.WriteInt16(rotation.Z.ToInt16());
+		}
 
 		#endregion
 
