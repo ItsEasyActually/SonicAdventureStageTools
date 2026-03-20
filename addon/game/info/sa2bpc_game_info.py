@@ -1,0 +1,126 @@
+from .game_info import GameInfo
+
+class SA2BPCGameInfo(GameInfo):
+    '''SA2B PC Game Info'''
+
+    stage_list = [
+        ('CityEscape',      'City Escape',              ''),
+        ('WildCanyon',      'Wild Canyon',              ''),
+        ('PrisonLane',      'Prison Lane',              ''),
+        ('MetalHarbor',     'Metal Harbor',             ''),
+        ('GreenForest',     'Green Forest',             ''),
+        ('PumpkinHill',     'Pumpkin Hill',             ''),
+        ('MissionStreet',   'Mission Street',           ''),
+        ('AquaticMine',     'Aquatic Mine',             ''),
+        ('HiddenBase',      'Hidden Base',              ''),
+        ('PyramidCave',     'Pyramid Cave',             ''),
+        ('DeathChamber',    'Death Chamber',            ''),
+        ('EternalEngine',   'Eternal Engine',           ''),
+        ('MeteorHerd',      'Meteor Herd',              ''),
+        ('CrazyGadget',     'Crazy Gadget',             ''),
+        ('FinalRush',       'Final Rush',               ''),
+
+        ('IronGate',        'Iron Gate',                ''),
+        ('DryLagoon',       'Dry Lagoon',               ''),
+        ('SandOcean',       'Sand Ocean',               ''),
+        ('RadicalHighway',  'Radical Highway',          ''),
+        ('EggQuarters',     'Egg Quarters',             ''),
+        ('LostColony',      'Lost Colony',              ''),
+        ('WeaponsBed',      'Weapons Bed',              ''),
+        ('SecurityHall',    'Security Hall',            ''),
+        ('WhiteJungle',     'White Jungle',             ''),
+        ('SkyRail',         'Sky Rail',                 ''),
+        ('MadSpace',        'Mad Space',                ''),        
+        ('CosmicWall',      'Cosmic Wall',              ''),
+        ('FinalChase',      'Final Chase',              ''),
+
+        ('CannonsCoreS',    "Cannon's Core (Sonic)",    ''),
+        ('CannonsCoreE',    "Cannon's Core (Eggman)",   ''),
+        ('CannonsCoreT',    "Cannon's Core (Tails)",    ''),
+        ('CannonsCoreR',    "Cannon's Core (Rouge)",    ''),
+        ('CannonsCoreK',    "Cannon's Core (Knuckles)", ''),
+        ('GreenHill',       'Green Hill',               ''),
+        
+        ('SonicShadow1',    'Sonic vs. Shadow 1',       ''),
+        ('TailsEggman1',    'Tails vs. Eggman 1',       ''),
+        ('KnucklesRouge',   'Knuckles vs. Rouge',       ''),
+        ('TailsEggman2',    'Tails vs. Eggman 2',       ''),
+        ('SonicShadow2',    'Sonic vs. Shadow 2',       ''),
+        
+        ('BossBigFoot',     'Boss: Big Foot',           ''),
+        ('BossHotshot',     'Boss: Hot Shot',           ''),
+        ('BossFlyingDog',   'Boss: Flying Dog',         ''),
+        ('BossKingBoomBoo', 'Boss: King Boom Boo',      ''),
+        ('BossEggGolemS',   'Boss: Egg Golem (Sonic)',  ''),
+        ('BossBiolizard',   'Boss: Biolizard',          ''),
+        ('BossFinalHazard', 'Boss: Final Hazard',       ''),
+        ('BossEggGolemE',   'Boss: Egg Golem (Eggman)', ''),
+
+        ('WeaponsBed2P',    'Weapons Bed (2P)',         ''),
+        ('SandOcean2P',     'Sand Ocean (2P)',          ''),
+        ('DryLagoon2P',     'Dry Lagoon (2P)',          ''),
+        ('PyramidRace',     'Pyramid Race',             ''),
+        ('HiddenBase2P',    'Hidden Base (2P)',         ''),
+        ('PoolQuest',       'Pool Quest',               ''),
+        ('PlanetQuest',     'Planet Quest',             ''),
+        ('DeckRace',        'Deck Race',                ''),
+        ('DowntownRace',    'Downtown Race',            ''),
+        ('CosmicWall2P',    'Cosmic Wall (2P)',         ''),
+        ('GrindRace',       'Grind Race',               ''),
+        ('LostColony2P',    'Lost Colony (2P)',         ''),
+        ('EternalEngine2P', 'Eternal Engine (2P)',      ''),
+        ('MetalHarbor2P',   'Metal Harbor (2P)',        ''),
+        ('IronGate2P',      'Iron Gate (2P)',           ''),
+        ('DeathChamber2P',  'Death Chamber (2P)',       ''),
+        ('MissionStreet2P', 'Mission Street (2P)',      ''),
+        ('WildCanyon2P',    'Wild Canyon (2P)',         ''),
+
+        #('StoryKart',       'Kart Race (Story)',        ''),
+        #('KartRace',        'Kart Race (Minigame)',     ''),
+        #('ChaoWorld',       'Chao World',               ''),
+
+        ('TestStage',       'Test Stage',               ''),
+        ('SonicTest',       'Sonic Test',               ''),
+        ('KnucklesTest',    'Knuckles Test',            ''),
+    ]
+
+    camera_mode_list = [
+        ('None',        'None',         'No Camera'),
+        ('User',        'User',         'User specified camera (Usage unknown)'),
+        ('Follow',      'Follow',       'Follows the player, no LR controls.'),
+        ('Knuckles',    'Knuckles',     'Follows the player with respect to the player movement.'),
+        ('Carmel',      'Carmel',       'Similar to Knuckles but has slightly better level geometry collision detection.'),
+        ('Knuckles_L',  'KnucklesL',    'Same as the Knuckles mode except it is further away from the player and turns more smoothly.'),
+        ('Klamath',     'Klamath',      'Target based camera using the XY Target positions.'),
+        ('Point',       'Point',        'Points to a specified target while keeping the player in view.'),
+        ('Ashland',     'Ashland',      'Fixed point camera that tracks the player.'),
+        ('Fix',         'Fix',          'Fixed camera that focuses on a single target. Does not move with the player.'),
+        ('Space',       'Space',        'Utilizes any Points in the scene that the player enters to create a camera that moves along a spline when camera mode is active.'),
+        ('Leave',       'Leave',        'Locks the camera position to where it was when volume is activated. Camera tracks player like the Ashland mode.'),
+        ('GakuGaku',    'GakuGaku',     'Locks the camera position and rotation to where it was when the volume is activated.'),
+
+        ('Collision',   'Collision',    'Camera Collider'),
+        ('Colli_LR',    'Colli_LR',     'Camera Collider when using the LR triggers to rotate the camera. Does not collide with the camera unless the Triggers are pressed.'),
+
+        ('PStone',      'PStone',       'Similar to the Leave camera except it eases to a stop while the player moves.'),
+        ('Fix2',        'Fix2',         'Similar to the Leave camera except it eases to a stop while the player moves.'),
+        ('SnapShot',    'SnapShot',     'Special camera that the player can control with the DPad. Not advised for use in normal play.'),
+        ('Init',        'Init',         'Immediate reaction camera, follows the rotation of the joystick. Not advised for use in normal play.')    
+    ]
+
+    camera_adjustment_list = [
+        ('None',        'None',        ''),
+        ('User',        'User',        ''),
+        ('Half',        'Half',        ''),
+        ('Three1',      'Three1',      ''),
+        ('Three2',      'Three2',      ''),
+        ('Three3',      'Three3',      ''),
+        ('Three4',      'Three4',      ''),
+        ('Three5',      'Three5',      ''),
+        ('Relative1',   'Relative1',   ''),
+        ('Relative2',   'Relative2',   ''),
+        ('Relative3',   'Relative3',   ''),
+        ('Relative4',   'Relative4',   ''),
+        ('Relative5',   'Relative5',   ''),
+        ('Relative6',   'Relative6',   '')
+    ]

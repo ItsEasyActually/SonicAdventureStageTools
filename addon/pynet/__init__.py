@@ -1,4 +1,4 @@
-from ..logger.sast_logger import SASTLogger
+from ..utilities.logger.sast_logger import SASTLogger
 import bpy
 import os
 from .pynet_install_operator import PyNetInstallOperator

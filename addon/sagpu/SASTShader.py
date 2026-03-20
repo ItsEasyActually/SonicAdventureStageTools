@@ -3,10 +3,9 @@ from gpu.types import (
     GPUShader
 )
 import gpu
-from ..properties.sast_point_object_properties import SASTPointObjectProperties
-from ..properties.sast_object_properties import SASTObjectProperties
+from ..object.properties.sast_object_properties import SASTObjectProperties
+from ..object.properties.sast_point_object_properties import SASTPointObjectProperties
 
-# This is the base class to inheret from. This should not be registered on its own.
 class SASTShader():
     '''Base SAST GPU Shader'''
 

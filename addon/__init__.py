@@ -1,4 +1,4 @@
-from .logger.sast_logger import SASTLogger
+from .utilities.logger.sast_logger import SASTLogger
 bl_info = {
 	"name": "Sonic Adventure Stage Tools",
 	"author": "ItsEasyActually",
@@ -20,44 +20,19 @@ def get_directory():
 
 def get_name():
     return ADDON_NAME
-
-def compare_paths(a: str, b: str):
-    absolute = bpy.path.abspath(b)
-    absolute = os.path.abspath(absolute)
-    return a == absolute
-
-def link_assets():
-    SASTLogger.log('Linking Assets')
-    path: str = os.path.join(ADDON_DIR, 'blend', 'Cameras.blend')
-    found: bool = False
-    for library in bpy.data.libraries:
-        if (compare_paths(path, library.filepath)):
-            found = True
-            break
-    
-    if not found:
-        path = f'{path}{os.path.sep}NodeTree{os.path.sep}'
-        SASTLogger.log(f'Linking from {path}')
-        SASTLogger.log('Linking SA1 Camera Node')
-        bpy.ops.wm.link(filename='SA1CameraNode', directory=path)
-        SASTLogger.log('Linking SA2 Camera Node')
-        bpy.ops.wm.link(filename='SA2CameraNode', directory=path)
-        SASTLogger.log('Linking SA2 Point Node')
-        bpy.ops.wm.link(filename='SA2PointNode', directory=path)
-        # TODO: Add other Nodes to be linked as they are created.
     
 
 import bpy
 from . import pynet
-from . import properties
-from . import interface
-from . import operators
+from . import object
+from . import scene
+from . import settings
 from .sagpu.SASTShader import SASTShader
 classes = []
 classes.extend(pynet.to_register)
-classes.extend(properties.to_register)
-classes.extend(interface.to_register)
-classes.extend(operators.to_register)
+classes.extend(settings.cls_register)
+classes.extend(object.cls_register)
+classes.extend(scene.cls_register)
 
 def register():
     for cls in classes:
