@@ -71,7 +71,7 @@ class SetItemNode(SASTGeonodeBase):
         raw_props_header: bpy.types.UILayout
         raw_props_layout: bpy.types.UILayout
         raw_props_header, raw_props_layout = layout.panel(idname='pt_rawitemprops', default_closed=True)
-        raw_props_header.label(text='Set Item Properties')
+        raw_props_header.label(text='Set Item Properties', icon='OPTIONS')
         if (raw_props_layout != None):
             self.draw_rotation_properties(raw_props_layout, setitem.rotation_order)
             raw_props_layout.prop(data=self.node, property=self.get_layout_prop(self.scl_x), text='X Scale Property')
