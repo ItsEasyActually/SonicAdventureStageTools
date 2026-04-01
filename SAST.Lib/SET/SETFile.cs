@@ -18,32 +18,32 @@ namespace SAST.Lib.SET
 		public int ObjectCount { get { return Objects.Count; } }
 
 		/// <summary>
-		/// Adds a <see cref="SETObject"/> to the <see cref="SETFile"/>'s Cameras.
+		/// Adds a <see cref="SETObject"/> to the <see cref="SETFile"/>'s Objects.
 		/// </summary>
 		/// <param name="obj"></param>
 		public void AddObject(SETObject obj) { Objects.Add(obj); }
 
 		/// <summary>
-		/// Removes the supplied <see cref="SETObject"/> from the <see cref="SETFile"/>'s Cameras.
+		/// Removes the supplied <see cref="SETObject"/> from the <see cref="SETFile"/>'s Objects.
 		/// </summary>
 		/// <param name="obj"></param>
 		public void RemoveObject(SETObject obj) { Objects.Remove(obj); }
 
 		/// <summary>
-		/// Removes the <see cref="SETObject"/> at the supplied index from the <see cref="SETFile"/>'s Cameras.
+		/// Removes the <see cref="SETObject"/> at the supplied index from the <see cref="SETFile"/>'s Objects.
 		/// </summary>
 		/// <param name="index"></param>
 		public void RemoveObject(int index) { Objects.RemoveAt(index); }
 
 		/// <summary>
-		/// Clears the <see cref="SETFile"/>'s Cameras.
+		/// Clears the <see cref="SETFile"/>'s Objects.
 		/// </summary>
 		public void ClearObjects() { Objects.Clear(); }
 
 		/// <summary>
-		/// Gets the <see cref="SETFile"/>'s Cameras.
+		/// Gets the <see cref="SETFile"/>'s Objects.
 		/// </summary>
-		/// <returns>A copy of the Cameras List.</returns>
+		/// <returns>A copy of the Objects List.</returns>
 		public List<SETObject> GetObjects() { return Objects; }
 
 		#endregion

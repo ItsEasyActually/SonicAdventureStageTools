@@ -12,22 +12,25 @@ from ...object.geonode.sa2cameranode import SA2CameraNode
 from ...object.geonode.sa2pointnode import SA2PointNode
 from .sast_import_base import SASTImportBase
 from .sast_export_base import SASTExportBase
+from ...scene.properties.sast_scene_properties import SASTSceneProperties
 
 class SASTSceneOperators:
     @staticmethod
-    def draw_ui(layout: bpy.types.UILayout, context: bpy.types.Context, imp_op: str, exp_op: str):
-        layout.operator(imp_op, text='Import Camera File', icon='IMPORT')
-        layout.operator(exp_op, text='Export Camera File', icon='EXPORT')
+    def draw_ui(layout: bpy.types.UILayout, context: bpy.types.Context, cam_imp: str, cam_exp: str, set_imp: str, set_exp: str):
+        layout.operator(cam_imp, text='Import Camera File', icon='IMPORT')
+        layout.operator(cam_exp, text='Export Camera File', icon='EXPORT')
+        layout.operator(set_imp, text='Import SET File', icon='IMPORT')
+        layout.operator(set_exp, text='Export SET File', icon='EXPORT')
     
     @staticmethod
     def draw_ui_manual(layout: bpy.types.UILayout, context: bpy.types.Context):
         '''Draws the Manual Operators for the Scene.'''
-        SASTSceneOperators.draw_ui(layout, context, SASTImportCameraManual.bl_idname, SASTExportCameraManual.bl_idname)
+        SASTSceneOperators.draw_ui(layout, context, SASTImportCameraManual.bl_idname, SASTExportCameraManual.bl_idname, SASTImportSETManual.bl_idname, SASTExportSETManual.bl_idname)
 
     @staticmethod
     def draw_ui_auto(layout: bpy.types.UILayout, context: bpy.types.Context):
         '''Draws the Automatic Operators for the Scene.'''
-        SASTSceneOperators.draw_ui(layout, context, SASTImportCameraAutomatic.bl_idname, SASTExportCameraAutomatic.bl_idname)
+        SASTSceneOperators.draw_ui(layout, context, SASTImportCameraAutomatic.bl_idname, SASTExportCameraAutomatic.bl_idname, SASTImportSETAutomatic.bl_idname, SASTExportSETAutomatic.bl_idname)
 
 class SASTImportCameraManual(SASTImportBase):
     '''Manual Camera File Import'''
@@ -47,12 +50,18 @@ class SASTImportCameraManual(SASTImportBase):
 
         return {'FINISHED'}
 
-class SASTImportSETManual(bpy.types.Operator):
+class SASTImportSETManual(SASTImportBase):
     '''Manual SET File Import'''
     bl_idname='sastimport.setmanual'
     bl_label='Import SET File'
 
     def execute(self, context: bpy.types.Context):
+        try:
+            SASTImportManager.import_set_manual(self.files, os.path.dirname(self.filepath), context)
+        except Exception as error:
+            print('Import Failed')
+            raise error
+
         return {'FINISHED'}
 
 class SASTImportCameraAutomatic(bpy.types.Operator):
@@ -76,6 +85,11 @@ class SASTImportSETAutomatic(bpy.types.Operator):
     '''Automatic SET File Import'''
     bl_idname='sastimport.setauto'
     bl_label='Import SET File Auto'
+
+    @classmethod
+    def poll(cls, context: bpy.types.Context) -> bool:
+        scene_props: SASTSceneProperties = SASTSceneProperties.get_properties()
+        return (scene_props.get_objlist_size() > 0)
 
     def execute(self, context: bpy.types.Context):
         return {'FINISHED'}
@@ -166,6 +180,11 @@ class SASTExportSETAutomatic(bpy.types.Operator):
     '''Automatic SET File Export'''
     bl_idname='sastexport.setauto'
     bl_label='Export SET File Auto'
+
+    @classmethod
+    def poll(cls, context: bpy.types.Context) -> bool:
+        scene_props: SASTSceneProperties = SASTSceneProperties.get_properties()
+        return (scene_props.get_objlist_size() > 0)
 
     def execute(self, context: bpy.types.Context):
         return {'FINISHED'}

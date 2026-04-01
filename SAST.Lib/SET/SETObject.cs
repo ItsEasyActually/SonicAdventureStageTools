@@ -119,6 +119,26 @@ namespace SAST.Lib.SET
 			endianBinaryWriter.WriteObject(Node.Scale);
 		}
 
+		/// <summary>
+		/// Returns a correct three axis rotation
+		/// </summary>
+		/// <param name="order"></param>
+		/// <returns></returns>
+		public RotationVector GetCorrectedRotationOrderForBlender(string order)
+		{
+			RotationVector vec = Node.Rotation;
+
+			if (Enum.TryParse(order, out RotationVector.AxisOrder axisOrder))
+			{
+				if (axisOrder != RotationVector.AxisOrder.XYZ)
+					vec.SwapAxisOrder(axisOrder, RotationVector.AxisOrder.XYZ);
+			}
+
+			vec.SwapOrientation();
+
+			return vec;
+		}
+
 		#endregion
 		#endregion
 

@@ -30,9 +30,9 @@ from . import settings
 from .sagpu.SASTShader import SASTShader
 classes = []
 classes.extend(pynet.to_register)
-classes.extend(settings.cls_register)
-classes.extend(object.cls_register)
 classes.extend(scene.cls_register)
+classes.extend(object.cls_register)
+classes.extend(settings.cls_register)
 
 def register():
     for cls in classes:

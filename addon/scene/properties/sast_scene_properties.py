@@ -96,9 +96,6 @@ class SASTSceneProperties(bpy.types.PropertyGroup):
     def register(cls):
         bpy.types.Scene.sast_properties = bpy.props.PointerProperty(type=cls)
 
-    def draw_object_list_editor(self, layout: bpy.types.UILayout):
-        layout.template_list()
-
     def draw_auto_ui(self, layout: bpy.types.UILayout, context: bpy.types.Context):
         '''Draws the Automatic Mode UI Items'''
         layout.prop(data=self, property='load_directory')
@@ -119,6 +116,75 @@ class SASTSceneProperties(bpy.types.PropertyGroup):
         grid.prop_enum(data=self, property='mode', value='AUTO')
         if (self.mode == 'AUTO'):
             self.draw_auto_ui(layout, context)
+
+    #region Directory Checkers
+    def is_directory_set(self) -> bool:
+        return len(self.load_directory) > 0
+
+    #endregion
+
+    #region Object List Functions
+    def get_objlist_size(self) -> int:
+        return len(self.objlist)
+
+    def get_active_object(self) -> SASTSETDefinitionProperties | None:
+        '''Returns the current active object from the Object List.'''
+        if (self.active_object > -1):
+            return self.objlist[self.active_object]
+        else:
+            return None
+
+    def add_object(self):
+        '''Adds a new object to the Object List.'''
+        item: SASTSETDefinitionProperties = self.objlist.add()
+        item.internal_name = 'OBJECT'
+        self.active_object = len(self.objlist) - 1
+
+    def remove_object(self):
+        '''Removes the currently selected object from the Object List.'''
+        if (self.active_object > -1):
+            index: int = self.active_object
+            self.active_object = self.active_object - 1
+            self.objlist.remove(index)
+
+    def clear_objectlist(self):
+        self.active_object = -1
+        self.objlist.clear()
+
+    def move_object(self, direction: str):
+        '''Moves the object in a specified direction. Only UP and DOWN are valid inputs for the direction.'''
+        current_index: int = self.active_object
+        next_index = None
+        match (direction):
+            case 'UP':
+                next_index: int = current_index - 1
+                if (next_index <= -1):
+                    next_index = None
+            case 'DOWN':
+                next_index: int = current_index + 1
+                if (next_index > len(self.objlist)-1):
+                    next_index = None
+
+        if (next_index is not None):
+            self.objlist.move(current_index, next_index)
+            if (self.active_object == current_index):
+                self.active_object = next_index
+
+    def move_object_max(self, direction: str):
+        '''Moves the object to the first or last position depending on the direction. Only UP and DOWN are valid inputs for the direction.'''
+        current_index: int = self.active_object
+        match (direction):
+            case 'UP':
+                self.objlist.move(current_index, 0)
+                if (self.active_object == current_index):
+                    self.active_object = 0
+            case 'DOWN':
+                bottom: int = len(self.objlist) - 1
+                self.objlist.move(current_index, bottom)
+                if (self.active_object == current_index):
+                    self.active_object = bottom
+
+    #endregion
 
     @staticmethod
     def get_properties():

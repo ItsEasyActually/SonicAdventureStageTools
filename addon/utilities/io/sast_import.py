@@ -3,8 +3,12 @@ import bpy
 import os
 
 from ..logger.sast_logger import SASTLogger
-from ...scene.properties import SASTSceneProperties
+from ...scene.properties import (
+    SASTSceneProperties,
+    SASTSETDefinitionProperties
+)
 from ...pynet import PyNetManager
+from ..set.set_asset_manager import SetAssetManager
 
 from typing import TYPE_CHECKING
 if TYPE_CHECKING:
@@ -66,6 +70,21 @@ class SASTImportManager:
             case 'Demo':
                 props.for_demo = True
                 props.for_singleplayer = False
+
+    @staticmethod
+    def get_set_item_flags(flags: int) -> set[str]:
+        retflags: set[str] = set[str]()
+        match (flags):
+            case 0:
+                retflags.add('NoFlags')
+            case 1:
+                retflags.add('Flag1')
+            case 2:
+                retflags.add('Flag2')
+            case 4:
+                retflags.add('Flag4')
+            case 8:
+                pass
 
     #endregion
 
@@ -385,6 +404,116 @@ class SASTImportManager:
 
     #endregion
 
+    #region SET Import
+    @staticmethod
+    def handle_set_item_rotation(obj: bpy.types.Object, rotation_mode: str):
+        '''Updates an object\'s rotation mode.'''
+        match (rotation_mode):
+            case 'NONE':
+                obj.rotation_mode = 'XYZ'
+                obj.rotation_euler[0] = 0
+                obj.rotation_euler[1] = 0
+                obj.rotation_euler[2] = 0
+                obj.lock_rotation[0] = True
+                obj.lock_rotation[1] = True
+                obj.lock_rotation[2] = True
+            case 'X':
+                obj.rotation_euler[1] = 0
+                obj.rotation_euler[2] = 0
+                obj.lock_rotation[1] = True
+                obj.lock_rotation[2] = True 
+            case 'Y':
+                obj.rotation_euler[0] = 0
+                obj.rotation_euler[2] = 0
+                obj.lock_rotation[0] = True
+                obj.lock_rotation[2] = True
+            case 'Z':
+                obj.rotation_euler[1] = 0
+                obj.rotation_euler[0] = 0
+                obj.lock_rotation[1] = True
+                obj.lock_rotation[0] = True
+            case 'XY' | 'YX' | 'XYZ' | 'YXZ':
+                if (rotation_mode == 'XYZ') or (rotation_mode == 'XY'):
+                    obj.rotation_mode = 'XYZ'
+                elif (rotation_mode == 'YXZ') or (rotation_mode == 'YX'):
+                    obj.rotation_mode = 'YXZ'
+
+                if (len(rotation_mode) == 2):
+                    obj.rotation_euler[2] = 0
+                    obj.lock_rotation[2] = True
+                else:
+                    obj.lock_rotation[2] = False
+            case 'XZ' | 'ZX' | 'XZY' | 'ZXY':
+                if (rotation_mode == 'XZY') or (rotation_mode == 'XZ'):
+                    obj.rotation_mode = 'XZY'
+                elif (rotation_mode == 'ZXY') or (rotation_mode == 'ZX'):
+                    obj.rotation_mode = 'ZXY'
+
+                if (len(rotation_mode) == 2):
+                    obj.rotation_euler[1] = 0
+                    obj.lock_rotation[1] = True
+                else:
+                    obj.lock_rotation[1] = False
+            case 'YZ' | 'ZY' | 'YZX' | 'ZYX':
+                if (rotation_mode == 'YZX') or (rotation_mode == 'YZ'):
+                    obj.rotation_mode = 'YZX'
+                elif (rotation_mode == 'ZYX') or (rotation_mode == 'ZY'):
+                    obj.rotation_mode = 'ZYX'
+
+                if (len(rotation_mode) == 2):
+                    obj.rotation_euler[0] = 0
+                    obj.lock_rotation[0] = True
+                else:
+                    obj.lock_rotation[0] = False
+
+    @staticmethod
+    def process_set_item(setitem, index: int, collection: bpy.types.Collection, scene_props: SASTSceneProperties):
+        from ...object.properties.sast_object_properties import SASTObjectProperties
+        from ...object.properties.sast_set_object_properties import SASTSETObjectProperties
+        from ...object.geonode.setitemnode import SetItemNode
+        if (setitem.ObjectID < scene_props.get_objlist_size()):
+            iteminfo: SASTSETDefinitionProperties = scene_props.objlist[setitem.ObjectID]
+        else:
+            iteminfo: SASTSETDefinitionProperties = scene_props.objlist[0]
+
+        item_name: str = iteminfo.internal_name
+        if (len(iteminfo.name) > 0):
+            item_name = iteminfo.name
+        obj: bpy.types.Object = SetAssetManager.get_object(iteminfo.asset_name)
+        if (obj is not None):
+            obj.name = f'{index:03d}_{item_name}'
+            obj.location[0] = setitem.Node.Position.X
+            obj.location[1] = -setitem.Node.Position.Z
+            obj.location[2] = setitem.Node.Position.Y
+            obj.rotation_euler[0] = setitem.Node.Rotation.X.Radians
+            obj.rotation_euler[1] = -setitem.Node.Rotation.Z.Radians
+            obj.rotation_euler[2] = setitem.Node.Rotation.Y.Radians
+            SASTImportManager.handle_set_item_rotation(obj, iteminfo.rotation_order)
+            obj.lock_scale[0] = True
+            obj.lock_scale[1] = True
+            obj.lock_scale[2] = True
+
+            obj_props: SASTObjectProperties = SASTObjectProperties.get_properties(obj)
+            SASTImportManager.get_object_flag(obj_props, collection.name)
+            obj_props.objtype = 'SET'
+
+            set_props: SASTSETObjectProperties = SASTSETObjectProperties.get_properties(obj)
+            set_props.objectid = str(setitem.ObjectID)
+            set_props.fallback_objid = setitem.ObjectID
+            #set_props.objectflags = setitem.Flags
+
+            node: SetItemNode = SetItemNode(obj)
+            node.set_rot_x(setitem.Node.Rotation.X.Angle)
+            node.set_rot_y(setitem.Node.Rotation.Y.Angle)
+            node.set_rot_z(setitem.Node.Rotation.Z.Angle)
+            node.set_scl_x(setitem.Node.Scale.X)
+            node.set_scl_y(setitem.Node.Scale.Y)
+            node.set_scl_z(setitem.Node.Scale.Z)
+            
+            collection.objects.link(obj)
+
+    #endregion
+
     #region Import Processing
     @staticmethod
     def import_cam_manual(files, directory: str, context: bpy.types.Context):
@@ -433,6 +562,29 @@ class SASTImportManager:
 
         SASTImportManager.importing = False
         SASTLogger.log('Camera Import Complete!')
+
+    @staticmethod
+    def import_set_manual(files, directory: str, context: bpy.types.Context):
+        SASTImportManager.importing = True
+        SASTLogger.log(f'Import {len(files)} SET Files: MANUAL MODE')
+
+        if (len(files) > 0):
+            for file in files:
+                path: str = os.path.join(directory, file.name)
+                collection: bpy.types.Collection = bpy.data.collections.new(name=file.name)
+                context.scene.collection.children.link(collection)
+                scene_props: SASTSceneProperties = SASTSceneProperties.get_properties()
+                SASTLogger.log(f'Importing SET File: {file}')
+                PyNetManager.load_dll()
+                from SAST.Lib.Blender import ImportManager
+                index: int = 0
+                setfile = ImportManager.ImportSETFile(path)
+                for item in setfile.GetObjects():
+                    SASTImportManager.process_set_item(item, index, collection, scene_props)
+                    index += 1
+
+        SASTImportManager.importing = False
+        SASTLogger.log('SET File Import Complete!')
 
     #endregion
 

@@ -5,6 +5,7 @@ from bpy.props import (
     CollectionProperty,
     EnumProperty
 )
+from ...utilities.geonode.geometry_node_manager import GeometryNodeManager
 
 class SASTExportBase(bpy.types.Operator):
     '''Base Export Operations'''

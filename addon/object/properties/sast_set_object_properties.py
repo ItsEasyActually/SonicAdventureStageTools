@@ -17,12 +17,23 @@ class SASTSETObjectProperties(bpy.types.PropertyGroup):
 
     fallback_objid: IntProperty(
         name='Fallback Object ID',
-        description='Actual value of the object ID, used when the Override Object ID toggle is enabled or when the Object ID is 0 while this value is higher than 0.',
+        description='Actual value of the object ID, used when the Override Object ID toggle is enabled.',
         default=0
     )
 
     def populate_objectid(self, context: bpy.types.Context):
-        return []
+        scene_props: SASTSceneProperties = SASTSceneProperties.get_properties()
+        items = []
+        if (scene_props.get_objlist_size() > 0):
+            index: int = 0
+            for item in scene_props.objlist:
+                name: str = item.internal_name
+                if (len(item.name) > 0):
+                    name = item.name
+                items.append((str(index), name, '', index))
+                index += 1
+            
+        return items
 
     def update_objectid(self, context: bpy.types.Context):
         pass
@@ -53,11 +64,16 @@ class SASTSETObjectProperties(bpy.types.PropertyGroup):
         name='Object Flags',
         description='Object Flags stored in the SET File. Read the description for each item for more information.',
         default=0,
-        items=populate_objectflags
+        items=populate_objectflags,
+        options={'ENUM_FLAG'}
     )
 
     def draw_ui(self, layout: bpy.types.UILayout):
-        pass
+        layout.prop(data=self, property='objectid')
+        layout.prop(data=self, property='override_id')
+        row: bpy.types.UILayout = layout.row()
+        row.enabled = self.override_id
+        row.prop(data=self, property='fallback_objid')
 
     @classmethod
     def register(cls):

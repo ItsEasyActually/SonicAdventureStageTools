@@ -19,6 +19,13 @@ class GeometryNodeManager:
         return False
 
     @staticmethod
+    def has_geometry_node(obj: Object) -> bool:
+        '''Checks if the supplied object has a NodeTree as its first modifier entry and returns True. Data is not as safely validated.'''
+        if (len(obj.modifiers) > 0):
+            if (obj.modifiers[0].id_data == 'NodeTree'):
+                return True
+
+    @staticmethod
     def clear_geometry_node(obj: Object):
         '''Clears all modifiers from the specified object'''
         if (len(obj.modifiers) > 0):

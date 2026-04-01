@@ -2,6 +2,7 @@ import bpy
 
 from ...utilities.interface.sast_viewport_panel_base import SASTViewportPanelBase
 from ...scene.properties.sast_scene_properties import SASTSceneProperties
+from ...scene.properties.sast_set_definition_properties import SASTSETDefinitionProperties
 from ...object.properties.sast_object_properties import SASTObjectProperties
 from ...object.properties.sast_set_object_properties import SASTSETObjectProperties
 from ...object.properties.sast_cam_object_properties import SASTCAMObjectProperties
@@ -9,6 +10,7 @@ from ...object.properties.sast_point_object_properties import SASTPointObjectPro
 from ...object.geonode.sa1cameranode import SA1CameraNode
 from ...object.geonode.sa2cameranode import SA2CameraNode
 from ...object.geonode.sa2pointnode import SA2PointNode
+from ...object.geonode.setitemnode import SetItemNode
 from ...object.operators.sast_cam_object_operators import SASTCamObjectOperators
 
 class SASTObjectInterface(SASTViewportPanelBase):
@@ -77,6 +79,12 @@ class SASTObjectInterface(SASTViewportPanelBase):
                             SASTCamObjectOperators.draw_ui(opbody, context)
                 case 'SET':
                     layout.separator(factor=2, type='LINE')
+                    setitem_properties: SASTSETObjectProperties = SASTSETObjectProperties.get_properties(obj)
+                    setitem_properties.draw_ui(layout)
+                    set_item_node: SetItemNode = SetItemNode(obj)
+                    if (set_item_node.node != None):
+                        setitem: SASTSETDefinitionProperties = scene_properties.objlist[int(setitem_properties.objectid)]
+                        set_item_node.draw_ui(layout, setitem)
 
             obj_properties.draw_export_flags(layout, context)
         else:

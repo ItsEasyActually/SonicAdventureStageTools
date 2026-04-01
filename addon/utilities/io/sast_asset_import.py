@@ -26,6 +26,9 @@ class SASTAssetImport:
         '''Links an asset from the supplied relative path. Paths are expected to be relative to the addon's root.'''
         SASTLogger.log(f'Linking Asset: {link_item_name}')
         path: str = os.path.join(get_addon_directory(), relative_path)
+        if (os.path.exists(path) == False):
+            return
+
         found: bool = False
         for library in bpy.data.libraries:
             if (SASTAssetImport.compare_paths(path, library.filepath)):
@@ -36,13 +39,16 @@ class SASTAssetImport:
         if not found:
             path = f'{path}{os.path.sep}{library_path}{os.path.sep}'
             SASTLogger.log(f'Linking {link_item_name} from {path}')
-            bpy.ops.wm.link(filename=link_item_name, directory=path)
+            bpy.ops.wm.link(filename=link_item_name, directory=path, active_collection=False)
 
     @staticmethod
     def append_asset(relative_path: str, library_path: str, append_item_name: str):
         '''Appends an asset from the supplied relative path. Paths are expected to be relative to the addon's root.'''
         SASTLogger.log(f'Appending Asset: {append_item_name}')
         path: str = os.path.join(get_addon_directory(), relative_path)
+        if (os.path.exists(path) == False):
+            return
+
         found: bool = False
         for library in bpy.data.libraries:
             if (SASTAssetImport.compare_paths(path, library.filepath)):
