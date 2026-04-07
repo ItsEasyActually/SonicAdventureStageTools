@@ -10,14 +10,6 @@ from bpy.props import (
 class SASTSETDefinitionProperties(bpy.types.PropertyGroup):
     '''SET Object Definition Property Group'''
 
-    property_display_options = [
-        ('NONE','No Custom Display','Does not display the property with any customized display options.'),
-        ('ENUM','List Property','Displays the property using a list system.'),
-        ('INT','Integer Property','Displays the property using an int value.'),
-        ('FLOAT','Float Property','Displays the property using a float value.'),
-        ('BOOL','Bool Property','Displays the property using a bool value.')
-    ]
-
     #region Object List Information
     internal_name: StringProperty(
         name='Internal Name',
@@ -68,7 +60,7 @@ class SASTSETDefinitionProperties(bpy.types.PropertyGroup):
     load_range: FloatProperty(
         name='Load Distance',
         description='Distance from the player in which the object will load. Only applicable if the Load Attribute used is Load By Distance.',
-        default=360000
+        default=0
     )
 
     function_address: StringProperty(
@@ -127,51 +119,6 @@ class SASTSETDefinitionProperties(bpy.types.PropertyGroup):
             ( 'ZYX',    'ZYX',      '' )
         ],
         default='NONE'
-    )
-
-    def get_property_display_options(self, context):
-        return self.property_display_options
-
-    display_rotation_x_property: EnumProperty(
-        name='X Rotation Property Display Options',
-        description='Set the display options for the X Rotation Property. Select Do Not Display if the object uses real rotations on the X Axis.',
-        items=get_property_display_options,
-        default=0
-    )
-
-    display_rotation_y_property: EnumProperty(
-        name='Y Rotation Property Display Options',
-        description='Set the display options for the Y Rotation Property. Select Do Not Display if the object uses real rotations on the Y Axis.',
-        items=get_property_display_options,
-        default=0
-    )
-
-    display_rotation_z_property: EnumProperty(
-        name='Z Rotation Property Display Options',
-        description='Set the display options for the Z Rotation Property. Select Do Not Display if the object uses real rotations on the Z Axis.',
-        items=get_property_display_options,
-        default=0
-    )
-
-    display_scale_x_property: EnumProperty(
-        name='X Scale Property Display Options',
-        description='Set the display options for the X Scale Property.',
-        items=get_property_display_options,
-        default=0
-    )
-
-    display_scale_y_property: EnumProperty(
-        name='Y Scale Property Display Options',
-        description='Set the display options for the Y Scale Property.',
-        items=get_property_display_options,
-        default=0
-    )
-
-    display_scale_z_property: EnumProperty(
-        name='Z Scale Property Display Options',
-        description='Set the display options for the Z Scale Property.',
-        items=get_property_display_options,
-        default=0
     )
 
     #endregion

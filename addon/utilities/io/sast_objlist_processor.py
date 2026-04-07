@@ -153,11 +153,12 @@ class SASTObjListProcessor:
             for section in config.sections():
                 entry: SASTSETDefinitionProperties = objlist.add()
                 entry.internal_name = config.get(section, 'Name')
-                entry.load_range = config.getfloat(section, 'Distance')
                 entry.function_address = config.get(section, 'Code')
                 entry.task_level = SASTObjListProcessor.get_task_level(config.getint(section, 'Arg2'))
                 entry.load_attributes = SASTObjListProcessor.get_attributes(config.getint(section, 'Flags'))
                 entry.init_mode = SASTObjListProcessor.get_init_mode(config.getint(section, 'Arg1'))
+                if config.has_option(section, 'Distance'):
+                    entry.load_range = config.getfloat(section, 'Distance')
         else:
             print('File length was less than 0')
 
