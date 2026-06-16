@@ -33,6 +33,8 @@ class SADXPCGameInfo(GameInfo):
         ('ThePast',             'The Past',                     ''),
         ('TwinkleCircuit',      'Twinkle Circuit',              ''),
         ('Sandhill',            'Sandhill',                     ''),
+        ('SkyChase',            'Sky Chase',                    ''),
+        ('HedgehogHammer',      'Hedgehog Hammer',              ''),
         ('ChaoGardenSS',        'Chao Garden (Station Square)', ''),
         ('ChaoGardenEC',        'Chao Garden (Egg Carrier)',    ''),
         ('ChaoGardenMR',        'Chao Garden (Mystic Ruins)',   ''),
