@@ -30,6 +30,36 @@ namespace SAST.Lib.Blender
 		public static void ExportSETFile(SETFile file, string path, bool bigEndian) { ExportFile<SETFile>(file, path, bigEndian); }
 
 		/// <summary>
+		/// Exports two <see cref="SETFile"/>s from a single supplied SET file.
+		/// </summary>
+		/// <param name="file"></param>
+		/// <param name="path"></param>
+		/// <param name="bigEndian"></param>
+		public static void ExportSA2SETFile(SETFile file, string path, bool bigEndian)
+		{
+			string extension = Path.GetExtension(path);
+			string filename = Path.GetFileNameWithoutExtension(path);
+			string directory = Path.GetFullPath(Path.GetDirectoryName(path));
+
+			SETFile sfile = new SETFile();
+			SETFile ufile = new SETFile();
+
+			foreach (var item in file.GetObjects())
+			{
+				if (item.Flags.HasFlag(SETObject.SetFlags.Flag4))
+					ufile.AddObject(item);
+				else
+					sfile.AddObject(item);
+			}
+
+			string sfilepath = Path.Combine(directory, $"{filename}_s{extension}");
+			string ufilepath = Path.Combine(directory, $"{filename}_u{extension}");
+
+			ExportFile<SETFile>(sfile, sfilepath, bigEndian);
+			ExportFile<SETFile>(ufile, ufilepath, bigEndian);
+		}
+
+		/// <summary>
 		/// Exports a <see cref="SA1CAMFile"/>.
 		/// </summary>
 		/// <param name="file"></param>
@@ -134,9 +164,31 @@ namespace SAST.Lib.Blender
 		/// <param name="stageID"></param>
 		/// <param name="actID"></param>
 		/// <param name="bigEndian"></param>
-		public static void ExportSA2SETFileAuto(List<SETFile> files, string directory, string stageID, string actID, bool bigEndian)
+		public static void ExportSA2SETFileAuto(List<SETFile> files, string directory, string stageID, string actID, int mode, bool bigEndian)
 		{
 			ExportSA2FileAuto<SETFile>(files, directory, stageID, actID, bigEndian);
+
+			if (Directory.Exists(directory))
+			{
+				foreach (var file in files)
+				{
+					string filename = SA2StageInfo.GetFilename(stageID, actID, "None", true);
+
+					switch (mode)
+					{
+						case 1:
+							filename = $"{filename}_2p.bin";
+							break;
+						case 2:
+							filename = $"{filename}_hd.bin";
+							break;
+					}
+
+					string filepath = Path.Combine(directory, filename);
+
+					ExportSA2SETFile(file, filepath, bigEndian);
+				}
+			}
 		}
 
 		/// <summary>

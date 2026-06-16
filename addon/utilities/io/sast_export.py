@@ -1,13 +1,16 @@
+import os
 import bpy
 from ...pynet import PyNetManager
 from ...object.geonode import (
     SA1CameraNode,
     SA2CameraNode,
-    SA2PointNode
+    SA2PointNode,
+    SetItemNode
 ) 
 from ...scene.properties.sast_scene_properties import SASTSceneProperties
 from ...object.properties.sast_cam_object_properties import SASTCAMObjectProperties
 from ...object.properties.sast_point_object_properties import SASTPointObjectProperties
+from ...object.properties.sast_set_object_properties import SASTSETObjectProperties
 from ..logger.sast_logger import SASTLogger
 
 class SASTExportManager:
@@ -108,7 +111,7 @@ class SASTExportManager:
 
             output = Dictionary[str, SA1CAMFile]()
             
-            from ..properties.sast_object_properties import SASTObjectProperties
+            from ...object.properties.sast_object_properties import SASTObjectProperties
             for obj in objs:
                 props: SASTObjectProperties = SASTObjectProperties.get_properties(obj)
 
@@ -391,3 +394,195 @@ class SASTExportManager:
                 SASTExportManager.export_sa1_camera_auto(path, objs, scene_props)
             case 'SA2BPC':
                 SASTExportManager.export_sa2_camera_auto(path, objs, scene_props)
+
+    #region SET Export
+    @staticmethod
+    def get_setitem_flags(flags: str, dependent_set: bool) -> int:
+        output: int = 0
+        match (flags):
+            case '1':
+                output = 1
+            case '2':
+                output = 2
+            case _:
+                output = 0
+        
+        if (dependent_set == True):
+            output += 8
+
+        return output
+
+    @staticmethod
+    def process_setitem_rotation(obj: bpy.types.Object, geonode: SetItemNode):
+        from SAST.Lib.DataTypes import RotationVector
+        rotation: RotationVector = RotationVector()
+
+        if (obj.lock_rotation[0] == False):
+            rotation.X.FromRadians(obj.rotation_euler[0])
+        else:
+            rotation.X.Angle = geonode.get_rot_x()
+
+        if (obj.lock_rotation[1] == False):
+            rotation.Z.FromRadians(-obj.rotation_euler[1])
+        else:
+            rotation.Z.Angle = geonode.get_rot_z()
+
+        if (obj.lock_rotation[2] == False):
+            rotation.Y.FromRadians(obj.rotation_euler[2])
+        else:
+            rotation.Y.Angle = geonode.get_rot_y()
+
+        return rotation
+
+    @staticmethod
+    def get_set_item(obj: bpy.types.Object):
+        geonode: SetItemNode = SetItemNode(obj)
+        props: SASTSETObjectProperties = SASTSETObjectProperties.get_properties(obj)
+        from SAST.Lib.SET import SETObject
+        setobj = SETObject()
+        if (props.override_id == True):
+            setobj.ObjectID = props.fallback_objid
+        else:
+            setobj.ObjectID = int(props.objectid)
+        setobj.SetObjectFlags(SASTExportManager.get_setitem_flags(props.objectflags, props.dependent_set))
+        setobj.Node.Position.X = obj.location[0]
+        setobj.Node.Position.Z = -obj.location[1]
+        setobj.Node.Position.Y = obj.location[2]
+        setobj.Node.Rotation = SASTExportManager.process_setitem_rotation(obj, geonode)
+        setobj.Node.Scale.X = geonode.get_scl_x()
+        setobj.Node.Scale.Y = geonode.get_scl_y()
+        setobj.Node.Scale.Z = geonode.get_scl_z()
+
+        return setobj
+
+    @staticmethod
+    def get_set_items(objs: list):
+        items: list = []
+
+        for obj in objs:
+            items.append(SASTExportManager.get_set_item(obj))
+
+        return items
+
+    @staticmethod
+    def get_set_file(objs: list[bpy.types.Object]):
+        from SAST.Lib.SET import SETFile
+        file = SETFile()
+        items: list = SASTExportManager.get_set_items(objs)
+        for item in items:
+            file.AddObject(item)
+
+        return file
+
+    @staticmethod
+    def export_setfile(path: str, objs: list[bpy.types.Object], isBigEndian: bool = False):
+        scene_props: SASTSceneProperties = SASTSceneProperties.get_properties()
+        SASTLogger.log(f'Exporting Camera File for {scene_props.game_id}')
+
+        from SAST.Lib.SET import SETFile
+        file = SASTExportManager.get_set_file(objs)
+
+        from SAST.Lib.Blender import ExportManager
+        match (scene_props.game_id):
+            case 'SADXPC':
+                ExportManager.ExportSETFile(file, path, isBigEndian)
+            case 'SA2BPC':
+                ExportManager.ExportSA2SETFile(file, path, isBigEndian)
+
+    @staticmethod
+    def export_sa1setfile_auto(path: str, objs: list[bpy.types.Object], scene_props: SASTSceneProperties, isBigEndian: bool = False):
+
+        PyNetManager.load_dll()
+        if (scene_props != None):
+            SASTLogger.log('Exporting SA1 SET: AUTO MODE')
+            from System.Collections.Generic import Dictionary
+            from SAST.Lib.SET import SETFile
+            from SAST.Lib.Blender import ExportManager
+
+            sonicobjs = list[bpy.types.Object]()
+            tailsobjs = list[bpy.types.Object]()
+            knucklesobjs = list[bpy.types.Object]()
+            amyobjs = list[bpy.types.Object]()
+            gammaobjs = list[bpy.types.Object]()
+            bigobjs = list[bpy.types.Object]()
+            eggmanobjs = list[bpy.types.Object]()
+            tikalobjs = list[bpy.types.Object]()
+            lastobjs = list[bpy.types.Object]()
+
+            output = Dictionary[str, SETFile]()
+            
+            from ...object.properties.sast_object_properties import SASTObjectProperties
+            for obj in objs:
+                props: SASTObjectProperties = SASTObjectProperties.get_properties(obj)
+
+                if (props.for_sonic):
+                    sonicobjs.append(obj)
+
+                if (props.for_tails):
+                    tailsobjs.append(obj)
+
+                if (props.for_knuckles):
+                    knucklesobjs.append(obj)
+                
+                if (props.for_amy):
+                    amyobjs.append(obj)
+
+                if (props.for_gamma):
+                    gammaobjs.append(obj)
+
+                if (props.for_big):
+                    bigobjs.append(obj)
+
+                if (props.for_eggman):
+                    eggmanobjs.append(obj)
+
+                if (props.for_tikal):
+                    tikalobjs.append(obj)
+
+                if (props.for_last):
+                    lastobjs.append(obj)
+
+            if (len(sonicobjs) > 0):
+                SASTLogger.log('Processing Sonic Cameras')
+                output.Add('Sonic', SASTExportManager.get_set_file(sonicobjs))
+            if (len(tailsobjs) > 0):
+                SASTLogger.log('Processing Tails Cameras')
+                output.Add('Tails', SASTExportManager.get_set_file(tailsobjs))
+            if (len(knucklesobjs) > 0):
+                SASTLogger.log('Processing Knuckles Cameras')
+                output.Add('Knuckles', SASTExportManager.get_set_file(knucklesobjs))
+            if (len(amyobjs) > 0):
+                SASTLogger.log('Processing Amy Cameras')
+                output.Add('Amy', SASTExportManager.get_set_file(amyobjs))
+            if (len(gammaobjs) > 0):
+                SASTLogger.log('Processing Gamma Cameras')
+                output.Add('Gamma', SASTExportManager.get_set_file(gammaobjs))
+            if (len(bigobjs) > 0):
+                SASTLogger.log('Processing Big Cameras')
+                output.Add('Big', SASTExportManager.get_set_file(bigobjs))
+            if (len(eggmanobjs) > 0):
+                SASTLogger.log('Processing Eggman Cameras')
+                output.Add('Eggman', SASTExportManager.get_set_file(eggmanobjs))
+            if (len(tikalobjs) > 0):
+                SASTLogger.log('Processing Tikal Cameras')
+                output.Add('Tikal', SASTExportManager.get_set_file(tikalobjs))
+            if (len(lastobjs) > 0):
+                SASTLogger.log('Processing Last Story Cameras')
+                output.Add('Last', SASTExportManager.get_set_file(lastobjs))
+
+            ExportManager.ExportSA1SETFileAuto(output, path, scene_props.stage_id, scene_props.act_id, False)
+        else:
+            print('Scene Properties were None! Nothing exported.')
+
+
+    @staticmethod
+    def export_setfile_automatic(path: str, objs: list[bpy.types.Object], isBigEndian: bool = False):
+        scene_props: SASTSceneProperties = SASTSceneProperties.get_properties()
+
+        match (scene_props.game_id):
+            case 'SADXPC':
+                SASTExportManager.export_sa1setfile_auto(path, objs, scene_props, isBigEndian)
+            case 'SA2BPC':
+                pass
+
+    #endregion

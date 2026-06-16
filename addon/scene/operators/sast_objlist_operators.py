@@ -46,6 +46,9 @@ class SASTObjListLoad(bpy.types.Operator):
     def execute(self, context: bpy.types.Context):
         scene_props: SASTSceneProperties = SASTSceneProperties.get_properties()
 
+        file: str = SASTObjListProcessor.get_list_file(scene_props.stage_id, scene_props.act_id)
+        SASTObjListProcessor.read_json_file(scene_props.objlist, file)
+
         return {'FINISHED'}
 
 class SASTObjListExport(bpy.types.Operator):

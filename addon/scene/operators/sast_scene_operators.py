@@ -92,6 +92,15 @@ class SASTImportSETAutomatic(bpy.types.Operator):
         return (scene_props.get_objlist_size() > 0)
 
     def execute(self, context: bpy.types.Context):
+        try:
+            from ..properties.sast_scene_properties import SASTSceneProperties
+            scene_props: SASTSceneProperties = SASTSceneProperties.get_properties()
+            stage_id: str = scene_props.stage_id
+            act_id: str = scene_props.act_id
+            SASTImportManager.import_set_auto(context, scene_props.load_directory, stage_id, act_id)
+        except Exception as error:
+            raise error
+
         return {'FINISHED'}
 
 class SASTExportCameraManual(SASTExportBase):
@@ -122,19 +131,34 @@ class SASTExportCameraManual(SASTExportBase):
                     objs.extend(self.get_objects(context, SA2PointNode.modifier_name))
 
             if (len(objs) > 0):
-                from ..io.sast_export import SASTExportManager
+                from ...utilities.io.sast_export import SASTExportManager
                 SASTExportManager.export_camera(self.filepath, objs)
         except Exception as error:
             raise error
 
         return {'FINISHED'}
 
-class SASTExportSETManual(bpy.types.Operator):
+class SASTExportSETManual(SASTExportBase):
     '''Manual SET File Export'''
     bl_idname='sastexport.setmanual'
     bl_label='Export SET File'
 
     def execute(self, context: bpy.types.Context):
+        try:
+            from ...object.properties.sast_object_properties import SASTObjectProperties
+            objs: list[bpy.types.Object] = list()
+            for obj in context.scene.objects:
+                if (obj.type == 'MESH'):
+                    obj_props: SASTObjectProperties = SASTObjectProperties.get_properties(obj)
+                    if (obj_props.objtype == 'SET'):
+                        objs.append(obj)
+
+            if (len(objs) > 0):
+                from ...utilities.io.sast_export import SASTExportManager
+                SASTExportManager.export_setfile(self.filepath, objs, False)
+        except Exception as error:
+            raise error
+
         return {'FINISHED'}
     
 class SASTExportCameraAutomatic(bpy.types.Operator):
@@ -187,4 +211,25 @@ class SASTExportSETAutomatic(bpy.types.Operator):
         return (scene_props.get_objlist_size() > 0)
 
     def execute(self, context: bpy.types.Context):
+        try:
+            from ..properties.sast_scene_properties import SASTSceneProperties
+            scene_props: SASTSceneProperties = SASTSceneProperties.get_properties()
+            objs = []
+
+            for obj in context.scene.objects:
+                if (obj.type == 'MESH'):
+                    from ...object.properties.sast_object_properties import SASTObjectProperties
+                    props: SASTObjectProperties = SASTObjectProperties.get_properties(obj)
+                    if (props.objtype == 'SET'):
+                        objs.append(obj)
+
+            from ...utilities.io.sast_export import SASTExportManager
+            output_dir: str = scene_props.load_directory
+            if (len(scene_props.save_directory) > 0):
+                output_dir = scene_props.save_directory
+
+            SASTExportManager.export_setfile_automatic(output_dir, objs)
+        except Exception as error:
+            raise error
+
         return {'FINISHED'}

@@ -121,6 +121,11 @@ class SASTSETDefinitionProperties(bpy.types.PropertyGroup):
         default='NONE'
     )
 
+    item_description: StringProperty(
+        name='Item Description',
+        description='Displayed description of the current item.'
+    )
+
     #endregion
 
     def draw_ui(self, layout: bpy.types.UILayout):
@@ -146,10 +151,5 @@ class SASTSETDefinitionProperties(bpy.types.PropertyGroup):
         settings_header.label(text='SET Item Property Settings')
         if (settings_layout != None):
             settings_layout.prop(data=self, property='rotation_order')
-            settings_layout.separator(type='LINE')
-            #settings_layout.prop(data=self, property='display_rotation_x_property')
-            #settings_layout.prop(data=self, property='display_rotation_y_property')
-            #settings_layout.prop(data=self, property='display_rotation_z_property')
-            #settings_layout.prop(data=self, property='display_scale_x_property')
-            #settings_layout.prop(data=self, property='display_scale_y_property')
-            #settings_layout.prop(data=self, property='display_scale_z_property')
+            settings_layout.label(text='Item Description:')
+            settings_layout.textbox(data=self, property='item_description')

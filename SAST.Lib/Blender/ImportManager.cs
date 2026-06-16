@@ -57,14 +57,14 @@ namespace SAST.Lib.Blender
 		/// <param name="levelid"></param>
 		/// <param name="actid"></param>
 		/// <returns></returns>
-		private static Dictionary<string, T> ImportSA1File<T>(string directory, string levelid, string actid) where T : IBinaryFile<T>
+		private static Dictionary<string, T> ImportSA1File<T>(string directory, string levelid, string actid, bool isCamFile) where T : IBinaryFile<T>
 		{
 			Dictionary<string, T> files = new Dictionary<string, T>();
 			string[] names = Enum.GetNames<SA1Character>();
 
 			for (int i = 0; i < names.Count(); i++)
 			{
-				string filename = SA1StageInfo.GetFilename(levelid, actid, names[i], true);
+				string filename = SA1StageInfo.GetFilename(levelid, actid, names[i], isCamFile);
 				string filepath = Path.Combine(directory, filename);
 				if (File.Exists(filepath))
 					files.Add(names[i], ImportFile<T>(filepath));
@@ -82,7 +82,7 @@ namespace SAST.Lib.Blender
 		/// <returns></returns>
 		public static Dictionary<string, SETFile> ImportSA1SETFileAuto(string directory, string levelid, string actid)
 		{
-			return ImportSA1File<SETFile>(directory, levelid, actid);
+			return ImportSA1File<SETFile>(directory, levelid, actid, false);
 		}
 
 		/// <summary>
@@ -94,7 +94,7 @@ namespace SAST.Lib.Blender
 		/// <returns></returns>
 		public static Dictionary<string, SA1CAMFile> ImportSA1CAMFileAuto(string directory, string levelid, string actid)
 		{
-			return ImportSA1File<SA1CAMFile>(directory, levelid, actid);
+			return ImportSA1File<SA1CAMFile>(directory, levelid, actid, true);
 		}
 
 		/// <summary>
@@ -105,11 +105,11 @@ namespace SAST.Lib.Blender
 		/// <param name="levelid"></param>
 		/// <param name="actid"></param>
 		/// <returns></returns>
-		private static List<T> ImportSA2File<T>(string directory, string levelid, string actid) where T : IBinaryFile<T>
+		private static List<T> ImportSA2File<T>(string directory, string levelid, string actid, bool isCamFile) where T : IBinaryFile<T>
 		{
 			List<T> files = new List<T>();
 
-			string filename = SA2StageInfo.GetFilename(levelid, actid, SA2ChaoRaceLevel.None.ToString(), true);
+			string filename = SA2StageInfo.GetFilename(levelid, actid, SA2ChaoRaceLevel.None.ToString(), isCamFile);
 			string filepath = Path.Combine(directory, filename);
 			if (File.Exists(filepath))
 				files.Add(T.FromFile(filepath));
@@ -126,7 +126,7 @@ namespace SAST.Lib.Blender
 		/// <returns></returns>
 		public static List<SETFile> ImportSA2SETFileAuto(string directory, string levelid, string actid)
 		{
-			return ImportSA2File<SETFile>(directory, levelid, actid);
+			return ImportSA2File<SETFile>(directory, levelid, actid, false);
 		}
 
 		/// <summary>
@@ -138,7 +138,7 @@ namespace SAST.Lib.Blender
 		/// <returns></returns>
 		public static List<SA2CAMFile> ImportSA2CAMFileAuto(string directory, string levelid, string actid)
 		{
-			return ImportSA2File<SA2CAMFile>(directory, levelid, actid);
+			return ImportSA2File<SA2CAMFile>(directory, levelid, actid, true);
 		}
 
 		#endregion

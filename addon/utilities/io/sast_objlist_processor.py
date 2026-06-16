@@ -1,5 +1,7 @@
+import os
 import configparser
 import json
+from ... import ADDON_DIR
 from bpy.types import CollectionProperty
 from ...scene.properties.sast_set_definition_properties import SASTSETDefinitionProperties
 
@@ -141,6 +143,44 @@ class SASTObjListProcessor:
 
         return retval
 
+    #region Automated Stuff
+    object_lists: dict = {
+        'EmeraldCoast':         'stg01',
+        'WindyValley':          'stg02',
+        'TwinklePark':          'stg03',
+        'SpeedHighway':         'stg04',
+        'RedMountain':          'stg05',
+        'SkyDeck':              'stg06',
+        'LostWorld':            'stg07',
+        'Icecap':               'stg08',
+        'Casinopolis':          'stg09',
+        'FinalEgg':             'stg10',
+        'HotShelter':           'stg12',
+        'Chaos0':               'boss_chaos0',
+        'Chaos2':               'boss_chaos2',
+        'Chaos4':               'boss_chaos4',
+        'Chaos6':               'boss_chaos6',
+        'Chaos7':               'boss_chaos7',
+        'EggHornet':            'boss_egm1',
+        'EggWalker':            'boss_egm2',
+        'EggViper':             'boss_egm3',
+        'ZERO':                 'boss_robo',
+        'E101':                 'boss_e101',
+        'E101R':                'boss_e101r',
+        'StationSquare':        'adv00',
+        'EggCarrierExterior':   'adv01ab',
+        'EggCarrierInterior':   'adv01c',
+        'MysticRuins':          'adv02',
+        'ThePast':              'adv03',
+        'TwinkleCircuit':       'minicart',
+        'Sandhill':             'sandboard',
+        'HedgehogHammer':       'stg00',
+        'SkyChase':             'shooting',
+        'ChaoRace':             'chao_race'
+    }
+
+    #endregion
+
     #region Readers
     @staticmethod
     def read_ini_file(objlist: CollectionProperty, filepath: str):
@@ -161,7 +201,6 @@ class SASTObjListProcessor:
                     entry.load_range = config.getfloat(section, 'Distance')
         else:
             print('File length was less than 0')
-
 
     @staticmethod
     def read_json_file(objlist: CollectionProperty, filepath: str):
@@ -186,6 +225,35 @@ class SASTObjListProcessor:
                 entry.asset_name = blender_info['AssetName']
                 entry.asset_file = blender_info['AssetFile']
                 entry.is_relative_file = blender_info['RelativeAssetFile']
+                if (blender_info.__contains__('ItemDescription')):
+                    entry.item_description = blender_info['ItemDescription']
+
+    @staticmethod
+    def get_list_file(stage_id: str, act_id: str):
+        name: str = ''
+        match (stage_id):
+            case 'ChaoGardenSS' | 'ChaoGardenEC' | 'ChaoGardenMR':
+                raise Exception('Chao Gardens are not supported for SET Import.')
+            case _:
+                name = f'{SASTObjListProcessor.object_lists[stage_id]}.json'
+                if (stage_id == 'HotShelter'):
+                    extension: str = '_'
+                    match (act_id):
+                        case 'Act2':
+                            extension += '02'
+                        case 'Act3':
+                            extension += '03'
+                        case 'Act4':
+                            extension += '04'
+                        case 'Act1' | _:
+                            extension += '01'
+                    
+                    name += extension
+        
+        if len(name) <= 0:
+            return ''
+        else:
+            return os.path.join(ADDON_DIR, 'game', 'definitions', 'adv1', name)
 
     #endregion
 
@@ -216,6 +284,7 @@ class SASTObjListProcessor:
             blender_info['AssetName'] = item.asset_name
             blender_info['AssetFile'] = item.asset_file
             blender_info['RelativeAssetFile'] = item.is_relative_file
+            blender_info['ItemDescription'] = item.item_description
 
             entry: dict = {}
             entry['ObjectInfo'] = object_info
