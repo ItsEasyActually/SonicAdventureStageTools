@@ -38,6 +38,6 @@ echo Copying contents from %addon_dll% to %addon_dlldst%
 xcopy /y %addon_dll%\* %addon_dlldst%
 
 echo Applying Updates to addon
-xcopy /s /e /y %addon_dst%\* "%APPDATA%\Blender Foundation\Blender\5.1\scripts\addons\SonicAdventureStageTools"
+xcopy /s /e /y %addon_dst%\* "%APPDATA%\Blender Foundation\Blender\5.2\scripts\addons\SonicAdventureStageTools"
 
 :end

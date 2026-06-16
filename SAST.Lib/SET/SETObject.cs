@@ -59,7 +59,7 @@ namespace SAST.Lib.SET
 		private byte flags = 0;
 
 		/// <summary>
-		/// Clip Distance, <see cref="ClipLevel"/>
+		/// Clip Distance, <see cref="SetFlags"/>
 		/// </summary>
 		public SetFlags Flags 
 		{ 
@@ -138,6 +138,8 @@ namespace SAST.Lib.SET
 
 			return vec;
 		}
+
+		public void SetObjectFlags(int val) { flags = (byte)val; }
 
 		#endregion
 		#endregion
