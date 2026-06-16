@@ -1,5 +1,5 @@
 # Sonic Adventure Stage Tools for Blender!
 
-Tooling for Blender to allow import and export CAM files for Sonic Adventure DX and Sonic Adventure 2. SET support is planned.
+Blender Toolkit for modifying stage object and camera layouts for Sonic Adventure and Sonic Adventure 2. 
 
-This addon is for Blender 5.0+
+This addon is for Blender 5.2+
