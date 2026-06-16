@@ -51,12 +51,13 @@ class SASTSETObjectProperties(bpy.types.PropertyGroup):
         scene_props: SASTSceneProperties = SASTSceneProperties.get_properties()
         match (scene_props.game_id):
             case ('SADXPC'):
-                flaglist.append(('NoFlags', 'High Draw Distance',   'Draws the object at the highest distance from the player.'))
-                flaglist.append(('Flag1',   'Medium Draw Distance', 'Draws the object at the medium distance from the player.'))
-                flaglist.append(('Flag2',   'Low Draw Distance',    'Draws the object at the lowest distance from the player.'))
+                flaglist.append(('0', 'High Draw Distance',   'Draws the object at the highest distance from the player.', 0))
+                flaglist.append(('1', 'Medium Draw Distance', 'Draws the object at the medium distance from the player.',  1))
+                flaglist.append(('2', 'Low Draw Distance',    'Draws the object at the lowest distance from the player.',  2))
             case ('SA2BPC'):
-                flaglist.append(('NoFlags', 'Primary SET File',     'The _s set file, also known as Substansive.'))
-                flaglist.append(('Flag4',   'Decoration SET File',  'The _u set file, also known as Unsubstansive. Objects in this file have no known difference to the primary layout.'))
+                flaglist.append(('0', 'Primary SET File', 'The _s set file, also known as Substansive.', 0))
+                flaglist.append(('1', 'Flag 1',           'If this is set, it is an unknown flag.',      1))
+                flaglist.append(('2', 'Flag 2',           'If this is set, it is an unknown flag.',      2))
         
         return flaglist
 
@@ -64,8 +65,13 @@ class SASTSETObjectProperties(bpy.types.PropertyGroup):
         name='Object Flags',
         description='Object Flags stored in the SET File. Read the description for each item for more information.',
         default=0,
-        items=populate_objectflags,
-        options={'ENUM_FLAG'}
+        items=populate_objectflags
+    )
+
+    dependent_set: BoolProperty(
+        name='Dependent SET File',
+        description='Set the file the item belongs to. In SA1/DX, this toggles the Player Dependent set flag, but it has effect in-game. In SA2/B, this will output an object to the unsubstansive layout (_u).',
+        default=False
     )
 
     def draw_ui(self, layout: bpy.types.UILayout):
@@ -74,6 +80,8 @@ class SASTSETObjectProperties(bpy.types.PropertyGroup):
         row: bpy.types.UILayout = layout.row()
         row.enabled = self.override_id
         row.prop(data=self, property='fallback_objid')
+        layout.prop(data=self, property='objectflags')
+        layout.prop(data=self, property='dependent_set')
 
     @classmethod
     def register(cls):
