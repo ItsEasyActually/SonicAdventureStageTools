@@ -9,8 +9,12 @@ class SASTGeonodeBase:
 
     @classmethod
     def get_layout_prop(cls, prop: str):
-        return f'["{prop}"]'
+        return f'{prop}'
     
+    @classmethod
+    def get_layout_prop_data(cls, prop: str):
+        return f'node.properties.inputs.{prop}'
+
     def __init__(self, obj: bpy.types.Object):
         if (len(obj.modifiers) > 0):
             modifier: bpy.types.NodesModifier = obj.modifiers[self.modifier_name]

@@ -44,54 +44,54 @@ class SA2PointNode(SASTGeonodeBase):
 
     def draw_ui(self, layout: bpy.types.UILayout):
         '''Draws the settings into a UILayout.'''
-        layout.prop(data=self.node, property=self.get_layout_prop(self.player_point_radius), text='Player Point Radius')
-        layout.prop(data=self.node, property=self.get_layout_prop(self.camera_x_point), text='Camera X Position')
-        layout.prop(data=self.node, property=self.get_layout_prop(self.camera_y_point), text='Camera Y Position')
-        layout.prop(data=self.node, property=self.get_layout_prop(self.camera_z_point), text='Camera Z Position')
-        #layout.prop(data=self.node, property=self.get_layout_prop(self.camera_point_radius), text='Camera Point Radius')
-        layout.prop(data=self.node, property=self.get_layout_prop(self.enable_player_point), text='Enable Player Point')
-        layout.prop(data=self.node, property=self.get_layout_prop(self.enable_player_tracking), text='Enable Player Tracking')
+        layout.prop(data=self.node.properties.inputs.Socket_2, property='value', text='Player Point Radius')
+        layout.prop(data=self.node.properties.inputs.Socket_3, property='value', text='Camera X Position')
+        layout.prop(data=self.node.properties.inputs.Socket_4, property='value', text='Camera Y Position')
+        layout.prop(data=self.node.properties.inputs.Socket_5, property='value', text='Camera Z Position')
+        #layout.prop(data=self.node.properties.inputs.Socket_6, property='value', text='Camera Point Radius')
+        layout.prop(data=self.node.properties.inputs.Socket_7, property='value', text='Enable Player Point')
+        layout.prop(data=self.node.properties.inputs.Socket_8, property='value', text='Enable Player Tracking')
 
     def set_player_point_radius(self, value: float):
-        self.node[self.player_point_radius] = value
+        self.node.properties.inputs.Socket_2.value = value
     
     def set_camera_x_point(self, value: float):
-        self.node[self.camera_x_point] = value
+        self.node.properties.inputs.Socket_3.value = value
     
     def set_camera_y_point(self, value: float):
-        self.node[self.camera_y_point] = value
+        self.node.properties.inputs.Socket_4.value = value
     
     def set_camera_z_point(self, value: float):
-        self.node[self.camera_z_point] = value
+        self.node.properties.inputs.Socket_5.value = value
     
     def set_camera_point_radius(self, value: float):
-        self.node[self.camera_point_radius] = value
+        self.node.properties.inputs.Socket_6.value = value
     
     def set_enable_player_point(self, value: float):
-        self.node[self.enable_player_point] = value
+        self.node.properties.inputs.Socket_7.value = value
     
     def set_enable_player_tracking(self, value: bool):
-        self.node[self.enable_player_tracking] = value
+        self.node.properties.inputs.Socket_8.value = value
 
     def get_player_point_radius(self) -> float:
-        return self.node[self.player_point_radius]
+        return self.node.properties.inputs.Socket_2.value
     
     def get_camera_x_point(self) -> float:
-        return self.node[self.camera_x_point]
+        return self.node.properties.inputs.Socket_3.value
     
     def get_camera_y_point(self) -> float:
-        return self.node[self.camera_y_point]
+        return self.node.properties.inputs.Socket_4.value
     
     def get_camera_z_point(self) -> float:
-        return self.node[self.camera_z_point]
+        return self.node.properties.inputs.Socket_5.value
     
     def get_camera_point_radius(self) -> float:
-        return self.node[self.camera_point_radius]
+        return self.node.properties.inputs.Socket_6.value
     
     def get_enable_player_point(self) -> bool:
-        return self.node[self.enable_player_point]
+        return self.node.properties.inputs.Socket_7.value
     
     def get_enable_player_tracking(self) -> bool:
-        return self.node[self.enable_player_tracking]
+        return self.node.properties.inputs.Socket_8.value
 
     

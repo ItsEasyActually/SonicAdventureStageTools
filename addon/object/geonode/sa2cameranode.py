@@ -63,27 +63,27 @@ class SA2CameraNode(SASTGeonodeBase):
 
     def draw_ui(self, layout: bpy.types.UILayout, cammode: str):
         '''Draws the properties menu.'''
-        layout.prop(data=self.node, property=self.get_layout_prop(self.collision_shape), text='Volume Shape')
+        layout.prop(data=self.node.properties.inputs.Socket_3, property='value', text='Volume Shape')
         layout.separator(factor=1, type='LINE')
         match (cammode):
             case 'Klamath':
-                layout.prop(data=self.node, property=self.get_layout_prop(self.target_x_position), text='Target X Position')
-                layout.prop(data=self.node, property=self.get_layout_prop(self.target_z_position), text='Target Y Position')
+                layout.prop(data=self.node.properties.inputs.Socket_16, property='value', text='Target X Position')
+                layout.prop(data=self.node.properties.inputs.Socket_17, property='value', text='Target Y Position')
             case 'Fix':
-                layout.prop(data=self.node, property=self.get_layout_prop(self.camera_x_position), text='Camera X Position')
-                layout.prop(data=self.node, property=self.get_layout_prop(self.camera_z_position), text='Camera Y Position')
-                layout.prop(data=self.node, property=self.get_layout_prop(self.camera_y_position), text='Camera Z Position')
-                layout.prop(data=self.node, property=self.get_layout_prop(self.target_x_position), text='Target X Position')
-                layout.prop(data=self.node, property=self.get_layout_prop(self.target_z_position), text='Target Y Position')
-                layout.prop(data=self.node, property=self.get_layout_prop(self.target_y_position), text='Target Z Position')
+                layout.prop(data=self.node.properties.inputs.Socket_13, property='value', text='Camera X Position')
+                layout.prop(data=self.node.properties.inputs.Socket_14, property='value', text='Camera Y Position')
+                layout.prop(data=self.node.properties.inputs.Socket_15, property='value', text='Camera Z Position')
+                layout.prop(data=self.node.properties.inputs.Socket_16, property='value', text='Target X Position')
+                layout.prop(data=self.node.properties.inputs.Socket_17, property='value', text='Target Y Position')
+                layout.prop(data=self.node.properties.inputs.Socket_18, property='value', text='Target Z Position')
             case 'Ashland':
-                layout.prop(data=self.node, property=self.get_layout_prop(self.camera_x_position), text='Camera X Position')
-                layout.prop(data=self.node, property=self.get_layout_prop(self.camera_z_position), text='Camera Y Position')
-                layout.prop(data=self.node, property=self.get_layout_prop(self.camera_y_position), text='Camera Z Position')
+                layout.prop(data=self.node.properties.inputs.Socket_13, property='value', text='Camera X Position')
+                layout.prop(data=self.node.properties.inputs.Socket_14, property='value', text='Camera Y Position')
+                layout.prop(data=self.node.properties.inputs.Socket_15, property='value', text='Camera Z Position')
             case 'Point':
-                layout.prop(data=self.node, property=self.get_layout_prop(self.target_x_position), text='Target X Position')
-                layout.prop(data=self.node, property=self.get_layout_prop(self.target_z_position), text='Target Y Position')
-                layout.prop(data=self.node, property=self.get_layout_prop(self.target_y_position), text='Target Z Position')
+                layout.prop(data=self.node.properties.inputs.Socket_16, property='value', text='Target X Position')
+                layout.prop(data=self.node.properties.inputs.Socket_17, property='value', text='Target Y Position')
+                layout.prop(data=self.node.properties.inputs.Socket_18, property='value', text='Target Z Position')
             case _:
                 layout.label(text='This camera mode does not make use of the default properties.')
 
@@ -104,100 +104,100 @@ class SA2CameraNode(SASTGeonodeBase):
                 self.set_camera_mode(0)
 
     def set_camera_mode(self, value: int):
-        self.node[self.camera_mode] = value
+        self.node.properties.inputs.Socket_2.value = value
 
     def set_collision_shape(self, value: int):
-        self.node[self.collision_shape] = value
+        self.node.properties.inputs.Socket_3.value = value
 
     def set_collision_x_angle(self, value: float):
-        self.node[self.collision_x_angle] = value
+        self.node.properties.inputs.Socket_4.value = value
 
     def set_collision_y_angle(self, value: float):
-        self.node[self.collision_y_angle] = value
+        self.node.properties.inputs.Socket_5.value = value
 
     def set_collision_z_angle(self, value: float):
-        self.node[self.collision_z_angle] = value
+        self.node.properties.inputs.Socket_6.value = value
 
     def set_collision_x_scale(self, value: float):
-        self.node[self.collision_x_scale] = value
+        self.node.properties.inputs.Socket_7.value = value
 
     def set_collision_y_scale(self, value: float):
-        self.node[self.collision_y_scale] = value
+        self.node.properties.inputs.Socket_8.value = value
 
     def set_collision_z_scale(self, value: float):
-        self.node[self.collision_z_scale] = value
+        self.node.properties.inputs.Socket_9.value = value
 
     def set_camera_x_angle(self, value: float):
-        self.node[self.camera_x_angle] = value
+        self.node.properties.inputs.Socket_10.value = value
 
     def set_camera_y_angle(self, value: float):
-        self.node[self.camera_y_angle] = value
+        self.node.properties.inputs.Socket_11.value = value
 
     def set_camera_z_angle(self, value: float):
-        self.node[self.camera_z_angle] = value
+        self.node.properties.inputs.Socket_12.value = value
 
     def set_camera_x_position(self, value: float):
-        self.node[self.camera_x_position] = value
+        self.node.properties.inputs.Socket_13.value = value
 
     def set_camera_y_position(self, value: float):
-        self.node[self.camera_y_position] = value
+        self.node.properties.inputs.Socket_14.value = value
 
     def set_camera_z_position(self, value: float):
-        self.node[self.camera_z_position] = value
+        self.node.properties.inputs.Socket_15.value = value
         
     def set_target_x_position(self, value: float):
-        self.node[self.target_x_position] = value
+        self.node.properties.inputs.Socket_16.value = value
 
     def set_target_y_position(self, value: float):
-        self.node[self.target_y_position] = value
+        self.node.properties.inputs.Socket_17.value = value
 
     def set_target_z_position(self, value: float):
-        self.node[self.target_z_position] = value
+        self.node.properties.inputs.Socket_18.value = value
 
     def get_collision_shape(self):
-        return self.node[self.collision_shape]
+        return self.node.properties.inputs.Socket_3.value
 
     def get_collision_x_angle(self) -> float:
-        return self.node[self.collision_x_angle]
+        return self.node.properties.inputs.Socket_4.value
     
     def get_collision_y_angle(self) -> float:
-        return self.node[self.collision_y_angle]
+        return self.node.properties.inputs.Socket_5.value
     
     def get_collision_z_angle(self) -> float:
-        return self.node[self.collision_z_angle]
+        return self.node.properties.inputs.Socket_6.value
     
     def get_collision_x_scale(self) -> float:
-        return self.node[self.collision_x_scale]
+        return self.node.properties.inputs.Socket_7.value
     
     def get_collision_y_scale(self) -> float:
-        return self.node[self.collision_y_scale]
+        return self.node.properties.inputs.Socket_8.value
     
     def get_collision_z_scale(self) -> float:
-        return self.node[self.collision_z_scale]
+        return self.node.properties.inputs.Socket_9.value
     
     def get_camera_x_angle(self) -> float:
-        return self.node[self.camera_x_angle]
+        return self.node.properties.inputs.Socket_10.value
     
     def get_camera_y_angle(self) -> float:
-        return self.node[self.camera_y_angle]
+        return self.node.properties.inputs.Socket_11.value
     
     def get_camera_z_angle(self) -> float:
-        return self.node[self.camera_z_angle]
+        return self.node.properties.inputs.Socket_12.value
     
     def get_camera_x_position(self) -> float:
-        return self.node[self.camera_x_position]
+        return self.node.properties.inputs.Socket_13.value
     
     def get_camera_y_position(self) -> float:
-        return self.node[self.camera_y_position]
+        return self.node.properties.inputs.Socket_14.value
     
     def get_camera_z_position(self) -> float:
-        return self.node[self.camera_z_position]
+        return self.node.properties.inputs.Socket_15.value
     
     def get_target_x_position(self) -> float:
-        return self.node[self.target_x_position]
+        return self.node.properties.inputs.Socket_16.value
     
     def get_target_y_position(self) -> float:
-        return self.node[self.target_y_position]
+        return self.node.properties.inputs.Socket_17.value
     
     def get_target_z_position(self) -> float:
-        return self.node[self.target_z_position]
+        return self.node.properties.inputs.Socket_18.value
