@@ -212,21 +212,34 @@ class SASTObjListProcessor:
                 item: dict = data[key]
                 object_info: dict = item['ObjectInfo']
                 blender_info: dict = item['BlenderInfo']
+                property_info: dict = blender_info['PropertyInfo']
 
                 entry: SASTSETDefinitionProperties = objlist.add()
-                entry.internal_name = key
-                entry.load_range = object_info['LoadDistance']
-                entry.function_address = object_info['FunctionAddress']
-                entry.task_level = SASTObjListProcessor.get_task_level(object_info['TaskLevel'])
-                entry.init_mode = SASTObjListProcessor.get_init_mode(object_info['InitializationMode'])
-                entry.load_attributes = SASTObjListProcessor.get_attributes(object_info['LoadAttributes'])
-                entry.name = blender_info['CommonName']
-                entry.rotation_order = blender_info['RotationMode']
-                entry.asset_name = blender_info['AssetName']
-                entry.asset_file = blender_info['AssetFile']
-                entry.is_relative_file = blender_info['RelativeAssetFile']
-                if (blender_info.__contains__('ItemDescription')):
-                    entry.item_description = blender_info['ItemDescription']
+                entry.internal_name     = key
+                entry.load_range        = object_info['LoadDistance']
+                entry.function_address  = object_info['FunctionAddress']
+                entry.task_level        = SASTObjListProcessor.get_task_level(object_info['TaskLevel'])
+                entry.init_mode         = SASTObjListProcessor.get_init_mode(object_info['InitializationMode'])
+                entry.load_attributes   = SASTObjListProcessor.get_attributes(object_info['LoadAttributes'])
+                entry.name              = blender_info['CommonName']
+                entry.rotation_order    = blender_info['RotationMode']
+                entry.asset_name        = blender_info['AssetName']
+                entry.asset_file        = blender_info['AssetFile']
+                entry.is_relative_file  = blender_info['RelativeAssetFile']
+                entry.item_description  = blender_info['ItemInfo']
+
+                entry.use_x_angle_property  = property_info['UseXAngleProperty']
+                entry.x_angle_name          = property_info['XAnglePropertyName']
+                entry.use_y_angle_property  = property_info['UseYAngleProperty']
+                entry.y_angle_name          = property_info['YAnglePropertyName']
+                entry.use_z_angle_property  = property_info['UseZAngleProperty']
+                entry.z_angle_name          = property_info['ZAnglePropertyName']
+                entry.use_x_scale_property  = property_info['UseXScaleProperty']
+                entry.x_scale_name          = property_info['XScalePropertyName']
+                entry.use_y_scale_property  = property_info['UseYScaleProperty']
+                entry.y_scale_name          = property_info['YScalePropertyName']
+                entry.use_z_scale_property  = property_info['UseZScaleProperty']
+                entry.z_scale_name          = property_info['ZScalePropertyName']
 
     @staticmethod
     def get_list_file(stage_id: str, act_id: str):
@@ -277,6 +290,21 @@ class SASTObjListProcessor:
             object_info['LoadAttributes'] = SASTObjListProcessor.set_attributes(item.load_attributes)
             object_info['LoadDistance'] = item.load_range
 
+            property_info: dict = {}
+
+            property_info['UseXAngleProperty'] = item.use_x_angle_property
+            property_info['XAnglePropertyName'] = item.x_angle_name
+            property_info['UseYAngleProperty'] = item.use_y_angle_property
+            property_info['YAnglePropertyName'] = item.y_angle_name
+            property_info['UseZAngleProperty'] = item.use_z_angle_property
+            property_info['ZAnglePropertyName'] = item.z_angle_name
+            property_info['UseXScaleProperty'] = item.use_x_scale_property
+            property_info['XScalePropertyName'] = item.x_scale_name
+            property_info['UseYScaleProperty'] = item.use_y_scale_property
+            property_info['YScalePropertyName'] = item.y_scale_name
+            property_info['UseZScaleProperty'] = item.use_z_scale_property
+            property_info['ZScalePropertyName'] = item.z_scale_name
+
             blender_info: dict = {}
 
             blender_info['CommonName'] = item.name
@@ -284,7 +312,8 @@ class SASTObjListProcessor:
             blender_info['AssetName'] = item.asset_name
             blender_info['AssetFile'] = item.asset_file
             blender_info['RelativeAssetFile'] = item.is_relative_file
-            blender_info['ItemDescription'] = item.item_description
+            blender_info['ItemInfo'] = item.item_description
+            blender_info['PropertyInfo'] = property_info
 
             entry: dict = {}
             entry['ObjectInfo'] = object_info

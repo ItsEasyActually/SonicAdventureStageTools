@@ -1,0 +1,157 @@
+{
+    "RING___": {
+        "ObjectInfo": {
+            "FunctionAddress": "00450370",
+            "TaskLevel": 3,
+            "InitializationMode": 2,
+            "LoadAttributes": 0,
+            "LoadDistance": 360000
+        },
+        "BlenderInfo": {
+            "CommonName": "Ring",
+            "RotationMode": "NONE",
+            "ItemInfo": "",
+            "AssetName": "Ring",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\common\\\\Ring.blend",
+            "RelativeAssetFile": true,
+            "PropertyInfo": {
+                "UseXAngleProperty": false,
+                "XAnglePropertyName": "",
+                "UseYAngleProperty": false,
+                "YAnglePropertyName": "",
+                "UseZAngleProperty": false,
+                "ZAnglePropertyName": "",
+                "UseXScaleProperty": false,
+                "XScalePropertyName": "",
+                "UseYScaleProperty": false,
+                "YScalePropertyName": "",
+                "UseZScaleProperty": false,
+                "ZScalePropertyName": ""
+            }
+        }
+    },
+    "Rocket H": {
+        "ObjectInfo": {
+            "FunctionAddress": "004CA530",
+            "TaskLevel": 2,
+            "InitializationMode": 14,
+            "LoadAttributes": 0,
+            "LoadDistance": 360000
+        },
+        "BlenderInfo": {
+            "CommonName": "Rocket (Horizontal)",
+            "RotationMode": "NONE",
+            "ItemInfo": "",
+            "AssetName": "HorizontalRocket",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\common\\\\HorizontalRocket.blend",
+            "RelativeAssetFile": true,
+            "PropertyInfo": {
+                "UseXAngleProperty": false,
+                "XAnglePropertyName": "",
+                "UseYAngleProperty": false,
+                "YAnglePropertyName": "",
+                "UseZAngleProperty": false,
+                "ZAnglePropertyName": "",
+                "UseXScaleProperty": true,
+                "XScalePropertyName": "X Target Position",
+                "UseYScaleProperty": true,
+                "YScalePropertyName": "Z Target Position",
+                "UseZScaleProperty": true,
+                "ZScalePropertyName": "Y Target Position"
+            }
+        }
+    },
+    "Rocket HS": {
+        "ObjectInfo": {
+            "FunctionAddress": "004CA660",
+            "TaskLevel": 2,
+            "InitializationMode": 14,
+            "LoadAttributes": 0,
+            "LoadDistance": 360000
+        },
+        "BlenderInfo": {
+            "CommonName": "Rocket (Horizontal, Sealed)",
+            "RotationMode": "NONE",
+            "ItemInfo": "",
+            "AssetName": "HorizontalRocketSealed",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\common\\\\HorizontalRocketSealed.blend",
+            "RelativeAssetFile": true,
+            "PropertyInfo": {
+                "UseXAngleProperty": true,
+                "XAnglePropertyName": "Switch ID",
+                "UseYAngleProperty": false,
+                "YAnglePropertyName": "",
+                "UseZAngleProperty": false,
+                "ZAnglePropertyName": "",
+                "UseXScaleProperty": true,
+                "XScalePropertyName": "X Target Position",
+                "UseYScaleProperty": true,
+                "YScalePropertyName": "Z Target Position",
+                "UseZScaleProperty": true,
+                "ZScalePropertyName": "Y Target Position"
+            }
+        }
+    },
+    "Rocket V": {
+        "ObjectInfo": {
+            "FunctionAddress": "004CA7D0",
+            "TaskLevel": 2,
+            "InitializationMode": 14,
+            "LoadAttributes": 0,
+            "LoadDistance": 360000
+        },
+        "BlenderInfo": {
+            "CommonName": "Rocket (Vertical)",
+            "RotationMode": "NONE",
+            "ItemInfo": "",
+            "AssetName": "VerticalRocket",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\common\\\\VerticalRocket.blend",
+            "RelativeAssetFile": true,
+            "PropertyInfo": {
+                "UseXAngleProperty": false,
+                "XAnglePropertyName": "",
+                "UseYAngleProperty": true,
+                "YAnglePropertyName": "Z Rotation",
+                "UseZAngleProperty": false,
+                "ZAnglePropertyName": "",
+                "UseXScaleProperty": false,
+                "XScalePropertyName": "",
+                "UseYScaleProperty": true,
+                "YScalePropertyName": "Height",
+                "UseZScaleProperty": false,
+                "ZScalePropertyName": ""
+            }
+        }
+    },
+    "Rocket VS": {
+        "ObjectInfo": {
+            "FunctionAddress": "004CA900",
+            "TaskLevel": 2,
+            "InitializationMode": 14,
+            "LoadAttributes": 0,
+            "LoadDistance": 360000
+        },
+        "BlenderInfo": {
+            "CommonName": "Rocket (Vertical, Sealed)",
+            "RotationMode": "NONE",
+            "ItemInfo": "",
+            "AssetName": "VerticalRocketSealed",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\common\\\\VerticalRocketSealed.blend",
+            "RelativeAssetFile": true,
+            "PropertyInfo": {
+                "UseXAngleProperty": true,
+                "XAnglePropertyName": "Switch ID",
+                "UseYAngleProperty": true,
+                "YAnglePropertyName": "Z Rotation",
+                "UseZAngleProperty": false,
+                "ZAnglePropertyName": "",
+                "UseXScaleProperty": false,
+                "XScalePropertyName": "",
+                "UseYScaleProperty": true,
+                "YScalePropertyName": "Height",
+                "UseZScaleProperty": false,
+                "ZScalePropertyName": ""
+            }
+        }
+    }
+}

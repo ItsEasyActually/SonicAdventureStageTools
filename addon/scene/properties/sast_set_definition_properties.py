@@ -1,3 +1,5 @@
+from this import d
+
 import bpy
 from bpy.props import (
     StringProperty,
@@ -126,6 +128,72 @@ class SASTSETDefinitionProperties(bpy.types.PropertyGroup):
         description='Displayed description of the current item.'
     )
 
+    use_x_angle_property: BoolProperty(
+        name='Use X Rotation Property',
+        description='When enabled and the object does not use real rotation, the X Rotation SET Object property will be displayed in the SET Editor Panel.',
+        default=True
+    )
+
+    x_angle_name: StringProperty(
+        name='X Angle Property Name',
+        description='When not empty, the X Rotation Property in the Set Item Editor panel will display this name.'
+    )
+
+    use_y_angle_property: BoolProperty(
+        name='Use Y Rotation Property',
+        description='When enabled and the object does not use real rotation, the Y Rotation SET Object property will be displayed in the SET Editor Panel.',
+        default=True
+    )
+
+    y_angle_name: StringProperty(
+        name='Y Angle Property Name',
+        description='When not empty, the Y Rotation Property in the Set Item Editor panel will display this name.'
+    )
+
+    use_z_angle_property: BoolProperty(
+        name='Use Z Rotation Property',
+        description='When enabled and the object does not use real rotation, the Z Rotation SET Object property will be displayed in the SET Editor Panel.',
+        default=True
+    )
+
+    z_angle_name: StringProperty(
+        name='Z Angle Property Name',
+        description='When not empty, the Z Rotation Property in the Set Item Editor panel will display this name.'
+    )
+
+    use_x_scale_property: BoolProperty(
+        name='Use X Scale Property',
+        description='When enabled, the X Scale SET Object Property will be displayed in the SET Editor Panel.',
+        default=True
+    )
+
+    x_scale_name: StringProperty(
+        name='X Scale Property Name',
+        description='When not empty, the X Scale Property in the Set Item Editor panel will display this name.'
+    )
+
+    use_y_scale_property: BoolProperty(
+        name='Use Y Scale Property',
+        description='When enabled, the Y Scale SET Object Property will be displayed in the SET Editor Panel.',
+        default=True
+    )
+
+    y_scale_name: StringProperty(
+        name='Y Scale Property Name',
+        description='When not empty, the Y Scale Property in the Set Item Editor panel will display this name.'
+    )
+
+    use_z_scale_property: BoolProperty(
+        name='Use Z Scale Property',
+        description='When enabled, the Z Scale SET Object Property will be displayed in the SET Editor Panel.',
+        default=True
+    )
+
+    z_scale_name: StringProperty(
+        name='Z Scale Property Name',
+        description='When not empty, the Z Scale Property in the Set Item Editor panel will display this name.'
+    )
+
     #endregion
 
     def draw_ui(self, layout: bpy.types.UILayout):
@@ -153,3 +221,24 @@ class SASTSETDefinitionProperties(bpy.types.PropertyGroup):
             settings_layout.prop(data=self, property='rotation_order')
             settings_layout.label(text='Item Description:')
             settings_layout.textbox(data=self, property='item_description')
+            properties_header, properties_layout = layout.panel(idname='pt_itemproperties', default_closed=True)
+            properties_header.label(text='SET Item Property Display Settings')
+            if (properties_layout != None):
+                properties_layout.prop(data=self, property='use_x_angle_property')
+                if (self.use_x_angle_property == True):
+                    properties_layout.prop(data=self, property='x_angle_name')
+                properties_layout.prop(data=self, property='use_y_angle_property')
+                if (self.use_y_angle_property == True):
+                    properties_layout.prop(data=self, property='y_angle_name')
+                properties_layout.prop(data=self, property='use_z_angle_property')
+                if (self.use_z_angle_property == True):
+                    properties_layout.prop(data=self, property='z_angle_name')
+                properties_layout.prop(data=self, property='use_x_scale_property')
+                if (self.use_x_scale_property == True):
+                    properties_layout.prop(data=self, property='x_scale_name')
+                properties_layout.prop(data=self, property='use_y_scale_property')
+                if (self.use_y_scale_property == True):
+                    properties_layout.prop(data=self, property='y_scale_name')
+                properties_layout.prop(data=self, property='use_z_scale_property')
+                if (self.use_z_scale_property == True):
+                    properties_layout.prop(data=self, property='z_scale_name')

@@ -59,13 +59,22 @@ class SetItemNode(SASTGeonodeBase):
     def get_scl_z(self) -> float:
         return self.node.properties.inputs.Socket_7.value
 
-    def draw_rotation_properties(self, layout: bpy.types.UILayout, rotation_order: str):
-        if (rotation_order.__contains__('X') == False):
-            layout.prop(data=self.node.properties.inputs.Socket_2, property='value', text='X Angle Property')
-        if (rotation_order.__contains__('Y') == False):
-            layout.prop(data=self.node.properties.inputs.Socket_3, property='value', text='Y Angle Property')
-        if (rotation_order.__contains__('Z') == False):
-            layout.prop(data=self.node.properties.inputs.Socket_4, property='value', text='Z Angle Property')
+    def draw_rotation_properties(self, layout: bpy.types.UILayout, rotation_order: str, use_x_angle: bool, use_y_angle: bool, use_z_angle: bool, x_angle_prop_name: str, y_angle_prop_name: str, z_angle_prop_name: str):
+        if ((rotation_order.__contains__('X') == False) and (use_x_angle == True)):
+            x_name: str = 'X Angle Property'
+            if (len(x_angle_prop_name) > 0):
+                x_name = x_angle_prop_name
+            layout.prop(data=self.node.properties.inputs.Socket_2, property='value', text=x_name)
+        if ((rotation_order.__contains__('Y') == False) and (use_y_angle == True)):
+            y_name: str = 'Y Angle Property'
+            if (len(y_angle_prop_name) > 0):
+                y_name = y_angle_prop_name
+            layout.prop(data=self.node.properties.inputs.Socket_3, property='value', text=y_name)
+        if ((rotation_order.__contains__('Z') == False) and (use_z_angle == True)):
+            z_name: str = 'Z Angle Property'
+            if (len(z_angle_prop_name) > 0):
+                z_name = z_angle_prop_name
+            layout.prop(data=self.node.properties.inputs.Socket_4, property='value', text=z_name)
 
     def draw_ui(self, layout: bpy.types.UILayout, setitem: SASTSETDefinitionProperties):
         if (len(setitem.item_description) > 0):
@@ -80,7 +89,22 @@ class SetItemNode(SASTGeonodeBase):
         raw_props_header, raw_props_layout = layout.panel(idname='pt_rawitemprops', default_closed=True)
         raw_props_header.label(text='Set Item Properties', icon='OPTIONS')
         if (raw_props_layout != None):
-            self.draw_rotation_properties(raw_props_layout, setitem.rotation_order)
-            raw_props_layout.prop(data=self.node.properties.inputs.Socket_5, property='value', text='X Scale Property')
-            raw_props_layout.prop(data=self.node.properties.inputs.Socket_6, property='value', text='Y Scale Property')
-            raw_props_layout.prop(data=self.node.properties.inputs.Socket_7, property='value', text='Z Scale Property')
+            if ((setitem.use_x_angle_property == False) and (setitem.use_y_angle_property == False) and (setitem.use_z_angle_property == False) and (setitem.use_x_scale_property == False) and (setitem.use_y_scale_property == False) and (setitem.use_z_scale_property == False)):
+                raw_props_layout.label(text='Object has no modifiable properties!')
+            else:
+                self.draw_rotation_properties(raw_props_layout, setitem.rotation_order, setitem.use_x_angle_property, setitem.use_y_angle_property, setitem.use_z_angle_property, setitem.x_angle_name, setitem.y_angle_name, setitem.z_angle_name)
+                if (setitem.use_x_scale_property == True):
+                    x_scl_name: str = 'X Scale Property'
+                    if (len(setitem.x_scale_name) > 0):
+                        x_scl_name = setitem.x_scale_name
+                    raw_props_layout.prop(data=self.node.properties.inputs.Socket_5, property='value', text=x_scl_name)
+                if (setitem.use_y_scale_property == True):
+                    y_scl_name: str = 'Y Scale Property'
+                    if (len(setitem.y_scale_name) > 0):
+                        y_scl_name = setitem.y_scale_name
+                    raw_props_layout.prop(data=self.node.properties.inputs.Socket_6, property='value', text=y_scl_name)
+                if (setitem.use_z_scale_property == True):
+                    z_scl_name: str = 'Z Scale Property'
+                    if (len(setitem.z_scale_name) > 0):
+                        z_scl_name = setitem.z_scale_name
+                    raw_props_layout.prop(data=self.node.properties.inputs.Socket_7, property='value', text=z_scl_name)
