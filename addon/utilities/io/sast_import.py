@@ -628,6 +628,6 @@ class SASTImportManager:
             context.scene.collection.children.link(base_collection)
         
         SASTImportManager.importing = False
-        SASTLogger.log('SET File Import Complete!')                    
+        SASTLogger.log('SET File Import Complete!')
 
     #endregion
