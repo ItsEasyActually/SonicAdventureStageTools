@@ -42,7 +42,8 @@ class SetAssetManager:
             if (len(item.asset_file) > 0):
                 obj: bpy.types.Object = SetAssetManager.link_object(item)
                 if (obj is not None):
-                    scene.collection.objects.link(obj)
+                    if (scene.objects.__contains__(obj.name) == False):
+                        scene.collection.objects.link(obj)
 
     @staticmethod
     def get_object(key: str) -> bpy.types.Object | None:
