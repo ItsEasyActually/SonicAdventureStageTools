@@ -3,7 +3,8 @@ from bpy.props import (
     EnumProperty,
     IntProperty,
     StringProperty,
-    CollectionProperty
+    CollectionProperty,
+    BoolProperty
 )
 from ...game.info import GameInfoManager
 from ...game.info.stageinfo import StageInfo
