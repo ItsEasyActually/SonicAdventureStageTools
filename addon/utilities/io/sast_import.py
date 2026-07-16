@@ -540,6 +540,7 @@ class SASTImportManager:
         obj: bpy.types.Object = SetAssetManager.get_object(iteminfo.asset_name)
         if (obj is not None):
             obj.name = f'{index:03d}_{item_name}'
+            SASTLogger.log(f'Adding Object: {obj.name}')
             obj.location[0] = setitem.Node.Position.X
             obj.location[1] = -setitem.Node.Position.Z
             obj.location[2] = setitem.Node.Position.Y
