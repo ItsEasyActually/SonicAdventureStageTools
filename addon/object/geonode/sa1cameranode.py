@@ -140,98 +140,98 @@ class SA1CameraNode(SASTGeonodeBase):
                     self.set_camera_level(3)
 
     def set_camera_mode(self, value: int):
-        self.node.properties.inputs.Socket_2 = value
+        self.node.properties.inputs.Socket_2.value = value
 
     def set_camera_level(self, value: int):
-        self.node.properties.inputs.Socket_3 = value
+        self.node.properties.inputs.Socket_3.value = value
 
     def set_collision_shape(self, value: int):
-        self.node.properties.inputs.Socket_4 = value
+        self.node.properties.inputs.Socket_4.value = value
 
     def set_collision_x_rotation(self, value: float):
-        self.node.properties.inputs.Socket_6 = value
+        self.node.properties.inputs.Socket_6.value = value
 
     def set_collision_y_rotation(self, value: float):
-        self.node.properties.inputs.Socket_7 = value
+        self.node.properties.inputs.Socket_7.value = value
 
     def set_collision_x_scale(self, value: float):
-        self.node.properties.inputs.Socket_8 = value
+        self.node.properties.inputs.Socket_8.value = value
 
     def set_collision_y_scale(self, value: float):
-        self.node.properties.inputs.Socket_9 = value
+        self.node.properties.inputs.Socket_9.value = value
 
     def set_collision_z_scale(self, value: float):
-        self.node.properties.inputs.Socket_10 = value
+        self.node.properties.inputs.Socket_10.value = value
 
     def set_camera_x_rotation(self, value: int):
-        self.node.properties.inputs.Socket_11 = value
+        self.node.properties.inputs.Socket_11.value = value
 
     def set_camera_y_rotation(self, value: int):
-        self.node.properties.inputs.Socket_12 = value
+        self.node.properties.inputs.Socket_12.value = value
 
     def set_camera_x_position(self, value: float):
-        self.node.properties.inputs.Socket_13 = value
+        self.node.properties.inputs.Socket_13.value = value
 
     def set_camera_y_position(self, value: float):
-        self.node.properties.inputs.Socket_14 = value
+        self.node.properties.inputs.Socket_14.value = value
 
     def set_camera_z_position(self, value: float):
-        self.node.properties.inputs.Socket_15 = value
+        self.node.properties.inputs.Socket_15.value = value
 
     def set_target_x_position(self, value: float):
-        self.node.properties.inputs.Socket_16 = value
+        self.node.properties.inputs.Socket_16.value = value
 
     def set_target_y_position(self, value: float):
-        self.node.properties.inputs.Socket_17 = value
+        self.node.properties.inputs.Socket_17.value = value
 
     def set_target_z_position(self, value: float):
-        self.node.properties.inputs.Socket_18 = value
+        self.node.properties.inputs.Socket_18.value = value
 
     def set_camera_distance(self, value: float):
-        self.node.properties.inputs.Socket_19 = value
+        self.node.properties.inputs.Socket_19.value = value
 
     def get_collision_shape(self) -> int:
-        return self.node.properties.inputs.Socket_4
+        return self.node.properties.inputs.Socket_4.value
 
     def get_collision_x_rotation(self) -> int:
-        return self.node.properties.inputs.Socket_6
+        return self.node.properties.inputs.Socket_6.value
 
     def get_collision_y_rotation(self) -> int:
-        return self.node.properties.inputs.Socket_7
+        return self.node.properties.inputs.Socket_7.value
 
     def get_collision_x_scale(self) -> float:
-        return self.node.properties.inputs.Socket_8
+        return self.node.properties.inputs.Socket_8.value
 
     def get_collision_y_scale(self) -> float:
-        return self.node.properties.inputs.Socket_9
+        return self.node.properties.inputs.Socket_9.value
 
     def get_collision_z_scale(self) -> float:
-        return self.node.properties.inputs.Socket_10
+        return self.node.properties.inputs.Socket_10.value
 
     def get_camera_x_rotation(self) -> int:
-        return self.node.properties.inputs.Socket_11
+        return self.node.properties.inputs.Socket_11.value
 
     def get_camera_y_rotation(self) -> int:
-        return self.node.properties.inputs.Socket_12
+        return self.node.properties.inputs.Socket_12.value
 
     def get_camera_x_position(self) -> float:
-        return self.node.properties.inputs.Socket_13
+        return self.node.properties.inputs.Socket_13.value
 
     def get_camera_y_position(self) -> float:
-        return self.node.properties.inputs.Socket_14
+        return self.node.properties.inputs.Socket_14.value
 
     def get_camera_z_position(self) -> float:
-        return self.node.properties.inputs.Socket_15
+        return self.node.properties.inputs.Socket_15.value
 
     def get_target_x_position(self) -> float:
-        return self.node.properties.inputs.Socket_16
+        return self.node.properties.inputs.Socket_16.value
 
     def get_target_y_position(self) -> float:
-        return self.node.properties.inputs.Socket_17
+        return self.node.properties.inputs.Socket_17.value
 
     def get_target_z_position(self) -> float:
-        return self.node.properties.inputs.Socket_18
+        return self.node.properties.inputs.Socket_18.value
 
     def get_camera_distance(self) -> float:
-        return self.node.properties.inputs.Socket_19
+        return self.node.properties.inputs.Socket_19.value
     
