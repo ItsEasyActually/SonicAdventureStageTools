@@ -1,4 +1,4 @@
-﻿using Kermalis.EndianBinaryIO;
+﻿using Amicitia.IO.Binary;
 using SAST.Lib.Extensions;
 using SAST.Lib.IO;
 
@@ -62,11 +62,11 @@ namespace SAST.Lib.CAM.SA1
 		/// <see cref="IBinarySerializable"/> method for reading <see cref="SA1CamFile"/>.
 		/// </summary>
 		/// <param name="endianBinaryReader"></param>
-		public void Read(EndianBinaryReader endianBinaryReader)
+		public void Read(BinaryObjectReader endianBinaryReader)
 		{
 			endianBinaryReader.CheckEndianByUInt32();
 			int count = endianBinaryReader.ReadInt32();
-			endianBinaryReader.Stream.Seek(60, SeekOrigin.Current);
+			endianBinaryReader.Seek(60, SeekOrigin.Current);
 
 			for (int i = 0; i < count; i++)
 				AddCamera(endianBinaryReader.ReadObject<SA1CAMObject>());
@@ -76,7 +76,7 @@ namespace SAST.Lib.CAM.SA1
 		/// <see cref="IBinarySerializable"/> method for writing <see cref="SA1CamFile"/>.
 		/// </summary>
 		/// <param name="endianBinaryWriter"></param>
-		public void Write(EndianBinaryWriter endianBinaryWriter)
+		public void Write(BinaryObjectWriter endianBinaryWriter)
 		{
 			endianBinaryWriter.WriteInt32(CameraCount);
 			endianBinaryWriter.WriteZeroes(60);
@@ -85,15 +85,7 @@ namespace SAST.Lib.CAM.SA1
 				endianBinaryWriter.WriteObject(obj);
 		}
 
-		public void ToStream(MemoryStream stream, bool isBigEndian = false)
-		{
-			EndianBinaryWriter writer = new EndianBinaryWriter(stream);
-
-			if (isBigEndian)
-				writer.SetAsBigEndian();
-
-			writer.WriteObject(this);
-		}
+		public void ToStream(MemoryStream stream, bool isBigEndian = false) { FileWriter.WriteStream(stream, this, isBigEndian); }
 
 		public void ToFile(string path, bool isBigEndian = false)
 		{

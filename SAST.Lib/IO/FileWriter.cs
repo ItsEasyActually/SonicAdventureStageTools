@@ -1,6 +1,6 @@
-﻿using Kermalis.EndianBinaryIO;
-using AuroraLib.Compression.Algorithms;
-using SAST.Lib.Extensions;
+﻿using Amicitia.IO.Binary;
+using Amicitia.IO.Streams;
+using SA3D.Archival;
 
 namespace SAST.Lib.IO
 {
@@ -13,13 +13,13 @@ namespace SAST.Lib.IO
 		/// 
 		/// </summary>
 		/// <param name="stream"></param>
-		public static void WriteStream(MemoryStream stream, object writeObject, bool isBigEndian = false)
+		public static void WriteStream<T>(MemoryStream stream, T writeObject, bool isBigEndian = false) where T : IBinarySerializable, new()
 		{
-			EndianBinaryWriter writer = new EndianBinaryWriter(stream);
+			using BinaryObjectWriter writer = new BinaryObjectWriter(stream, StreamOwnership.Retain, Endianness.Little);
 			//writer.Stream.Seek(0, SeekOrigin.Begin);
 
 			if (isBigEndian)
-				writer.SetAsBigEndian();
+				writer.Endianness = Endianness.Big;
 
 			writer.WriteObject(writeObject);
 		}
@@ -28,7 +28,7 @@ namespace SAST.Lib.IO
 		/// 
 		/// </summary>
 		/// <param name="path"></param>
-		public static void WriteFile(string path, object writeObject, bool isBigEndian = false)
+		public static void WriteFile<T>(string path, T writeObject, bool isBigEndian = false) where T : IBinarySerializable, new()
 		{
 			string filepath = Path.GetFullPath(path);
 
@@ -44,18 +44,15 @@ namespace SAST.Lib.IO
 		/// 
 		/// </summary>
 		/// <param name="path"></param>
-		public static void WriteCompressedFile(string path, object writeObject, bool isBigEndian = false)
+		public static void WriteCompressedFile<T>(string path, T writeObject, bool isBigEndian = false) where T : IBinarySerializable, new()
 		{
 			string filepath = Path.GetFullPath(path);
 
 			using (MemoryStream stream = new MemoryStream())
 			{
 				WriteStream(stream, writeObject, isBigEndian);
-				using (MemoryStream compressedStream = new MemoryStream())
-				{
-					PRS.CompressHeaderless(stream.ToArray(), compressedStream);
-					File.WriteAllBytes(filepath, compressedStream.ToArray());
-				}
+
+				File.WriteAllBytes(filepath, PRS.CompressPRS(stream.ToArray()));
 			}
 		}
 	}

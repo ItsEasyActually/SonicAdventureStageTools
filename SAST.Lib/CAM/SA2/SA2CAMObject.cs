@@ -1,5 +1,6 @@
-﻿using Kermalis.EndianBinaryIO;
+﻿using Amicitia.IO.Binary;
 using SAST.Lib.DataTypes;
+using SAST.Lib.Extensions;
 
 namespace SAST.Lib.CAM.SA2
 {
@@ -128,7 +129,7 @@ namespace SAST.Lib.CAM.SA2
 		/// <see cref="IBinarySerializable"/> method for reading <see cref="SA2CamObject"/>.
 		/// </summary>
 		/// <param name="endianBinaryReader"></param>
-		public void Read(EndianBinaryReader endianBinaryReader)
+		public void Read(BinaryObjectReader endianBinaryReader)
 		{
 			Mode = endianBinaryReader.ReadEnum<SA2CamMode>();
 			AdjustMode = endianBinaryReader.ReadEnum<SA2CamAdjustMode>();
@@ -164,7 +165,7 @@ namespace SAST.Lib.CAM.SA2
 		/// <see cref="IBinarySerializable"/> method for writing <see cref="SA2CamObject"/>.
 		/// </summary>
 		/// <param name="endianBinaryWriter"></param>
-		public void Write(EndianBinaryWriter endianBinaryWriter)
+		public void Write(BinaryObjectWriter endianBinaryWriter)
 		{
 			endianBinaryWriter.WriteEnum(Mode);
 			endianBinaryWriter.WriteEnum(AdjustMode);

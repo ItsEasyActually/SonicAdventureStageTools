@@ -8,8 +8,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="AuroraLib.Compression" Version="1.5.3" />
-    <PackageReference Include="EndianBinaryIO" Version="2.1.1" />
+    <PackageReference Include="Amicitia.IO" Version="1.2.1" />
+    <PackageReference Include="SA3D.Archival" Version="1.2.0" />
   </ItemGroup>
 
 </Project>

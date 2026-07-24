@@ -1,4 +1,4 @@
-﻿using Kermalis.EndianBinaryIO;
+﻿using Amicitia.IO.Binary;
 
 namespace SAST.Lib.DataTypes
 {
@@ -98,7 +98,7 @@ namespace SAST.Lib.DataTypes
 		/// <see cref="IBinarySerializable"/> method for reading <see cref="FloatVector"/>.
 		/// </summary>
 		/// <param name="endianBinaryReader"></param>
-		public void Read(EndianBinaryReader endianBinaryReader)
+		public void Read(BinaryObjectReader endianBinaryReader)
 		{
 			X = endianBinaryReader.ReadSingle();
 			Y = endianBinaryReader.ReadSingle();
@@ -109,7 +109,7 @@ namespace SAST.Lib.DataTypes
 		/// <see cref="IBinarySerializable"/> method for writing <see cref="FloatVector"/>.
 		/// </summary>
 		/// <param name="endianBinaryWriter"></param>
-		public void Write(EndianBinaryWriter endianBinaryWriter)
+		public void Write(BinaryObjectWriter endianBinaryWriter)
 		{
 			endianBinaryWriter.WriteSingle(X);
 			endianBinaryWriter.WriteSingle(Y);

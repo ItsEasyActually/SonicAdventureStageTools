@@ -1,5 +1,6 @@
-﻿using Kermalis.EndianBinaryIO;
+﻿using Amicitia.IO.Binary;
 using SAST.Lib.DataTypes;
+using SAST.Lib.Extensions;
 
 namespace SAST.Lib.CAM.SA2
 {
@@ -47,7 +48,6 @@ namespace SAST.Lib.CAM.SA2
 		/// 
 		/// If false, the point can still be referenced by other points.
 		/// </summary>
-		[BinaryBooleanSize(BooleanSize.U8)]
 		public bool IsPlayerPointEnabled { get; set; } = true;
 
 		/// <summary>
@@ -55,7 +55,6 @@ namespace SAST.Lib.CAM.SA2
 		/// 
 		/// If disabled, the camera follows the fixed path along the points without attempting to keep the player in view.
 		/// </summary>
-		[BinaryBooleanSize(BooleanSize.U8)]
 		public bool TrackPlayer { get; set; } = false;
 		#endregion
 
@@ -69,7 +68,7 @@ namespace SAST.Lib.CAM.SA2
 		/// <see cref="IBinarySerializable"/> method for reading <see cref="SA2PointObject"/>.
 		/// </summary>
 		/// <param name="endianBinaryReader"></param>
-		public void Read(EndianBinaryReader endianBinaryReader)
+		public void Read(BinaryObjectReader endianBinaryReader)
 		{
 			PlayerPoint = endianBinaryReader.ReadObject<FloatVector>();
 			PlayerPointRadius = endianBinaryReader.ReadSingle();
@@ -78,15 +77,15 @@ namespace SAST.Lib.CAM.SA2
 			for (int i = 0; i < 6; i++)
 				Links[i] = endianBinaryReader.ReadInt16();
 			FlowIndex = endianBinaryReader.ReadInt16();
-			IsPlayerPointEnabled = endianBinaryReader.ReadBoolean8();
-			TrackPlayer = endianBinaryReader.ReadBoolean8();
+			IsPlayerPointEnabled = endianBinaryReader.ReadBooleanByte();
+			TrackPlayer = endianBinaryReader.ReadBooleanByte();
 		}
 
 		/// <summary>
 		/// <see cref="IBinarySerializable"/> method for writing <see cref="SA2PointObject"/>.
 		/// </summary>
 		/// <param name="endianBinaryWriter"></param>
-		public void Write(EndianBinaryWriter endianBinaryWriter)
+		public void Write(BinaryObjectWriter endianBinaryWriter)
 		{
 			endianBinaryWriter.WriteObject(PlayerPoint);
 			endianBinaryWriter.WriteSingle(PlayerPointRadius);

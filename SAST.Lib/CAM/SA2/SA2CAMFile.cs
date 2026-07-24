@@ -1,11 +1,6 @@
-﻿using Kermalis.EndianBinaryIO;
+﻿using Amicitia.IO.Binary;
 using SAST.Lib.Extensions;
 using SAST.Lib.IO;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SAST.Lib.CAM.SA2
 {
@@ -45,7 +40,7 @@ namespace SAST.Lib.CAM.SA2
 		/// <see cref="IBinarySerializable"/> method for reading <see cref="SA2CAMFile"/>.
 		/// </summary>
 		/// <param name="endianBinaryReader"></param>
-		public void Read(EndianBinaryReader endianBinaryReader)
+		public void Read(BinaryObjectReader endianBinaryReader)
 		{
 			endianBinaryReader.CheckEndianByUInt32();
 			Content = endianBinaryReader.ReadEnum<ContentFlags>();
@@ -63,7 +58,7 @@ namespace SAST.Lib.CAM.SA2
 
 			if (sizeSPCameras > 0)
 			{
-				endianBinaryReader.Stream.Seek(curAddr, SeekOrigin.Begin);
+				endianBinaryReader.Seek(curAddr, SeekOrigin.Begin);
 				endianBinaryReader.CheckEndianByUInt32();   // This check has to be run due to the port sometimes having left over Little Endian data.
 
 				for (int i = 0; i < (sizeSPCameras / SA2CAMObject.Size); i++)
@@ -79,7 +74,7 @@ namespace SAST.Lib.CAM.SA2
 			if (sizeSPPoints > 0)
 			{
 				curAddr += sizeSPCameras;
-				endianBinaryReader.Stream.Seek(curAddr, SeekOrigin.Begin);
+				endianBinaryReader.Seek(curAddr, SeekOrigin.Begin);
 
 				for (int i = 0; i < (sizeSPPoints / SA2PointObject.Size); i++)
 				{
@@ -94,7 +89,7 @@ namespace SAST.Lib.CAM.SA2
 			if (sizeDCameras > 0)
 			{
 				curAddr += sizeSPPoints;
-				endianBinaryReader.Stream.Seek(curAddr, SeekOrigin.Begin);
+				endianBinaryReader.Seek(curAddr, SeekOrigin.Begin);
 				endianBinaryReader.CheckEndianByUInt32();   // This check has to be run due to the port sometimes having left over Little Endian data.
 
 				for (int i = 0; i < (sizeDCameras / SA2CAMObject.Size); i++)
@@ -110,7 +105,7 @@ namespace SAST.Lib.CAM.SA2
 			if (sizeDPoints > 0)
 			{
 				curAddr += sizeDCameras;
-				endianBinaryReader.Stream.Seek(curAddr, SeekOrigin.Begin);
+				endianBinaryReader.Seek(curAddr, SeekOrigin.Begin);
 
 				for (int i = 0; i < (sizeDPoints / SA2PointObject.Size); i++)
 				{
@@ -125,7 +120,7 @@ namespace SAST.Lib.CAM.SA2
 			if (sizeMPCameras > 0)
 			{
 				curAddr += sizeDPoints;
-				endianBinaryReader.Stream.Seek(curAddr, SeekOrigin.Begin);
+				endianBinaryReader.Seek(curAddr, SeekOrigin.Begin);
 				endianBinaryReader.CheckEndianByUInt32();   // This check has to be run due to the port sometimes having left over Little Endian data.
 
 				for (int i = 0; i < (sizeMPCameras / SA2CAMObject.Size); i++)
@@ -141,7 +136,7 @@ namespace SAST.Lib.CAM.SA2
 			if (sizeMPPoints > 0)
 			{
 				curAddr += sizeMPCameras;
-				endianBinaryReader.Stream.Seek(curAddr, SeekOrigin.Begin);
+				endianBinaryReader.Seek(curAddr, SeekOrigin.Begin);
 
 				for (int i = 0; i < (sizeMPPoints / SA2PointObject.Size); i++)
 				{
@@ -158,7 +153,7 @@ namespace SAST.Lib.CAM.SA2
 		/// <see cref="IBinarySerializable"/> method for writing <see cref="SA2CAMFile"/>.
 		/// </summary>
 		/// <param name="endianBinaryWriter"></param>
-		public void Write(EndianBinaryWriter endianBinaryWriter)
+		public void Write(BinaryObjectWriter endianBinaryWriter)
 		{
 			if (MultiplayerCameraGroup.PointCount > 0)
 				Content = ContentFlags.HasMultiplayerPoints;

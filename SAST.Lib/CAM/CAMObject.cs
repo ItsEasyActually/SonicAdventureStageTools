@@ -1,5 +1,4 @@
-﻿using Kermalis.EndianBinaryIO;
-using SAST.Lib.DataTypes;
+﻿using SAST.Lib.DataTypes;
 
 namespace SAST.Lib.CAM
 {

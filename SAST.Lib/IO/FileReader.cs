@@ -1,7 +1,6 @@
-﻿using AuroraLib.Compression.Algorithms;
-using Kermalis.EndianBinaryIO;
-using SAST.Lib.Extensions;
-using System.IO;
+﻿using Amicitia.IO.Streams;
+using Amicitia.IO.Binary;
+using SA3D.Archival;
 
 namespace SAST.Lib.IO
 {
@@ -16,10 +15,9 @@ namespace SAST.Lib.IO
 		/// <typeparam name="T"></typeparam>
 		/// <param name="stream">Current stream for the file.</param>
 		/// <returns></returns>
-		public static T ReadStream<T>(MemoryStream stream)
+		public static T ReadStream<T>(MemoryStream stream) where T : IBinarySerializable, new()
 		{
-			EndianBinaryReader reader = new EndianBinaryReader(stream);
-			reader.Stream.Seek(0, SeekOrigin.Begin);
+			using BinaryObjectReader reader = new BinaryObjectReader(stream, StreamOwnership.Retain, Endianness.Little);
 
 			return reader.ReadObject<T>();
 		}
@@ -30,16 +28,15 @@ namespace SAST.Lib.IO
 		/// <typeparam name="T"></typeparam>
 		/// <param name="path">Path to the file.</param>
 		/// <returns></returns>
-		public static T ReadFile<T>(string path)
+		public static T ReadFile<T>(string path) where T : IBinarySerializable, new()
 		{
 			string filepath = Path.GetFullPath(path);
 
 			if (File.Exists(filepath))
 			{
-				using (MemoryStream stream = new MemoryStream(File.ReadAllBytes(filepath)))
-				{
-					return ReadStream<T>(stream);
-				}
+				using BinaryObjectReader reader = new BinaryObjectReader(filepath, Endianness.Little, null);
+				
+				return reader.ReadObject<T>();
 			}
 			else
 				return default;
@@ -51,18 +48,14 @@ namespace SAST.Lib.IO
 		/// <typeparam name="T"></typeparam>
 		/// <param name="path"></param>
 		/// <returns></returns>
-		public static T ReadCompressedFile<T>(string path)
+		public static T ReadCompressedFile<T>(string path) where T : IBinarySerializable, new()
 		{
 			string filepath = Path.GetFullPath(path);
 
 			if (File.Exists(filepath))
 			{
-				using (MemoryStream deststream = new MemoryStream())
+				using (MemoryStream deststream = new MemoryStream(PRS.ReadPRSFile(filepath)))
 				{
-					using (MemoryStream sourcestream = new MemoryStream(File.ReadAllBytes(filepath)))
-					{
-						PRS.DecompressHeaderless(sourcestream, deststream);
-					}
 					return ReadStream<T>(deststream);
 				}
 			}

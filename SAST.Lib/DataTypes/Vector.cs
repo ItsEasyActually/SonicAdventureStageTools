@@ -20,10 +20,5 @@ namespace SAST.Lib.DataTypes
 			else
 				return "Vector has null variables!";
 		}
-
-		public static float LengthSquared(float x, float y, float z)
-		{
-			return x * x + y * y + z * z;
-		}
 	}
 }

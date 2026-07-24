@@ -1,4 +1,4 @@
-﻿using Kermalis.EndianBinaryIO;
+﻿using Amicitia.IO.Binary;
 using SAST.Lib.Extensions;
 using SAST.Lib.IO;
 
@@ -58,11 +58,11 @@ namespace SAST.Lib.SET
 		/// <see cref="IBinarySerializable"/> method for reading <see cref="SETFile"/>.
 		/// </summary>
 		/// <param name="endianBinaryReader"></param>
-		public void Read(EndianBinaryReader endianBinaryReader)
+		public void Read(BinaryObjectReader endianBinaryReader)
 		{
 			endianBinaryReader.CheckEndianByUInt32();
 			int count = endianBinaryReader.ReadInt32();
-			endianBinaryReader.Stream.Seek(28, SeekOrigin.Current);
+			endianBinaryReader.Seek(28, SeekOrigin.Current);
 
 			for (int i = 0; i < count; i++)
 				AddObject(endianBinaryReader.ReadObject<SETObject>());
@@ -72,7 +72,7 @@ namespace SAST.Lib.SET
 		/// <see cref="IBinarySerializable"/> method for writing <see cref="SETFile"/>.
 		/// </summary>
 		/// <param name="endianBinaryWriter"></param>
-		public void Write(EndianBinaryWriter endianBinaryWriter)
+		public void Write(BinaryObjectWriter endianBinaryWriter)
 		{
 			endianBinaryWriter.WriteInt32(Objects.Count);
 			endianBinaryWriter.WriteZeroes(28);

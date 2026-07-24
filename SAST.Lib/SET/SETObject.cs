@@ -1,7 +1,6 @@
-﻿using Kermalis.EndianBinaryIO;
+﻿using Amicitia.IO.Binary;
 using SAST.Lib.DataTypes;
 using SAST.Lib.Extensions;
-using System.Security.Cryptography;
 
 namespace SAST.Lib.SET
 {
@@ -96,7 +95,7 @@ namespace SAST.Lib.SET
 		/// <see cref="IBinarySerializable"/> method for reading <see cref="SETObject"/>.
 		/// </summary>
 		/// <param name="endianBinaryReader"></param>
-		public void Read(EndianBinaryReader endianBinaryReader)
+		public void Read(BinaryObjectReader endianBinaryReader)
 		{
 			ushort bits = endianBinaryReader.ReadUInt16();
 			ObjectID = bits;
@@ -110,7 +109,7 @@ namespace SAST.Lib.SET
 		/// <see cref="IBinarySerializable"/> method for writing <see cref="SetObject"/>.
 		/// </summary>
 		/// <param name="endianBinaryWriter"></param>
-		public void Write(EndianBinaryWriter endianBinaryWriter)
+		public void Write(BinaryObjectWriter endianBinaryWriter)
 		{
 			ushort bits = (ushort)(ObjectID | ((int)Flags << 12));
 			endianBinaryWriter.WriteUInt16(bits);
