@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
+    <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
 	<GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
@@ -9,7 +9,7 @@
 
   <ItemGroup>
     <PackageReference Include="Amicitia.IO" Version="1.2.1" />
-    <PackageReference Include="SA3D.Archival" Version="1.2.0" />
+    <PackageReference Include="SA3D.Archival" Version="2.0.0" />
   </ItemGroup>
 
 </Project>

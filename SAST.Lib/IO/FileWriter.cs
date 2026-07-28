@@ -52,7 +52,7 @@ namespace SAST.Lib.IO
 			{
 				WriteStream(stream, writeObject, isBigEndian);
 
-				File.WriteAllBytes(filepath, PRS.CompressPRS(stream.ToArray()));
+				File.WriteAllBytes(filepath, PRS.Compress(stream.ToArray()));
 			}
 		}
 	}

@@ -54,7 +54,7 @@ namespace SAST.Lib.IO
 
 			if (File.Exists(filepath))
 			{
-				using (MemoryStream deststream = new MemoryStream(PRS.ReadPRSFile(filepath)))
+				using (MemoryStream deststream = new MemoryStream(PRS.DecompressFile(filepath)))
 				{
 					return ReadStream<T>(deststream);
 				}
