@@ -37,6 +37,10 @@ REM Copy contents from dll to destination
 echo Copying contents from %addon_dll% to %addon_dlldst%
 xcopy /y %addon_dll%\* %addon_dlldst%
 
+REM Delete excess blend files.
+echo Deleting *.blend1 files from %addon_dst%
+del /S *.blend1
+
 echo Applying Updates to addon
 xcopy /s /e /y %addon_dst%\* "%APPDATA%\Blender Foundation\Blender\5.2\scripts\addons\SonicAdventureStageTools"
 
