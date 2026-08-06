@@ -179,9 +179,9 @@ class SADXPCGameInfo(GameInfo):
             case 'StationSquare':
                 return self.ss_act_list
             case 'EggCarrierExterior':
-                return self.ecab_act_list
-            case 'EggCarrierInterior':
                 return self.ecc_act_list
+            case 'EggCarrierInterior':
+                return self.ecab_act_list
             case 'MysticRuins':
                 return self.mr_act_list
             case 'ThePast':
