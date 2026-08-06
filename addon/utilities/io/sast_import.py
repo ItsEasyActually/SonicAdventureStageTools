@@ -557,7 +557,10 @@ class SASTImportManager:
             obj_props.objtype = 'SET'
 
             set_props: SASTSETObjectProperties = SASTSETObjectProperties.get_properties(obj)
-            set_props.objectid = str(setitem.ObjectID)
+            if (setitem.ObjectID < len(scene_props.objlist)):
+                set_props.objectid = str(setitem.ObjectID)
+            else:
+                set_props.objectid = '0'
             set_props.fallback_objid = setitem.ObjectID
             SASTImportManager.process_setitem_flags(set_props, setitem.Flags.ToString())
 
