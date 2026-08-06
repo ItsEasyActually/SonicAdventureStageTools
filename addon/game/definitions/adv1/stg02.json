@@ -350,7 +350,7 @@
         },
         "BlenderInfo": {
             "CommonName": "Dash Ring",
-            "RotationMode": "NONE",
+            "RotationMode": "YZX",
             "ItemInfo": "",
             "AssetName": "DashRing",
             "AssetFile": "blend\\\\set\\\\sa1\\\\common\\\\DashRing.blend",
@@ -784,24 +784,24 @@
         },
         "BlenderInfo": {
             "CommonName": "Repelling Box",
-            "RotationMode": "NONE",
+            "RotationMode": "Z",
             "ItemInfo": "",
-            "AssetName": "",
-            "AssetFile": "",
+            "AssetName": "RepellingBox",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\common\\\\CollisionBox.blend",
             "RelativeAssetFile": true,
             "PropertyInfo": {
-                "UseXAngleProperty": true,
+                "UseXAngleProperty": false,
                 "XAnglePropertyName": "",
-                "UseYAngleProperty": true,
+                "UseYAngleProperty": false,
                 "YAnglePropertyName": "",
-                "UseZAngleProperty": true,
+                "UseZAngleProperty": false,
                 "ZAnglePropertyName": "",
                 "UseXScaleProperty": true,
-                "XScalePropertyName": "",
+                "XScalePropertyName": "Width",
                 "UseYScaleProperty": true,
-                "YScalePropertyName": "",
+                "YScalePropertyName": "Height",
                 "UseZScaleProperty": true,
-                "ZScalePropertyName": ""
+                "ZScalePropertyName": "Depth"
             }
         }
     },
@@ -939,24 +939,24 @@
         },
         "BlenderInfo": {
             "CommonName": "Leon",
-            "RotationMode": "NONE",
+            "RotationMode": "Z",
             "ItemInfo": "",
-            "AssetName": "",
-            "AssetFile": "",
+            "AssetName": "Leon",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\enemy\\\\Leon.blend",
             "RelativeAssetFile": true,
             "PropertyInfo": {
-                "UseXAngleProperty": true,
+                "UseXAngleProperty": false,
                 "XAnglePropertyName": "",
-                "UseYAngleProperty": true,
+                "UseYAngleProperty": false,
                 "YAnglePropertyName": "",
                 "UseZAngleProperty": true,
-                "ZAnglePropertyName": "",
-                "UseXScaleProperty": true,
+                "ZAnglePropertyName": "Emerald Shard ID",
+                "UseXScaleProperty": false,
                 "XScalePropertyName": "",
                 "UseYScaleProperty": true,
-                "YScalePropertyName": "",
+                "YScalePropertyName": "Search Range",
                 "UseZScaleProperty": true,
-                "ZScalePropertyName": ""
+                "ZScalePropertyName": "Movement Range"
             }
         }
     },
@@ -2458,7 +2458,7 @@
         },
         "BlenderInfo": {
             "CommonName": "Horizontal Spring",
-            "RotationMode": "Y",
+            "RotationMode": "Z",
             "ItemInfo": "",
             "AssetName": "WideSpring",
             "AssetFile": "blend\\\\set\\\\sa1\\\\common\\\\WideSpring.blend",

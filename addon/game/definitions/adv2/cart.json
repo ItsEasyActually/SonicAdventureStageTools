@@ -1,0 +1,405 @@
+{
+    "DMYOBJ": {
+        "ObjectInfo": {
+            "FunctionAddress": "006D34B0",
+            "TaskLevel": 2,
+            "InitializationMode": 2,
+            "LoadAttributes": 2,
+            "LoadDistance": 0
+        },
+        "BlenderInfo": {
+            "CommonName": "",
+            "RotationMode": "",
+            "ItemInfo": "",
+            "AssetName": "",
+            "AssetFile": "",
+            "RelativeAssetFile": true,
+            "PropertyInfo": {
+                "UseXAngleProperty": true,
+                "XAnglePropertyName": "",
+                "UseYAngleProperty": true,
+                "YAnglePropertyName": "",
+                "UseZAngleProperty": true,
+                "ZAnglePropertyName": "",
+                "UseXScaleProperty": true,
+                "XScalePropertyName": "",
+                "UseYScaleProperty": true,
+                "YScalePropertyName": "",
+                "UseZScaleProperty": true,
+                "ZScalePropertyName": ""
+            }
+        }
+    },
+    "JUMP PANEL": {
+        "ObjectInfo": {
+            "FunctionAddress": "00625A00",
+            "TaskLevel": 2,
+            "InitializationMode": 2,
+            "LoadAttributes": 2,
+            "LoadDistance": 0
+        },
+        "BlenderInfo": {
+            "CommonName": "",
+            "RotationMode": "",
+            "ItemInfo": "",
+            "AssetName": "",
+            "AssetFile": "",
+            "RelativeAssetFile": true,
+            "PropertyInfo": {
+                "UseXAngleProperty": true,
+                "XAnglePropertyName": "",
+                "UseYAngleProperty": true,
+                "YAnglePropertyName": "",
+                "UseZAngleProperty": true,
+                "ZAnglePropertyName": "",
+                "UseXScaleProperty": true,
+                "XScalePropertyName": "",
+                "UseYScaleProperty": true,
+                "YScalePropertyName": "",
+                "UseZScaleProperty": true,
+                "ZScalePropertyName": ""
+            }
+        }
+    },
+    "DASH PANEL": {
+        "ObjectInfo": {
+            "FunctionAddress": "00625320",
+            "TaskLevel": 2,
+            "InitializationMode": 2,
+            "LoadAttributes": 2,
+            "LoadDistance": 0
+        },
+        "BlenderInfo": {
+            "CommonName": "",
+            "RotationMode": "",
+            "ItemInfo": "",
+            "AssetName": "",
+            "AssetFile": "",
+            "RelativeAssetFile": true,
+            "PropertyInfo": {
+                "UseXAngleProperty": true,
+                "XAnglePropertyName": "",
+                "UseYAngleProperty": true,
+                "YAnglePropertyName": "",
+                "UseZAngleProperty": true,
+                "ZAnglePropertyName": "",
+                "UseXScaleProperty": true,
+                "XScalePropertyName": "",
+                "UseYScaleProperty": true,
+                "YScalePropertyName": "",
+                "UseZScaleProperty": true,
+                "ZScalePropertyName": ""
+            }
+        }
+    },
+    "GATE": {
+        "ObjectInfo": {
+            "FunctionAddress": "006245A0",
+            "TaskLevel": 2,
+            "InitializationMode": 2,
+            "LoadAttributes": 2,
+            "LoadDistance": 0
+        },
+        "BlenderInfo": {
+            "CommonName": "",
+            "RotationMode": "",
+            "ItemInfo": "",
+            "AssetName": "",
+            "AssetFile": "",
+            "RelativeAssetFile": true,
+            "PropertyInfo": {
+                "UseXAngleProperty": true,
+                "XAnglePropertyName": "",
+                "UseYAngleProperty": true,
+                "YAnglePropertyName": "",
+                "UseZAngleProperty": true,
+                "ZAnglePropertyName": "",
+                "UseXScaleProperty": true,
+                "XScalePropertyName": "",
+                "UseYScaleProperty": true,
+                "YScalePropertyName": "",
+                "UseZScaleProperty": true,
+                "ZScalePropertyName": ""
+            }
+        }
+    },
+    "GATE2": {
+        "ObjectInfo": {
+            "FunctionAddress": "00621800",
+            "TaskLevel": 2,
+            "InitializationMode": 2,
+            "LoadAttributes": 2,
+            "LoadDistance": 0
+        },
+        "BlenderInfo": {
+            "CommonName": "",
+            "RotationMode": "",
+            "ItemInfo": "",
+            "AssetName": "",
+            "AssetFile": "",
+            "RelativeAssetFile": true,
+            "PropertyInfo": {
+                "UseXAngleProperty": true,
+                "XAnglePropertyName": "",
+                "UseYAngleProperty": true,
+                "YAnglePropertyName": "",
+                "UseZAngleProperty": true,
+                "ZAnglePropertyName": "",
+                "UseXScaleProperty": true,
+                "XScalePropertyName": "",
+                "UseYScaleProperty": true,
+                "YScalePropertyName": "",
+                "UseZScaleProperty": true,
+                "ZScalePropertyName": ""
+            }
+        }
+    },
+    "KANBAN": {
+        "ObjectInfo": {
+            "FunctionAddress": "00625DC0",
+            "TaskLevel": 2,
+            "InitializationMode": 2,
+            "LoadAttributes": 2,
+            "LoadDistance": 0
+        },
+        "BlenderInfo": {
+            "CommonName": "",
+            "RotationMode": "",
+            "ItemInfo": "",
+            "AssetName": "",
+            "AssetFile": "",
+            "RelativeAssetFile": true,
+            "PropertyInfo": {
+                "UseXAngleProperty": true,
+                "XAnglePropertyName": "",
+                "UseYAngleProperty": true,
+                "YAnglePropertyName": "",
+                "UseZAngleProperty": true,
+                "ZAnglePropertyName": "",
+                "UseXScaleProperty": true,
+                "XScalePropertyName": "",
+                "UseYScaleProperty": true,
+                "YScalePropertyName": "",
+                "UseZScaleProperty": true,
+                "ZScalePropertyName": ""
+            }
+        }
+    },
+    "RESTART_OBJ": {
+        "ObjectInfo": {
+            "FunctionAddress": "00624100",
+            "TaskLevel": 2,
+            "InitializationMode": 2,
+            "LoadAttributes": 2,
+            "LoadDistance": 0
+        },
+        "BlenderInfo": {
+            "CommonName": "",
+            "RotationMode": "",
+            "ItemInfo": "",
+            "AssetName": "",
+            "AssetFile": "",
+            "RelativeAssetFile": true,
+            "PropertyInfo": {
+                "UseXAngleProperty": true,
+                "XAnglePropertyName": "",
+                "UseYAngleProperty": true,
+                "YAnglePropertyName": "",
+                "UseZAngleProperty": true,
+                "ZAnglePropertyName": "",
+                "UseXScaleProperty": true,
+                "XScalePropertyName": "",
+                "UseYScaleProperty": true,
+                "YScalePropertyName": "",
+                "UseZScaleProperty": true,
+                "ZScalePropertyName": ""
+            }
+        }
+    },
+    "LIGHT SW": {
+        "ObjectInfo": {
+            "FunctionAddress": "006C9910",
+            "TaskLevel": 2,
+            "InitializationMode": 2,
+            "LoadAttributes": 2,
+            "LoadDistance": 0
+        },
+        "BlenderInfo": {
+            "CommonName": "",
+            "RotationMode": "",
+            "ItemInfo": "",
+            "AssetName": "",
+            "AssetFile": "",
+            "RelativeAssetFile": true,
+            "PropertyInfo": {
+                "UseXAngleProperty": true,
+                "XAnglePropertyName": "",
+                "UseYAngleProperty": true,
+                "YAnglePropertyName": "",
+                "UseZAngleProperty": true,
+                "ZAnglePropertyName": "",
+                "UseXScaleProperty": true,
+                "XScalePropertyName": "",
+                "UseYScaleProperty": true,
+                "YScalePropertyName": "",
+                "UseZScaleProperty": true,
+                "ZScalePropertyName": ""
+            }
+        }
+    },
+    "CART RING": {
+        "ObjectInfo": {
+            "FunctionAddress": "00625770",
+            "TaskLevel": 2,
+            "InitializationMode": 2,
+            "LoadAttributes": 2,
+            "LoadDistance": 0
+        },
+        "BlenderInfo": {
+            "CommonName": "",
+            "RotationMode": "",
+            "ItemInfo": "",
+            "AssetName": "",
+            "AssetFile": "",
+            "RelativeAssetFile": true,
+            "PropertyInfo": {
+                "UseXAngleProperty": true,
+                "XAnglePropertyName": "",
+                "UseYAngleProperty": true,
+                "YAnglePropertyName": "",
+                "UseZAngleProperty": true,
+                "ZAnglePropertyName": "",
+                "UseXScaleProperty": true,
+                "XScalePropertyName": "",
+                "UseYScaleProperty": true,
+                "YScalePropertyName": "",
+                "UseZScaleProperty": true,
+                "ZScalePropertyName": ""
+            }
+        }
+    },
+    "BALOON": {
+        "ObjectInfo": {
+            "FunctionAddress": "00624E10",
+            "TaskLevel": 2,
+            "InitializationMode": 2,
+            "LoadAttributes": 2,
+            "LoadDistance": 0
+        },
+        "BlenderInfo": {
+            "CommonName": "",
+            "RotationMode": "",
+            "ItemInfo": "",
+            "AssetName": "",
+            "AssetFile": "",
+            "RelativeAssetFile": true,
+            "PropertyInfo": {
+                "UseXAngleProperty": true,
+                "XAnglePropertyName": "",
+                "UseYAngleProperty": true,
+                "YAnglePropertyName": "",
+                "UseZAngleProperty": true,
+                "ZAnglePropertyName": "",
+                "UseXScaleProperty": true,
+                "XScalePropertyName": "",
+                "UseYScaleProperty": true,
+                "YScalePropertyName": "",
+                "UseZScaleProperty": true,
+                "ZScalePropertyName": ""
+            }
+        }
+    },
+    "HIKOUSEN": {
+        "ObjectInfo": {
+            "FunctionAddress": "006241A0",
+            "TaskLevel": 2,
+            "InitializationMode": 2,
+            "LoadAttributes": 2,
+            "LoadDistance": 0
+        },
+        "BlenderInfo": {
+            "CommonName": "",
+            "RotationMode": "",
+            "ItemInfo": "",
+            "AssetName": "",
+            "AssetFile": "",
+            "RelativeAssetFile": true,
+            "PropertyInfo": {
+                "UseXAngleProperty": true,
+                "XAnglePropertyName": "",
+                "UseYAngleProperty": true,
+                "YAnglePropertyName": "",
+                "UseZAngleProperty": true,
+                "ZAnglePropertyName": "",
+                "UseXScaleProperty": true,
+                "XScalePropertyName": "",
+                "UseYScaleProperty": true,
+                "YScalePropertyName": "",
+                "UseZScaleProperty": true,
+                "ZScalePropertyName": ""
+            }
+        }
+    },
+    "KAKUSI": {
+        "ObjectInfo": {
+            "FunctionAddress": "00624C30",
+            "TaskLevel": 2,
+            "InitializationMode": 2,
+            "LoadAttributes": 2,
+            "LoadDistance": 0
+        },
+        "BlenderInfo": {
+            "CommonName": "",
+            "RotationMode": "",
+            "ItemInfo": "",
+            "AssetName": "",
+            "AssetFile": "",
+            "RelativeAssetFile": true,
+            "PropertyInfo": {
+                "UseXAngleProperty": true,
+                "XAnglePropertyName": "",
+                "UseYAngleProperty": true,
+                "YAnglePropertyName": "",
+                "UseZAngleProperty": true,
+                "ZAnglePropertyName": "",
+                "UseXScaleProperty": true,
+                "XScalePropertyName": "",
+                "UseYScaleProperty": true,
+                "YScalePropertyName": "",
+                "UseZScaleProperty": true,
+                "ZScalePropertyName": ""
+            }
+        }
+    },
+    "G RING": {
+        "ObjectInfo": {
+            "FunctionAddress": "00624060",
+            "TaskLevel": 2,
+            "InitializationMode": 2,
+            "LoadAttributes": 2,
+            "LoadDistance": 0
+        },
+        "BlenderInfo": {
+            "CommonName": "",
+            "RotationMode": "",
+            "ItemInfo": "",
+            "AssetName": "",
+            "AssetFile": "",
+            "RelativeAssetFile": true,
+            "PropertyInfo": {
+                "UseXAngleProperty": true,
+                "XAnglePropertyName": "",
+                "UseYAngleProperty": true,
+                "YAnglePropertyName": "",
+                "UseZAngleProperty": true,
+                "ZAnglePropertyName": "",
+                "UseXScaleProperty": true,
+                "XScalePropertyName": "",
+                "UseYScaleProperty": true,
+                "YScalePropertyName": "",
+                "UseZScaleProperty": true,
+                "ZScalePropertyName": ""
+            }
+        }
+    }
+}

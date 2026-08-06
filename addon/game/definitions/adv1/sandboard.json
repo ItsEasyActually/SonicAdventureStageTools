@@ -381,7 +381,7 @@
         },
         "BlenderInfo": {
             "CommonName": "Dash Ring",
-            "RotationMode": "NONE",
+            "RotationMode": "YZX",
             "ItemInfo": "",
             "AssetName": "DashRing",
             "AssetFile": "blend\\\\set\\\\sa1\\\\common\\\\DashRing.blend",

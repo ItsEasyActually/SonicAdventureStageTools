@@ -350,7 +350,7 @@
         },
         "BlenderInfo": {
             "CommonName": "Dash Ring",
-            "RotationMode": "NONE",
+            "RotationMode": "YZX",
             "ItemInfo": "",
             "AssetName": "DashRing",
             "AssetFile": "blend\\\\set\\\\sa1\\\\common\\\\DashRing.blend",
@@ -659,24 +659,24 @@
             "LoadDistance": 160000
         },
         "BlenderInfo": {
-            "CommonName": "ZERO",
-            "RotationMode": "NONE",
+            "CommonName": "Egg Keeper",
+            "RotationMode": "Z",
             "ItemInfo": "",
-            "AssetName": "",
-            "AssetFile": "",
+            "AssetName": "EggKeeper",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\enemy\\\\EggKeeper.blend",
             "RelativeAssetFile": true,
             "PropertyInfo": {
-                "UseXAngleProperty": true,
+                "UseXAngleProperty": false,
                 "XAnglePropertyName": "",
-                "UseYAngleProperty": true,
+                "UseYAngleProperty": false,
                 "YAnglePropertyName": "",
-                "UseZAngleProperty": true,
+                "UseZAngleProperty": false,
                 "ZAnglePropertyName": "",
-                "UseXScaleProperty": true,
+                "UseXScaleProperty": false,
                 "XScalePropertyName": "",
-                "UseYScaleProperty": true,
+                "UseYScaleProperty": false,
                 "YScalePropertyName": "",
-                "UseZScaleProperty": true,
+                "UseZScaleProperty": false,
                 "ZScalePropertyName": ""
             }
         }
@@ -783,24 +783,24 @@
             "LoadDistance": 160000
         },
         "BlenderInfo": {
-            "CommonName": "ZERO",
-            "RotationMode": "NONE",
+            "CommonName": "Egg Keeper",
+            "RotationMode": "Z",
             "ItemInfo": "",
-            "AssetName": "",
-            "AssetFile": "",
+            "AssetName": "EggKeeper",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\enemy\\\\EggKeeper.blend",
             "RelativeAssetFile": true,
             "PropertyInfo": {
-                "UseXAngleProperty": true,
+                "UseXAngleProperty": false,
                 "XAnglePropertyName": "",
-                "UseYAngleProperty": true,
+                "UseYAngleProperty": false,
                 "YAnglePropertyName": "",
-                "UseZAngleProperty": true,
+                "UseZAngleProperty": false,
                 "ZAnglePropertyName": "",
-                "UseXScaleProperty": true,
+                "UseXScaleProperty": false,
                 "XScalePropertyName": "",
-                "UseYScaleProperty": true,
+                "UseYScaleProperty": false,
                 "YScalePropertyName": "",
-                "UseZScaleProperty": true,
+                "UseZScaleProperty": false,
                 "ZScalePropertyName": ""
             }
         }
@@ -2799,24 +2799,24 @@
         },
         "BlenderInfo": {
             "CommonName": "Repelling Box",
-            "RotationMode": "NONE",
+            "RotationMode": "Z",
             "ItemInfo": "",
-            "AssetName": "",
-            "AssetFile": "",
+            "AssetName": "RepellingBox",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\common\\\\CollisionBox.blend",
             "RelativeAssetFile": true,
             "PropertyInfo": {
-                "UseXAngleProperty": true,
+                "UseXAngleProperty": false,
                 "XAnglePropertyName": "",
-                "UseYAngleProperty": true,
+                "UseYAngleProperty": false,
                 "YAnglePropertyName": "",
-                "UseZAngleProperty": true,
+                "UseZAngleProperty": false,
                 "ZAnglePropertyName": "",
                 "UseXScaleProperty": true,
-                "XScalePropertyName": "",
+                "XScalePropertyName": "Width",
                 "UseYScaleProperty": true,
-                "YScalePropertyName": "",
+                "YScalePropertyName": "Height",
                 "UseZScaleProperty": true,
-                "ZScalePropertyName": ""
+                "ZScalePropertyName": "Depth"
             }
         }
     },
@@ -2953,25 +2953,25 @@
             "LoadDistance": 360000
         },
         "BlenderInfo": {
-            "CommonName": "",
-            "RotationMode": "NONE",
+            "CommonName": "ZERO Trigger Zone",
+            "RotationMode": "Z",
             "ItemInfo": "",
-            "AssetName": "",
-            "AssetFile": "",
+            "AssetName": "ZEROTrigger",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\enemy\\\\ZEROTrigger.blend",
             "RelativeAssetFile": true,
             "PropertyInfo": {
                 "UseXAngleProperty": true,
-                "XAnglePropertyName": "",
-                "UseYAngleProperty": true,
+                "XAnglePropertyName": "Collision Type",
+                "UseYAngleProperty": false,
                 "YAnglePropertyName": "",
                 "UseZAngleProperty": true,
-                "ZAnglePropertyName": "",
+                "ZAnglePropertyName": "Offset",
                 "UseXScaleProperty": true,
-                "XScalePropertyName": "",
+                "XScalePropertyName": "Width",
                 "UseYScaleProperty": true,
-                "YScalePropertyName": "",
+                "YScalePropertyName": "Height",
                 "UseZScaleProperty": true,
-                "ZScalePropertyName": ""
+                "ZScalePropertyName": "Depth"
             }
         }
     },

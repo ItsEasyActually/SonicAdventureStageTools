@@ -70,25 +70,25 @@
             "LoadDistance": 360000
         },
         "BlenderInfo": {
-            "CommonName": "",
-            "RotationMode": "NONE",
+            "CommonName": "Arc Line of Rings",
+            "RotationMode": "Z",
             "ItemInfo": "",
-            "AssetName": "",
-            "AssetFile": "",
+            "AssetName": "LineRingV",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\common\\\\LineRingV.blend",
             "RelativeAssetFile": true,
             "PropertyInfo": {
                 "UseXAngleProperty": true,
-                "XAnglePropertyName": "",
-                "UseYAngleProperty": true,
+                "XAnglePropertyName": "Switch ID",
+                "UseYAngleProperty": false,
                 "YAnglePropertyName": "",
-                "UseZAngleProperty": true,
+                "UseZAngleProperty": false,
                 "ZAnglePropertyName": "",
                 "UseXScaleProperty": true,
-                "XScalePropertyName": "",
+                "XScalePropertyName": "Arc Length",
                 "UseYScaleProperty": true,
-                "YScalePropertyName": "",
+                "YScalePropertyName": "Vertical Length",
                 "UseZScaleProperty": true,
-                "ZScalePropertyName": ""
+                "ZScalePropertyName": "Ring Interval"
             }
         }
     },
@@ -101,25 +101,25 @@
             "LoadDistance": 360000
         },
         "BlenderInfo": {
-            "CommonName": "",
+            "CommonName": "Line of Rings",
             "RotationMode": "NONE",
             "ItemInfo": "",
-            "AssetName": "",
-            "AssetFile": "",
+            "AssetName": "LineRing",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\common\\\\LineRing.blend",
             "RelativeAssetFile": true,
             "PropertyInfo": {
                 "UseXAngleProperty": true,
-                "XAnglePropertyName": "",
-                "UseYAngleProperty": true,
+                "XAnglePropertyName": "Switch ID",
+                "UseYAngleProperty": false,
                 "YAnglePropertyName": "",
-                "UseZAngleProperty": true,
+                "UseZAngleProperty": false,
                 "ZAnglePropertyName": "",
                 "UseXScaleProperty": true,
-                "XScalePropertyName": "",
+                "XScalePropertyName": "X Length",
                 "UseYScaleProperty": true,
-                "YScalePropertyName": "",
+                "YScalePropertyName": "Z Length",
                 "UseZScaleProperty": true,
-                "ZScalePropertyName": ""
+                "ZScalePropertyName": "Ring Interval"
             }
         }
     },
@@ -195,7 +195,7 @@
         },
         "BlenderInfo": {
             "CommonName": "Horizontal Spring",
-            "RotationMode": "Y",
+            "RotationMode": "Z",
             "ItemInfo": "",
             "AssetName": "WideSpring",
             "AssetFile": "blend\\\\set\\\\sa1\\\\common\\\\WideSpring.blend",
@@ -815,24 +815,24 @@
         },
         "BlenderInfo": {
             "CommonName": "Repelling Box",
-            "RotationMode": "NONE",
+            "RotationMode": "Z",
             "ItemInfo": "",
-            "AssetName": "",
-            "AssetFile": "",
+            "AssetName": "RepellingBox",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\common\\\\CollisionBox.blend",
             "RelativeAssetFile": true,
             "PropertyInfo": {
-                "UseXAngleProperty": true,
+                "UseXAngleProperty": false,
                 "XAnglePropertyName": "",
-                "UseYAngleProperty": true,
+                "UseYAngleProperty": false,
                 "YAnglePropertyName": "",
-                "UseZAngleProperty": true,
+                "UseZAngleProperty": false,
                 "ZAnglePropertyName": "",
                 "UseXScaleProperty": true,
-                "XScalePropertyName": "",
+                "XScalePropertyName": "Width",
                 "UseYScaleProperty": true,
-                "YScalePropertyName": "",
+                "YScalePropertyName": "Height",
                 "UseZScaleProperty": true,
-                "ZScalePropertyName": ""
+                "ZScalePropertyName": "Depth"
             }
         }
     },
@@ -845,25 +845,25 @@
             "LoadDistance": 1000000
         },
         "BlenderInfo": {
-            "CommonName": "",
-            "RotationMode": "NONE",
+            "CommonName": "Not Underwater Collision",
+            "RotationMode": "ZYX",
             "ItemInfo": "",
-            "AssetName": "",
-            "AssetFile": "",
+            "AssetName": "NoWater",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\common\\\\NoWater.blend",
             "RelativeAssetFile": true,
             "PropertyInfo": {
-                "UseXAngleProperty": true,
+                "UseXAngleProperty": false,
                 "XAnglePropertyName": "",
-                "UseYAngleProperty": true,
+                "UseYAngleProperty": false,
                 "YAnglePropertyName": "",
-                "UseZAngleProperty": true,
+                "UseZAngleProperty": false,
                 "ZAnglePropertyName": "",
                 "UseXScaleProperty": true,
-                "XScalePropertyName": "",
+                "XScalePropertyName": "Width",
                 "UseYScaleProperty": true,
-                "YScalePropertyName": "",
+                "YScalePropertyName": "Height",
                 "UseZScaleProperty": true,
-                "ZScalePropertyName": ""
+                "ZScalePropertyName": "Depth"
             }
         }
     },
@@ -970,7 +970,7 @@
         },
         "BlenderInfo": {
             "CommonName": "Kart Kiki",
-            "RotationMode": "Y",
+            "RotationMode": "Z",
             "ItemInfo": "",
             "AssetName": "CartKiki",
             "AssetFile": "blend\\\\set\\\\sa1\\\\enemy\\\\CartKiki.blend",
@@ -1001,7 +1001,7 @@
         },
         "BlenderInfo": {
             "CommonName": "Buyon",
-            "RotationMode": "Y",
+            "RotationMode": "Z",
             "ItemInfo": "",
             "AssetName": "Buyon",
             "AssetFile": "blend\\\\set\\\\sa1\\\\enemy\\\\Buyon.blend",
@@ -1034,7 +1034,7 @@
             "CommonName": "Kiki",
             "RotationMode": "NONE",
             "ItemInfo": "",
-            "AssetName": "Kiki",
+            "AssetName": "EKiki",
             "AssetFile": "blend\\\\set\\\\sa1\\\\enemy\\\\Kiki.blend",
             "RelativeAssetFile": true,
             "PropertyInfo": {
@@ -1062,25 +1062,25 @@
             "LoadDistance": 360000
         },
         "BlenderInfo": {
-            "CommonName": "",
-            "RotationMode": "NONE",
+            "CommonName": "ZERO Trigger Zone",
+            "RotationMode": "Z",
             "ItemInfo": "",
-            "AssetName": "",
-            "AssetFile": "",
+            "AssetName": "ZEROTrigger",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\enemy\\\\ZEROTrigger.blend",
             "RelativeAssetFile": true,
             "PropertyInfo": {
                 "UseXAngleProperty": true,
-                "XAnglePropertyName": "",
-                "UseYAngleProperty": true,
+                "XAnglePropertyName": "Collision Type",
+                "UseYAngleProperty": false,
                 "YAnglePropertyName": "",
                 "UseZAngleProperty": true,
-                "ZAnglePropertyName": "",
+                "ZAnglePropertyName": "Offset",
                 "UseXScaleProperty": true,
-                "XScalePropertyName": "",
+                "XScalePropertyName": "Width",
                 "UseYScaleProperty": true,
-                "YScalePropertyName": "",
+                "YScalePropertyName": "Height",
                 "UseZScaleProperty": true,
-                "ZScalePropertyName": ""
+                "ZScalePropertyName": "Depth"
             }
         }
     },
@@ -2705,25 +2705,25 @@
             "LoadDistance": 360000
         },
         "BlenderInfo": {
-            "CommonName": "",
+            "CommonName": "Fish Generator",
             "RotationMode": "NONE",
             "ItemInfo": "",
-            "AssetName": "",
-            "AssetFile": "",
+            "AssetName": "FishGenerator",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\common\\\\FishGenerator.blend",
             "RelativeAssetFile": true,
             "PropertyInfo": {
-                "UseXAngleProperty": true,
+                "UseXAngleProperty": false,
                 "XAnglePropertyName": "",
-                "UseYAngleProperty": true,
+                "UseYAngleProperty": false,
                 "YAnglePropertyName": "",
-                "UseZAngleProperty": true,
+                "UseZAngleProperty": false,
                 "ZAnglePropertyName": "",
                 "UseXScaleProperty": true,
-                "XScalePropertyName": "",
-                "UseYScaleProperty": true,
+                "XScalePropertyName": "Fish ID",
+                "UseYScaleProperty": false,
                 "YScalePropertyName": "",
                 "UseZScaleProperty": true,
-                "ZScalePropertyName": ""
+                "ZScalePropertyName": "Scale Method"
             }
         }
     },
@@ -2736,24 +2736,24 @@
             "LoadDistance": 360000
         },
         "BlenderInfo": {
-            "CommonName": "Froggy",
+            "CommonName": "Froggy (Fishing)",
             "RotationMode": "NONE",
             "ItemInfo": "",
-            "AssetName": "",
-            "AssetFile": "",
+            "AssetName": "BigFroggy",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\common\\\\BigFroggy.blend",
             "RelativeAssetFile": true,
             "PropertyInfo": {
-                "UseXAngleProperty": true,
+                "UseXAngleProperty": false,
                 "XAnglePropertyName": "",
-                "UseYAngleProperty": true,
+                "UseYAngleProperty": false,
                 "YAnglePropertyName": "",
-                "UseZAngleProperty": true,
+                "UseZAngleProperty": false,
                 "ZAnglePropertyName": "",
-                "UseXScaleProperty": true,
+                "UseXScaleProperty": false,
                 "XScalePropertyName": "",
-                "UseYScaleProperty": true,
+                "UseYScaleProperty": false,
                 "YScalePropertyName": "",
-                "UseZScaleProperty": true,
+                "UseZScaleProperty": false,
                 "ZScalePropertyName": ""
             }
         }
@@ -2767,25 +2767,25 @@
             "LoadDistance": 360000
         },
         "BlenderInfo": {
-            "CommonName": "",
+            "CommonName": "Fish Generator",
             "RotationMode": "NONE",
             "ItemInfo": "",
-            "AssetName": "",
-            "AssetFile": "",
+            "AssetName": "FishGenerator",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\common\\\\FishGenerator.blend",
             "RelativeAssetFile": true,
             "PropertyInfo": {
-                "UseXAngleProperty": true,
+                "UseXAngleProperty": false,
                 "XAnglePropertyName": "",
-                "UseYAngleProperty": true,
+                "UseYAngleProperty": false,
                 "YAnglePropertyName": "",
-                "UseZAngleProperty": true,
+                "UseZAngleProperty": false,
                 "ZAnglePropertyName": "",
                 "UseXScaleProperty": true,
-                "XScalePropertyName": "",
-                "UseYScaleProperty": true,
+                "XScalePropertyName": "Fish ID",
+                "UseYScaleProperty": false,
                 "YScalePropertyName": "",
                 "UseZScaleProperty": true,
-                "ZScalePropertyName": ""
+                "ZScalePropertyName": "Scale Method"
             }
         }
     },
@@ -2798,24 +2798,24 @@
             "LoadDistance": 360000
         },
         "BlenderInfo": {
-            "CommonName": "",
+            "CommonName": "Air Bubble",
             "RotationMode": "NONE",
             "ItemInfo": "",
-            "AssetName": "",
-            "AssetFile": "",
+            "AssetName": "AirBubble",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\common\\\\AirBubble.blend",
             "RelativeAssetFile": true,
             "PropertyInfo": {
-                "UseXAngleProperty": true,
+                "UseXAngleProperty": false,
                 "XAnglePropertyName": "",
-                "UseYAngleProperty": true,
+                "UseYAngleProperty": false,
                 "YAnglePropertyName": "",
-                "UseZAngleProperty": true,
+                "UseZAngleProperty": false,
                 "ZAnglePropertyName": "",
-                "UseXScaleProperty": true,
+                "UseXScaleProperty": false,
                 "XScalePropertyName": "",
                 "UseYScaleProperty": true,
-                "YScalePropertyName": "",
-                "UseZScaleProperty": true,
+                "YScalePropertyName": "Collision Search Range",
+                "UseZScaleProperty": false,
                 "ZScalePropertyName": ""
             }
         }
@@ -2829,25 +2829,25 @@
             "LoadDistance": 360000
         },
         "BlenderInfo": {
-            "CommonName": "",
+            "CommonName": "Small Bubbles Spawner",
             "RotationMode": "NONE",
             "ItemInfo": "",
-            "AssetName": "",
-            "AssetFile": "",
+            "AssetName": "BubblesSmall",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\common\\\\BubblesSmall.blend",
             "RelativeAssetFile": true,
             "PropertyInfo": {
-                "UseXAngleProperty": true,
+                "UseXAngleProperty": false,
                 "XAnglePropertyName": "",
-                "UseYAngleProperty": true,
+                "UseYAngleProperty": false,
                 "YAnglePropertyName": "",
-                "UseZAngleProperty": true,
+                "UseZAngleProperty": false,
                 "ZAnglePropertyName": "",
                 "UseXScaleProperty": true,
-                "XScalePropertyName": "",
+                "XScalePropertyName": "Spawn Radius",
                 "UseYScaleProperty": true,
-                "YScalePropertyName": "",
+                "YScalePropertyName": "Spawn Frequency",
                 "UseZScaleProperty": true,
-                "ZScalePropertyName": ""
+                "ZScalePropertyName": "Bubble Spawn Count"
             }
         }
     },

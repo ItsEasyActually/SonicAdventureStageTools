@@ -70,25 +70,25 @@
             "LoadDistance": 360000
         },
         "BlenderInfo": {
-            "CommonName": "",
-            "RotationMode": "NONE",
+            "CommonName": "Arc Line of Rings",
+            "RotationMode": "Z",
             "ItemInfo": "",
-            "AssetName": "",
-            "AssetFile": "",
+            "AssetName": "LineRingV",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\common\\\\LineRingV.blend",
             "RelativeAssetFile": true,
             "PropertyInfo": {
                 "UseXAngleProperty": true,
-                "XAnglePropertyName": "",
-                "UseYAngleProperty": true,
+                "XAnglePropertyName": "Switch ID",
+                "UseYAngleProperty": false,
                 "YAnglePropertyName": "",
-                "UseZAngleProperty": true,
+                "UseZAngleProperty": false,
                 "ZAnglePropertyName": "",
                 "UseXScaleProperty": true,
-                "XScalePropertyName": "",
+                "XScalePropertyName": "Arc Length",
                 "UseYScaleProperty": true,
-                "YScalePropertyName": "",
+                "YScalePropertyName": "Vertical Length",
                 "UseZScaleProperty": true,
-                "ZScalePropertyName": ""
+                "ZScalePropertyName": "Ring Interval"
             }
         }
     },
@@ -101,25 +101,25 @@
             "LoadDistance": 360000
         },
         "BlenderInfo": {
-            "CommonName": "",
+            "CommonName": "Line of Rings",
             "RotationMode": "NONE",
             "ItemInfo": "",
-            "AssetName": "",
-            "AssetFile": "",
+            "AssetName": "LineRing",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\common\\\\LineRing.blend",
             "RelativeAssetFile": true,
             "PropertyInfo": {
                 "UseXAngleProperty": true,
-                "XAnglePropertyName": "",
-                "UseYAngleProperty": true,
+                "XAnglePropertyName": "Switch ID",
+                "UseYAngleProperty": false,
                 "YAnglePropertyName": "",
-                "UseZAngleProperty": true,
+                "UseZAngleProperty": false,
                 "ZAnglePropertyName": "",
                 "UseXScaleProperty": true,
-                "XScalePropertyName": "",
+                "XScalePropertyName": "X Length",
                 "UseYScaleProperty": true,
-                "YScalePropertyName": "",
+                "YScalePropertyName": "Z Length",
                 "UseZScaleProperty": true,
-                "ZScalePropertyName": ""
+                "ZScalePropertyName": "Ring Interval"
             }
         }
     },
@@ -195,7 +195,7 @@
         },
         "BlenderInfo": {
             "CommonName": "Horizontal Spring",
-            "RotationMode": "Y",
+            "RotationMode": "Z",
             "ItemInfo": "",
             "AssetName": "WideSpring",
             "AssetFile": "blend\\\\set\\\\sa1\\\\common\\\\WideSpring.blend",
@@ -319,7 +319,7 @@
         },
         "BlenderInfo": {
             "CommonName": "Dash Ring",
-            "RotationMode": "NONE",
+            "RotationMode": "YZX",
             "ItemInfo": "",
             "AssetName": "DashRing",
             "AssetFile": "blend\\\\set\\\\sa1\\\\common\\\\DashRing.blend",
@@ -1125,24 +1125,24 @@
         },
         "BlenderInfo": {
             "CommonName": "Repelling Box",
-            "RotationMode": "NONE",
+            "RotationMode": "Z",
             "ItemInfo": "",
-            "AssetName": "",
-            "AssetFile": "",
+            "AssetName": "RepellingBox",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\common\\\\CollisionBox.blend",
             "RelativeAssetFile": true,
             "PropertyInfo": {
-                "UseXAngleProperty": true,
+                "UseXAngleProperty": false,
                 "XAnglePropertyName": "",
-                "UseYAngleProperty": true,
+                "UseYAngleProperty": false,
                 "YAnglePropertyName": "",
-                "UseZAngleProperty": true,
+                "UseZAngleProperty": false,
                 "ZAnglePropertyName": "",
                 "UseXScaleProperty": true,
-                "XScalePropertyName": "",
+                "XScalePropertyName": "Width",
                 "UseYScaleProperty": true,
-                "YScalePropertyName": "",
+                "YScalePropertyName": "Height",
                 "UseZScaleProperty": true,
-                "ZScalePropertyName": ""
+                "ZScalePropertyName": "Depth"
             }
         }
     }

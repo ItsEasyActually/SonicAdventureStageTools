@@ -350,7 +350,7 @@
         },
         "BlenderInfo": {
             "CommonName": "Dash Ring",
-            "RotationMode": "NONE",
+            "RotationMode": "YZX",
             "ItemInfo": "",
             "AssetName": "DashRing",
             "AssetFile": "blend\\\\set\\\\sa1\\\\common\\\\DashRing.blend",
@@ -722,24 +722,24 @@
         },
         "BlenderInfo": {
             "CommonName": "Repelling Box",
-            "RotationMode": "NONE",
+            "RotationMode": "Z",
             "ItemInfo": "",
-            "AssetName": "",
-            "AssetFile": "",
+            "AssetName": "RepellingBox",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\common\\\\CollisionBox.blend",
             "RelativeAssetFile": true,
             "PropertyInfo": {
-                "UseXAngleProperty": true,
+                "UseXAngleProperty": false,
                 "XAnglePropertyName": "",
-                "UseYAngleProperty": true,
+                "UseYAngleProperty": false,
                 "YAnglePropertyName": "",
-                "UseZAngleProperty": true,
+                "UseZAngleProperty": false,
                 "ZAnglePropertyName": "",
                 "UseXScaleProperty": true,
-                "XScalePropertyName": "",
+                "XScalePropertyName": "Width",
                 "UseYScaleProperty": true,
-                "YScalePropertyName": "",
+                "YScalePropertyName": "Height",
                 "UseZScaleProperty": true,
-                "ZScalePropertyName": ""
+                "ZScalePropertyName": "Depth"
             }
         }
     },
@@ -783,25 +783,25 @@
             "LoadDistance": 360000
         },
         "BlenderInfo": {
-            "CommonName": "",
-            "RotationMode": "NONE",
+            "CommonName": "Arc Line of Rings",
+            "RotationMode": "Z",
             "ItemInfo": "",
-            "AssetName": "",
-            "AssetFile": "",
+            "AssetName": "LineRingV",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\common\\\\LineRingV.blend",
             "RelativeAssetFile": true,
             "PropertyInfo": {
                 "UseXAngleProperty": true,
-                "XAnglePropertyName": "",
-                "UseYAngleProperty": true,
+                "XAnglePropertyName": "Switch ID",
+                "UseYAngleProperty": false,
                 "YAnglePropertyName": "",
-                "UseZAngleProperty": true,
+                "UseZAngleProperty": false,
                 "ZAnglePropertyName": "",
                 "UseXScaleProperty": true,
-                "XScalePropertyName": "",
+                "XScalePropertyName": "Arc Length",
                 "UseYScaleProperty": true,
-                "YScalePropertyName": "",
+                "YScalePropertyName": "Vertical Length",
                 "UseZScaleProperty": true,
-                "ZScalePropertyName": ""
+                "ZScalePropertyName": "Ring Interval"
             }
         }
     },
@@ -814,25 +814,25 @@
             "LoadDistance": 360000
         },
         "BlenderInfo": {
-            "CommonName": "",
+            "CommonName": "Line of Rings",
             "RotationMode": "NONE",
             "ItemInfo": "",
-            "AssetName": "",
-            "AssetFile": "",
+            "AssetName": "LineRing",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\common\\\\LineRing.blend",
             "RelativeAssetFile": true,
             "PropertyInfo": {
                 "UseXAngleProperty": true,
-                "XAnglePropertyName": "",
-                "UseYAngleProperty": true,
+                "XAnglePropertyName": "Switch ID",
+                "UseYAngleProperty": false,
                 "YAnglePropertyName": "",
-                "UseZAngleProperty": true,
+                "UseZAngleProperty": false,
                 "ZAnglePropertyName": "",
                 "UseXScaleProperty": true,
-                "XScalePropertyName": "",
+                "XScalePropertyName": "X Length",
                 "UseYScaleProperty": true,
-                "YScalePropertyName": "",
+                "YScalePropertyName": "Z Length",
                 "UseZScaleProperty": true,
-                "ZScalePropertyName": ""
+                "ZScalePropertyName": "Ring Interval"
             }
         }
     },
@@ -2488,25 +2488,25 @@
             "LoadDistance": 360000
         },
         "BlenderInfo": {
-            "CommonName": "",
-            "RotationMode": "NONE",
+            "CommonName": "Unidas (Fire)",
+            "RotationMode": "Y",
             "ItemInfo": "",
-            "AssetName": "",
-            "AssetFile": "",
+            "AssetName": "UnidasFire",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\enemy\\\\UnidasC.blend",
             "RelativeAssetFile": true,
             "PropertyInfo": {
-                "UseXAngleProperty": true,
+                "UseXAngleProperty": false,
                 "XAnglePropertyName": "",
-                "UseYAngleProperty": true,
+                "UseYAngleProperty": false,
                 "YAnglePropertyName": "",
                 "UseZAngleProperty": true,
-                "ZAnglePropertyName": "",
+                "ZAnglePropertyName": "Emerald Shard ID",
                 "UseXScaleProperty": true,
-                "XScalePropertyName": "",
-                "UseYScaleProperty": true,
+                "XScalePropertyName": "Movement Range",
+                "UseYScaleProperty": false,
                 "YScalePropertyName": "",
                 "UseZScaleProperty": true,
-                "ZScalePropertyName": ""
+                "ZScalePropertyName": "Disable Collision"
             }
         }
     },
@@ -2551,24 +2551,24 @@
         },
         "BlenderInfo": {
             "CommonName": "Leon",
-            "RotationMode": "NONE",
+            "RotationMode": "Z",
             "ItemInfo": "",
-            "AssetName": "",
-            "AssetFile": "",
+            "AssetName": "Leon",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\enemy\\\\Leon.blend",
             "RelativeAssetFile": true,
             "PropertyInfo": {
-                "UseXAngleProperty": true,
+                "UseXAngleProperty": false,
                 "XAnglePropertyName": "",
-                "UseYAngleProperty": true,
+                "UseYAngleProperty": false,
                 "YAnglePropertyName": "",
                 "UseZAngleProperty": true,
-                "ZAnglePropertyName": "",
-                "UseXScaleProperty": true,
+                "ZAnglePropertyName": "Emerald Shard ID",
+                "UseXScaleProperty": false,
                 "XScalePropertyName": "",
                 "UseYScaleProperty": true,
-                "YScalePropertyName": "",
+                "YScalePropertyName": "Search Range",
                 "UseZScaleProperty": true,
-                "ZScalePropertyName": ""
+                "ZScalePropertyName": "Movement Range"
             }
         }
     },
@@ -2643,25 +2643,25 @@
             "LoadDistance": 1000000
         },
         "BlenderInfo": {
-            "CommonName": "",
-            "RotationMode": "NONE",
+            "CommonName": "Not Underwater Collision",
+            "RotationMode": "ZYX",
             "ItemInfo": "",
-            "AssetName": "",
-            "AssetFile": "",
+            "AssetName": "NoWater",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\common\\\\NoWater.blend",
             "RelativeAssetFile": true,
             "PropertyInfo": {
-                "UseXAngleProperty": true,
+                "UseXAngleProperty": false,
                 "XAnglePropertyName": "",
-                "UseYAngleProperty": true,
+                "UseYAngleProperty": false,
                 "YAnglePropertyName": "",
-                "UseZAngleProperty": true,
+                "UseZAngleProperty": false,
                 "ZAnglePropertyName": "",
                 "UseXScaleProperty": true,
-                "XScalePropertyName": "",
+                "XScalePropertyName": "Width",
                 "UseYScaleProperty": true,
-                "YScalePropertyName": "",
+                "YScalePropertyName": "Height",
                 "UseZScaleProperty": true,
-                "ZScalePropertyName": ""
+                "ZScalePropertyName": "Depth"
             }
         }
     }

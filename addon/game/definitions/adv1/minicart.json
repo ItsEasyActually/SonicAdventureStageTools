@@ -474,7 +474,7 @@
         },
         "BlenderInfo": {
             "CommonName": "Kart Kiki",
-            "RotationMode": "Y",
+            "RotationMode": "Z",
             "ItemInfo": "",
             "AssetName": "CartKiki",
             "AssetFile": "blend\\\\set\\\\sa1\\\\enemy\\\\CartKiki.blend",
@@ -1034,7 +1034,7 @@
             "CommonName": "Kiki",
             "RotationMode": "NONE",
             "ItemInfo": "",
-            "AssetName": "Kiki",
+            "AssetName": "EKiki",
             "AssetFile": "blend\\\\set\\\\sa1\\\\enemy\\\\Kiki.blend",
             "RelativeAssetFile": true,
             "PropertyInfo": {
@@ -1155,24 +1155,24 @@
             "LoadDistance": 4000000
         },
         "BlenderInfo": {
-            "CommonName": "Unidas (Fire)",
-            "RotationMode": "NONE",
+            "CommonName": "Unidas (Throw)",
+            "RotationMode": "Y",
             "ItemInfo": "",
-            "AssetName": "",
-            "AssetFile": "",
+            "AssetName": "Unidas",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\enemy\\\\UnidasA.blend",
             "RelativeAssetFile": true,
             "PropertyInfo": {
-                "UseXAngleProperty": true,
+                "UseXAngleProperty": false,
                 "XAnglePropertyName": "",
-                "UseYAngleProperty": true,
+                "UseYAngleProperty": false,
                 "YAnglePropertyName": "",
                 "UseZAngleProperty": true,
-                "ZAnglePropertyName": "",
+                "ZAnglePropertyName": "Emerald Shard ID",
                 "UseXScaleProperty": true,
-                "XScalePropertyName": "",
-                "UseYScaleProperty": true,
+                "XScalePropertyName": "Movement Range",
+                "UseYScaleProperty": false,
                 "YScalePropertyName": "",
-                "UseZScaleProperty": true,
+                "UseZScaleProperty": false,
                 "ZScalePropertyName": ""
             }
         }
@@ -1186,24 +1186,24 @@
             "LoadDistance": 4000000
         },
         "BlenderInfo": {
-            "CommonName": "Unidas (Spike)",
-            "RotationMode": "NONE",
+            "CommonName": "Unidas (Spin)",
+            "RotationMode": "Y",
             "ItemInfo": "",
-            "AssetName": "",
-            "AssetFile": "",
+            "AssetName": "Unidas",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\enemy\\\\UnidasA.blend",
             "RelativeAssetFile": true,
             "PropertyInfo": {
-                "UseXAngleProperty": true,
+                "UseXAngleProperty": false,
                 "XAnglePropertyName": "",
-                "UseYAngleProperty": true,
+                "UseYAngleProperty": false,
                 "YAnglePropertyName": "",
                 "UseZAngleProperty": true,
-                "ZAnglePropertyName": "",
+                "ZAnglePropertyName": "Emerald Shard ID",
                 "UseXScaleProperty": true,
-                "XScalePropertyName": "",
-                "UseYScaleProperty": true,
+                "XScalePropertyName": "Movement Range",
+                "UseYScaleProperty": false,
                 "YScalePropertyName": "",
-                "UseZScaleProperty": true,
+                "UseZScaleProperty": false,
                 "ZScalePropertyName": ""
             }
         }
