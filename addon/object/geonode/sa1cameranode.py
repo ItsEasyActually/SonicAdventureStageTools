@@ -110,22 +110,22 @@ class SA1CameraNode(SASTGeonodeBase):
         match (cammode):
             case 'Klamath' | 'Line':
                 # Camera Mode has XZ Target controls.
-                self.set_camera_mode(43)
+                self.set_camera_mode('Klamath')
             case 'Point' | 'Tornado':
                 # Camera Mode has Camera Target controls.
-                self.set_camera_mode(42)
+                self.set_camera_mode('Point')
             case 'Fixed':
                 # Camera Mode has Camera Position and Target controls.
-                self.set_camera_mode(3)
+                self.set_camera_mode('Fixed')
             case 'Ashland' | 'AshlandI':
                 # Camera Mode has Camera Position only controls.
-                self.set_camera_mode(2)
+                self.set_camera_mode('Ashland')
             case 'Collision':
                 # Camera Mode is Camera Collision
-                self.set_camera_mode(1)
+                self.set_camera_mode('Collision')
             case _:
                 # Camera Mode has  No Controls
-                self.set_camera_mode(0)
+                self.set_camera_mode('Camera')
 
     def update_camera_level(self, camlevel: str):
         SASTLogger.log(f'Updating Camera Level: {camlevel}')
@@ -142,10 +142,10 @@ class SA1CameraNode(SASTGeonodeBase):
     def set_camera_mode(self, value: int):
         self.node.properties.inputs.Socket_2.value = value
 
-    def set_camera_level(self, value: int):
+    def set_camera_level(self, value: str):
         self.node.properties.inputs.Socket_3.value = value
 
-    def set_collision_shape(self, value: int):
+    def set_collision_shape(self, value: str):
         self.node.properties.inputs.Socket_4.value = value
 
     def set_collision_x_rotation(self, value: float):
@@ -190,7 +190,7 @@ class SA1CameraNode(SASTGeonodeBase):
     def set_camera_distance(self, value: float):
         self.node.properties.inputs.Socket_19.value = value
 
-    def get_collision_shape(self) -> int:
+    def get_collision_shape(self) -> str:
         return self.node.properties.inputs.Socket_4.value
 
     def get_collision_x_rotation(self) -> int:

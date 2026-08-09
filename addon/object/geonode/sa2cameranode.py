@@ -44,7 +44,7 @@ class SA2CameraNode(SASTGeonodeBase):
 
     def reset_properties(self):
         SASTLogger.log('Resetting Geometry Node Properties')
-        self.set_collision_shape(0)
+        self.set_collision_shape('Sphere')
         self.set_collision_x_scale(10)
         self.set_collision_y_scale(10)
         self.set_collision_z_scale(10)
@@ -91,22 +91,22 @@ class SA2CameraNode(SASTGeonodeBase):
         SASTLogger.log(f'Updating Camera Mode: {cammode}')
         match (cammode):
             case 'Klamath':
-                self.set_camera_mode(5)
+                self.set_camera_mode('XY Target')
             case 'Fix':
-                self.set_camera_mode(4)
+                self.set_camera_mode('Fixed Camera')
             case 'Ashland':
-                self.set_camera_mode(3)
+                self.set_camera_mode('Camera Move')
             case 'Point':
-                self.set_camera_mode(2)
+                self.set_camera_mode('Target')
             case 'Collision' | 'Colli_LR':
-                self.set_camera_mode(1)
+                self.set_camera_mode('Collision')
             case _:
-                self.set_camera_mode(0)
+                self.set_camera_mode('Normal')
 
-    def set_camera_mode(self, value: int):
+    def set_camera_mode(self, value: str):
         self.node.properties.inputs.Socket_2.value = value
 
-    def set_collision_shape(self, value: int):
+    def set_collision_shape(self, value: str):
         self.node.properties.inputs.Socket_3.value = value
 
     def set_collision_x_angle(self, value: float):
@@ -154,7 +154,7 @@ class SA2CameraNode(SASTGeonodeBase):
     def set_target_z_position(self, value: float):
         self.node.properties.inputs.Socket_18.value = value
 
-    def get_collision_shape(self):
+    def get_collision_shape(self) -> str:
         return self.node.properties.inputs.Socket_3.value
 
     def get_collision_x_angle(self) -> float:

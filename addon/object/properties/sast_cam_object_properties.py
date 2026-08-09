@@ -60,13 +60,7 @@ class SASTCAMObjectProperties(bpy.types.PropertyGroup):
 
     def update_cameralevel(self, context: bpy.types.Context):
         '''Runs whenever the Camera Level selection is changed.'''
-        from ...utilities.io.sast_import import SASTImportManager
-        if (SASTImportManager.importing == True):
-            return
-        obj: bpy.types.Object = context.active_object
-        geonode: SA1CameraNode = SA1CameraNode(obj)
-        if (geonode.node is not None):
-            geonode.update_camera_level(self.cameralevel)
+        pass
 
     cameralevel: EnumProperty(
         name='Camera Level',

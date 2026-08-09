@@ -116,17 +116,8 @@ class SASTImportManager:
             modes: list[str] = str.split(camobject.Mode.ToString(), "_")
             geonode.update_camera_mode(modes[0])
             if (len(modes) > 1):
-                geonode.update_camera_level(modes[1])
-            match (camobject.CollisionShape.ToString()):
-                case 'Sphere':
-                    SASTLogger.log('Setting Collision Shape to SPHERE')
-                    geonode.set_collision_shape(0)
-                case 'Block':
-                    SASTLogger.log('Setting Collision Shape to BLOCK')
-                    geonode.set_collision_shape(2)
-                case 'Plane':
-                    SASTLogger.log('Setting Collision Shape to PLANE')
-                    geonode.set_collision_shape(1)
+                geonode.set_camera_level(modes[1])
+            geonode.set_collision_shape(camobject.CollisionShape.ToString())
             geonode.set_collision_x_rotation(camobject.Collision.Rotation.X.Radians)
             geonode.set_collision_y_rotation(camobject.Collision.Rotation.Y.Radians)
             
@@ -219,14 +210,7 @@ class SASTImportManager:
             geonode: SA2CameraNode = SA2CameraNode(obj)
             if (geonode.node != None):
                 geonode.update_camera_mode(cam.Mode.ToString())
-                match (cam.CollisionShape.ToString()):
-                    case 'Sphere':
-                        geonode.set_collision_shape(0)
-                    case 'Plane':
-                        geonode.set_collision_shape(1)
-                    case 'Block':
-                        geonode.set_collision_shape(2)
-
+                geonode.set_collision_shape(cam.CollisionShape.ToString())
                 geonode.set_collision_x_angle(cam.Collision.Rotation.X.Radians)
                 geonode.set_collision_y_angle(cam.Collision.Rotation.Y.Radians)
                 geonode.set_collision_z_angle(-cam.Collision.Rotation.Z.Radians)
@@ -561,6 +545,7 @@ class SASTImportManager:
                 set_props.objectid = str(setitem.ObjectID)
             else:
                 set_props.objectid = '0'
+                set_props.override_id = True
             set_props.fallback_objid = setitem.ObjectID
             SASTImportManager.process_setitem_flags(set_props, setitem.Flags.ToString())
 
