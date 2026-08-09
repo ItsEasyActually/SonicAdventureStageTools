@@ -1,11 +1,11 @@
 {
-    "RING": {
+    "RING   ": {
         "ObjectInfo": {
             "FunctionAddress": "00450370",
             "TaskLevel": 3,
             "InitializationMode": 2,
             "LoadAttributes": 2,
-            "LoadDistance": 360000
+            "LoadDistance": 0
         },
         "BlenderInfo": {
             "CommonName": "Ring",

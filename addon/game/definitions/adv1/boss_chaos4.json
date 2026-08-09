@@ -5,7 +5,7 @@
             "TaskLevel": 4,
             "InitializationMode": 2,
             "LoadAttributes": 0,
-            "LoadDistance": 360000
+            "LoadDistance": 0
         },
         "BlenderInfo": {
             "CommonName": "Ring",

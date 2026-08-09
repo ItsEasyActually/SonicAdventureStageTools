@@ -1,11 +1,11 @@
 {
-    "RING": {
+    "RING   ": {
         "ObjectInfo": {
             "FunctionAddress": "00450370",
             "TaskLevel": 3,
             "InitializationMode": 2,
             "LoadAttributes": 0,
-            "LoadDistance": 360000
+            "LoadDistance": 0
         },
         "BlenderInfo": {
             "CommonName": "Ring",
@@ -30,13 +30,13 @@
             }
         }
     },
-    "SPRING": {
+    "SPRING ": {
         "ObjectInfo": {
             "FunctionAddress": "007A4C30",
             "TaskLevel": 2,
             "InitializationMode": 2,
             "LoadAttributes": 0,
-            "LoadDistance": 360000
+            "LoadDistance": 0
         },
         "BlenderInfo": {
             "CommonName": "Spring (Ground)",
@@ -67,7 +67,7 @@
             "TaskLevel": 2,
             "InitializationMode": 2,
             "LoadAttributes": 0,
-            "LoadDistance": 360000
+            "LoadDistance": 0
         },
         "BlenderInfo": {
             "CommonName": "Spring (Rotatable)",
@@ -98,7 +98,7 @@
             "TaskLevel": 3,
             "InitializationMode": 6,
             "LoadAttributes": 0,
-            "LoadDistance": 360000
+            "LoadDistance": 0
         },
         "BlenderInfo": {
             "CommonName": "Switch",
@@ -129,7 +129,7 @@
             "TaskLevel": 3,
             "InitializationMode": 14,
             "LoadAttributes": 0,
-            "LoadDistance": 360000
+            "LoadDistance": 0
         },
         "BlenderInfo": {
             "CommonName": "Dash Ring",
@@ -160,7 +160,7 @@
             "TaskLevel": 3,
             "InitializationMode": 2,
             "LoadAttributes": 0,
-            "LoadDistance": 360000
+            "LoadDistance": 0
         },
         "BlenderInfo": {
             "CommonName": "Item Box (Ground)",
@@ -191,7 +191,7 @@
             "TaskLevel": 6,
             "InitializationMode": 15,
             "LoadAttributes": 0,
-            "LoadDistance": 360000
+            "LoadDistance": 0
         },
         "BlenderInfo": {
             "CommonName": "Checkpoint",
@@ -222,7 +222,7 @@
             "TaskLevel": 3,
             "InitializationMode": 6,
             "LoadAttributes": 0,
-            "LoadDistance": 360000
+            "LoadDistance": 0
         },
         "BlenderInfo": {
             "CommonName": "",
@@ -253,7 +253,7 @@
             "TaskLevel": 3,
             "InitializationMode": 6,
             "LoadAttributes": 0,
-            "LoadDistance": 360000
+            "LoadDistance": 0
         },
         "BlenderInfo": {
             "CommonName": "",
@@ -284,7 +284,7 @@
             "TaskLevel": 3,
             "InitializationMode": 6,
             "LoadAttributes": 0,
-            "LoadDistance": 360000
+            "LoadDistance": 0
         },
         "BlenderInfo": {
             "CommonName": "",
@@ -315,7 +315,7 @@
             "TaskLevel": 3,
             "InitializationMode": 3,
             "LoadAttributes": 0,
-            "LoadDistance": 360000
+            "LoadDistance": 0
         },
         "BlenderInfo": {
             "CommonName": "",
@@ -346,7 +346,7 @@
             "TaskLevel": 3,
             "InitializationMode": 2,
             "LoadAttributes": 0,
-            "LoadDistance": 360000
+            "LoadDistance": 0
         },
         "BlenderInfo": {
             "CommonName": "",
@@ -377,7 +377,7 @@
             "TaskLevel": 3,
             "InitializationMode": 6,
             "LoadAttributes": 0,
-            "LoadDistance": 360000
+            "LoadDistance": 0
         },
         "BlenderInfo": {
             "CommonName": "",
@@ -439,7 +439,7 @@
             "TaskLevel": 3,
             "InitializationMode": 2,
             "LoadAttributes": 0,
-            "LoadDistance": 360000
+            "LoadDistance": 0
         },
         "BlenderInfo": {
             "CommonName": "",
@@ -470,7 +470,7 @@
             "TaskLevel": 3,
             "InitializationMode": 6,
             "LoadAttributes": 0,
-            "LoadDistance": 360000
+            "LoadDistance": 0
         },
         "BlenderInfo": {
             "CommonName": "",
@@ -501,7 +501,7 @@
             "TaskLevel": 3,
             "InitializationMode": 6,
             "LoadAttributes": 0,
-            "LoadDistance": 360000
+            "LoadDistance": 0
         },
         "BlenderInfo": {
             "CommonName": "",
@@ -594,7 +594,7 @@
             "TaskLevel": 3,
             "InitializationMode": 6,
             "LoadAttributes": 0,
-            "LoadDistance": 360000
+            "LoadDistance": 0
         },
         "BlenderInfo": {
             "CommonName": "",
@@ -656,7 +656,7 @@
             "TaskLevel": 3,
             "InitializationMode": 3,
             "LoadAttributes": 0,
-            "LoadDistance": 360000
+            "LoadDistance": 0
         },
         "BlenderInfo": {
             "CommonName": "",
@@ -687,7 +687,7 @@
             "TaskLevel": 3,
             "InitializationMode": 6,
             "LoadAttributes": 0,
-            "LoadDistance": 360000
+            "LoadDistance": 0
         },
         "BlenderInfo": {
             "CommonName": "",
@@ -718,7 +718,7 @@
             "TaskLevel": 3,
             "InitializationMode": 6,
             "LoadAttributes": 0,
-            "LoadDistance": 360000
+            "LoadDistance": 0
         },
         "BlenderInfo": {
             "CommonName": "",
@@ -749,7 +749,7 @@
             "TaskLevel": 3,
             "InitializationMode": 2,
             "LoadAttributes": 0,
-            "LoadDistance": 360000
+            "LoadDistance": 0
         },
         "BlenderInfo": {
             "CommonName": "",
@@ -780,7 +780,7 @@
             "TaskLevel": 3,
             "InitializationMode": 6,
             "LoadAttributes": 0,
-            "LoadDistance": 360000
+            "LoadDistance": 0
         },
         "BlenderInfo": {
             "CommonName": "",
@@ -811,7 +811,7 @@
             "TaskLevel": 3,
             "InitializationMode": 2,
             "LoadAttributes": 0,
-            "LoadDistance": 360000
+            "LoadDistance": 0
         },
         "BlenderInfo": {
             "CommonName": "",
@@ -842,7 +842,7 @@
             "TaskLevel": 3,
             "InitializationMode": 2,
             "LoadAttributes": 0,
-            "LoadDistance": 360000
+            "LoadDistance": 0
         },
         "BlenderInfo": {
             "CommonName": "",
@@ -873,7 +873,7 @@
             "TaskLevel": 3,
             "InitializationMode": 6,
             "LoadAttributes": 2,
-            "LoadDistance": 360000
+            "LoadDistance": 0
         },
         "BlenderInfo": {
             "CommonName": "",
@@ -904,7 +904,7 @@
             "TaskLevel": 3,
             "InitializationMode": 2,
             "LoadAttributes": 0,
-            "LoadDistance": 360000
+            "LoadDistance": 0
         },
         "BlenderInfo": {
             "CommonName": "",
@@ -935,7 +935,7 @@
             "TaskLevel": 3,
             "InitializationMode": 2,
             "LoadAttributes": 0,
-            "LoadDistance": 360000
+            "LoadDistance": 0
         },
         "BlenderInfo": {
             "CommonName": "",
@@ -966,7 +966,7 @@
             "TaskLevel": 3,
             "InitializationMode": 2,
             "LoadAttributes": 0,
-            "LoadDistance": 360000
+            "LoadDistance": 0
         },
         "BlenderInfo": {
             "CommonName": "",
@@ -997,7 +997,7 @@
             "TaskLevel": 3,
             "InitializationMode": 2,
             "LoadAttributes": 0,
-            "LoadDistance": 360000
+            "LoadDistance": 0
         },
         "BlenderInfo": {
             "CommonName": "",
@@ -1028,28 +1028,28 @@
             "TaskLevel": 3,
             "InitializationMode": 2,
             "LoadAttributes": 0,
-            "LoadDistance": 360000
+            "LoadDistance": 0
         },
         "BlenderInfo": {
-            "CommonName": "",
-            "RotationMode": "NONE",
+            "CommonName": "Scene Changer",
+            "RotationMode": "Z",
             "ItemInfo": "",
-            "AssetName": "",
-            "AssetFile": "",
+            "AssetName": "SceneChanger",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\adv\\\\mysticruins\\\\SceneChangerMR.blend",
             "RelativeAssetFile": true,
             "PropertyInfo": {
                 "UseXAngleProperty": true,
-                "XAnglePropertyName": "",
-                "UseYAngleProperty": true,
+                "XAnglePropertyName": "Stage, Entrance, and Act ID",
+                "UseYAngleProperty": false,
                 "YAnglePropertyName": "",
-                "UseZAngleProperty": true,
+                "UseZAngleProperty": false,
                 "ZAnglePropertyName": "",
                 "UseXScaleProperty": true,
-                "XScalePropertyName": "",
+                "XScalePropertyName": "Width",
                 "UseYScaleProperty": true,
-                "YScalePropertyName": "",
+                "YScalePropertyName": "Depth",
                 "UseZScaleProperty": true,
-                "ZScalePropertyName": ""
+                "ZScalePropertyName": "Height"
             }
         }
     },
@@ -1059,7 +1059,7 @@
             "TaskLevel": 3,
             "InitializationMode": 2,
             "LoadAttributes": 2,
-            "LoadDistance": 360000
+            "LoadDistance": 0
         },
         "BlenderInfo": {
             "CommonName": "",
@@ -1090,7 +1090,7 @@
             "TaskLevel": 3,
             "InitializationMode": 3,
             "LoadAttributes": 0,
-            "LoadDistance": 360000
+            "LoadDistance": 0
         },
         "BlenderInfo": {
             "CommonName": "",
@@ -1121,7 +1121,7 @@
             "TaskLevel": 3,
             "InitializationMode": 3,
             "LoadAttributes": 0,
-            "LoadDistance": 360000
+            "LoadDistance": 0
         },
         "BlenderInfo": {
             "CommonName": "",
@@ -1152,7 +1152,7 @@
             "TaskLevel": 3,
             "InitializationMode": 3,
             "LoadAttributes": 0,
-            "LoadDistance": 360000
+            "LoadDistance": 0
         },
         "BlenderInfo": {
             "CommonName": "",
@@ -1183,7 +1183,7 @@
             "TaskLevel": 3,
             "InitializationMode": 3,
             "LoadAttributes": 0,
-            "LoadDistance": 360000
+            "LoadDistance": 0
         },
         "BlenderInfo": {
             "CommonName": "",
@@ -1214,7 +1214,7 @@
             "TaskLevel": 2,
             "InitializationMode": 2,
             "LoadAttributes": 0,
-            "LoadDistance": 360000
+            "LoadDistance": 0
         },
         "BlenderInfo": {
             "CommonName": "Hint Monitor",
@@ -1245,7 +1245,7 @@
             "TaskLevel": 2,
             "InitializationMode": 2,
             "LoadAttributes": 0,
-            "LoadDistance": 360000
+            "LoadDistance": 0
         },
         "BlenderInfo": {
             "CommonName": "Collision Sphere",
@@ -1276,7 +1276,7 @@
             "TaskLevel": 2,
             "InitializationMode": 2,
             "LoadAttributes": 0,
-            "LoadDistance": 360000
+            "LoadDistance": 0
         },
         "BlenderInfo": {
             "CommonName": "Collision Cylinder",
@@ -1307,7 +1307,7 @@
             "TaskLevel": 2,
             "InitializationMode": 2,
             "LoadAttributes": 0,
-            "LoadDistance": 360000
+            "LoadDistance": 0
         },
         "BlenderInfo": {
             "CommonName": "Collision Cube",
@@ -1332,13 +1332,13 @@
             }
         }
     },
-    "WALL": {
+    "WALL   ": {
         "ObjectInfo": {
             "FunctionAddress": "004D4850",
             "TaskLevel": 3,
             "InitializationMode": 2,
             "LoadAttributes": 0,
-            "LoadDistance": 360000
+            "LoadDistance": 0
         },
         "BlenderInfo": {
             "CommonName": "Repelling Wall",
@@ -1369,7 +1369,7 @@
             "TaskLevel": 2,
             "InitializationMode": 2,
             "LoadAttributes": 0,
-            "LoadDistance": 360000
+            "LoadDistance": 0
         },
         "BlenderInfo": {
             "CommonName": "Repelling Box",
@@ -1400,7 +1400,7 @@
             "TaskLevel": 3,
             "InitializationMode": 15,
             "LoadAttributes": 0,
-            "LoadDistance": 360000
+            "LoadDistance": 0
         },
         "BlenderInfo": {
             "CommonName": "Item Box (Air)",
@@ -1431,27 +1431,27 @@
             "TaskLevel": 3,
             "InitializationMode": 15,
             "LoadAttributes": 0,
-            "LoadDistance": 360000
+            "LoadDistance": 0
         },
         "BlenderInfo": {
-            "CommonName": "",
+            "CommonName": "Character Upgrade",
             "RotationMode": "NONE",
             "ItemInfo": "",
-            "AssetName": "",
-            "AssetFile": "",
+            "AssetName": "LevelItem",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\common\\\\LevelItem.blend",
             "RelativeAssetFile": true,
             "PropertyInfo": {
-                "UseXAngleProperty": true,
+                "UseXAngleProperty": false,
                 "XAnglePropertyName": "",
-                "UseYAngleProperty": true,
+                "UseYAngleProperty": false,
                 "YAnglePropertyName": "",
-                "UseZAngleProperty": true,
+                "UseZAngleProperty": false,
                 "ZAnglePropertyName": "",
                 "UseXScaleProperty": true,
-                "XScalePropertyName": "",
-                "UseYScaleProperty": true,
+                "XScalePropertyName": "Upgrade Item",
+                "UseYScaleProperty": false,
                 "YScalePropertyName": "",
-                "UseZScaleProperty": true,
+                "UseZScaleProperty": false,
                 "ZScalePropertyName": ""
             }
         }
@@ -1462,7 +1462,7 @@
             "TaskLevel": 3,
             "InitializationMode": 3,
             "LoadAttributes": 0,
-            "LoadDistance": 360000
+            "LoadDistance": 0
         },
         "BlenderInfo": {
             "CommonName": "",
@@ -1493,7 +1493,7 @@
             "TaskLevel": 3,
             "InitializationMode": 2,
             "LoadAttributes": 0,
-            "LoadDistance": 360000
+            "LoadDistance": 0
         },
         "BlenderInfo": {
             "CommonName": "",
@@ -1617,7 +1617,7 @@
             "TaskLevel": 3,
             "InitializationMode": 2,
             "LoadAttributes": 0,
-            "LoadDistance": 360000
+            "LoadDistance": 0
         },
         "BlenderInfo": {
             "CommonName": "",
@@ -1648,7 +1648,7 @@
             "TaskLevel": 3,
             "InitializationMode": 6,
             "LoadAttributes": 0,
-            "LoadDistance": 360000
+            "LoadDistance": 0
         },
         "BlenderInfo": {
             "CommonName": "",
@@ -1679,7 +1679,7 @@
             "TaskLevel": 3,
             "InitializationMode": 2,
             "LoadAttributes": 0,
-            "LoadDistance": 360000
+            "LoadDistance": 0
         },
         "BlenderInfo": {
             "CommonName": "",
@@ -1710,7 +1710,7 @@
             "TaskLevel": 3,
             "InitializationMode": 2,
             "LoadAttributes": 0,
-            "LoadDistance": 360000
+            "LoadDistance": 0
         },
         "BlenderInfo": {
             "CommonName": "",
@@ -1741,7 +1741,7 @@
             "TaskLevel": 3,
             "InitializationMode": 2,
             "LoadAttributes": 0,
-            "LoadDistance": 360000
+            "LoadDistance": 0
         },
         "BlenderInfo": {
             "CommonName": "",
@@ -1772,7 +1772,7 @@
             "TaskLevel": 3,
             "InitializationMode": 2,
             "LoadAttributes": 0,
-            "LoadDistance": 360000
+            "LoadDistance": 0
         },
         "BlenderInfo": {
             "CommonName": "",
@@ -1803,7 +1803,7 @@
             "TaskLevel": 3,
             "InitializationMode": 2,
             "LoadAttributes": 0,
-            "LoadDistance": 360000
+            "LoadDistance": 0
         },
         "BlenderInfo": {
             "CommonName": "",
@@ -1865,7 +1865,7 @@
             "TaskLevel": 3,
             "InitializationMode": 2,
             "LoadAttributes": 0,
-            "LoadDistance": 360000
+            "LoadDistance": 0
         },
         "BlenderInfo": {
             "CommonName": "",
@@ -1896,7 +1896,7 @@
             "TaskLevel": 2,
             "InitializationMode": 2,
             "LoadAttributes": 0,
-            "LoadDistance": 360000
+            "LoadDistance": 0
         },
         "BlenderInfo": {
             "CommonName": "Tikal Hint Orb",
@@ -1958,7 +1958,7 @@
             "TaskLevel": 3,
             "InitializationMode": 10,
             "LoadAttributes": 0,
-            "LoadDistance": 360000
+            "LoadDistance": 0
         },
         "BlenderInfo": {
             "CommonName": "Weed",
@@ -1989,7 +1989,7 @@
             "TaskLevel": 3,
             "InitializationMode": 3,
             "LoadAttributes": 0,
-            "LoadDistance": 360000
+            "LoadDistance": 0
         },
         "BlenderInfo": {
             "CommonName": "",
@@ -2020,7 +2020,7 @@
             "TaskLevel": 3,
             "InitializationMode": 2,
             "LoadAttributes": 0,
-            "LoadDistance": 360000
+            "LoadDistance": 0
         },
         "BlenderInfo": {
             "CommonName": "Emblem",

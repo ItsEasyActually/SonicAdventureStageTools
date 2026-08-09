@@ -160,7 +160,7 @@
             "TaskLevel": 3,
             "InitializationMode": 2,
             "LoadAttributes": 0,
-            "LoadDistance": 360000
+            "LoadDistance": 0
         },
         "BlenderInfo": {
             "CommonName": "",
@@ -191,7 +191,7 @@
             "TaskLevel": 3,
             "InitializationMode": 2,
             "LoadAttributes": 0,
-            "LoadDistance": 360000
+            "LoadDistance": 0
         },
         "BlenderInfo": {
             "CommonName": "",
@@ -501,7 +501,7 @@
             "TaskLevel": 2,
             "InitializationMode": 2,
             "LoadAttributes": 0,
-            "LoadDistance": 360000
+            "LoadDistance": 0
         },
         "BlenderInfo": {
             "CommonName": "",
@@ -532,7 +532,7 @@
             "TaskLevel": 2,
             "InitializationMode": 2,
             "LoadAttributes": 0,
-            "LoadDistance": 360000
+            "LoadDistance": 0
         },
         "BlenderInfo": {
             "CommonName": "",
@@ -563,7 +563,7 @@
             "TaskLevel": 2,
             "InitializationMode": 2,
             "LoadAttributes": 0,
-            "LoadDistance": 360000
+            "LoadDistance": 0
         },
         "BlenderInfo": {
             "CommonName": "",

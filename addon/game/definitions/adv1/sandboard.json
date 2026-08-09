@@ -1,11 +1,11 @@
 {
-    "RING": {
+    "RING   ": {
         "ObjectInfo": {
             "FunctionAddress": "00450370",
             "TaskLevel": 3,
             "InitializationMode": 2,
             "LoadAttributes": 0,
-            "LoadDistance": 360000
+            "LoadDistance": 0
         },
         "BlenderInfo": {
             "CommonName": "Ring",
@@ -36,7 +36,7 @@
             "TaskLevel": 3,
             "InitializationMode": 2,
             "LoadAttributes": 0,
-            "LoadDistance": 360000
+            "LoadDistance": 0
         },
         "BlenderInfo": {
             "CommonName": "Ring Group",
@@ -61,13 +61,13 @@
             }
         }
     },
-    "SPRING": {
+    "SPRING ": {
         "ObjectInfo": {
             "FunctionAddress": "007A4C30",
             "TaskLevel": 2,
             "InitializationMode": 2,
             "LoadAttributes": 0,
-            "LoadDistance": 360000
+            "LoadDistance": 0
         },
         "BlenderInfo": {
             "CommonName": "Spring (Ground)",
@@ -98,7 +98,7 @@
             "TaskLevel": 2,
             "InitializationMode": 2,
             "LoadAttributes": 0,
-            "LoadDistance": 360000
+            "LoadDistance": 0
         },
         "BlenderInfo": {
             "CommonName": "Spring (Rotatable)",
@@ -129,7 +129,7 @@
             "TaskLevel": 3,
             "InitializationMode": 3,
             "LoadAttributes": 0,
-            "LoadDistance": 360000
+            "LoadDistance": 0
         },
         "BlenderInfo": {
             "CommonName": "Dash Panel",
@@ -160,7 +160,7 @@
             "TaskLevel": 3,
             "InitializationMode": 6,
             "LoadAttributes": 0,
-            "LoadDistance": 360000
+            "LoadDistance": 0
         },
         "BlenderInfo": {
             "CommonName": "Swinging Spike Ball",
@@ -191,7 +191,7 @@
             "TaskLevel": 3,
             "InitializationMode": 2,
             "LoadAttributes": 0,
-            "LoadDistance": 360000
+            "LoadDistance": 0
         },
         "BlenderInfo": {
             "CommonName": "Falling Spike Ball",
@@ -222,7 +222,7 @@
             "TaskLevel": 3,
             "InitializationMode": 2,
             "LoadAttributes": 0,
-            "LoadDistance": 360000
+            "LoadDistance": 0
         },
         "BlenderInfo": {
             "CommonName": "Spikes",
@@ -253,7 +253,7 @@
             "TaskLevel": 3,
             "InitializationMode": 3,
             "LoadAttributes": 0,
-            "LoadDistance": 360000
+            "LoadDistance": 0
         },
         "BlenderInfo": {
             "CommonName": "Master Emerald Shard",
@@ -284,7 +284,7 @@
             "TaskLevel": 3,
             "InitializationMode": 2,
             "LoadAttributes": 0,
-            "LoadDistance": 360000
+            "LoadDistance": 0
         },
         "BlenderInfo": {
             "CommonName": "Capsule",
@@ -315,7 +315,7 @@
             "TaskLevel": 3,
             "InitializationMode": 6,
             "LoadAttributes": 0,
-            "LoadDistance": 360000
+            "LoadDistance": 0
         },
         "BlenderInfo": {
             "CommonName": "Switch",
@@ -346,7 +346,7 @@
             "TaskLevel": 3,
             "InitializationMode": 10,
             "LoadAttributes": 0,
-            "LoadDistance": 360000
+            "LoadDistance": 0
         },
         "BlenderInfo": {
             "CommonName": "Weed",
@@ -377,7 +377,7 @@
             "TaskLevel": 3,
             "InitializationMode": 14,
             "LoadAttributes": 0,
-            "LoadDistance": 360000
+            "LoadDistance": 0
         },
         "BlenderInfo": {
             "CommonName": "Dash Ring",
@@ -408,7 +408,7 @@
             "TaskLevel": 3,
             "InitializationMode": 2,
             "LoadAttributes": 0,
-            "LoadDistance": 360000
+            "LoadDistance": 0
         },
         "BlenderInfo": {
             "CommonName": "Balloon",
@@ -439,7 +439,7 @@
             "TaskLevel": 3,
             "InitializationMode": 2,
             "LoadAttributes": 0,
-            "LoadDistance": 360000
+            "LoadDistance": 0
         },
         "BlenderInfo": {
             "CommonName": "Item Box (Ground)",
@@ -470,7 +470,7 @@
             "TaskLevel": 2,
             "InitializationMode": 14,
             "LoadAttributes": 0,
-            "LoadDistance": 360000
+            "LoadDistance": 0
         },
         "BlenderInfo": {
             "CommonName": "Rocket (Horizontal)",
@@ -501,7 +501,7 @@
             "TaskLevel": 2,
             "InitializationMode": 14,
             "LoadAttributes": 0,
-            "LoadDistance": 360000
+            "LoadDistance": 0
         },
         "BlenderInfo": {
             "CommonName": "Rocket (Horizontal, Sealed)",
@@ -532,7 +532,7 @@
             "TaskLevel": 2,
             "InitializationMode": 14,
             "LoadAttributes": 0,
-            "LoadDistance": 360000
+            "LoadDistance": 0
         },
         "BlenderInfo": {
             "CommonName": "Rocket (Vertical)",
@@ -563,7 +563,7 @@
             "TaskLevel": 2,
             "InitializationMode": 14,
             "LoadAttributes": 0,
-            "LoadDistance": 360000
+            "LoadDistance": 0
         },
         "BlenderInfo": {
             "CommonName": "Rocket (Vertical, Sealed)",
@@ -625,7 +625,7 @@
             "TaskLevel": 6,
             "InitializationMode": 15,
             "LoadAttributes": 0,
-            "LoadDistance": 360000
+            "LoadDistance": 0
         },
         "BlenderInfo": {
             "CommonName": "Checkpoint",
@@ -650,13 +650,13 @@
             }
         }
     },
-    "WALL": {
+    "WALL   ": {
         "ObjectInfo": {
             "FunctionAddress": "004D4850",
             "TaskLevel": 3,
             "InitializationMode": 2,
             "LoadAttributes": 0,
-            "LoadDistance": 360000
+            "LoadDistance": 0
         },
         "BlenderInfo": {
             "CommonName": "Repelling Wall",
@@ -1084,13 +1084,13 @@
             }
         }
     },
-    "O SFROG": {
+    "O SFROG ": {
         "ObjectInfo": {
             "FunctionAddress": "00598040",
             "TaskLevel": 3,
             "InitializationMode": 2,
             "LoadAttributes": 0,
-            "LoadDistance": 360000
+            "LoadDistance": 0
         },
         "BlenderInfo": {
             "CommonName": "",
@@ -1121,7 +1121,7 @@
             "TaskLevel": 2,
             "InitializationMode": 2,
             "LoadAttributes": 0,
-            "LoadDistance": 360000
+            "LoadDistance": 0
         },
         "BlenderInfo": {
             "CommonName": "Collision Sphere",
@@ -1152,7 +1152,7 @@
             "TaskLevel": 2,
             "InitializationMode": 2,
             "LoadAttributes": 0,
-            "LoadDistance": 360000
+            "LoadDistance": 0
         },
         "BlenderInfo": {
             "CommonName": "Collision Cylinder",
@@ -1183,7 +1183,7 @@
             "TaskLevel": 2,
             "InitializationMode": 2,
             "LoadAttributes": 0,
-            "LoadDistance": 360000
+            "LoadDistance": 0
         },
         "BlenderInfo": {
             "CommonName": "Collision Cube",

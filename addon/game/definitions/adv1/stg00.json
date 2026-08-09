@@ -1,11 +1,11 @@
 {
-    "RING": {
+    "RING   ": {
         "ObjectInfo": {
             "FunctionAddress": "00450370",
             "TaskLevel": 3,
             "InitializationMode": 2,
             "LoadAttributes": 0,
-            "LoadDistance": 360000
+            "LoadDistance": 0
         },
         "BlenderInfo": {
             "CommonName": "Ring",
@@ -36,7 +36,7 @@
             "TaskLevel": 3,
             "InitializationMode": 15,
             "LoadAttributes": 2,
-            "LoadDistance": 360000
+            "LoadDistance": 0
         },
         "BlenderInfo": {
             "CommonName": "",
@@ -67,7 +67,7 @@
             "TaskLevel": 2,
             "InitializationMode": 2,
             "LoadAttributes": 0,
-            "LoadDistance": 360000
+            "LoadDistance": 0
         },
         "BlenderInfo": {
             "CommonName": "Collision Cube",

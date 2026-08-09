@@ -5,7 +5,7 @@
             "TaskLevel": 3,
             "InitializationMode": 2,
             "LoadAttributes": 0,
-            "LoadDistance": 360000
+            "LoadDistance": 0
         },
         "BlenderInfo": {
             "CommonName": "Ring",
@@ -36,7 +36,7 @@
             "TaskLevel": 2,
             "InitializationMode": 14,
             "LoadAttributes": 0,
-            "LoadDistance": 360000
+            "LoadDistance": 0
         },
         "BlenderInfo": {
             "CommonName": "Rocket (Horizontal)",
@@ -67,7 +67,7 @@
             "TaskLevel": 2,
             "InitializationMode": 14,
             "LoadAttributes": 0,
-            "LoadDistance": 360000
+            "LoadDistance": 0
         },
         "BlenderInfo": {
             "CommonName": "Rocket (Horizontal, Sealed)",
@@ -98,7 +98,7 @@
             "TaskLevel": 2,
             "InitializationMode": 14,
             "LoadAttributes": 0,
-            "LoadDistance": 360000
+            "LoadDistance": 0
         },
         "BlenderInfo": {
             "CommonName": "Rocket (Vertical)",
@@ -129,7 +129,7 @@
             "TaskLevel": 2,
             "InitializationMode": 14,
             "LoadAttributes": 0,
-            "LoadDistance": 360000
+            "LoadDistance": 0
         },
         "BlenderInfo": {
             "CommonName": "Rocket (Vertical, Sealed)",

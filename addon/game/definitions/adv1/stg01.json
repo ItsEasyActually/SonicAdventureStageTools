@@ -1,5 +1,5 @@
 {
-    "RING": {
+    "RING   ": {
         "ObjectInfo": {
             "FunctionAddress": "00450370",
             "TaskLevel": 3,
@@ -30,7 +30,7 @@
             }
         }
     },
-    "SPRING": {
+    "SPRING ": {
         "ObjectInfo": {
             "FunctionAddress": "007A4C30",
             "TaskLevel": 2,
@@ -619,7 +619,7 @@
             }
         }
     },
-    "WALL": {
+    "WALL   ": {
         "ObjectInfo": {
             "FunctionAddress": "004D4850",
             "TaskLevel": 3,
@@ -898,7 +898,7 @@
             }
         }
     },
-    "E SARU": {
+    "E SARU  ": {
         "ObjectInfo": {
             "FunctionAddress": "004AD140",
             "TaskLevel": 3,
@@ -991,7 +991,7 @@
             }
         }
     },
-    "YASI0": {
+    "YASI0   ": {
         "ObjectInfo": {
             "FunctionAddress": "00500F50",
             "TaskLevel": 3,
@@ -1022,7 +1022,7 @@
             }
         }
     },
-    "YASI1": {
+    "YASI1   ": {
         "ObjectInfo": {
             "FunctionAddress": "00500FF0",
             "TaskLevel": 3,
@@ -1053,7 +1053,7 @@
             }
         }
     },
-    "YASI2": {
+    "YASI2   ": {
         "ObjectInfo": {
             "FunctionAddress": "00501090",
             "TaskLevel": 3,
@@ -1084,7 +1084,7 @@
             }
         }
     },
-    "YASI3": {
+    "YASI3   ": {
         "ObjectInfo": {
             "FunctionAddress": "00500EC0",
             "TaskLevel": 3,
@@ -1115,7 +1115,7 @@
             }
         }
     },
-    "O BFLOOT": {
+    "O BFLOOT   ": {
         "ObjectInfo": {
             "FunctionAddress": "004FB710",
             "TaskLevel": 3,
@@ -1146,7 +1146,7 @@
             }
         }
     },
-    "O BUNGA": {
+    "O BUNGA   ": {
         "ObjectInfo": {
             "FunctionAddress": "004FB730",
             "TaskLevel": 3,
@@ -1177,7 +1177,7 @@
             }
         }
     },
-    "O BGIRO": {
+    "O BGIRO   ": {
         "ObjectInfo": {
             "FunctionAddress": "00500B90",
             "TaskLevel": 3,
@@ -1208,7 +1208,7 @@
             }
         }
     },
-    "O IWA": {
+    "O IWA   ": {
         "ObjectInfo": {
             "FunctionAddress": "00500770",
             "TaskLevel": 3,
@@ -1239,7 +1239,7 @@
             }
         }
     },
-    "O JUMP": {
+    "O JUMP   ": {
         "ObjectInfo": {
             "FunctionAddress": "005001E0",
             "TaskLevel": 3,
@@ -1270,7 +1270,7 @@
             }
         }
     },
-    "O IWAPO": {
+    "O IWAPO   ": {
         "ObjectInfo": {
             "FunctionAddress": "004FB770",
             "TaskLevel": 3,
@@ -1301,7 +1301,7 @@
             }
         }
     },
-    "O ROCK": {
+    "O ROCK   ": {
         "ObjectInfo": {
             "FunctionAddress": "004FB750",
             "TaskLevel": 3,
@@ -1332,7 +1332,7 @@
             }
         }
     },
-    "O FENA": {
+    "O FENA   ": {
         "ObjectInfo": {
             "FunctionAddress": "004FFDC0",
             "TaskLevel": 3,
@@ -1363,7 +1363,7 @@
             }
         }
     },
-    "O FENB": {
+    "O FENB   ": {
         "ObjectInfo": {
             "FunctionAddress": "004FFE00",
             "TaskLevel": 3,
@@ -1394,7 +1394,7 @@
             }
         }
     },
-    "O FENC": {
+    "O FENC   ": {
         "ObjectInfo": {
             "FunctionAddress": "004FFE40",
             "TaskLevel": 3,
@@ -1425,7 +1425,7 @@
             }
         }
     },
-    "O FEND": {
+    "O FEND   ": {
         "ObjectInfo": {
             "FunctionAddress": "004FFE80",
             "TaskLevel": 3,
@@ -1456,7 +1456,7 @@
             }
         }
     },
-    "O CORA": {
+    "O CORA   ": {
         "ObjectInfo": {
             "FunctionAddress": "004FFD80",
             "TaskLevel": 3,
@@ -1487,7 +1487,7 @@
             }
         }
     },
-    "O CORB": {
+    "O CORB   ": {
         "ObjectInfo": {
             "FunctionAddress": "004FFDA0",
             "TaskLevel": 3,
@@ -1518,7 +1518,7 @@
             }
         }
     },
-    "O GRASA": {
+    "O GRASA   ": {
         "ObjectInfo": {
             "FunctionAddress": "004FFD00",
             "TaskLevel": 3,
@@ -1549,7 +1549,7 @@
             }
         }
     },
-    "O GRASB": {
+    "O GRASB   ": {
         "ObjectInfo": {
             "FunctionAddress": "004FFD20",
             "TaskLevel": 3,
@@ -1580,7 +1580,7 @@
             }
         }
     },
-    "O GRASC": {
+    "O GRASC   ": {
         "ObjectInfo": {
             "FunctionAddress": "004FFD40",
             "TaskLevel": 3,
@@ -1611,7 +1611,7 @@
             }
         }
     },
-    "O GRASD": {
+    "O GRASD   ": {
         "ObjectInfo": {
             "FunctionAddress": "004FFD60",
             "TaskLevel": 3,
@@ -1642,7 +1642,7 @@
             }
         }
     },
-    "O DOLPHIN": {
+    "O DOLPHIN   ": {
         "ObjectInfo": {
             "FunctionAddress": "004FACD0",
             "TaskLevel": 3,
@@ -1673,7 +1673,7 @@
             }
         }
     },
-    "O SEKITYU": {
+    "O SEKITYU   ": {
         "ObjectInfo": {
             "FunctionAddress": "004FB790",
             "TaskLevel": 3,
@@ -1704,7 +1704,7 @@
             }
         }
     },
-    "O KAMOME": {
+    "O KAMOME   ": {
         "ObjectInfo": {
             "FunctionAddress": "004FFC30",
             "TaskLevel": 3,
@@ -1735,7 +1735,7 @@
             }
         }
     },
-    "O KAMOMEL": {
+    "O KAMOMEL   ": {
         "ObjectInfo": {
             "FunctionAddress": "004FFB60",
             "TaskLevel": 3,
@@ -1766,7 +1766,7 @@
             }
         }
     },
-    "O KOMOMO": {
+    "O KOMOMO   ": {
         "ObjectInfo": {
             "FunctionAddress": "004FB7E0",
             "TaskLevel": 3,
@@ -2355,7 +2355,7 @@
             }
         }
     },
-    "S BASS": {
+    "S BASS ": {
         "ObjectInfo": {
             "FunctionAddress": "005977F0",
             "TaskLevel": 3,
@@ -2417,7 +2417,7 @@
             }
         }
     },
-    "S GENE": {
+    "S GENE ": {
         "ObjectInfo": {
             "FunctionAddress": "00597660",
             "TaskLevel": 3,
@@ -2448,7 +2448,7 @@
             }
         }
     },
-    "O BEWIND": {
+    "O BEWIND ": {
         "ObjectInfo": {
             "FunctionAddress": "004FA3B0",
             "TaskLevel": 3,
@@ -2479,7 +2479,7 @@
             }
         }
     },
-    "O FROG": {
+    "O FROG ": {
         "ObjectInfo": {
             "FunctionAddress": "004FA320",
             "TaskLevel": 3,
@@ -2510,7 +2510,7 @@
             }
         }
     },
-    "O BZ": {
+    "O BZ ": {
         "ObjectInfo": {
             "FunctionAddress": "004F9FB0",
             "TaskLevel": 3,
