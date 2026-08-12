@@ -39,24 +39,24 @@
             "LoadDistance": 1000000
         },
         "BlenderInfo": {
-            "CommonName": "",
+            "CommonName": "Casino",
             "RotationMode": "NONE",
             "ItemInfo": "",
-            "AssetName": "",
-            "AssetFile": "",
+            "AssetName": "Egm2Casino",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\boss\\\\eggwalker\\\\Egm2Casino.blend",
             "RelativeAssetFile": true,
             "PropertyInfo": {
-                "UseXAngleProperty": true,
+                "UseXAngleProperty": false,
                 "XAnglePropertyName": "",
-                "UseYAngleProperty": true,
+                "UseYAngleProperty": false,
                 "YAnglePropertyName": "",
-                "UseZAngleProperty": true,
+                "UseZAngleProperty": false,
                 "ZAnglePropertyName": "",
-                "UseXScaleProperty": true,
+                "UseXScaleProperty": false,
                 "XScalePropertyName": "",
-                "UseYScaleProperty": true,
+                "UseYScaleProperty": false,
                 "YScalePropertyName": "",
-                "UseZScaleProperty": true,
+                "UseZScaleProperty": false,
                 "ZScalePropertyName": ""
             }
         }
