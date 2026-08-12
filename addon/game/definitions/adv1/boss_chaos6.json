@@ -39,24 +39,24 @@
             "LoadDistance": 0
         },
         "BlenderInfo": {
-            "CommonName": "",
+            "CommonName": "Smoke",
             "RotationMode": "NONE",
             "ItemInfo": "",
-            "AssetName": "",
-            "AssetFile": "",
+            "AssetName": "Chaos6Smoke",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\boss\\\\chaos6\\\\Smoke.blend",
             "RelativeAssetFile": true,
             "PropertyInfo": {
-                "UseXAngleProperty": true,
+                "UseXAngleProperty": false,
                 "XAnglePropertyName": "",
-                "UseYAngleProperty": true,
+                "UseYAngleProperty": false,
                 "YAnglePropertyName": "",
-                "UseZAngleProperty": true,
+                "UseZAngleProperty": false,
                 "ZAnglePropertyName": "",
                 "UseXScaleProperty": true,
-                "XScalePropertyName": "",
+                "XScalePropertyName": "Effect Size",
                 "UseYScaleProperty": true,
-                "YScalePropertyName": "",
-                "UseZScaleProperty": true,
+                "YScalePropertyName": "Smoke Color",
+                "UseZScaleProperty": false,
                 "ZScalePropertyName": ""
             }
         }
