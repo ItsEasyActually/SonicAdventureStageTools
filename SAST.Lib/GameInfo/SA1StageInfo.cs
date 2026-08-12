@@ -141,6 +141,12 @@ namespace SAST.Lib.GameInfo
 				case SA1Stage.ChaoGardenSS:
 				case SA1Stage.ChaoGardenMR:
 				case SA1Stage.ChaoGardenEC:
+				case SA1Stage.EggHornet:
+				case SA1Stage.EggWalker:
+				case SA1Stage.EggViper:
+				case SA1Stage.ZERO:
+				case SA1Stage.E101:
+				case SA1Stage.E101r:
 					return "";
 			}
 		}
