@@ -448,67 +448,6 @@ class SASTImportManager:
                 props.dependent_set = True
 
     @staticmethod
-    def handle_set_item_rotation(obj: bpy.types.Object, rotation_mode: str):
-        '''Updates an object\'s rotation mode.'''
-        match (rotation_mode):
-            case 'NONE':
-                obj.rotation_mode = 'XYZ'
-                obj.rotation_euler[0] = 0
-                obj.rotation_euler[1] = 0
-                obj.rotation_euler[2] = 0
-                obj.lock_rotation[0] = True
-                obj.lock_rotation[1] = True
-                obj.lock_rotation[2] = True
-            case 'X':
-                obj.rotation_euler[1] = 0
-                obj.rotation_euler[2] = 0
-                obj.lock_rotation[1] = True
-                obj.lock_rotation[2] = True 
-            case 'Y':
-                obj.rotation_euler[0] = 0
-                obj.rotation_euler[2] = 0
-                obj.lock_rotation[0] = True
-                obj.lock_rotation[2] = True
-            case 'Z':
-                obj.rotation_euler[1] = 0
-                obj.rotation_euler[0] = 0
-                obj.lock_rotation[1] = True
-                obj.lock_rotation[0] = True
-            case 'XY' | 'YX' | 'XYZ' | 'YXZ':
-                if (rotation_mode == 'XYZ') or (rotation_mode == 'XY'):
-                    obj.rotation_mode = 'XYZ'
-                elif (rotation_mode == 'YXZ') or (rotation_mode == 'YX'):
-                    obj.rotation_mode = 'YXZ'
-
-                if (len(rotation_mode) == 2):
-                    obj.rotation_euler[2] = 0
-                    obj.lock_rotation[2] = True
-                else:
-                    obj.lock_rotation[2] = False
-            case 'XZ' | 'ZX' | 'XZY' | 'ZXY':
-                if (rotation_mode == 'XZY') or (rotation_mode == 'XZ'):
-                    obj.rotation_mode = 'XZY'
-                elif (rotation_mode == 'ZXY') or (rotation_mode == 'ZX'):
-                    obj.rotation_mode = 'ZXY'
-
-                if (len(rotation_mode) == 2):
-                    obj.rotation_euler[1] = 0
-                    obj.lock_rotation[1] = True
-                else:
-                    obj.lock_rotation[1] = False
-            case 'YZ' | 'ZY' | 'YZX' | 'ZYX':
-                if (rotation_mode == 'YZX') or (rotation_mode == 'YZ'):
-                    obj.rotation_mode = 'YZX'
-                elif (rotation_mode == 'ZYX') or (rotation_mode == 'ZY'):
-                    obj.rotation_mode = 'ZYX'
-
-                if (len(rotation_mode) == 2):
-                    obj.rotation_euler[0] = 0
-                    obj.lock_rotation[0] = True
-                else:
-                    obj.lock_rotation[0] = False
-
-    @staticmethod
     def process_set_item(setitem, index: int, collection: bpy.types.Collection, scene_props: SASTSceneProperties):
         from ...object.properties.sast_object_properties import SASTObjectProperties
         from ...object.properties.sast_set_object_properties import SASTSETObjectProperties
@@ -531,7 +470,7 @@ class SASTImportManager:
             obj.rotation_euler[0] = setitem.Node.Rotation.X.Radians
             obj.rotation_euler[1] = -setitem.Node.Rotation.Z.Radians
             obj.rotation_euler[2] = setitem.Node.Rotation.Y.Radians
-            SASTImportManager.handle_set_item_rotation(obj, iteminfo.rotation_order)
+            SetItemNode.handle_set_item_rotation(obj, iteminfo.rotation_order)
             obj.lock_scale[0] = True
             obj.lock_scale[1] = True
             obj.lock_scale[2] = True

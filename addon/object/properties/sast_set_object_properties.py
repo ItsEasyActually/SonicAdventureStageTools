@@ -4,7 +4,10 @@ from bpy.props import (
     IntProperty,
     BoolProperty
 )
+
 from ...scene.properties.sast_scene_properties import SASTSceneProperties
+from ...scene.properties.sast_set_definition_properties import SASTSETDefinitionProperties
+from ..geonode.setitemnode import SetItemNode
 
 class SASTSETObjectProperties(bpy.types.PropertyGroup):
     '''Set Object Properties for SAST.'''
@@ -36,7 +39,50 @@ class SASTSETObjectProperties(bpy.types.PropertyGroup):
         return items
 
     def update_objectid(self, context: bpy.types.Context):
-        pass
+        obj: bpy.types.Object = bpy.context.active_object
+        scene_props: SASTSceneProperties = SASTSceneProperties.get_properties()
+        item: SASTSETDefinitionProperties = scene_props.objlist[int(self.objectid)]
+        xr: float = 0 
+        yr: float = 0 
+        zr: float = 0
+        if (obj.lock_rotation[0] == False):
+            xr = obj.rotation_euler[0]
+        if (obj.lock_rotation[1] == False):
+            yr = obj.rotation_euler[1]
+        if (obj.lock_rotation[2] == False):
+            zr = obj.rotation_euler[2]
+
+        xa: int = 0
+        ya: int = 0 
+        za: int = 0
+        xs: float = 0 
+        ys: float = 0 
+        zs: float = 0
+        if (len(obj.modifiers) > 0):
+            setitem: SetItemNode = SetItemNode(obj)
+            xa = setitem.get_rot_x()
+            ya = setitem.get_rot_y()
+            za = setitem.get_rot_z()
+            xs = setitem.get_scl_x()
+            ys = setitem.get_scl_y()
+            zs = setitem.get_scl_z()
+
+        SetItemNode.create(obj, item)
+        SetItemNode.handle_set_item_rotation(obj, item.rotation_order)
+        if (obj.lock_rotation[0] == False):
+            obj.rotation_euler = xr
+        if (obj.lock_rotation[1] == False):
+            obj.rotation_euler = yr
+        if (obj.lock_rotation[2] == False):
+            obj.rotation_euler = zr
+        setitem = SetItemNode(obj)
+        setitem.set_rot_x(xa)
+        setitem.set_rot_y(ya)
+        setitem.set_rot_z(za)
+        setitem.set_scl_x(xs)
+        setitem.set_scl_y(ys)
+        setitem.set_scl_z(zs)
+        
 
     objectid: EnumProperty(
         name='Object ID',

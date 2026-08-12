@@ -4,6 +4,7 @@ from bpy.props import (
     BoolProperty
 )
 from ...scene.properties.sast_scene_properties import SASTSceneProperties
+from ..geonode.setitemnode import SetItemNode
 from ..geonode.sa1cameranode import SA1CameraNode
 from ..geonode.sa2cameranode import SA2CameraNode
 from ..geonode.sa2pointnode import SA2PointNode
@@ -43,8 +44,7 @@ class SASTObjectProperties(bpy.types.PropertyGroup):
         scene_props: SASTSceneProperties = SASTSceneProperties.get_properties()
         match (self.objtype):
             case 'SET':
-                #TODO: SET Object Support
-                pass
+                SetItemNode.create(obj, scene_props.objlist[0])
             case 'CAM':
                 match (scene_props.game_id):
                     case 'SADXPC':

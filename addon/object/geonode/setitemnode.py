@@ -1,4 +1,5 @@
 import bpy
+from bpy.types import BlendDataNodeTrees
 from .sast_geonode_base import SASTGeonodeBase
 from ...utilities.geonode.geometry_node_manager import GeometryNodeManager
 from ...scene.properties.sast_set_definition_properties import SASTSETDefinitionProperties
@@ -16,6 +17,89 @@ class SetItemNode(SASTGeonodeBase):
     @staticmethod
     def poll(obj: bpy.types.Object) -> bool:
         return GeometryNodeManager.has_geometry_node(obj)
+
+    @staticmethod
+    def handle_set_item_rotation(obj: bpy.types.Object, rotation_mode: str):
+        '''Updates an object\'s rotation mode.'''
+        match (rotation_mode):
+            case 'NONE':
+                obj.rotation_mode = 'XYZ'
+                obj.rotation_euler[0] = 0
+                obj.rotation_euler[1] = 0
+                obj.rotation_euler[2] = 0
+                obj.lock_rotation[0] = True
+                obj.lock_rotation[1] = True
+                obj.lock_rotation[2] = True
+            case 'X':
+                obj.rotation_euler[1] = 0
+                obj.rotation_euler[2] = 0
+                obj.lock_rotation[1] = True
+                obj.lock_rotation[2] = True 
+            case 'Y':
+                obj.rotation_euler[0] = 0
+                obj.rotation_euler[2] = 0
+                obj.lock_rotation[0] = True
+                obj.lock_rotation[2] = True
+            case 'Z':
+                obj.rotation_euler[1] = 0
+                obj.rotation_euler[0] = 0
+                obj.lock_rotation[1] = True
+                obj.lock_rotation[0] = True
+            case 'XY' | 'YX' | 'XYZ' | 'YXZ':
+                if (rotation_mode == 'XYZ') or (rotation_mode == 'XY'):
+                    obj.rotation_mode = 'XYZ'
+                elif (rotation_mode == 'YXZ') or (rotation_mode == 'YX'):
+                    obj.rotation_mode = 'YXZ'
+
+                if (len(rotation_mode) == 2):
+                    obj.rotation_euler[2] = 0
+                    obj.lock_rotation[2] = True
+                else:
+                    obj.lock_rotation[2] = False
+            case 'XZ' | 'ZX' | 'XZY' | 'ZXY':
+                if (rotation_mode == 'XZY') or (rotation_mode == 'XZ'):
+                    obj.rotation_mode = 'XZY'
+                elif (rotation_mode == 'ZXY') or (rotation_mode == 'ZX'):
+                    obj.rotation_mode = 'ZXY'
+
+                if (len(rotation_mode) == 2):
+                    obj.rotation_euler[1] = 0
+                    obj.lock_rotation[1] = True
+                else:
+                    obj.lock_rotation[1] = False
+            case 'YZ' | 'ZY' | 'YZX' | 'ZYX':
+                if (rotation_mode == 'YZX') or (rotation_mode == 'YZ'):
+                    obj.rotation_mode = 'YZX'
+                elif (rotation_mode == 'ZYX') or (rotation_mode == 'ZY'):
+                    obj.rotation_mode = 'ZYX'
+
+                if (len(rotation_mode) == 2):
+                    obj.rotation_euler[0] = 0
+                    obj.lock_rotation[0] = True
+                else:
+                    obj.lock_rotation[0] = False
+
+    @staticmethod
+    def get_object_node(asset_name: str) -> BlendDataNodeTrees | None:
+        '''Returns a Geometry Node corresponding to the selected object from the object list.'''
+        node_name: str = f'{asset_name}Node'
+        
+        if (bpy.data.node_groups.__contains__(node_name)):
+            return bpy.data.node_groups[node_name]
+        elif (bpy.data.node_groups.__contains__('GenericSetItemNode')):
+            return bpy.data.node_groups['GenericSetItemNode']
+        else:
+            return None
+
+    @staticmethod
+    def create(obj: bpy.types.Object, item: SASTSETDefinitionProperties):
+        '''Creates a SET Item in the scene with the first item in the loaded object list if one is loaded, otherwise it simply sets the override ID to True.'''
+        node: BlendDataNodeTrees = SetItemNode.get_object_node(item.asset_name)
+        if (node is not None):
+            obj.modifiers.clear()
+            nodes_modifier: bpy.types.NodesModifier = obj.modifiers.new(f'{item.asset_name}Node', 'NODES')
+            nodes_modifier.node_group = node
+            SetItemNode.handle_set_item_rotation(obj, item.rotation_order)
 
     def __init__(self, obj: bpy.types.Object) -> None:
         if (len(obj.modifiers) > 0):
