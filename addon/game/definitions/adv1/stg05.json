@@ -2895,7 +2895,7 @@
             "RotationMode": "Z",
             "ItemInfo": "",
             "AssetName": "RepellingBox",
-            "AssetFile": "blend\\\\set\\\\sa1\\\\common\\\\CollisionBox.blend",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\common\\\\CollisionBlock.blend",
             "RelativeAssetFile": true,
             "PropertyInfo": {
                 "UseXAngleProperty": false,
