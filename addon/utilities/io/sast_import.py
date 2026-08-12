@@ -387,6 +387,7 @@ class SASTImportManager:
     def import_cam_manual(files, directory: str, context: bpy.types.Context):
         '''Manual Camera Import'''
         SASTImportManager.importing = True
+        bpy.context.view_layer.objects.active = None
         SASTLogger.log(f'Importing {len(files)} Camera Files: MANUAL MODE')
 
         if (len(files) > 0):
@@ -409,6 +410,7 @@ class SASTImportManager:
     def import_cam_auto(context: bpy.types.Context, directory: str, stage_id: str, act_id: str, base_collection_name: str = ""):
         '''Automatic Camera Import'''
         SASTImportManager.importing = True
+        bpy.context.view_layer.objects.active = None
 
         if (len(directory) > 0):
             scene_props: SASTSceneProperties = SASTSceneProperties.get_properties()
@@ -510,6 +512,7 @@ class SASTImportManager:
     @staticmethod
     def import_set_manual(files, directory: str, context: bpy.types.Context):
         SASTImportManager.importing = True
+        bpy.context.view_layer.objects.active = None
         SASTLogger.log(f'Import {len(files)} SET Files: MANUAL MODE')
 
         if (len(files) > 0):
@@ -533,6 +536,7 @@ class SASTImportManager:
     @staticmethod
     def import_set_auto(context: bpy.types.Context, directory: str, stage_id: str, act_id: str, base_collection_name: str = ""):
         SASTImportManager.importing = True
+        bpy.context.view_layer.objects.active = None
 
         if (len(directory) > 0):
             scene_props: SASTSceneProperties = SASTSceneProperties.get_properties()
