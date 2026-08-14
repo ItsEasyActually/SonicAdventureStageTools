@@ -49,6 +49,18 @@ class SASTSceneProperties(bpy.types.PropertyGroup):
         subtype='DIR_PATH'
     )
 
+    project_mode: BoolProperty(
+        name='Enable Project Support',
+        description='Enables support for SAP Projects',
+        default=False
+    )
+
+    project_directory: StringProperty(
+        name='Project Directory',
+        description='The direct where split project data is stored.',
+        subtype='DIR_PATH'
+    )
+
     def populate_stage_id(self, context: bpy.types.Context) -> list:
         '''Populates the Stage ID selection list.'''
         return GameInfoManager.get_stage_list(self.game_id)

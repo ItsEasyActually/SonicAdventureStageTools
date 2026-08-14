@@ -14,45 +14,41 @@ from .sast_import_base import SASTImportBase
 from .sast_export_base import SASTExportBase
 from ...scene.properties.sast_scene_properties import SASTSceneProperties
 
-class SASTSceneOperators:
-    @staticmethod
-    def draw_set_operators(layout: bpy.types.UILayout, mode: str):
-        '''Draws the SET Operators to the supplied layout.'''
-        match (mode):
-            case 'AUTO':
-                layout.operator(SASTImportSETAutomatic.bl_idname, text='Import SET File', icon='IMPORT')
-                layout.operator(SASTExportSETAutomatic.bl_idname, text='Export SET File', icon='EXPORT')
-            case 'MANUAL':
-                layout.operator(SASTImportSETManual.bl_idname, text='Import SET File', icon='IMPORT')
-                layout.operator(SASTExportSETManual.bl_idname, text='Export SET File', icon='EXPORT')
+class SASTProjectFileImport(SASTImportBase):
+    '''Import scene information from a project file'''
+    bl_idname='sastimport.projectfile'
+    bl_label='Import Project File'
 
-    @staticmethod
-    def draw_cam_operators(layout: bpy.types.UILayout, mode: str):
-        '''Draws the Camera Operators to the supplied layout.'''
-        match (mode):
-            case 'AUTO':
-                layout.operator(SASTImportCameraAutomatic.bl_idname, text='Import SET File', icon='IMPORT')
-                layout.operator(SASTExportCameraAutomatic.bl_idname, text='Export SET File', icon='EXPORT')
-            case 'MANUAL':
-                layout.operator(SASTImportCameraManual.bl_idname, text='Import SET File', icon='IMPORT')
-                layout.operator(SASTExportCameraManual.bl_idname, text='Export SET File', icon='EXPORT')
+    filter_glob: StringProperty(
+        default='*.sap'
+    )
 
-    @staticmethod
-    def draw_ui(layout: bpy.types.UILayout, context: bpy.types.Context, cam_imp: str, cam_exp: str, set_imp: str, set_exp: str):
-        layout.operator(cam_imp, text='Import Camera File', icon='IMPORT')
-        layout.operator(cam_exp, text='Export Camera File', icon='EXPORT')
-        layout.operator(set_imp, text='Import SET File', icon='IMPORT')
-        layout.operator(set_exp, text='Export SET File', icon='EXPORT')
-    
-    @staticmethod
-    def draw_ui_manual(layout: bpy.types.UILayout, context: bpy.types.Context):
-        '''Draws the Manual Operators for the Scene.'''
-        SASTSceneOperators.draw_ui(layout, context, SASTImportCameraManual.bl_idname, SASTExportCameraManual.bl_idname, SASTImportSETManual.bl_idname, SASTExportSETManual.bl_idname)
+    @classmethod
+    def poll(cls, context: bpy.types.Context) -> bool:
+        scene_props: SASTSceneProperties = SASTSceneProperties.get_properties()
+        return scene_props.project_mode
 
-    @staticmethod
-    def draw_ui_auto(layout: bpy.types.UILayout, context: bpy.types.Context):
-        '''Draws the Automatic Operators for the Scene.'''
-        SASTSceneOperators.draw_ui(layout, context, SASTImportCameraAutomatic.bl_idname, SASTExportCameraAutomatic.bl_idname, SASTImportSETAutomatic.bl_idname, SASTExportSETAutomatic.bl_idname)
+    def execute(self, context: bpy.types.Context):
+        try:
+            from ..properties.sast_scene_properties import SASTSceneProperties
+            from ...utilities.types.sap_project_file import SAPProjectFile
+            projectfile: SAPProjectFile = SAPProjectFile()
+            projectfile.readfile(self.filepath)
+
+            if (projectfile.game_type != 'NONE'):
+                scene_props: SASTSceneProperties = SASTSceneProperties.get_properties()
+                
+                scene_props.project_directory = projectfile.project_folder
+                scene_props.save_directory = projectfile.project_system_folder
+                match (projectfile.game_type):
+                    case 'SADXPC':
+                        scene_props.game_id = 'SADXPC'
+                    case 'SA2PC':
+                        scene_props.game_id = 'SA2BPC'
+        except Exception as error:
+            raise error
+        
+        return {'FINISHED'}
 
 class SASTImportCameraManual(SASTImportBase):
     '''Manual Camera File Import'''
@@ -78,7 +74,7 @@ class SASTImportSETManual(SASTImportBase):
     bl_label='Import SET File'
 
     @classmethod
-    def poll(cls, constext: bpy.types.Context) -> bool:
+    def poll(cls, context: bpy.types.Context) -> bool:
         scene_props: SASTSceneProperties = SASTSceneProperties.get_properties()
         return (scene_props.get_objlist_size() > 0)
 

@@ -1,6 +1,7 @@
 import bpy
 from ...utilities.interface.sast_viewport_panel_base import SASTViewportPanelBase
 from ...scene.properties.sast_scene_properties import SASTSceneProperties
+from ..operators.sast_scene_operators import SASTProjectFileImport
 from .sast_objlist_interface import SASTObjListInterface
 
 class SASTSceneInterface(SASTViewportPanelBase):
@@ -18,6 +19,12 @@ class SASTSceneInterface(SASTViewportPanelBase):
 
             if (scene_properties is not None):
                 scene_properties.draw_ui(layout, context)
+                layout.prop(data=scene_properties, property='project_mode')
+                if (scene_properties.project_mode == True):
+                    layout.operator(SASTProjectFileImport.bl_idname, text='Import SAP File', icon='WORKSPACE')
+                    row: bpy.types.UILayout = layout.row()
+                    row.prop(data=scene_properties, property='project_directory')
+                    row.enabled = False
                 layout.separator(factor=1, type='LINE')
                 olist_header: bpy.types.UILayout
                 olist_layout: bpy.types.UILayout

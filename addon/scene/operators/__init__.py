@@ -1,4 +1,5 @@
 from .sast_scene_operators import (
+    SASTProjectFileImport,
     SASTImportCameraAutomatic,
     SASTImportCameraManual,
     SASTExportCameraAutomatic,
@@ -24,6 +25,7 @@ from .sast_objlist_operators import (
 )
 
 cls_register = [
+    SASTProjectFileImport,
     SASTImportCameraAutomatic,
     SASTImportCameraManual,
     SASTExportCameraAutomatic,
