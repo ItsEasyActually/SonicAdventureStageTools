@@ -29,21 +29,17 @@ class SAST_UL_objlist(bpy.types.UIList):
         else:
             layout.label(text=objitem.internal_name)
 
-class SASTObjListInterface(SASTViewportPanelBase):
-    '''Object List Editor Interface'''
-    bl_label='Object List'
-    bl_idname='SCENE_PT_objlist'
-
-    def draw(self, context: bpy.types.Context):
-        layout: bpy.types.UILayout = self.layout
-
+class SASTObjListInterface:
+    @staticmethod
+    def draw(layout: bpy.types.UILayout, context: bpy.types.Context):
         scene_props: SASTSceneProperties = SASTSceneProperties.get_properties()
         if (scene_props is not None):
-            layout.operator(SASTObjListLoad.bl_idname, icon='APPEND_BLEND')
-            layout.operator(SASTObjListLinkAssets.bl_idname, icon='LINK_BLEND')
+            if (scene_props.mode == 'AUTO'):
+                layout.operator(SASTObjListLoad.bl_idname, icon='APPEND_BLEND')
             header: bpy.types.UILayout = layout.row()
             header.operator(SASTObjListImport.bl_idname, icon='IMPORT')
             header.operator(SASTObjListExport.bl_idname, icon='EXPORT')
+            layout.operator(SASTObjListLinkAssets.bl_idname, icon='LINK_BLEND')
             group: bpy.types.UILayout = layout.row()
             group.template_list('SAST_UL_objlist', '', scene_props, 'objlist', scene_props, 'active_object', rows=7)
             column: bpy.types.UILayout = group.column()

@@ -16,6 +16,28 @@ from ...scene.properties.sast_scene_properties import SASTSceneProperties
 
 class SASTSceneOperators:
     @staticmethod
+    def draw_set_operators(layout: bpy.types.UILayout, mode: str):
+        '''Draws the SET Operators to the supplied layout.'''
+        match (mode):
+            case 'AUTO':
+                layout.operator(SASTImportSETAutomatic.bl_idname, text='Import SET File', icon='IMPORT')
+                layout.operator(SASTExportSETAutomatic.bl_idname, text='Export SET File', icon='EXPORT')
+            case 'MANUAL':
+                layout.operator(SASTImportSETManual.bl_idname, text='Import SET File', icon='IMPORT')
+                layout.operator(SASTExportSETManual.bl_idname, text='Export SET File', icon='EXPORT')
+
+    @staticmethod
+    def draw_cam_operators(layout: bpy.types.UILayout, mode: str):
+        '''Draws the Camera Operators to the supplied layout.'''
+        match (mode):
+            case 'AUTO':
+                layout.operator(SASTImportCameraAutomatic.bl_idname, text='Import SET File', icon='IMPORT')
+                layout.operator(SASTExportCameraAutomatic.bl_idname, text='Export SET File', icon='EXPORT')
+            case 'MANUAL':
+                layout.operator(SASTImportCameraManual.bl_idname, text='Import SET File', icon='IMPORT')
+                layout.operator(SASTExportCameraManual.bl_idname, text='Export SET File', icon='EXPORT')
+
+    @staticmethod
     def draw_ui(layout: bpy.types.UILayout, context: bpy.types.Context, cam_imp: str, cam_exp: str, set_imp: str, set_exp: str):
         layout.operator(cam_imp, text='Import Camera File', icon='IMPORT')
         layout.operator(cam_exp, text='Export Camera File', icon='EXPORT')
@@ -54,6 +76,11 @@ class SASTImportSETManual(SASTImportBase):
     '''Manual SET File Import'''
     bl_idname='sastimport.setmanual'
     bl_label='Import SET File'
+
+    @classmethod
+    def poll(cls, constext: bpy.types.Context) -> bool:
+        scene_props: SASTSceneProperties = SASTSceneProperties.get_properties()
+        return (scene_props.get_objlist_size() > 0)
 
     def execute(self, context: bpy.types.Context):
         try:
@@ -142,6 +169,11 @@ class SASTExportSETManual(SASTExportBase):
     '''Manual SET File Export'''
     bl_idname='sastexport.setmanual'
     bl_label='Export SET File'
+
+    @classmethod
+    def poll(cls, constext: bpy.types.Context) -> bool:
+        scene_props: SASTSceneProperties = SASTSceneProperties.get_properties()
+        return (scene_props.get_objlist_size() > 0)
 
     def execute(self, context: bpy.types.Context):
         try:

@@ -8,7 +8,6 @@ class SASTSettingsInterface(SASTViewportPanelBase):
     bl_idname = 'VIEW_PT_SASTSettingsInterface'
     bl_label = 'Addon Settings'
     bl_description='Change preferences and settings for the SAST Addon.'
-    bl_options={'DEFAULT_CLOSED'}
 
     def draw(self, context: bpy.types.Context):
         layout: bpy.types.UILayout = self.layout

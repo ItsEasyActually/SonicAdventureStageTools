@@ -1,13 +1,13 @@
 import bpy
 from ...utilities.interface.sast_viewport_panel_base import SASTViewportPanelBase
 from ...scene.properties.sast_scene_properties import SASTSceneProperties
-from ..operators.sast_scene_operators import SASTSceneOperators
+from .sast_objlist_interface import SASTObjListInterface
 
 class SASTSceneInterface(SASTViewportPanelBase):
     '''Scene Properties UI Handler.'''
     bl_idname = 'VIEW_PT_SASTSceneInterface'
-    bl_label = 'Scene Settings & Import Tools'
-    bl_description='Scene specific settings and IO processing.'
+    bl_label = 'Scene Settings & Properties'
+    bl_description='Scene related settings including the Scene Object List'
 
     def draw(self, context: bpy.types.Context):
         layout: bpy.types.UILayout = self.layout
@@ -19,14 +19,11 @@ class SASTSceneInterface(SASTViewportPanelBase):
             if (scene_properties is not None):
                 scene_properties.draw_ui(layout, context)
                 layout.separator(factor=1, type='LINE')
-                grid: bpy.types.UILayout = layout.grid_flow(columns=2, even_columns=True)
-                match (scene_properties.mode):
-                    case 'AUTO':
-                        grid.enabled = len(scene_properties.load_directory) > 0
-                        SASTSceneOperators.draw_ui_auto(grid, context)
-                    case 'MANUAL':
-                        grid.enabled = True
-                        SASTSceneOperators.draw_ui_manual(grid, context)
-                layout.separator(factor=4, type='LINE')
+                olist_header: bpy.types.UILayout
+                olist_layout: bpy.types.UILayout
+                olist_header, olist_layout = layout.panel(idname='pt_olist', default_closed=True)
+                olist_header.label(text='Scene Object List')
+                if (olist_layout != None):
+                    SASTObjListInterface.draw(olist_layout, context)
         else:
             PyNetManager.draw_ui(layout, context)

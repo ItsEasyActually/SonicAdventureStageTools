@@ -146,7 +146,7 @@ class SASTObjListClear(bpy.types.Operator):
     def poll(cls, context: bpy.types.Context) -> bool:
         scene_props: SASTSceneProperties = SASTSceneProperties.get_properties()
         if (scene_props is not None):
-            if (scene_props.active_object > -1):
+            if (scene_props.get_objlist_size() > 0):
                 return True
 
         return False
