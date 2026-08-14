@@ -124,9 +124,23 @@ namespace SAST.Lib.Blender
 		/// <param name="levelid"></param>
 		/// <param name="actid"></param>
 		/// <returns></returns>
-		public static List<SETFile> ImportSA2SETFileAuto(string directory, string levelid, string actid)
+		public static Dictionary<string, SETFile> ImportSA2SETFileAuto(string directory, string levelid, string actid)
 		{
-			return ImportSA2File<SETFile>(directory, levelid, actid, false);
+			Dictionary<string, SETFile> files = new Dictionary<string, SETFile>();
+
+			string filename = SA2StageInfo.GetFilename(levelid, actid, SA2ChaoRaceLevel.None.ToString(), false);
+
+			string filename_s = $"{filename}_s";
+			string filepath_s = Path.Combine(directory, filename_s);
+			string filename_u = $"{filename}_u";
+			string filepath_u = Path.Combine(directory, filename_u);
+
+			if (File.Exists($"{filepath_s}.bin"))
+				files.Add(filename_s, SETFile.FromFile($"{filepath_s}.bin"));
+			if (File.Exists($"{filepath_u}.bin"))
+				files.Add(filename_u, SETFile.FromFile($"{filepath_u}.bin"));
+
+			return files;
 		}
 
 		/// <summary>
