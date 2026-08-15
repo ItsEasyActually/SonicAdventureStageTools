@@ -9,7 +9,7 @@
         },
         "BlenderInfo": {
             "CommonName": "",
-            "RotationMode": "",
+            "RotationMode": "NONE",
             "ItemInfo": "",
             "AssetName": "",
             "AssetFile": "",
@@ -40,7 +40,7 @@
         },
         "BlenderInfo": {
             "CommonName": "",
-            "RotationMode": "",
+            "RotationMode": "NONE",
             "ItemInfo": "",
             "AssetName": "",
             "AssetFile": "",
@@ -71,7 +71,7 @@
         },
         "BlenderInfo": {
             "CommonName": "",
-            "RotationMode": "",
+            "RotationMode": "NONE",
             "ItemInfo": "",
             "AssetName": "",
             "AssetFile": "",
@@ -102,7 +102,7 @@
         },
         "BlenderInfo": {
             "CommonName": "",
-            "RotationMode": "",
+            "RotationMode": "NONE",
             "ItemInfo": "",
             "AssetName": "",
             "AssetFile": "",
@@ -133,7 +133,7 @@
         },
         "BlenderInfo": {
             "CommonName": "",
-            "RotationMode": "",
+            "RotationMode": "NONE",
             "ItemInfo": "",
             "AssetName": "",
             "AssetFile": "",
@@ -164,7 +164,7 @@
         },
         "BlenderInfo": {
             "CommonName": "",
-            "RotationMode": "",
+            "RotationMode": "NONE",
             "ItemInfo": "",
             "AssetName": "",
             "AssetFile": "",
@@ -188,14 +188,14 @@
     "BIGJUMP": {
         "ObjectInfo": {
             "FunctionAddress": "006D7130",
-            "TaskLevel": 6,
-            "InitializationMode": 2,
+            "TaskLevel": 2,
+            "InitializationMode": 6,
             "LoadAttributes": 0,
             "LoadDistance": 0
         },
         "BlenderInfo": {
             "CommonName": "",
-            "RotationMode": "",
+            "RotationMode": "NONE",
             "ItemInfo": "",
             "AssetName": "",
             "AssetFile": "",
@@ -226,7 +226,7 @@
         },
         "BlenderInfo": {
             "CommonName": "",
-            "RotationMode": "",
+            "RotationMode": "NONE",
             "ItemInfo": "",
             "AssetName": "",
             "AssetFile": "",
@@ -257,7 +257,7 @@
         },
         "BlenderInfo": {
             "CommonName": "",
-            "RotationMode": "",
+            "RotationMode": "NONE",
             "ItemInfo": "",
             "AssetName": "",
             "AssetFile": "",
@@ -288,7 +288,7 @@
         },
         "BlenderInfo": {
             "CommonName": "",
-            "RotationMode": "",
+            "RotationMode": "NONE",
             "ItemInfo": "",
             "AssetName": "",
             "AssetFile": "",
@@ -319,7 +319,7 @@
         },
         "BlenderInfo": {
             "CommonName": "",
-            "RotationMode": "",
+            "RotationMode": "NONE",
             "ItemInfo": "",
             "AssetName": "",
             "AssetFile": "",
@@ -350,7 +350,7 @@
         },
         "BlenderInfo": {
             "CommonName": "",
-            "RotationMode": "",
+            "RotationMode": "NONE",
             "ItemInfo": "",
             "AssetName": "",
             "AssetFile": "",
@@ -381,7 +381,7 @@
         },
         "BlenderInfo": {
             "CommonName": "",
-            "RotationMode": "",
+            "RotationMode": "NONE",
             "ItemInfo": "",
             "AssetName": "",
             "AssetFile": "",
@@ -412,7 +412,7 @@
         },
         "BlenderInfo": {
             "CommonName": "",
-            "RotationMode": "",
+            "RotationMode": "NONE",
             "ItemInfo": "",
             "AssetName": "",
             "AssetFile": "",
@@ -443,7 +443,7 @@
         },
         "BlenderInfo": {
             "CommonName": "",
-            "RotationMode": "",
+            "RotationMode": "NONE",
             "ItemInfo": "",
             "AssetName": "",
             "AssetFile": "",
@@ -474,7 +474,7 @@
         },
         "BlenderInfo": {
             "CommonName": "",
-            "RotationMode": "",
+            "RotationMode": "NONE",
             "ItemInfo": "",
             "AssetName": "",
             "AssetFile": "",
@@ -505,7 +505,7 @@
         },
         "BlenderInfo": {
             "CommonName": "",
-            "RotationMode": "",
+            "RotationMode": "NONE",
             "ItemInfo": "",
             "AssetName": "",
             "AssetFile": "",
@@ -536,7 +536,7 @@
         },
         "BlenderInfo": {
             "CommonName": "",
-            "RotationMode": "",
+            "RotationMode": "NONE",
             "ItemInfo": "",
             "AssetName": "",
             "AssetFile": "",
@@ -567,7 +567,7 @@
         },
         "BlenderInfo": {
             "CommonName": "",
-            "RotationMode": "",
+            "RotationMode": "NONE",
             "ItemInfo": "",
             "AssetName": "",
             "AssetFile": "",
@@ -591,14 +591,14 @@
     "ROCKET   ": {
         "ObjectInfo": {
             "FunctionAddress": "006D4EA0",
-            "TaskLevel": 6,
-            "InitializationMode": 2,
+            "TaskLevel": 2,
+            "InitializationMode": 6,
             "LoadAttributes": 0,
             "LoadDistance": 0
         },
         "BlenderInfo": {
             "CommonName": "",
-            "RotationMode": "",
+            "RotationMode": "NONE",
             "ItemInfo": "",
             "AssetName": "",
             "AssetFile": "",
@@ -622,14 +622,14 @@
     "ROCKETMISSSILE": {
         "ObjectInfo": {
             "FunctionAddress": "006CE4C0",
-            "TaskLevel": 6,
-            "InitializationMode": 2,
+            "TaskLevel": 2,
+            "InitializationMode": 6,
             "LoadAttributes": 0,
             "LoadDistance": 0
         },
         "BlenderInfo": {
             "CommonName": "",
-            "RotationMode": "",
+            "RotationMode": "NONE",
             "ItemInfo": "",
             "AssetName": "",
             "AssetFile": "",
@@ -653,14 +653,14 @@
     "BUNCHIN": {
         "ObjectInfo": {
             "FunctionAddress": "006DBB90",
-            "TaskLevel": 6,
-            "InitializationMode": 2,
+            "TaskLevel": 2,
+            "InitializationMode": 6,
             "LoadAttributes": 0,
             "LoadDistance": 0
         },
         "BlenderInfo": {
             "CommonName": "",
-            "RotationMode": "",
+            "RotationMode": "NONE",
             "ItemInfo": "",
             "AssetName": "",
             "AssetFile": "",
@@ -691,7 +691,7 @@
         },
         "BlenderInfo": {
             "CommonName": "",
-            "RotationMode": "",
+            "RotationMode": "NONE",
             "ItemInfo": "",
             "AssetName": "",
             "AssetFile": "",
@@ -722,7 +722,7 @@
         },
         "BlenderInfo": {
             "CommonName": "",
-            "RotationMode": "",
+            "RotationMode": "NONE",
             "ItemInfo": "",
             "AssetName": "",
             "AssetFile": "",
@@ -753,7 +753,7 @@
         },
         "BlenderInfo": {
             "CommonName": "",
-            "RotationMode": "",
+            "RotationMode": "NONE",
             "ItemInfo": "",
             "AssetName": "",
             "AssetFile": "",
@@ -784,7 +784,7 @@
         },
         "BlenderInfo": {
             "CommonName": "",
-            "RotationMode": "",
+            "RotationMode": "NONE",
             "ItemInfo": "",
             "AssetName": "",
             "AssetFile": "",
@@ -815,7 +815,7 @@
         },
         "BlenderInfo": {
             "CommonName": "",
-            "RotationMode": "",
+            "RotationMode": "NONE",
             "ItemInfo": "",
             "AssetName": "",
             "AssetFile": "",
@@ -846,7 +846,7 @@
         },
         "BlenderInfo": {
             "CommonName": "",
-            "RotationMode": "",
+            "RotationMode": "NONE",
             "ItemInfo": "",
             "AssetName": "",
             "AssetFile": "",
@@ -877,7 +877,7 @@
         },
         "BlenderInfo": {
             "CommonName": "",
-            "RotationMode": "",
+            "RotationMode": "NONE",
             "ItemInfo": "",
             "AssetName": "",
             "AssetFile": "",
@@ -908,7 +908,7 @@
         },
         "BlenderInfo": {
             "CommonName": "",
-            "RotationMode": "",
+            "RotationMode": "NONE",
             "ItemInfo": "",
             "AssetName": "",
             "AssetFile": "",
@@ -939,7 +939,7 @@
         },
         "BlenderInfo": {
             "CommonName": "",
-            "RotationMode": "",
+            "RotationMode": "NONE",
             "ItemInfo": "",
             "AssetName": "",
             "AssetFile": "",
@@ -970,7 +970,7 @@
         },
         "BlenderInfo": {
             "CommonName": "",
-            "RotationMode": "",
+            "RotationMode": "NONE",
             "ItemInfo": "",
             "AssetName": "",
             "AssetFile": "",
@@ -1001,7 +1001,7 @@
         },
         "BlenderInfo": {
             "CommonName": "",
-            "RotationMode": "",
+            "RotationMode": "NONE",
             "ItemInfo": "",
             "AssetName": "",
             "AssetFile": "",
@@ -1032,7 +1032,7 @@
         },
         "BlenderInfo": {
             "CommonName": "",
-            "RotationMode": "",
+            "RotationMode": "NONE",
             "ItemInfo": "",
             "AssetName": "",
             "AssetFile": "",
@@ -1063,7 +1063,7 @@
         },
         "BlenderInfo": {
             "CommonName": "",
-            "RotationMode": "",
+            "RotationMode": "NONE",
             "ItemInfo": "",
             "AssetName": "",
             "AssetFile": "",
@@ -1087,14 +1087,14 @@
     "HAMMER": {
         "ObjectInfo": {
             "FunctionAddress": "005B3470",
-            "TaskLevel": 14,
-            "InitializationMode": 2,
+            "TaskLevel": 2,
+            "InitializationMode": 14,
             "LoadAttributes": 1,
             "LoadDistance": 1000000
         },
         "BlenderInfo": {
             "CommonName": "",
-            "RotationMode": "",
+            "RotationMode": "NONE",
             "ItemInfo": "",
             "AssetName": "",
             "AssetFile": "",
@@ -1118,14 +1118,14 @@
     "HAMMER3": {
         "ObjectInfo": {
             "FunctionAddress": "005B7770",
-            "TaskLevel": 15,
-            "InitializationMode": 2,
+            "TaskLevel": 2,
+            "InitializationMode": 15,
             "LoadAttributes": 1,
             "LoadDistance": 1000000
         },
         "BlenderInfo": {
             "CommonName": "",
-            "RotationMode": "",
+            "RotationMode": "NONE",
             "ItemInfo": "",
             "AssetName": "",
             "AssetFile": "",
@@ -1156,7 +1156,7 @@
         },
         "BlenderInfo": {
             "CommonName": "",
-            "RotationMode": "",
+            "RotationMode": "NONE",
             "ItemInfo": "",
             "AssetName": "",
             "AssetFile": "",
@@ -1187,7 +1187,7 @@
         },
         "BlenderInfo": {
             "CommonName": "",
-            "RotationMode": "",
+            "RotationMode": "NONE",
             "ItemInfo": "",
             "AssetName": "",
             "AssetFile": "",
@@ -1211,14 +1211,14 @@
     "SLANE": {
         "ObjectInfo": {
             "FunctionAddress": "005AE3E0",
-            "TaskLevel": 6,
-            "InitializationMode": 2,
+            "TaskLevel": 2,
+            "InitializationMode": 6,
             "LoadAttributes": 1,
             "LoadDistance": 1000000
         },
         "BlenderInfo": {
             "CommonName": "",
-            "RotationMode": "",
+            "RotationMode": "NONE",
             "ItemInfo": "",
             "AssetName": "",
             "AssetFile": "",
@@ -1242,14 +1242,14 @@
     "SLANE2": {
         "ObjectInfo": {
             "FunctionAddress": "005AF4A0",
-            "TaskLevel": 6,
-            "InitializationMode": 2,
+            "TaskLevel": 2,
+            "InitializationMode": 6,
             "LoadAttributes": 1,
             "LoadDistance": 1000000
         },
         "BlenderInfo": {
             "CommonName": "",
-            "RotationMode": "",
+            "RotationMode": "NONE",
             "ItemInfo": "",
             "AssetName": "",
             "AssetFile": "",
@@ -1280,7 +1280,7 @@
         },
         "BlenderInfo": {
             "CommonName": "",
-            "RotationMode": "",
+            "RotationMode": "NONE",
             "ItemInfo": "",
             "AssetName": "",
             "AssetFile": "",
@@ -1311,7 +1311,7 @@
         },
         "BlenderInfo": {
             "CommonName": "",
-            "RotationMode": "",
+            "RotationMode": "NONE",
             "ItemInfo": "",
             "AssetName": "",
             "AssetFile": "",
@@ -1342,7 +1342,7 @@
         },
         "BlenderInfo": {
             "CommonName": "",
-            "RotationMode": "",
+            "RotationMode": "NONE",
             "ItemInfo": "",
             "AssetName": "",
             "AssetFile": "",
@@ -1373,7 +1373,7 @@
         },
         "BlenderInfo": {
             "CommonName": "",
-            "RotationMode": "",
+            "RotationMode": "NONE",
             "ItemInfo": "",
             "AssetName": "",
             "AssetFile": "",
@@ -1404,7 +1404,7 @@
         },
         "BlenderInfo": {
             "CommonName": "",
-            "RotationMode": "",
+            "RotationMode": "NONE",
             "ItemInfo": "",
             "AssetName": "",
             "AssetFile": "",
@@ -1435,7 +1435,7 @@
         },
         "BlenderInfo": {
             "CommonName": "",
-            "RotationMode": "",
+            "RotationMode": "NONE",
             "ItemInfo": "",
             "AssetName": "",
             "AssetFile": "",
@@ -1466,7 +1466,7 @@
         },
         "BlenderInfo": {
             "CommonName": "",
-            "RotationMode": "",
+            "RotationMode": "NONE",
             "ItemInfo": "",
             "AssetName": "",
             "AssetFile": "",
@@ -1497,7 +1497,7 @@
         },
         "BlenderInfo": {
             "CommonName": "",
-            "RotationMode": "",
+            "RotationMode": "NONE",
             "ItemInfo": "",
             "AssetName": "",
             "AssetFile": "",
@@ -1528,7 +1528,7 @@
         },
         "BlenderInfo": {
             "CommonName": "",
-            "RotationMode": "",
+            "RotationMode": "NONE",
             "ItemInfo": "",
             "AssetName": "",
             "AssetFile": "",
@@ -1559,7 +1559,7 @@
         },
         "BlenderInfo": {
             "CommonName": "",
-            "RotationMode": "",
+            "RotationMode": "NONE",
             "ItemInfo": "",
             "AssetName": "",
             "AssetFile": "",

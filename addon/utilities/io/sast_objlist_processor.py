@@ -143,8 +143,9 @@ class SASTObjListProcessor:
 
         return retval
 
-    #region Automated Stuff
-    object_lists: dict = {
+    #region Reference Object Lists
+    sa1_objlists: dict = {
+        # Sonic Adventure
         'EmeraldCoast':         'stg01',
         'WindyValley':          'stg02',
         'TwinklePark':          'stg03',
@@ -176,7 +177,80 @@ class SASTObjListProcessor:
         'Sandhill':             'sandboard',
         'HedgehogHammer':       'stg00',
         'SkyChase':             'shooting',
-        'ChaoRace':             'chao_race'
+        'ChaoRace':             'chao_race'        
+    }
+
+    sa2_objlists: dict = {
+        'TestStage':			'stg00',
+        'SonicTest':			'stg01',
+        'KnucklesTest':			'stg02',
+        'GreenForest':			'stg03',
+        'WhiteJungle':			'stg04',
+        'PumpkinHill':			'stg05',
+        'SkyRail':				'stg06',
+        'AquaticMine':			'stg07',
+        'SecurityHall':			'stg08',
+        'PrisonLane':			'stg09',
+        'MetalHarbor':			'stg10',
+        'IronGate':				'stg11',
+        'WeaponsBed':			'stg12',
+        'CityEscape':			'stg13',
+        'RadicalHighway':		'stg14',
+        'WeaponsBed2P':			'stg15',
+        'WildCanyon':			'stg16',
+        'MissionStreet':		'stg17',
+        'DryLagoon':			'stg18',
+        'SonicShadow1':			'stg19',
+        'TailsEggman1':			'stg20',
+        'SandOcean':			'stg21',
+        'CrazyGadget':			'stg22',
+        'HiddenBase':			'stg23',
+        'EternalEngine':		'stg24',
+        'DeathChamber':			'stg25',
+        'EggQuarters':			'stg26',
+        'LostColony':			'stg27',
+        'PyramidCave':			'stg28',
+        'TailsEggman2':			'stg29',
+        'FinalRush':			'stg30',
+        'GreenHill':			'stg31',
+        'MeteorHerd':			'stg32',
+        'KnucklesRouge':		'stg33',
+        'CannonsCoreS':			'stg34',
+        'CannonsCoreE':			'stg35',
+        'CannonsCoreT':			'stg36',
+        'CannonsCoreR':			'stg37',
+        'CannonsCoreK':			'stg38',
+        'MissionStreet2P':		'stg39',
+        'FinalChase':			'stg40',
+        'WildCanyon2P':			'stg41',
+        'SonicShadow2':			'stg42',
+        'CosmicWall':			'stg43',
+        'MadSpace':				'stg44',
+        'SandOcean2P':			'stg45',
+        'DryLagoon2P':			'stg46',
+        'PyramidRace':			'stg47',
+        'HiddenBase2P':			'stg48',
+        'PoolQuest':			'stg49',
+        'PlanetQuest':			'stg50',
+        'DeckRace':				'stg51',
+        'DowntownRace':			'stg52',
+        'CosmicWall2P':			'stg53',
+        'GrindRace':			'stg54',
+        'LostColony2P':			'stg55',
+        'EternalEngine2P':		'stg56',
+        'MetalHarbor2P':		'stg57',
+        'IronGate2P':			'stg58',
+        'DeathChamber2P':		'stg59',
+        'BossBigFoot':			'bossbigfoot',
+        'BossHotshot':			'bosshotshot',
+        'BossFlyingDog':		'bossflyingdog',
+        'BossKingBoomBoo':		'bossbigbogy',
+        'BossEggGolemS':		'bossgolem',
+        'BossBiolizard':		'bosslast1',
+        'BossEggGolemE':		'bossgoleme',
+        'ChaoWorld':            'chao',
+        'StoryKart':            'cart',
+        'KartRace':             'cart'
     }
 
     #endregion
@@ -242,31 +316,47 @@ class SASTObjListProcessor:
                 entry.z_scale_name          = property_info['ZScalePropertyName']
 
     @staticmethod
-    def get_list_file(stage_id: str, act_id: str):
+    def get_list_file(game_id: str, stage_id: str, act_id: str):
         name: str = ''
-        match (stage_id):
-            case 'ChaoGardenSS' | 'ChaoGardenEC' | 'ChaoGardenMR':
-                raise Exception('Chao Gardens are not supported for SET Import.')
-            case _:
-                name = f'{SASTObjListProcessor.object_lists[stage_id]}.json'
-                if (stage_id == 'HotShelter'):
-                    extension: str = '_'
+        extension: str = ''
+        gamefolder: str = ''
+        match (game_id):
+            case 'SADXPC':
+                gamefolder = 'adv1'
+                match (stage_id):
+                    case 'ChaoGardenSS' | 'ChaoGardenEC' | 'ChaoGardenMR':
+                        raise Exception('Chao Gardens are not supported for SET Import.')
+                    case _:
+                        if (stage_id == 'HotShelter'):
+                            extension = '_'
+                            match (act_id):
+                                case 'Act2':
+                                    extension += '02'
+                                case 'Act3':
+                                    extension += '03'
+                                case 'Act4':
+                                    extension += '04'
+                                case 'Act1' | _:
+                                    extension += '01'
+                            
+                name = f'{SASTObjListProcessor.sa1_objlists[stage_id]}{extension}.json'                
+            case 'SA2BPC':
+                gamefolder = 'adv2'
+                if (stage_id == 'ChaoWorld'):
                     match (act_id):
-                        case 'Act2':
-                            extension += '02'
-                        case 'Act3':
-                            extension += '03'
-                        case 'Act4':
-                            extension += '04'
-                        case 'Act1' | _:
-                            extension += '01'
-                    
-                    name += extension
-        
+                        case 'ChaoRaceNeutral':
+                            pass
+                        case 'ChaoRaceHero':
+                            pass
+                        case 'ChaoRaceDark':
+                            pass
+                
+                name = f'{SASTObjListProcessor.sa2_objlists[stage_id]}{extension}.json'
+
         if len(name) <= 0:
             return ''
         else:
-            return os.path.join(ADDON_DIR, 'game', 'definitions', 'adv1', name)
+            return os.path.join(ADDON_DIR, 'game', 'definitions', gamefolder, name)
 
     #endregion
 

@@ -2,14 +2,14 @@
     "SAMPLE S": {
         "ObjectInfo": {
             "FunctionAddress": "006D6EE0",
-            "TaskLevel": 3,
-            "InitializationMode": 2,
+            "TaskLevel": 2,
+            "InitializationMode": 3,
             "LoadAttributes": 0,
             "LoadDistance": 0
         },
         "BlenderInfo": {
             "CommonName": "",
-            "RotationMode": "",
+            "RotationMode": "NONE",
             "ItemInfo": "",
             "AssetName": "",
             "AssetFile": "",
@@ -33,14 +33,14 @@
     "SAMPLE M": {
         "ObjectInfo": {
             "FunctionAddress": "006D6F60",
-            "TaskLevel": 3,
-            "InitializationMode": 2,
+            "TaskLevel": 2,
+            "InitializationMode": 3,
             "LoadAttributes": 0,
             "LoadDistance": 0
         },
         "BlenderInfo": {
             "CommonName": "",
-            "RotationMode": "",
+            "RotationMode": "NONE",
             "ItemInfo": "",
             "AssetName": "",
             "AssetFile": "",
@@ -64,14 +64,14 @@
     "SAMPLE L": {
         "ObjectInfo": {
             "FunctionAddress": "006D6FB0",
-            "TaskLevel": 3,
-            "InitializationMode": 2,
+            "TaskLevel": 2,
+            "InitializationMode": 3,
             "LoadAttributes": 0,
             "LoadDistance": 0
         },
         "BlenderInfo": {
             "CommonName": "",
-            "RotationMode": "",
+            "RotationMode": "NONE",
             "ItemInfo": "",
             "AssetName": "",
             "AssetFile": "",
@@ -95,14 +95,14 @@
     "SAMPLESW": {
         "ObjectInfo": {
             "FunctionAddress": "006D7030",
-            "TaskLevel": 3,
-            "InitializationMode": 2,
+            "TaskLevel": 2,
+            "InitializationMode": 3,
             "LoadAttributes": 0,
             "LoadDistance": 0
         },
         "BlenderInfo": {
             "CommonName": "",
-            "RotationMode": "",
+            "RotationMode": "NONE",
             "ItemInfo": "",
             "AssetName": "",
             "AssetFile": "",
@@ -133,7 +133,7 @@
         },
         "BlenderInfo": {
             "CommonName": "",
-            "RotationMode": "",
+            "RotationMode": "NONE",
             "ItemInfo": "",
             "AssetName": "",
             "AssetFile": "",
@@ -164,7 +164,7 @@
         },
         "BlenderInfo": {
             "CommonName": "",
-            "RotationMode": "",
+            "RotationMode": "NONE",
             "ItemInfo": "",
             "AssetName": "",
             "AssetFile": "",
@@ -195,7 +195,7 @@
         },
         "BlenderInfo": {
             "CommonName": "",
-            "RotationMode": "",
+            "RotationMode": "NONE",
             "ItemInfo": "",
             "AssetName": "",
             "AssetFile": "",
@@ -226,7 +226,7 @@
         },
         "BlenderInfo": {
             "CommonName": "",
-            "RotationMode": "",
+            "RotationMode": "NONE",
             "ItemInfo": "",
             "AssetName": "",
             "AssetFile": "",
@@ -257,7 +257,7 @@
         },
         "BlenderInfo": {
             "CommonName": "",
-            "RotationMode": "",
+            "RotationMode": "NONE",
             "ItemInfo": "",
             "AssetName": "",
             "AssetFile": "",
@@ -288,7 +288,7 @@
         },
         "BlenderInfo": {
             "CommonName": "",
-            "RotationMode": "",
+            "RotationMode": "NONE",
             "ItemInfo": "",
             "AssetName": "",
             "AssetFile": "",
@@ -319,7 +319,7 @@
         },
         "BlenderInfo": {
             "CommonName": "",
-            "RotationMode": "",
+            "RotationMode": "NONE",
             "ItemInfo": "",
             "AssetName": "",
             "AssetFile": "",
@@ -350,7 +350,7 @@
         },
         "BlenderInfo": {
             "CommonName": "",
-            "RotationMode": "",
+            "RotationMode": "NONE",
             "ItemInfo": "",
             "AssetName": "",
             "AssetFile": "",
@@ -381,7 +381,7 @@
         },
         "BlenderInfo": {
             "CommonName": "",
-            "RotationMode": "",
+            "RotationMode": "NONE",
             "ItemInfo": "",
             "AssetName": "",
             "AssetFile": "",
@@ -405,14 +405,14 @@
     "SAVEPOINT": {
         "ObjectInfo": {
             "FunctionAddress": "006D99A0",
-            "TaskLevel": 10,
-            "InitializationMode": 2,
+            "TaskLevel": 2,
+            "InitializationMode": 10,
             "LoadAttributes": 0,
             "LoadDistance": 0
         },
         "BlenderInfo": {
             "CommonName": "",
-            "RotationMode": "",
+            "RotationMode": "NONE",
             "ItemInfo": "",
             "AssetName": "",
             "AssetFile": "",
@@ -443,7 +443,7 @@
         },
         "BlenderInfo": {
             "CommonName": "",
-            "RotationMode": "",
+            "RotationMode": "NONE",
             "ItemInfo": "",
             "AssetName": "",
             "AssetFile": "",
@@ -474,7 +474,7 @@
         },
         "BlenderInfo": {
             "CommonName": "",
-            "RotationMode": "",
+            "RotationMode": "NONE",
             "ItemInfo": "",
             "AssetName": "",
             "AssetFile": "",
@@ -505,7 +505,7 @@
         },
         "BlenderInfo": {
             "CommonName": "",
-            "RotationMode": "",
+            "RotationMode": "NONE",
             "ItemInfo": "",
             "AssetName": "",
             "AssetFile": "",
@@ -536,7 +536,7 @@
         },
         "BlenderInfo": {
             "CommonName": "",
-            "RotationMode": "",
+            "RotationMode": "NONE",
             "ItemInfo": "",
             "AssetName": "",
             "AssetFile": "",
@@ -567,7 +567,7 @@
         },
         "BlenderInfo": {
             "CommonName": "",
-            "RotationMode": "",
+            "RotationMode": "NONE",
             "ItemInfo": "",
             "AssetName": "",
             "AssetFile": "",
@@ -591,14 +591,14 @@
     "BIGJUMP": {
         "ObjectInfo": {
             "FunctionAddress": "006D7130",
-            "TaskLevel": 6,
-            "InitializationMode": 2,
+            "TaskLevel": 2,
+            "InitializationMode": 6,
             "LoadAttributes": 0,
             "LoadDistance": 0
         },
         "BlenderInfo": {
             "CommonName": "",
-            "RotationMode": "",
+            "RotationMode": "NONE",
             "ItemInfo": "",
             "AssetName": "",
             "AssetFile": "",
@@ -622,14 +622,14 @@
     "ROCKETK": {
         "ObjectInfo": {
             "FunctionAddress": "006D4EA0",
-            "TaskLevel": 6,
-            "InitializationMode": 2,
+            "TaskLevel": 2,
+            "InitializationMode": 6,
             "LoadAttributes": 0,
             "LoadDistance": 0
         },
         "BlenderInfo": {
             "CommonName": "",
-            "RotationMode": "",
+            "RotationMode": "NONE",
             "ItemInfo": "",
             "AssetName": "",
             "AssetFile": "",
@@ -653,14 +653,14 @@
     "MISSSILE": {
         "ObjectInfo": {
             "FunctionAddress": "006CE4C0",
-            "TaskLevel": 6,
-            "InitializationMode": 2,
+            "TaskLevel": 2,
+            "InitializationMode": 6,
             "LoadAttributes": 0,
             "LoadDistance": 0
         },
         "BlenderInfo": {
             "CommonName": "",
-            "RotationMode": "",
+            "RotationMode": "NONE",
             "ItemInfo": "",
             "AssetName": "",
             "AssetFile": "",
@@ -684,14 +684,14 @@
     "BUNCHIN": {
         "ObjectInfo": {
             "FunctionAddress": "006DBB90",
-            "TaskLevel": 6,
-            "InitializationMode": 2,
+            "TaskLevel": 2,
+            "InitializationMode": 6,
             "LoadAttributes": 0,
             "LoadDistance": 0
         },
         "BlenderInfo": {
             "CommonName": "",
-            "RotationMode": "",
+            "RotationMode": "NONE",
             "ItemInfo": "",
             "AssetName": "",
             "AssetFile": "",
@@ -722,7 +722,7 @@
         },
         "BlenderInfo": {
             "CommonName": "",
-            "RotationMode": "",
+            "RotationMode": "NONE",
             "ItemInfo": "",
             "AssetName": "",
             "AssetFile": "",
@@ -753,7 +753,7 @@
         },
         "BlenderInfo": {
             "CommonName": "",
-            "RotationMode": "",
+            "RotationMode": "NONE",
             "ItemInfo": "",
             "AssetName": "",
             "AssetFile": "",
@@ -784,7 +784,7 @@
         },
         "BlenderInfo": {
             "CommonName": "",
-            "RotationMode": "",
+            "RotationMode": "NONE",
             "ItemInfo": "",
             "AssetName": "",
             "AssetFile": "",
@@ -815,7 +815,7 @@
         },
         "BlenderInfo": {
             "CommonName": "",
-            "RotationMode": "",
+            "RotationMode": "NONE",
             "ItemInfo": "",
             "AssetName": "",
             "AssetFile": "",
@@ -846,7 +846,7 @@
         },
         "BlenderInfo": {
             "CommonName": "",
-            "RotationMode": "",
+            "RotationMode": "NONE",
             "ItemInfo": "",
             "AssetName": "",
             "AssetFile": "",
@@ -877,7 +877,7 @@
         },
         "BlenderInfo": {
             "CommonName": "",
-            "RotationMode": "",
+            "RotationMode": "NONE",
             "ItemInfo": "",
             "AssetName": "",
             "AssetFile": "",
@@ -908,7 +908,7 @@
         },
         "BlenderInfo": {
             "CommonName": "",
-            "RotationMode": "",
+            "RotationMode": "NONE",
             "ItemInfo": "",
             "AssetName": "",
             "AssetFile": "",
@@ -939,7 +939,7 @@
         },
         "BlenderInfo": {
             "CommonName": "",
-            "RotationMode": "",
+            "RotationMode": "NONE",
             "ItemInfo": "",
             "AssetName": "",
             "AssetFile": "",
@@ -970,7 +970,7 @@
         },
         "BlenderInfo": {
             "CommonName": "",
-            "RotationMode": "",
+            "RotationMode": "NONE",
             "ItemInfo": "",
             "AssetName": "",
             "AssetFile": "",
@@ -1001,7 +1001,7 @@
         },
         "BlenderInfo": {
             "CommonName": "",
-            "RotationMode": "",
+            "RotationMode": "NONE",
             "ItemInfo": "",
             "AssetName": "",
             "AssetFile": "",
@@ -1032,7 +1032,7 @@
         },
         "BlenderInfo": {
             "CommonName": "",
-            "RotationMode": "",
+            "RotationMode": "NONE",
             "ItemInfo": "",
             "AssetName": "",
             "AssetFile": "",
@@ -1063,7 +1063,7 @@
         },
         "BlenderInfo": {
             "CommonName": "",
-            "RotationMode": "",
+            "RotationMode": "NONE",
             "ItemInfo": "",
             "AssetName": "",
             "AssetFile": "",
@@ -1094,7 +1094,7 @@
         },
         "BlenderInfo": {
             "CommonName": "",
-            "RotationMode": "",
+            "RotationMode": "NONE",
             "ItemInfo": "",
             "AssetName": "",
             "AssetFile": "",
@@ -1125,7 +1125,7 @@
         },
         "BlenderInfo": {
             "CommonName": "",
-            "RotationMode": "",
+            "RotationMode": "NONE",
             "ItemInfo": "",
             "AssetName": "",
             "AssetFile": "",
@@ -1156,7 +1156,7 @@
         },
         "BlenderInfo": {
             "CommonName": "",
-            "RotationMode": "",
+            "RotationMode": "NONE",
             "ItemInfo": "",
             "AssetName": "",
             "AssetFile": "",
@@ -1187,7 +1187,7 @@
         },
         "BlenderInfo": {
             "CommonName": "",
-            "RotationMode": "",
+            "RotationMode": "NONE",
             "ItemInfo": "",
             "AssetName": "",
             "AssetFile": "",
@@ -1218,7 +1218,7 @@
         },
         "BlenderInfo": {
             "CommonName": "",
-            "RotationMode": "",
+            "RotationMode": "NONE",
             "ItemInfo": "",
             "AssetName": "",
             "AssetFile": "",
@@ -1249,7 +1249,7 @@
         },
         "BlenderInfo": {
             "CommonName": "",
-            "RotationMode": "",
+            "RotationMode": "NONE",
             "ItemInfo": "",
             "AssetName": "",
             "AssetFile": "",
@@ -1280,7 +1280,7 @@
         },
         "BlenderInfo": {
             "CommonName": "",
-            "RotationMode": "",
+            "RotationMode": "NONE",
             "ItemInfo": "",
             "AssetName": "",
             "AssetFile": "",
@@ -1311,7 +1311,7 @@
         },
         "BlenderInfo": {
             "CommonName": "",
-            "RotationMode": "",
+            "RotationMode": "NONE",
             "ItemInfo": "",
             "AssetName": "",
             "AssetFile": "",
@@ -1342,7 +1342,7 @@
         },
         "BlenderInfo": {
             "CommonName": "",
-            "RotationMode": "",
+            "RotationMode": "NONE",
             "ItemInfo": "",
             "AssetName": "",
             "AssetFile": "",
@@ -1373,7 +1373,7 @@
         },
         "BlenderInfo": {
             "CommonName": "",
-            "RotationMode": "",
+            "RotationMode": "NONE",
             "ItemInfo": "",
             "AssetName": "",
             "AssetFile": "",
@@ -1397,14 +1397,14 @@
     "UGOKIDAI": {
         "ObjectInfo": {
             "FunctionAddress": "004C1F90",
-            "TaskLevel": 14,
-            "InitializationMode": 2,
+            "TaskLevel": 2,
+            "InitializationMode": 14,
             "LoadAttributes": 1,
             "LoadDistance": 1000000
         },
         "BlenderInfo": {
             "CommonName": "",
-            "RotationMode": "",
+            "RotationMode": "NONE",
             "ItemInfo": "",
             "AssetName": "",
             "AssetFile": "",
