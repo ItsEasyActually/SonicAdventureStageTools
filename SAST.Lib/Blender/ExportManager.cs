@@ -91,13 +91,13 @@ namespace SAST.Lib.Blender
 		/// <param name="stageID"></param>
 		/// <param name="actID"></param>
 		/// <param name="bigEndian"></param>
-		private static void ExportSA1FileAuto<T>(Dictionary<string, T> files, string directory, string stageID, string actID, bool bigEndian) where T : IBinaryFile<T>
+		private static void ExportSA1FileAuto<T>(Dictionary<string, T> files, string directory, string stageID, string actID, bool bigEndian, bool isCameraFile) where T : IBinaryFile<T>
 		{
 			if (Directory.Exists(directory))
 			{
 				foreach (var file in files)
 				{
-					string filename = SA1StageInfo.GetFilename(stageID, actID, file.Key, true);
+					string filename = SA1StageInfo.GetFilename(stageID, actID, file.Key, isCameraFile);
 
 					string filepath = Path.Combine(directory, filename);
 
@@ -116,7 +116,7 @@ namespace SAST.Lib.Blender
 		/// <param name="bigEndian"></param>
 		public static void ExportSA1SETFileAuto(Dictionary<string, SETFile> files, string directory, string stageID, string actID, bool bigEndian)
 		{
-			ExportSA1FileAuto<SETFile>(files, directory, stageID, actID, bigEndian);
+			ExportSA1FileAuto<SETFile>(files, directory, stageID, actID, bigEndian, false);
 		}
 
 		/// <summary>
@@ -129,7 +129,7 @@ namespace SAST.Lib.Blender
 		/// <param name="bigEndian"></param>
 		public static void ExportSA1CamFileAuto(Dictionary<string, SA1CAMFile> files, string directory, string stageID, string actID, bool bigEndian)
 		{
-			ExportSA1FileAuto<SA1CAMFile>(files, directory, stageID, actID, bigEndian);
+			ExportSA1FileAuto<SA1CAMFile>(files, directory, stageID, actID, bigEndian, true);
 		}
 
 		/// <summary>

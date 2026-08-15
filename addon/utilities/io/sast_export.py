@@ -543,31 +543,31 @@ class SASTExportManager:
                     lastobjs.append(obj)
 
             if (len(sonicobjs) > 0):
-                SASTLogger.log('Processing Sonic Cameras')
+                SASTLogger.log('Processing Sonic Objects')
                 output.Add('Sonic', SASTExportManager.get_set_file(sonicobjs))
             if (len(tailsobjs) > 0):
-                SASTLogger.log('Processing Tails Cameras')
+                SASTLogger.log('Processing Tails Objects')
                 output.Add('Tails', SASTExportManager.get_set_file(tailsobjs))
             if (len(knucklesobjs) > 0):
-                SASTLogger.log('Processing Knuckles Cameras')
+                SASTLogger.log('Processing Knuckles Objects')
                 output.Add('Knuckles', SASTExportManager.get_set_file(knucklesobjs))
             if (len(amyobjs) > 0):
-                SASTLogger.log('Processing Amy Cameras')
+                SASTLogger.log('Processing Amy Objects')
                 output.Add('Amy', SASTExportManager.get_set_file(amyobjs))
             if (len(gammaobjs) > 0):
-                SASTLogger.log('Processing Gamma Cameras')
+                SASTLogger.log('Processing Gamma Objects')
                 output.Add('Gamma', SASTExportManager.get_set_file(gammaobjs))
             if (len(bigobjs) > 0):
-                SASTLogger.log('Processing Big Cameras')
+                SASTLogger.log('Processing Big Objects')
                 output.Add('Big', SASTExportManager.get_set_file(bigobjs))
             if (len(eggmanobjs) > 0):
-                SASTLogger.log('Processing Eggman Cameras')
+                SASTLogger.log('Processing Eggman Objects')
                 output.Add('Eggman', SASTExportManager.get_set_file(eggmanobjs))
             if (len(tikalobjs) > 0):
-                SASTLogger.log('Processing Tikal Cameras')
+                SASTLogger.log('Processing Tikal Objects')
                 output.Add('Tikal', SASTExportManager.get_set_file(tikalobjs))
             if (len(lastobjs) > 0):
-                SASTLogger.log('Processing Last Story Cameras')
+                SASTLogger.log('Processing Last Story Objects')
                 output.Add('Last', SASTExportManager.get_set_file(lastobjs))
 
             ExportManager.ExportSA1SETFileAuto(output, path, scene_props.stage_id, scene_props.act_id, False)
