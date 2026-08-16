@@ -51,6 +51,9 @@ class SASTSETObjectProperties(bpy.types.PropertyGroup):
             yr = obj.rotation_euler[1]
         if (obj.lock_rotation[2] == False):
             zr = obj.rotation_euler[2]
+        obj.lock_rotation[0] = False
+        obj.lock_rotation[1] = False
+        obj.lock_rotation[2] = False
 
         xa: int = 0
         ya: int = 0 
