@@ -13,6 +13,10 @@ class GameInfo:
 
     camera_adjustment_list = []
 
+    objlists = {}
+
+    stage_folder_suffixes = []
+
     def get_stage_list(self):
         return self.stage_list
 
@@ -30,3 +34,9 @@ class GameInfo:
 
     def get_camera_adjustment_list(self):
         return self.camera_adjustment_list
+
+    def get_objlist_name(self, stageid: str, actid: str) -> str:
+        return self.objlists[stageid]
+
+    def get_project_folder(self, stage_id: str) -> str:
+        return ''

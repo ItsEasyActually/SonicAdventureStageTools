@@ -124,3 +124,88 @@ class SA2BPCGameInfo(GameInfo):
         ('Relative5',   'Relative5',   ''),
         ('Relative6',   'Relative6',   '')
     ]
+
+    objlists: dict = {
+        'TestStage':			'stg00',
+        'SonicTest':			'stg01',
+        'KnucklesTest':			'stg02',
+        'GreenForest':			'stg03',
+        'WhiteJungle':			'stg04',
+        'PumpkinHill':			'stg05',
+        'SkyRail':				'stg06',
+        'AquaticMine':			'stg07',
+        'SecurityHall':			'stg08',
+        'PrisonLane':			'stg09',
+        'MetalHarbor':			'stg10',
+        'IronGate':				'stg11',
+        'WeaponsBed':			'stg12',
+        'CityEscape':			'stg13',
+        'RadicalHighway':		'stg14',
+        'WeaponsBed2P':			'stg15',
+        'WildCanyon':			'stg16',
+        'MissionStreet':		'stg17',
+        'DryLagoon':			'stg18',
+        'SonicShadow1':			'stg19',
+        'TailsEggman1':			'stg20',
+        'SandOcean':			'stg21',
+        'CrazyGadget':			'stg22',
+        'HiddenBase':			'stg23',
+        'EternalEngine':		'stg24',
+        'DeathChamber':			'stg25',
+        'EggQuarters':			'stg26',
+        'LostColony':			'stg27',
+        'PyramidCave':			'stg28',
+        'TailsEggman2':			'stg29',
+        'FinalRush':			'stg30',
+        'GreenHill':			'stg31',
+        'MeteorHerd':			'stg32',
+        'KnucklesRouge':		'stg33',
+        'CannonsCoreS':			'stg34',
+        'CannonsCoreE':			'stg35',
+        'CannonsCoreT':			'stg36',
+        'CannonsCoreR':			'stg37',
+        'CannonsCoreK':			'stg38',
+        'MissionStreet2P':		'stg39',
+        'FinalChase':			'stg40',
+        'WildCanyon2P':			'stg41',
+        'SonicShadow2':			'stg42',
+        'CosmicWall':			'stg43',
+        'MadSpace':				'stg44',
+        'SandOcean2P':			'stg45',
+        'DryLagoon2P':			'stg46',
+        'PyramidRace':			'stg47',
+        'HiddenBase2P':			'stg48',
+        'PoolQuest':			'stg49',
+        'PlanetQuest':			'stg50',
+        'DeckRace':				'stg51',
+        'DowntownRace':			'stg52',
+        'CosmicWall2P':			'stg53',
+        'GrindRace':			'stg54',
+        'LostColony2P':			'stg55',
+        'EternalEngine2P':		'stg56',
+        'MetalHarbor2P':		'stg57',
+        'IronGate2P':			'stg58',
+        'DeathChamber2P':		'stg59',
+        'BossBigFoot':			'bossbigfoot',
+        'BossHotshot':			'bosshotshot',
+        'BossFlyingDog':		'bossflyingdog',
+        'BossKingBoomBoo':		'bossbigbogy',
+        'BossEggGolemS':		'bossgolem',
+        'BossBiolizard':		'bosslast1',
+        'BossEggGolemE':		'bossgoleme',
+        'ChaoWorld':            'chao',
+        'StoryKart':            'cart',
+        'KartRace':             'cart'
+    }
+
+    def get_objlist_name(self, stageid: str, actid: str):
+        if (stageid == 'ChaoWorld'):
+            match (actid):
+                case 'ChaoRaceNeutral':
+                    pass
+                case 'ChaoRaceHero':
+                    pass
+                case 'ChaoRaceDark':
+                    pass
+
+        return f'{self.objlists[stageid]}'

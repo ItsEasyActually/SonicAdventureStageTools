@@ -174,6 +174,41 @@ class SADXPCGameInfo(GameInfo):
         ('FreeCamera',   'Free Camera',     '')
     ]
 
+    objlists: dict = {
+        'EmeraldCoast':         'stg01',
+        'WindyValley':          'stg02',
+        'TwinklePark':          'stg03',
+        'SpeedHighway':         'stg04',
+        'RedMountain':          'stg05',
+        'SkyDeck':              'stg06',
+        'LostWorld':            'stg07',
+        'Icecap':               'stg08',
+        'Casinopolis':          'stg09',
+        'FinalEgg':             'stg10',
+        'HotShelter':           'stg12',
+        'Chaos0':               'boss_chaos0',
+        'Chaos2':               'boss_chaos2',
+        'Chaos4':               'boss_chaos4',
+        'Chaos6':               'boss_chaos6',
+        'Chaos7':               'boss_chaos7',
+        'EggHornet':            'boss_egm1',
+        'EggWalker':            'boss_egm2',
+        'EggViper':             'boss_egm3',
+        'ZERO':                 'boss_robo',
+        'E101':                 'boss_e101',
+        'E101R':                'boss_e101r',
+        'StationSquare':        'adv00',
+        'EggCarrierExterior':   'adv01ab',
+        'EggCarrierInterior':   'adv01c',
+        'MysticRuins':          'adv02',
+        'ThePast':              'adv03',
+        'TwinkleCircuit':       'minicart',
+        'Sandhill':             'sandboard',
+        'HedgehogHammer':       'stg00',
+        'SkyChase':             'shooting',
+        'ChaoRace':             'chao_race'        
+    }
+
     def get_act_list(self, stage_id: str):
         match (stage_id):
             case 'StationSquare':
@@ -205,3 +240,23 @@ class SADXPCGameInfo(GameInfo):
                 items.append(self.camera_level_list[0])
 
         return items
+
+    def get_objlist_name(self, stageid: str, actid: str):
+        extension: str = ''
+        match (stageid):
+            case 'ChaoGardenSS' | 'ChaoGardenEC' | 'ChaoGardenMR':
+                raise Exception('Chao Gardens are not supported for SET Import.')
+            case _:
+                if (stageid == 'HotShelter'):
+                    extension = '_'
+                    match (actid):
+                        case 'Act2':
+                            extension += '02'
+                        case 'Act3':
+                            extension += '03'
+                        case 'Act4':
+                            extension += '04'
+                        case 'Act1' | _:
+                            extension += '01'
+
+        return f'{self.objlists[stageid]}{extension}'
