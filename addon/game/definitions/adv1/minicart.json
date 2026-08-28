@@ -132,24 +132,24 @@
             "LoadDistance": 2250000
         },
         "BlenderInfo": {
-            "CommonName": "",
-            "RotationMode": "NONE",
+            "CommonName": "Lap Counter",
+            "RotationMode": "Z",
             "ItemInfo": "",
-            "AssetName": "",
-            "AssetFile": "",
+            "AssetName": "LapCounter",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\mini\\\\cart\\\\LapCounter.blend",
             "RelativeAssetFile": true,
             "PropertyInfo": {
-                "UseXAngleProperty": true,
+                "UseXAngleProperty": false,
                 "XAnglePropertyName": "",
-                "UseYAngleProperty": true,
+                "UseYAngleProperty": false,
                 "YAnglePropertyName": "",
-                "UseZAngleProperty": true,
+                "UseZAngleProperty": false,
                 "ZAnglePropertyName": "",
-                "UseXScaleProperty": true,
+                "UseXScaleProperty": false,
                 "XScalePropertyName": "",
-                "UseYScaleProperty": true,
+                "UseYScaleProperty": false,
                 "YScalePropertyName": "",
-                "UseZScaleProperty": true,
+                "UseZScaleProperty": false,
                 "ZScalePropertyName": ""
             }
         }
@@ -163,24 +163,24 @@
             "LoadDistance": 0
         },
         "BlenderInfo": {
-            "CommonName": "",
-            "RotationMode": "NONE",
+            "CommonName": "Race Start Robot",
+            "RotationMode": "Z",
             "ItemInfo": "",
-            "AssetName": "",
-            "AssetFile": "",
+            "AssetName": "StartBot",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\mini\\\\cart\\\\StartBot.blend",
             "RelativeAssetFile": true,
             "PropertyInfo": {
-                "UseXAngleProperty": true,
+                "UseXAngleProperty": false,
                 "XAnglePropertyName": "",
-                "UseYAngleProperty": true,
+                "UseYAngleProperty": false,
                 "YAnglePropertyName": "",
-                "UseZAngleProperty": true,
+                "UseZAngleProperty": false,
                 "ZAnglePropertyName": "",
-                "UseXScaleProperty": true,
+                "UseXScaleProperty": false,
                 "XScalePropertyName": "",
-                "UseYScaleProperty": true,
+                "UseYScaleProperty": false,
                 "YScalePropertyName": "",
-                "UseZScaleProperty": true,
+                "UseZScaleProperty": false,
                 "ZScalePropertyName": ""
             }
         }
@@ -194,25 +194,25 @@
             "LoadDistance": 0
         },
         "BlenderInfo": {
-            "CommonName": "",
-            "RotationMode": "NONE",
+            "CommonName": "Race End Robot",
+            "RotationMode": "Z",
             "ItemInfo": "",
-            "AssetName": "",
-            "AssetFile": "",
+            "AssetName": "GoalBot",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\mini\\\\cart\\\\GoalBot.blend",
             "RelativeAssetFile": true,
             "PropertyInfo": {
-                "UseXAngleProperty": true,
+                "UseXAngleProperty": false,
                 "XAnglePropertyName": "",
-                "UseYAngleProperty": true,
+                "UseYAngleProperty": false,
                 "YAnglePropertyName": "",
-                "UseZAngleProperty": true,
+                "UseZAngleProperty": false,
                 "ZAnglePropertyName": "",
-                "UseXScaleProperty": true,
+                "UseXScaleProperty": false,
                 "XScalePropertyName": "",
-                "UseYScaleProperty": true,
+                "UseYScaleProperty": false,
                 "YScalePropertyName": "",
                 "UseZScaleProperty": true,
-                "ZScalePropertyName": ""
+                "ZScalePropertyName": "Horizontal Position"
             }
         }
     },
@@ -225,24 +225,24 @@
             "LoadDistance": 2250000
         },
         "BlenderInfo": {
-            "CommonName": "",
-            "RotationMode": "NONE",
+            "CommonName": "Signboard (Green/Black)",
+            "RotationMode": "ZY",
             "ItemInfo": "",
-            "AssetName": "",
-            "AssetFile": "",
+            "AssetName": "Signboard1",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\mini\\\\cart\\\\Signboard1.blend",
             "RelativeAssetFile": true,
             "PropertyInfo": {
-                "UseXAngleProperty": true,
+                "UseXAngleProperty": false,
                 "XAnglePropertyName": "",
-                "UseYAngleProperty": true,
+                "UseYAngleProperty": false,
                 "YAnglePropertyName": "",
-                "UseZAngleProperty": true,
+                "UseZAngleProperty": false,
                 "ZAnglePropertyName": "",
-                "UseXScaleProperty": true,
+                "UseXScaleProperty": false,
                 "XScalePropertyName": "",
-                "UseYScaleProperty": true,
+                "UseYScaleProperty": false,
                 "YScalePropertyName": "",
-                "UseZScaleProperty": true,
+                "UseZScaleProperty": false,
                 "ZScalePropertyName": ""
             }
         }
@@ -256,24 +256,24 @@
             "LoadDistance": 2250000
         },
         "BlenderInfo": {
-            "CommonName": "",
-            "RotationMode": "NONE",
+            "CommonName": "Signboard (Black/Blue)",
+            "RotationMode": "ZY",
             "ItemInfo": "",
-            "AssetName": "",
-            "AssetFile": "",
+            "AssetName": "Signboard2",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\mini\\\\cart\\\\Signboard2.blend",
             "RelativeAssetFile": true,
             "PropertyInfo": {
-                "UseXAngleProperty": true,
+                "UseXAngleProperty": false,
                 "XAnglePropertyName": "",
-                "UseYAngleProperty": true,
+                "UseYAngleProperty": false,
                 "YAnglePropertyName": "",
-                "UseZAngleProperty": true,
+                "UseZAngleProperty": false,
                 "ZAnglePropertyName": "",
-                "UseXScaleProperty": true,
+                "UseXScaleProperty": false,
                 "XScalePropertyName": "",
-                "UseYScaleProperty": true,
+                "UseYScaleProperty": false,
                 "YScalePropertyName": "",
-                "UseZScaleProperty": true,
+                "UseZScaleProperty": false,
                 "ZScalePropertyName": ""
             }
         }
@@ -287,24 +287,24 @@
             "LoadDistance": 2250000
         },
         "BlenderInfo": {
-            "CommonName": "",
-            "RotationMode": "NONE",
+            "CommonName": "Signboard (Blue/Pink)",
+            "RotationMode": "ZY",
             "ItemInfo": "",
-            "AssetName": "",
-            "AssetFile": "",
+            "AssetName": "Signboard3",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\mini\\\\cart\\\\Signboard3.blend",
             "RelativeAssetFile": true,
             "PropertyInfo": {
-                "UseXAngleProperty": true,
+                "UseXAngleProperty": false,
                 "XAnglePropertyName": "",
-                "UseYAngleProperty": true,
+                "UseYAngleProperty": false,
                 "YAnglePropertyName": "",
-                "UseZAngleProperty": true,
+                "UseZAngleProperty": false,
                 "ZAnglePropertyName": "",
-                "UseXScaleProperty": true,
+                "UseXScaleProperty": false,
                 "XScalePropertyName": "",
-                "UseYScaleProperty": true,
+                "UseYScaleProperty": false,
                 "YScalePropertyName": "",
-                "UseZScaleProperty": true,
+                "UseZScaleProperty": false,
                 "ZScalePropertyName": ""
             }
         }
@@ -318,24 +318,24 @@
             "LoadDistance": 2250000
         },
         "BlenderInfo": {
-            "CommonName": "",
-            "RotationMode": "NONE",
+            "CommonName": "Signboard (Pink/Red)",
+            "RotationMode": "ZY",
             "ItemInfo": "",
-            "AssetName": "",
-            "AssetFile": "",
+            "AssetName": "Signboard4",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\mini\\\\cart\\\\Signboard4.blend",
             "RelativeAssetFile": true,
             "PropertyInfo": {
-                "UseXAngleProperty": true,
+                "UseXAngleProperty": false,
                 "XAnglePropertyName": "",
-                "UseYAngleProperty": true,
+                "UseYAngleProperty": false,
                 "YAnglePropertyName": "",
-                "UseZAngleProperty": true,
+                "UseZAngleProperty": false,
                 "ZAnglePropertyName": "",
-                "UseXScaleProperty": true,
+                "UseXScaleProperty": false,
                 "XScalePropertyName": "",
-                "UseYScaleProperty": true,
+                "UseYScaleProperty": false,
                 "YScalePropertyName": "",
-                "UseZScaleProperty": true,
+                "UseZScaleProperty": false,
                 "ZScalePropertyName": ""
             }
         }
@@ -349,24 +349,24 @@
             "LoadDistance": 2250000
         },
         "BlenderInfo": {
-            "CommonName": "",
-            "RotationMode": "NONE",
+            "CommonName": "Signboard (Red/Green)",
+            "RotationMode": "ZY",
             "ItemInfo": "",
-            "AssetName": "",
-            "AssetFile": "",
+            "AssetName": "Signboard5",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\mini\\\\cart\\\\Signboard5.blend",
             "RelativeAssetFile": true,
             "PropertyInfo": {
-                "UseXAngleProperty": true,
+                "UseXAngleProperty": false,
                 "XAnglePropertyName": "",
-                "UseYAngleProperty": true,
+                "UseYAngleProperty": false,
                 "YAnglePropertyName": "",
-                "UseZAngleProperty": true,
+                "UseZAngleProperty": false,
                 "ZAnglePropertyName": "",
-                "UseXScaleProperty": true,
+                "UseXScaleProperty": false,
                 "XScalePropertyName": "",
-                "UseYScaleProperty": true,
+                "UseYScaleProperty": false,
                 "YScalePropertyName": "",
-                "UseZScaleProperty": true,
+                "UseZScaleProperty": false,
                 "ZScalePropertyName": ""
             }
         }
@@ -380,24 +380,24 @@
             "LoadDistance": 2250000
         },
         "BlenderInfo": {
-            "CommonName": "",
-            "RotationMode": "NONE",
+            "CommonName": "Arrows",
+            "RotationMode": "ZXY",
             "ItemInfo": "",
-            "AssetName": "",
-            "AssetFile": "",
+            "AssetName": "Arrows",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\stg\\\\twinklepark\\\\Arrows.blend",
             "RelativeAssetFile": true,
             "PropertyInfo": {
-                "UseXAngleProperty": true,
+                "UseXAngleProperty": false,
                 "XAnglePropertyName": "",
-                "UseYAngleProperty": true,
+                "UseYAngleProperty": false,
                 "YAnglePropertyName": "",
-                "UseZAngleProperty": true,
+                "UseZAngleProperty": false,
                 "ZAnglePropertyName": "",
-                "UseXScaleProperty": true,
+                "UseXScaleProperty": false,
                 "XScalePropertyName": "",
-                "UseYScaleProperty": true,
+                "UseYScaleProperty": false,
                 "YScalePropertyName": "",
-                "UseZScaleProperty": true,
+                "UseZScaleProperty": false,
                 "ZScalePropertyName": ""
             }
         }
@@ -411,24 +411,24 @@
             "LoadDistance": 2250000
         },
         "BlenderInfo": {
-            "CommonName": "",
-            "RotationMode": "NONE",
+            "CommonName": "Jump Ramp",
+            "RotationMode": "ZXY",
             "ItemInfo": "",
-            "AssetName": "",
-            "AssetFile": "",
+            "AssetName": "JumpRamp",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\stg\\\\twinklepark\\\\JumpRamp.blend",
             "RelativeAssetFile": true,
             "PropertyInfo": {
-                "UseXAngleProperty": true,
+                "UseXAngleProperty": false,
                 "XAnglePropertyName": "",
-                "UseYAngleProperty": true,
+                "UseYAngleProperty": false,
                 "YAnglePropertyName": "",
-                "UseZAngleProperty": true,
+                "UseZAngleProperty": false,
                 "ZAnglePropertyName": "",
                 "UseXScaleProperty": true,
-                "XScalePropertyName": "",
+                "XScalePropertyName": "Speed",
                 "UseYScaleProperty": true,
-                "YScalePropertyName": "",
-                "UseZScaleProperty": true,
+                "YScalePropertyName": "Jump Rate",
+                "UseZScaleProperty": false,
                 "ZScalePropertyName": ""
             }
         }
@@ -442,24 +442,24 @@
             "LoadDistance": 2250000
         },
         "BlenderInfo": {
-            "CommonName": "",
-            "RotationMode": "NONE",
+            "CommonName": "Cart Dash Panel",
+            "RotationMode": "ZXY",
             "ItemInfo": "",
-            "AssetName": "",
-            "AssetFile": "",
+            "AssetName": "CartDashPanel",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\stg\\\\twinklepark\\\\CartDashPanel.blend",
             "RelativeAssetFile": true,
             "PropertyInfo": {
-                "UseXAngleProperty": true,
+                "UseXAngleProperty": false,
                 "XAnglePropertyName": "",
-                "UseYAngleProperty": true,
+                "UseYAngleProperty": false,
                 "YAnglePropertyName": "",
-                "UseZAngleProperty": true,
+                "UseZAngleProperty": false,
                 "ZAnglePropertyName": "",
                 "UseXScaleProperty": true,
-                "XScalePropertyName": "",
-                "UseYScaleProperty": true,
+                "XScalePropertyName": "Speed",
+                "UseYScaleProperty": false,
                 "YScalePropertyName": "",
-                "UseZScaleProperty": true,
+                "UseZScaleProperty": false,
                 "ZScalePropertyName": ""
             }
         }
@@ -504,24 +504,24 @@
             "LoadDistance": 0
         },
         "BlenderInfo": {
-            "CommonName": "",
-            "RotationMode": "NONE",
+            "CommonName": "Goal Marker",
+            "RotationMode": "Z",
             "ItemInfo": "",
-            "AssetName": "",
-            "AssetFile": "",
+            "AssetName": "Zone",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\mini\\\\cart\\\\Zone.blend",
             "RelativeAssetFile": true,
             "PropertyInfo": {
-                "UseXAngleProperty": true,
+                "UseXAngleProperty": false,
                 "XAnglePropertyName": "",
-                "UseYAngleProperty": true,
+                "UseYAngleProperty": false,
                 "YAnglePropertyName": "",
-                "UseZAngleProperty": true,
+                "UseZAngleProperty": false,
                 "ZAnglePropertyName": "",
-                "UseXScaleProperty": true,
+                "UseXScaleProperty": false,
                 "XScalePropertyName": "",
-                "UseYScaleProperty": true,
+                "UseYScaleProperty": false,
                 "YScalePropertyName": "",
-                "UseZScaleProperty": true,
+                "UseZScaleProperty": false,
                 "ZScalePropertyName": ""
             }
         }
@@ -535,24 +535,24 @@
             "LoadDistance": 0
         },
         "BlenderInfo": {
-            "CommonName": "",
-            "RotationMode": "NONE",
+            "CommonName": "Previous Lap Marker",
+            "RotationMode": "Z",
             "ItemInfo": "",
-            "AssetName": "",
-            "AssetFile": "",
+            "AssetName": "Zone",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\mini\\\\cart\\\\Zone.blend",
             "RelativeAssetFile": true,
             "PropertyInfo": {
-                "UseXAngleProperty": true,
+                "UseXAngleProperty": false,
                 "XAnglePropertyName": "",
-                "UseYAngleProperty": true,
+                "UseYAngleProperty": false,
                 "YAnglePropertyName": "",
-                "UseZAngleProperty": true,
+                "UseZAngleProperty": false,
                 "ZAnglePropertyName": "",
-                "UseXScaleProperty": true,
+                "UseXScaleProperty": false,
                 "XScalePropertyName": "",
-                "UseYScaleProperty": true,
+                "UseYScaleProperty": false,
                 "YScalePropertyName": "",
-                "UseZScaleProperty": true,
+                "UseZScaleProperty": false,
                 "ZScalePropertyName": ""
             }
         }
@@ -566,24 +566,24 @@
             "LoadDistance": 0
         },
         "BlenderInfo": {
-            "CommonName": "",
-            "RotationMode": "NONE",
+            "CommonName": "Next Lap Marker",
+            "RotationMode": "Z",
             "ItemInfo": "",
-            "AssetName": "",
-            "AssetFile": "",
+            "AssetName": "Zone",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\mini\\\\cart\\\\Zone.blend",
             "RelativeAssetFile": true,
             "PropertyInfo": {
-                "UseXAngleProperty": true,
+                "UseXAngleProperty": false,
                 "XAnglePropertyName": "",
-                "UseYAngleProperty": true,
+                "UseYAngleProperty": false,
                 "YAnglePropertyName": "",
-                "UseZAngleProperty": true,
+                "UseZAngleProperty": false,
                 "ZAnglePropertyName": "",
-                "UseXScaleProperty": true,
+                "UseXScaleProperty": false,
                 "XScalePropertyName": "",
-                "UseYScaleProperty": true,
+                "UseYScaleProperty": false,
                 "YScalePropertyName": "",
-                "UseZScaleProperty": true,
+                "UseZScaleProperty": false,
                 "ZScalePropertyName": ""
             }
         }
@@ -597,24 +597,24 @@
             "LoadDistance": 9000000
         },
         "BlenderInfo": {
-            "CommonName": "",
-            "RotationMode": "NONE",
+            "CommonName": "Small Arch",
+            "RotationMode": "ZXY",
             "ItemInfo": "",
-            "AssetName": "",
-            "AssetFile": "",
+            "AssetName": "Arch01",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\stg\\\\twinklepark\\\\Arch01.blend",
             "RelativeAssetFile": true,
             "PropertyInfo": {
-                "UseXAngleProperty": true,
+                "UseXAngleProperty": false,
                 "XAnglePropertyName": "",
-                "UseYAngleProperty": true,
+                "UseYAngleProperty": false,
                 "YAnglePropertyName": "",
-                "UseZAngleProperty": true,
+                "UseZAngleProperty": false,
                 "ZAnglePropertyName": "",
                 "UseXScaleProperty": true,
-                "XScalePropertyName": "",
-                "UseYScaleProperty": true,
+                "XScalePropertyName": "Texture Scroll Speed",
+                "UseYScaleProperty": false,
                 "YScalePropertyName": "",
-                "UseZScaleProperty": true,
+                "UseZScaleProperty": false,
                 "ZScalePropertyName": ""
             }
         }
@@ -628,25 +628,25 @@
             "LoadDistance": 9000000
         },
         "BlenderInfo": {
-            "CommonName": "",
-            "RotationMode": "NONE",
+            "CommonName": "Wide Arch",
+            "RotationMode": "ZXY",
             "ItemInfo": "",
-            "AssetName": "",
-            "AssetFile": "",
+            "AssetName": "Arch02",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\stg\\\\twinklepark\\\\Arch02.blend",
             "RelativeAssetFile": true,
             "PropertyInfo": {
-                "UseXAngleProperty": true,
+                "UseXAngleProperty": false,
                 "XAnglePropertyName": "",
-                "UseYAngleProperty": true,
+                "UseYAngleProperty": false,
                 "YAnglePropertyName": "",
-                "UseZAngleProperty": true,
+                "UseZAngleProperty": false,
                 "ZAnglePropertyName": "",
                 "UseXScaleProperty": true,
-                "XScalePropertyName": "",
+                "XScalePropertyName": "Texture Scroll Speed",
                 "UseYScaleProperty": true,
-                "YScalePropertyName": "",
+                "YScalePropertyName": "Number of Spotlights",
                 "UseZScaleProperty": true,
-                "ZScalePropertyName": ""
+                "ZScalePropertyName": "Spotlight Rotation Speed"
             }
         }
     },
@@ -659,24 +659,24 @@
             "LoadDistance": 9000000
         },
         "BlenderInfo": {
-            "CommonName": "",
-            "RotationMode": "NONE",
+            "CommonName": "Curved Light",
+            "RotationMode": "ZXY",
             "ItemInfo": "",
-            "AssetName": "",
-            "AssetFile": "",
+            "AssetName": "Light01",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\stg\\\\twinklepark\\\\Light01.blend",
             "RelativeAssetFile": true,
             "PropertyInfo": {
-                "UseXAngleProperty": true,
+                "UseXAngleProperty": false,
                 "XAnglePropertyName": "",
-                "UseYAngleProperty": true,
+                "UseYAngleProperty": false,
                 "YAnglePropertyName": "",
-                "UseZAngleProperty": true,
+                "UseZAngleProperty": false,
                 "ZAnglePropertyName": "",
-                "UseXScaleProperty": true,
+                "UseXScaleProperty": false,
                 "XScalePropertyName": "",
-                "UseYScaleProperty": true,
+                "UseYScaleProperty": false,
                 "YScalePropertyName": "",
-                "UseZScaleProperty": true,
+                "UseZScaleProperty": false,
                 "ZScalePropertyName": ""
             }
         }
@@ -690,24 +690,24 @@
             "LoadDistance": 9000000
         },
         "BlenderInfo": {
-            "CommonName": "",
-            "RotationMode": "NONE",
+            "CommonName": "Spinning Light",
+            "RotationMode": "ZXY",
             "ItemInfo": "",
-            "AssetName": "",
-            "AssetFile": "",
+            "AssetName": "Light02",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\stg\\\\twinklepark\\\\Light02.blend",
             "RelativeAssetFile": true,
             "PropertyInfo": {
-                "UseXAngleProperty": true,
+                "UseXAngleProperty": false,
                 "XAnglePropertyName": "",
-                "UseYAngleProperty": true,
+                "UseYAngleProperty": false,
                 "YAnglePropertyName": "",
-                "UseZAngleProperty": true,
+                "UseZAngleProperty": false,
                 "ZAnglePropertyName": "",
-                "UseXScaleProperty": true,
+                "UseXScaleProperty": false,
                 "XScalePropertyName": "",
                 "UseYScaleProperty": true,
-                "YScalePropertyName": "",
-                "UseZScaleProperty": true,
+                "YScalePropertyName": "Rotation Speed",
+                "UseZScaleProperty": false,
                 "ZScalePropertyName": ""
             }
         }
@@ -721,24 +721,24 @@
             "LoadDistance": 9000000
         },
         "BlenderInfo": {
-            "CommonName": "",
-            "RotationMode": "NONE",
+            "CommonName": "Big Meteor",
+            "RotationMode": "ZXY",
             "ItemInfo": "",
-            "AssetName": "",
-            "AssetFile": "",
+            "AssetName": "Meteor01",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\stg\\\\twinklepark\\\\Meteor01.blend",
             "RelativeAssetFile": true,
             "PropertyInfo": {
-                "UseXAngleProperty": true,
+                "UseXAngleProperty": false,
                 "XAnglePropertyName": "",
-                "UseYAngleProperty": true,
+                "UseYAngleProperty": false,
                 "YAnglePropertyName": "",
-                "UseZAngleProperty": true,
+                "UseZAngleProperty": false,
                 "ZAnglePropertyName": "",
                 "UseXScaleProperty": true,
-                "XScalePropertyName": "",
-                "UseYScaleProperty": true,
+                "XScalePropertyName": "Rotation Speed",
+                "UseYScaleProperty": false,
                 "YScalePropertyName": "",
-                "UseZScaleProperty": true,
+                "UseZScaleProperty": false,
                 "ZScalePropertyName": ""
             }
         }
@@ -752,24 +752,24 @@
             "LoadDistance": 9000000
         },
         "BlenderInfo": {
-            "CommonName": "",
-            "RotationMode": "NONE",
+            "CommonName": "Skinny Meteor",
+            "RotationMode": "ZXY",
             "ItemInfo": "",
-            "AssetName": "",
-            "AssetFile": "",
+            "AssetName": "Meteor02",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\stg\\\\twinklepark\\\\Meteor02.blend",
             "RelativeAssetFile": true,
             "PropertyInfo": {
-                "UseXAngleProperty": true,
+                "UseXAngleProperty": false,
                 "XAnglePropertyName": "",
-                "UseYAngleProperty": true,
+                "UseYAngleProperty": false,
                 "YAnglePropertyName": "",
-                "UseZAngleProperty": true,
+                "UseZAngleProperty": false,
                 "ZAnglePropertyName": "",
                 "UseXScaleProperty": true,
-                "XScalePropertyName": "",
-                "UseYScaleProperty": true,
+                "XScalePropertyName": "Rotation Speed",
+                "UseYScaleProperty": false,
                 "YScalePropertyName": "",
-                "UseZScaleProperty": true,
+                "UseZScaleProperty": false,
                 "ZScalePropertyName": ""
             }
         }
@@ -783,24 +783,24 @@
             "LoadDistance": 9000000
         },
         "BlenderInfo": {
-            "CommonName": "",
-            "RotationMode": "NONE",
+            "CommonName": "Small Meteor",
+            "RotationMode": "ZXY",
             "ItemInfo": "",
-            "AssetName": "",
-            "AssetFile": "",
+            "AssetName": "Meteor03",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\stg\\\\twinklepark\\\\Meteor03.blend",
             "RelativeAssetFile": true,
             "PropertyInfo": {
-                "UseXAngleProperty": true,
+                "UseXAngleProperty": false,
                 "XAnglePropertyName": "",
-                "UseYAngleProperty": true,
+                "UseYAngleProperty": false,
                 "YAnglePropertyName": "",
-                "UseZAngleProperty": true,
+                "UseZAngleProperty": false,
                 "ZAnglePropertyName": "",
                 "UseXScaleProperty": true,
-                "XScalePropertyName": "",
-                "UseYScaleProperty": true,
+                "XScalePropertyName": "Rotation Speed",
+                "UseYScaleProperty": false,
                 "YScalePropertyName": "",
-                "UseZScaleProperty": true,
+                "UseZScaleProperty": false,
                 "ZScalePropertyName": ""
             }
         }
@@ -814,24 +814,24 @@
             "LoadDistance": 9000000
         },
         "BlenderInfo": {
-            "CommonName": "",
-            "RotationMode": "NONE",
+            "CommonName": "Neptune",
+            "RotationMode": "ZXY",
             "ItemInfo": "",
-            "AssetName": "",
-            "AssetFile": "",
+            "AssetName": "Planet01",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\stg\\\\twinklepark\\\\Planet01.blend",
             "RelativeAssetFile": true,
             "PropertyInfo": {
-                "UseXAngleProperty": true,
+                "UseXAngleProperty": false,
                 "XAnglePropertyName": "",
-                "UseYAngleProperty": true,
+                "UseYAngleProperty": false,
                 "YAnglePropertyName": "",
-                "UseZAngleProperty": true,
+                "UseZAngleProperty": false,
                 "ZAnglePropertyName": "",
                 "UseXScaleProperty": true,
-                "XScalePropertyName": "",
-                "UseYScaleProperty": true,
+                "XScalePropertyName": "Rotation Speed",
+                "UseYScaleProperty": false,
                 "YScalePropertyName": "",
-                "UseZScaleProperty": true,
+                "UseZScaleProperty": false,
                 "ZScalePropertyName": ""
             }
         }
@@ -845,24 +845,24 @@
             "LoadDistance": 9000000
         },
         "BlenderInfo": {
-            "CommonName": "",
-            "RotationMode": "NONE",
+            "CommonName": "Jupiter",
+            "RotationMode": "ZXY",
             "ItemInfo": "",
-            "AssetName": "",
-            "AssetFile": "",
+            "AssetName": "Planet02",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\stg\\\\twinklepark\\\\Planet02.blend",
             "RelativeAssetFile": true,
             "PropertyInfo": {
-                "UseXAngleProperty": true,
+                "UseXAngleProperty": false,
                 "XAnglePropertyName": "",
-                "UseYAngleProperty": true,
+                "UseYAngleProperty": false,
                 "YAnglePropertyName": "",
-                "UseZAngleProperty": true,
+                "UseZAngleProperty": false,
                 "ZAnglePropertyName": "",
                 "UseXScaleProperty": true,
-                "XScalePropertyName": "",
-                "UseYScaleProperty": true,
+                "XScalePropertyName": "Rotation Speed",
+                "UseYScaleProperty": false,
                 "YScalePropertyName": "",
-                "UseZScaleProperty": true,
+                "UseZScaleProperty": false,
                 "ZScalePropertyName": ""
             }
         }
@@ -876,24 +876,24 @@
             "LoadDistance": 9000000
         },
         "BlenderInfo": {
-            "CommonName": "",
-            "RotationMode": "NONE",
+            "CommonName": "Saturn",
+            "RotationMode": "ZXY",
             "ItemInfo": "",
-            "AssetName": "",
-            "AssetFile": "",
+            "AssetName": "Planet03",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\stg\\\\twinklepark\\\\Planet03.blend",
             "RelativeAssetFile": true,
             "PropertyInfo": {
-                "UseXAngleProperty": true,
+                "UseXAngleProperty": false,
                 "XAnglePropertyName": "",
-                "UseYAngleProperty": true,
+                "UseYAngleProperty": false,
                 "YAnglePropertyName": "",
-                "UseZAngleProperty": true,
+                "UseZAngleProperty": false,
                 "ZAnglePropertyName": "",
                 "UseXScaleProperty": true,
-                "XScalePropertyName": "",
-                "UseYScaleProperty": true,
+                "XScalePropertyName": "Rotation Speed",
+                "UseYScaleProperty": false,
                 "YScalePropertyName": "",
-                "UseZScaleProperty": true,
+                "UseZScaleProperty": false,
                 "ZScalePropertyName": ""
             }
         }
@@ -907,24 +907,24 @@
             "LoadDistance": 12250000
         },
         "BlenderInfo": {
-            "CommonName": "",
-            "RotationMode": "NONE",
+            "CommonName": "Light Pole",
+            "RotationMode": "ZXY",
             "ItemInfo": "",
-            "AssetName": "",
-            "AssetFile": "",
+            "AssetName": "LightPole",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\stg\\\\twinklepark\\\\LightPole.blend",
             "RelativeAssetFile": true,
             "PropertyInfo": {
-                "UseXAngleProperty": true,
+                "UseXAngleProperty": false,
                 "XAnglePropertyName": "",
-                "UseYAngleProperty": true,
+                "UseYAngleProperty": false,
                 "YAnglePropertyName": "",
-                "UseZAngleProperty": true,
+                "UseZAngleProperty": false,
                 "ZAnglePropertyName": "",
                 "UseXScaleProperty": true,
-                "XScalePropertyName": "",
+                "XScalePropertyName": "Texture Scroll Speed",
                 "UseYScaleProperty": true,
-                "YScalePropertyName": "",
-                "UseZScaleProperty": true,
+                "YScalePropertyName": "Beam Rotation",
+                "UseZScaleProperty": false,
                 "ZScalePropertyName": ""
             }
         }
@@ -938,24 +938,24 @@
             "LoadDistance": 1000000
         },
         "BlenderInfo": {
-            "CommonName": "",
-            "RotationMode": "NONE",
+            "CommonName": "Rocket Spinner",
+            "RotationMode": "ZXY",
             "ItemInfo": "",
-            "AssetName": "",
-            "AssetFile": "",
+            "AssetName": "RocketRide",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\stg\\\\twinklepark\\\\RocketRide.blend",
             "RelativeAssetFile": true,
             "PropertyInfo": {
-                "UseXAngleProperty": true,
+                "UseXAngleProperty": false,
                 "XAnglePropertyName": "",
-                "UseYAngleProperty": true,
+                "UseYAngleProperty": false,
                 "YAnglePropertyName": "",
-                "UseZAngleProperty": true,
+                "UseZAngleProperty": false,
                 "ZAnglePropertyName": "",
-                "UseXScaleProperty": true,
+                "UseXScaleProperty": false,
                 "XScalePropertyName": "",
-                "UseYScaleProperty": true,
+                "UseYScaleProperty": false,
                 "YScalePropertyName": "",
-                "UseZScaleProperty": true,
+                "UseZScaleProperty": false,
                 "ZScalePropertyName": ""
             }
         }
@@ -969,24 +969,24 @@
             "LoadDistance": 1000000
         },
         "BlenderInfo": {
-            "CommonName": "",
-            "RotationMode": "NONE",
+            "CommonName": "Satellite",
+            "RotationMode": "Z",
             "ItemInfo": "",
-            "AssetName": "",
-            "AssetFile": "",
+            "AssetName": "Satellite",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\stg\\\\twinklepark\\\\Satellite.blend",
             "RelativeAssetFile": true,
             "PropertyInfo": {
-                "UseXAngleProperty": true,
+                "UseXAngleProperty": false,
                 "XAnglePropertyName": "",
-                "UseYAngleProperty": true,
+                "UseYAngleProperty": false,
                 "YAnglePropertyName": "",
-                "UseZAngleProperty": true,
+                "UseZAngleProperty": false,
                 "ZAnglePropertyName": "",
-                "UseXScaleProperty": true,
+                "UseXScaleProperty": false,
                 "XScalePropertyName": "",
-                "UseYScaleProperty": true,
+                "UseYScaleProperty": false,
                 "YScalePropertyName": "",
-                "UseZScaleProperty": true,
+                "UseZScaleProperty": false,
                 "ZScalePropertyName": ""
             }
         }
@@ -1000,25 +1000,25 @@
             "LoadDistance": 9000000
         },
         "BlenderInfo": {
-            "CommonName": "",
-            "RotationMode": "NONE",
+            "CommonName": "Ship",
+            "RotationMode": "XZ",
             "ItemInfo": "",
-            "AssetName": "",
-            "AssetFile": "",
+            "AssetName": "Ship",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\stg\\\\twinklepark\\\\Ship.blend",
             "RelativeAssetFile": true,
             "PropertyInfo": {
-                "UseXAngleProperty": true,
+                "UseXAngleProperty": false,
                 "XAnglePropertyName": "",
-                "UseYAngleProperty": true,
+                "UseYAngleProperty": false,
                 "YAnglePropertyName": "",
-                "UseZAngleProperty": true,
+                "UseZAngleProperty": false,
                 "ZAnglePropertyName": "",
                 "UseXScaleProperty": true,
-                "XScalePropertyName": "",
+                "XScalePropertyName": "Mode",
                 "UseYScaleProperty": true,
-                "YScalePropertyName": "",
+                "YScalePropertyName": "Speed",
                 "UseZScaleProperty": true,
-                "ZScalePropertyName": ""
+                "ZScalePropertyName": "Start Cue"
             }
         }
     },
