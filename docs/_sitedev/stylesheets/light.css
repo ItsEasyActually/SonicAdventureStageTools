@@ -1,0 +1,153 @@
+[data-md-color-scheme="sastlight"] {
+
+  /* ADV Palette */
+  --adv-foreground: rgb(25, 25, 25);
+  --adv-foreground-alt: rgb(251, 250, 245);
+  --adv-background: rgb(251, 250, 245);
+
+  --adv-control: rgb(240,239,235);
+  --adv-control-dark: rgb(222,221,217);
+  --adv-control-light: rgb(187,222,240);
+
+  --adv-border: rgb(207,206,202);
+  --adv-border-dark: rgb(189,188,185);
+  --adv-border-light: rgb(171,203,219);
+
+  --adv-highlight: rgb(0, 0, 219); /*0000dbff*/
+  --adv-highlight-dark: rgb(0,0,255);
+  --adv-highlight-light: rgb(0,153,255); /*0099ffff*/
+
+  /* Admonition Colors */
+  --adv-admonition-note: rgb(1,80,218); 
+  --adv-admonition-note-a: rgba(1,80,218,0.2);
+
+  --adv-admonition-abstract: rgb(1,162,218);
+  --adv-admonition-abstract-a: rgba(1,162,218,0.2);
+
+  --adv-admonition-info: rgb(1,202,218);
+  --adv-admonition-info-a: rgba(1,202,218,0.2);
+
+  --adv-admonition-tip: rgb(1,218,152);
+  --adv-admonition-tip-a: rgba(1,218,152,0.2);
+
+  --adv-admonition-success: rgb(1,218,71);
+  --adv-admonition-success-a: rgba(1,218,71,0.2);
+
+  --adv-admonition-question: rgb(94,218,1);
+  --adv-admonition-question-a: rgba(94,218,1,0.2);
+  
+  --adv-admonition-warning: rgb(218,139,1);
+  --adv-admonition-warning-a: rgba(218,139,1, 0.2);
+  
+  --adv-admonition-failure: rgb(218,57,1);
+  --adv-admonition-failure-a: rgba(218,57,1,0.2);
+  
+  --adv-admonition-danger: rgb(218,98,1);
+  --adv-admonition-danger-a: rgba(218,98,1,0.2);
+  
+  --adv-admonition-bug: rgb(218,1,26);
+  --adv-admonition-bug-a: rgba(218,1,26,0.2);
+  
+  --adv-admonition-example: rgb(218,1,189);
+  --adv-admonition-example-a: rgba(218,1,189,0.2);
+  
+  --adv-admonition-quote: rgb(158,158,158);
+  --adv-admonition-quote-a: rgba(158,158,158,0.2);
+
+  /* Default color shades */
+  --md-default-fg-color:               var(--adv-foreground);
+  --md-default-fg-color--light:        var(--adv-foreground);
+  --md-default-fg-color--lighter:      var(--adv-foreground);
+  --md-default-fg-color--lightest:     var(--adv-foreground);
+  --md-default-bg-color:               var(--adv-background);
+  --md-default-bg-color--light:        var(--adv-background);
+  --md-default-bg-color--lighter:      var(--adv-background);
+  --md-default-bg-color--lightest:     var(--adv-background);
+
+  /* Primary color shades */
+  --md-primary-fg-color:               var(--adv-highlight);
+  --md-primary-fg-color--light:        var(--adv-highlight-light);
+  --md-primary-fg-color--dark:         var(--adv-highlight-dark);
+  --md-primary-bg-color:               var(--adv-foreground-alt);
+  --md-primary-bg-color--light:        var(--adv-foreground-alt);
+
+  /* Accent color shades */
+  --md-accent-fg-color:                var(--adv-highlight-light);
+  --md-accent-fg-color--transparent:   rgba(35, 153, 250, 0.1);
+  --md-accent-bg-color:                var(--adv-foreground-alt);
+  --md-accent-bg-color--light:         rgba(251, 250, 245, 0.7);
+
+  /* Code highlighting syntax color shades */
+  --md-code-hl-number-color:           rgb(181, 206, 168);
+  --md-code-hl-special-color:          rgb(197, 134, 192);
+  --md-code-hl-function-color:         rgb(78, 201, 176);
+  --md-code-hl-constant-color:         hsla(250, 63%, 60%, 1);
+  --md-code-hl-keyword-color:          rgb(86, 106, 214);
+  --md-code-hl-string-color:           rgb(190, 105, 90);
+  --md-code-hl-name-color:             rgb(30, 30, 30);
+  --md-code-hl-operator-color:         rgba(30, 30, 30);
+  --md-code-hl-punctuation-color:      rgb(30, 30, 30);
+  --md-code-hl-comment-color:          rgb(76, 123, 85);
+  --md-code-hl-generic-color:          rgb(128, 128, 128);
+  --md-code-hl-variable-color:         rgb(124, 220, 240);
+
+  /* Code color shades */
+  --md-code-fg-color:                  var(--adv-foreground);
+  --md-code-bg-color:                  var(--adv-control);
+
+  /* Code highlighting color shades */
+  --md-code-hl-color:                  hsla(#{hex2hsl($clr-blue-a200)}, 1);
+  --md-code-hl-color--light:           hsla(#{hex2hsl($clr-blue-a200)}, 0.1);
+
+  /* Typeset color shades */
+  --md-typeset-color:                  var(--md-default-fg-color);
+
+  /* Typeset `a` color shades */
+  --md-typeset-a-color:                var(--md-primary-fg-color);
+
+  /* Typeset `del` and `ins` color shades */
+  --md-typeset-del-color:              hsla(6, 90%, 60%, 0.15);
+  --md-typeset-ins-color:              hsla(150, 90%, 44%, 0.15);
+
+  /* Typeset `kbd` color shades */
+  --md-typeset-kbd-color:              hsla(0, 0%, 98%, 1);
+  --md-typeset-kbd-accent-color:       hsla(0, 100%, 100%, 1);
+  --md-typeset-kbd-border-color:       hsla(0, 0%, 72%, 1);
+
+  /* Typeset `mark` color shades */
+  --md-typeset-mark-color:             hsla(#{hex2hsl($clr-yellow-a200)}, 0.5);
+
+  /* Typeset `table` color shades */
+  --md-typeset-table-color:            hsla(0, 0%, 0%, 0.12);
+  --md-typeset-table-color--light:     hsla(0, 0%, 0%, 0.035);
+
+  /* Admonition color shades */
+  --md-admonition-fg-color:            var(--adv-foreground);
+  --md-admonition-bg-color:            var(--adv-background);
+
+  /* Warning color shades */
+  --md-warning-fg-color:              hsla(0, 0%, 0%, 0.87);
+  --md-warning-bg-color:              hsla(10, 100%, 80%, 1);
+
+  /* Footer color shades */
+  --md-footer-fg-color:                hsla(0, 0%, 100%, 1);
+  --md-footer-fg-color--light:         hsla(0, 0%, 100%, 0.7);
+  --md-footer-fg-color--lighter:       hsla(0, 0%, 100%, 0.45);
+  --md-footer-bg-color:                hsla(0, 0%, 0%, 0.87);
+  --md-footer-bg-color--dark:          hsla(0, 0%, 0%, 0.32);
+
+  /* Shadow depth 1 */
+  --md-shadow-z1:
+    0 #{px2rem(4px)} #{px2rem(10px)} hsla(0, 0%, 0%, 0.05),
+    0 0              #{px2rem(1px)}  hsla(0, 0%, 0%, 0.1);
+
+  /* Shadow depth 2 */
+  --md-shadow-z2:
+    0 #{px2rem(4px)} #{px2rem(10px)} hsla(0, 0%, 0%, 0.1),
+    0 0              #{px2rem(1px)}  hsla(0, 0%, 0%, 0.25);
+
+  /* Shadow depth 3 */
+  --md-shadow-z3:
+    0 #{px2rem(4px)} #{px2rem(10px)} hsla(0, 0%, 0%, 0.2),
+    0 0              #{px2rem(1px)}  hsla(0, 0%, 0%, 0.35);
+}
