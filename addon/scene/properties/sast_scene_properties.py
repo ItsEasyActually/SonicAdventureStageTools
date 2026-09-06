@@ -7,7 +7,6 @@ from bpy.props import (
     BoolProperty
 )
 from ...game.info import GameInfoManager
-from ...game.info.stageinfo import StageInfo
 from .sast_set_definition_properties import SASTSETDefinitionProperties
 
 class SASTSceneProperties(bpy.types.PropertyGroup):
