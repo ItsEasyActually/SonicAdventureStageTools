@@ -306,7 +306,7 @@ class SASTExportManager:
         mp_cams: list[bpy.types.Object] = []
         mp_points: list[bpy.types.Object] = []
 
-        from ..properties.sast_object_properties import SASTObjectProperties
+        from ...object.properties import SASTObjectProperties
         for obj in objects:
             props: SASTObjectProperties = SASTObjectProperties.get_properties(obj)
 

@@ -207,14 +207,14 @@ class SASTExportCameraAutomatic(bpy.types.Operator):
                     match (scene_props.game_id):
                         case 'SADXPC':
                             if (props.objtype == 'CAM'):
-                                if (GeometryNodeManager.has_geometry_node(obj, SA1CameraNode.modifier_name)):
+                                if (GeometryNodeManager.has_named_geometry_node(obj, SA1CameraNode.modifier_name)):
                                     objs.append(obj)
                         case 'SA2BPC':
                             if (props.objtype == 'CAM'):
-                                if (GeometryNodeManager.has_geometry_node(obj, SA2CameraNode.modifier_name)):
+                                if (GeometryNodeManager.has_named_geometry_node(obj, SA2CameraNode.modifier_name)):
                                     objs.append(obj)
                             elif (props.objtype == 'POINT'):
-                                if (GeometryNodeManager.has_geometry_node(obj, SA2PointNode.modifier_name)):
+                                if (GeometryNodeManager.has_named_geometry_node(obj, SA2PointNode.modifier_name)):
                                     objs.append(obj)
 
             from ...utilities.io.sast_export import SASTExportManager

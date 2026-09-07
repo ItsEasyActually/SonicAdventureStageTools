@@ -7,7 +7,7 @@ class GeometryNodeManager:
     '''Static Manager for Geometry Node processing'''
 
     @staticmethod
-    def has_geometry_node(obj: Object, name: str) -> bool:
+    def has_named_geometry_node(obj: Object, name: str) -> bool:
         '''Checks if the supplied object has a modifier and group matching the supplied name.'''
         if (len(obj.modifiers) > 0):
             if (obj.modifiers.__contains__(name)):
