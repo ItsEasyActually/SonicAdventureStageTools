@@ -184,13 +184,7 @@ class SASTExportManager:
         camera = SA2CAMObject()
         camera.Mode = SA2CAMObject.GetCamModeFromString(camprops.cameramode)
         camera.AdjustMode = SA2CAMObject.GetAdjustModeFromString(camprops.adjustmode)
-        match (geonode.get_collision_shape()):
-            case 0:
-                camera.CollisionShape = SA2CAMObject.GetCollisionShapeFromInt(1)
-            case 1:
-                camera.CollisionShape = SA2CAMObject.GetCollisionShapeFromInt(2)
-            case 2:
-                camera.CollisionShape = SA2CAMObject.GetCollisionShapeFromInt(3)
+        camera.CollisionShape = SA2CAMObject.GetCollisionShapeFromString(geonode.get_collision_shape())
         camera.Priority = camprops.priority
 
         camera.Collision.Rotation.X.FromRadians(geonode.get_collision_x_angle())

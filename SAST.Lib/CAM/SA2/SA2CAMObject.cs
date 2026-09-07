@@ -241,9 +241,17 @@ namespace SAST.Lib.CAM.SA2
 			}
 		}
 
-		public static SA2CamCollisionShape GetCollisionShapeFromInt(int val)
+		public static SA2CamCollisionShape GetCollisionShapeFromString(string val)
 		{
-			return (SA2CamCollisionShape)val;
+			bool parsed = Enum.TryParse<SA2CamCollisionShape>(val, out SA2CamCollisionShape result);
+
+			if (parsed)
+				return result;
+			else
+			{
+				Console.WriteLine($"Invalid Camera Collision Shape: {val}, returning Block shape.");
+				return SA2CamCollisionShape.Block;
+			}
 		}
 
 		#endregion
