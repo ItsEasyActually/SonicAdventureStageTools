@@ -27,7 +27,7 @@ class SASTExportManager:
             cammode = f'{camprops.cameramode}_{camprops.cameralevel}'
         camobject.Mode = SA1CAMObject.GetCamModeFromString(cammode)
         camobject.AdjustMode = SA1CAMObject.GetAdjustModeFromString(camprops.adjustmode)
-        camobject.CollisionShape = SA1CAMObject.GetCollisionShapeFromInt(geonode.get_collision_shape())
+        camobject.CollisionShape = SA1CAMObject.GetCollisionShapeFromString(geonode.get_collision_shape())
         camobject.Priority = camprops.priority
         camobject.Collision.Rotation.X.FromRadians(geonode.get_collision_x_rotation())
         camobject.Collision.Rotation.Y.FromRadians(geonode.get_collision_y_rotation())
@@ -58,10 +58,10 @@ class SASTExportManager:
         from SAST.Lib.CAM.SA1 import SA1CAMFile
         file = SA1CAMFile()
         for obj in objs:
-            from ..geonode.sa1cameranode import SA1CameraNode
+            from ...object.geonode import SA1CameraNode
             geonode: SA1CameraNode = SA1CameraNode(obj)
             if (geonode.node is not None):
-                from ..properties.sast_cam_object_properties import SASTCAMObjectProperties
+                from ...object.properties import SASTCAMObjectProperties
                 camprops: SASTCAMObjectProperties = SASTCAMObjectProperties.get_properties(obj)
                 if (camprops is not None):
                     camobject = SASTExportManager.get_sa1_camera(geonode, camprops)
