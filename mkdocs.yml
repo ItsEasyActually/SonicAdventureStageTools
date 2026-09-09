@@ -38,7 +38,7 @@ theme:
     view: material/eye
     annotation: material/plus-circle-outline
   font:
-    text: Comfortaa
+    text: Arimo
     code: Noto Sans Mono
   features:
     - navigation.instant
@@ -50,7 +50,7 @@ theme:
     - content.code.annotate
   palette:
     - media: "(prefers-color-scheme: dark)"
-      scheme: sastdark
+      scheme: slate
       toggle:
         icon: material/brightness-5
         name: Switch to Light Theme

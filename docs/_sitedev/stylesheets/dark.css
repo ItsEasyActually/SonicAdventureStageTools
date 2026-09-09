@@ -1,4 +1,4 @@
-[data-md-color-scheme="sastdark"] {
+[data-md-color-scheme="slate"] {
 
   /* ADV Palette */
   --adv-foreground: rgb(251, 250, 245);
@@ -58,9 +58,7 @@
   --md-code-fg-color:                  var(--adv-foreground);
   --md-code-bg-color:                  var(--adv-control);
 
-  /* Typeset */
-  --md-typeset-color:                  var(--adv-foreground);
-  --md-typeset-a-color:                var(--md-primary-fg-color);
+
 
   /* Admonition Colors */
   --adv-admonition-note: rgb(1,80,218); 
