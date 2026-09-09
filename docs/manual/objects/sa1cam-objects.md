@@ -1,0 +1,1 @@
+# CAM Objects (Sonic Adventure)

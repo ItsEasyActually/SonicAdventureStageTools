@@ -19,6 +19,15 @@ extra_javascript:
   - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
   - sitedev/javascript/tablesort.js
 
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - attr_list
+  - md_in_html
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+
 # Theme Settings
 theme:
   name: material
@@ -28,9 +37,9 @@ theme:
   icon:
     edit: material/pencil
     view: material/eye
-    annotation: material/help-circle
+    annotation: material/plus-circle-outline
   font:
-    text: Sora
+    text: Oxanium
     code: Noto Sans Mono
   features:
     - navigation.instant
@@ -58,8 +67,24 @@ nav:
   - Home: index.md
   - Installation: 
     - installation/index.md
-  - Features:
-    - features/index.md
+  - Manual:
+    - manual/index.md
+    - Editor Panel:
+      - Scene Settings: 
+        - manual/scene/index.md
+        - manual/scene/settings.md
+        - manual/scene/object-list.md
+      - Utilities:
+        - manual/utilities/index.md
+      - Editor Objects:
+        - manual/objects/index.md
+        - CAM Objects: 
+          - manual/objects/sa1cam-objects.md
+          - manual/objects/sa2cam-objects.md
+          - manual/objects/sa2campoint-objects.md
+        - SET Objects: manual/objects/set-objects.md
+      - Addon Preferences:
+        - manual/preferences/index.md
   - Guides:
     - guides/index.md
   - Contributing:

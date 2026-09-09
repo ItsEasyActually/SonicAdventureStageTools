@@ -1,0 +1,1 @@
+# Camera Path Points (Sonic Adventure 2)
