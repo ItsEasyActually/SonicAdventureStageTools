@@ -31,7 +31,6 @@ markdown_extensions:
 # Theme Settings
 theme:
   name: material
-  custom_dir: docs/_sitedev/overrides
   favicon: _sitedev/assets/svg/favicon.svg
   logo: _sitedev/assets/svg/icon.svg
   icon:
