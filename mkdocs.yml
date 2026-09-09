@@ -20,9 +20,9 @@ extra_javascript:
   - sitedev/javascript/tablesort.js
 
 markdown_extensions:
+  - attr_list
   - admonition
   - pymdownx.details
-  - attr_list
   - md_in_html
   - pymdownx.superfences
   - pymdownx.tabbed:
