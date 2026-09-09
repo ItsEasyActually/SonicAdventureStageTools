@@ -39,7 +39,7 @@ theme:
     view: material/eye
     annotation: material/plus-circle-outline
   font:
-    text: Oxanium
+    text: Comfortaa
     code: Noto Sans Mono
   features:
     - navigation.instant
