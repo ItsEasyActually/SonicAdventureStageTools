@@ -137,6 +137,12 @@ class SASTObjectProperties(bpy.types.PropertyGroup):
         default=False
     )
 
+    for_hardmode: BoolProperty(
+        name='Hard Mode',
+        description='Object will be exported for use in the Hard Mode Layout in Single Player.',
+        default=False
+    )
+
     for_demo: BoolProperty(
         name='Demo',
         description='Object will be exported for use in the Demo for the stage.',
@@ -172,8 +178,11 @@ class SASTObjectProperties(bpy.types.PropertyGroup):
                     case 'SA2BPC':
                         body.prop(data=self, property='for_singleplayer')
                         body.prop(data=self, property='for_multiplayer')
-                        if (self.objtype != 'SET'):
-                            body.prop(data=self, property='for_demo')
+                        match (self.objtype):
+                            case 'SET':
+                                body.prop(data=self, property='for_hardmode')
+                            case 'CAM' | 'POINT':
+                                body.prop(data=self, property='for_demo')
 
     def draw_ui(self, layout: bpy.types.UILayout, context: bpy.types.Context):
         '''Draws the corresponding UI element for the selected object.'''
