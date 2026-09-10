@@ -1,0 +1,108 @@
+[data-md-color-scheme="sastdark"] {
+
+  color-scheme: dark;
+
+  /* ADV Palette */
+  --adv-foreground: rgb(224, 224, 224);
+  --adv-foreground-alt: rgb(224, 224, 224);
+  --adv-background: rgb(25, 25, 25);
+
+  --adv-control: rgb(32,32,32);
+  --adv-control-dark: rgb(15,15,15);
+  --adv-control-light: rgb(51,51,51);
+
+  --adv-border: rgb(64,64,64);
+  --adv-border-dark: rgb(46,46,46);
+  --adv-border-light: rgb(82,82,82);
+
+  --adv-highlight: rgb(0,153,255); /*0099ffff*/
+  --adv-highlight-dark: rgb(0, 0, 219); /*0000dbff*/
+  --adv-highlight-light: rgb(171,255,255); /*abffffff*/
+
+  /* Default color shades */
+  --md-default-fg-color:               var(--adv-foreground);
+  --md-default-fg-color--light:        var(--adv-foreground);
+  --md-default-fg-color--lighter:      var(--adv-foreground);
+  --md-default-fg-color--lightest:     var(--adv-foreground);
+  --md-default-bg-color:               var(--adv-background);
+  --md-default-bg-color--light:        var(--adv-background);
+  --md-default-bg-color--lighter:      var(--adv-background);
+  --md-default-bg-color--lightest:     var(--adv-background);
+
+  /* Primary color shades */
+  --md-primary-fg-color:               var(--adv-highlight);
+  --md-primary-fg-color--light:        var(--adv-highlight-light);
+  --md-primary-fg-color--dark:         var(--adv-highlight-dark);
+  --md-primary-bg-color:               var(--adv-foreground-alt);
+  --md-primary-bg-color--light:        var(--adv-foreground-alt);
+
+  /* Accent color shades */
+  --md-accent-fg-color:                var(--adv-highlight-light);
+  --md-accent-fg-color--transparent:   rgba(23, 140, 235, 0.1);
+  --md-accent-bg-color:                var(--adv-foreground-alt);
+  --md-accent-bg-color--light:         rgba(251, 250, 245, 0.7);
+
+  /* Code highlighting syntax color shades */
+  --md-code-hl-number-color:           rgb(181, 206, 168);
+  --md-code-hl-special-color:          rgb(197, 134, 192);
+  --md-code-hl-function-color:         rgb(78, 201, 176);
+  --md-code-hl-constant-color:         hsla(250, 63%, 60%, 1);
+  --md-code-hl-keyword-color:          rgb(86, 156, 214);
+  --md-code-hl-string-color:           rgb(206, 145, 120);
+  --md-code-hl-name-color:             rgb(212, 212, 212);
+  --md-code-hl-operator-color:         rgba(212, 212, 212);
+  --md-code-hl-punctuation-color:      rgb(201, 212, 212);
+  --md-code-hl-comment-color:          rgb(106, 153, 85);
+  --md-code-hl-generic-color:          rgb(128, 128, 128);
+  --md-code-hl-variable-color:         rgb(124, 220, 240);
+
+  /* Code color shades */
+  --md-code-fg-color:                  var(--adv-foreground);
+  --md-code-bg-color:                  var(--adv-control);
+
+  /* Typeset */
+  --md-typeset-color:                  var(--adv-foreground);
+  --md-typeset-a-color:                var(--md-primary-fg-color);
+
+  /* Admonition Colors */
+  --md-admonition-fg-color:          var(--md-default-fg-color);
+  --md-admonition-bg-color:          var(--md-default-bg-color);
+
+  --adv-admonition-note: rgb(1,80,218); 
+  --adv-admonition-note-a: rgba(1,80,218,0.2);
+
+  --adv-admonition-abstract: rgb(1,162,218);
+  --adv-admonition-abstract-a: rgba(1,162,218,0.2);
+
+  --adv-admonition-info: rgb(1,202,218);
+  --adv-admonition-info-a: rgba(1,202,218,0.2);
+
+  --adv-admonition-tip: rgb(1,218,152);
+  --adv-admonition-tip-a: rgba(1,218,152,0.2);
+
+  --adv-admonition-success: rgb(1,218,71);
+  --adv-admonition-success-a: rgba(1,218,71,0.2);
+
+  --adv-admonition-question: rgb(94,218,1);
+  --adv-admonition-question-a: rgba(94,218,1,0.2);
+  
+  --adv-admonition-warning: rgb(218,139,1);
+  --adv-admonition-warning-a: rgba(218,139,1, 0.2);
+  
+  --adv-admonition-failure: rgb(218,57,1);
+  --adv-admonition-failure-a: rgba(218,57,1,0.2);
+  
+  --adv-admonition-danger: rgb(218,98,1);
+  --adv-admonition-danger-a: rgba(218,98,1,0.2);
+  
+  --adv-admonition-bug: rgb(218,1,26);
+  --adv-admonition-bug-a: rgba(218,1,26,0.2);
+  
+  --adv-admonition-example: rgb(218,1,189);
+  --adv-admonition-example-a: rgba(218,1,189,0.2);
+  
+  --adv-admonition-quote: rgb(158,158,158);
+  --adv-admonition-quote-a: rgba(158,158,158,0.2);
+
+  color-scheme:dark
+}
