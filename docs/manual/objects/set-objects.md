@@ -4,9 +4,12 @@ SET Objects are the interactable or "dressing" objects in a level for the player
 ## General Info
 SET Objects are all handled using a base setup from a Geometry Node. The choice to use Geometry Nodes is due to it allowing a lot of leeway in creating custom gizmos and features for a SET object to make it look correct in a scene.
 
+---
+
 ## Property Reference
 
-### Object Properties
+### <u>Object Properties</u>
+These properties directly relate to the properties of the actual Blender Object in the scene.
 
 #### Position
 These objects will always make use of the location/position property of the object it is assigned to. Remember that in Blender, the Z and Y axis are flipped compared to the game. This means all Y axis in Blender as -Z from the game and the Z axis in Blender is the Y axis from the game.
@@ -19,7 +22,12 @@ The Rotation Order will be set to match the game when necessary and any axis not
 !!! warning 
     Please note that there is some lossy conversion if you swap between objects that use rotations. While the addon will attempt to preserve the rotation data when possible, it may end up lost from locking and unlocking axis or due to an object using the Geometry Node for rotation values.
 
-### SAST Properties
+!!! note
+    An Object's scale values are all locked to 1.0. If an object does use scaling of some variety, that must be handled through the [Geometry Node](#geometry-node-properties) and its properties.
+
+### <u>SAST Properties</u>
+These are the extended properties that the addon creates for Blender Objects.
+
 #### Object ID
 The Object's ID from the Object List. This sets what the object actually is. When switching objects, it will attempt to match whatever the incoming Object ID is to a loaded Object Definition. If one does not exist, it will set it to the Default SET Object (the Questionmark cube) template as a fallback.
 
@@ -49,7 +57,18 @@ In SA1/DX, this will set the "Player Dependent" flag that is used on objects tha
 
 In SA2/B, this will set the file to be exported to the _u or unsubstansive layout. 
 
-### Geometry Node Properties
+### <u>Geometry Node Properties</u>
+These properties are all bound to the Geometry Node for SET Objects.
+
+??? danger "Required Properties"
+    These properties are required per any object acting like a SET Object in the scene. The Geometry Nodes are customizable and are allowed to have additional properties, but the following six must exist and need to correspond to the following Socket values for the addon to properly apply and pull the data for SET Objects.
+
+    * Rotation X - socket_2
+    * Rotation Y - socket_3
+    * Rotation Z - socket_4
+    * Scale X - socket_5
+    * Scale Y - socket_6
+    * Scale Z - socket_7
 
 #### Rotation X
 This stores the raw short value from the Rotation X field in the SET Object. This is often used when this property is not used for real rotation and is instead used as some other type of data. This is only utilized for exports when the Object's real X Rotation axis is not locked.
@@ -70,9 +89,9 @@ This stores the value from the Y Scale field in the SET Object and is the only w
 This stores the value from the Z Scale field in the SET Object and is the only way to access this property. These values regularly differ in their use in both titles.
 
 !!! note
-    Regarding the Scale values; a SET Object always has its Object Scale values locked at 1.0 to prevent visual issues with the object that may not reflect how it's intended to look. 
+    Some SET objects may use the Scale Y and Scale Z axis for position data. Generally speaking, these will not reflect values that look correct in Blender due to needing to switch the axis in the Geometry Node's nodes. Please keep this in mind when you're editing values like this.
 
-    Additionally, some object may use the Y and Z axis for position data. Generally speaking, these will not reflect values that look correct in Blender due to needing to switch the axis in the Geometry Node's nodes. Please keep this in mind when you're editing values like this.
+---
 
 ## Technical Info
 

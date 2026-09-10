@@ -1,8 +1,10 @@
-[data-md-color-scheme="slate"] {
+[data-md-color-scheme="sastdark"] {
+
+  color-scheme: dark;
 
   /* ADV Palette */
-  --adv-foreground: rgb(251, 250, 245);
-  --adv-foreground-alt: rgb(251, 250, 245);
+  --adv-foreground: rgb(224, 224, 224);
+  --adv-foreground-alt: rgb(224, 224, 224);
   --adv-background: rgb(25, 25, 25);
 
   --adv-control: rgb(32,32,32);
@@ -58,9 +60,14 @@
   --md-code-fg-color:                  var(--adv-foreground);
   --md-code-bg-color:                  var(--adv-control);
 
-
+  /* Typeset */
+  --md-typeset-color:                  var(--adv-foreground);
+  --md-typeset-a-color:                var(--md-primary-fg-color);
 
   /* Admonition Colors */
+  --md-admonition-fg-color:          var(--md-default-fg-color);
+  --md-admonition-bg-color:          var(--md-default-bg-color);
+
   --adv-admonition-note: rgb(1,80,218); 
   --adv-admonition-note-a: rgba(1,80,218,0.2);
 

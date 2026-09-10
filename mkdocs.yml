@@ -50,7 +50,7 @@ theme:
     - content.code.annotate
   palette:
     - media: "(prefers-color-scheme: dark)"
-      scheme: slate
+      scheme: sastdark
       toggle:
         icon: material/brightness-5
         name: Switch to Light Theme
