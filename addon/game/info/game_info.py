@@ -38,5 +38,5 @@ class GameInfo:
     def get_objlist_name(self, stageid: str, actid: str) -> str:
         return self.objlists[stageid]
 
-    def get_project_folder(self, stage_id: str) -> str:
+    def get_project_folder(self, type: str, item: str, suffix: str = '') -> str:
         return ''
