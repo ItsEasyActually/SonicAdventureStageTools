@@ -209,6 +209,73 @@ class SADXPCGameInfo(GameInfo):
         'ChaoRace':             'chao_race'        
     }
 
+    actids: dict = {
+        'Act1': '0',
+        'Act2': '1',
+        'Act3': '2',
+        'Act4': '3',
+        'Act5': '4',
+        'Act6': '5'
+    }
+
+    projectfolders: dict = {
+        'Sonic':    'sonic',
+        'Miles':    'miles',
+        'Knuckles': 'knuckles',
+        'Amy':      'amy',
+        'Big':      'big',
+        'E102':     'e102',
+        'Tikal':    'tikal',
+        'Eggman':   'eggman',
+
+        'EmeraldCoast': 'stg01_beach',
+        'WindyValley':  'stg02_windy',
+        'TwinklePark':  'stg03_twinkle',
+        'SpeedHighway': 'stg04_highway',
+        'RedMountain':  'stg05_mountain',
+        'SkyDeck':      'stg06_skydeck',
+        'LostWorld':    'stg07_ruin',
+        'Icecap':       'stg08_icecap',
+        'Casinopolis':  'stg09_casino',
+        'FinalEgg':     'stg10_finalegg',
+        'HotShelter':   'stg12_hotshelter',
+
+        'Chaos0':       'boss00_chaos0',
+        'Chaos2':       'boss_chaos2',
+        'Chaos4':       'boss_chaos4',
+        'Chaos6':       'boss_chaos6',
+        'Chaos7':       'boss_chaos7',
+        'EggHornet':    'bossegm1',
+        'EggWalker':    'bossegm2',
+        'EggViper':     'bossegm3',
+        'ZERO':         'bossrobo',
+        'E101':         'boss_e101',
+        'E101R':        'boss_e101r',
+
+        'StationSquare':        'adv00_stationsquare',
+        'EggCarrierExterior':   'adv01_eggcarrierab',
+        'EggCarrierInterior':   'adv01_eggcarrierc',
+        'MysticRuins':          'adv02_mysticruins',
+        'ThePast':              'adv03_past',
+
+        'TwinkleCircuit':   'mini_cart',
+        'Sandhill':         'sandboarding',
+        'SkyChase':         'shooting',
+        'HedgehogHammer':   'stg00_practice',
+
+        'ChaoGardenSS': 'stg_garden00_ss',
+        'ChaoGardenEC': 'stg_garden01_ec',
+        'ChaoGardenMR': 'stg_garden02_mr',
+        'ChaoRace':     'stg_race1',
+
+        'Act1': 'act01',
+        'Act2': 'act02',
+        'Act3': 'act03',
+        'Act4': 'act04',
+        'Act5': 'act05',
+        'Act6': 'act06'
+    }
+
     def get_act_list(self, stage_id: str):
         match (stage_id):
             case 'StationSquare':
@@ -260,3 +327,20 @@ class SADXPCGameInfo(GameInfo):
                             extension += '01'
 
         return f'{self.objlists[stageid]}{extension}'
+
+    def get_stage_and_act_key(self, stageid: str, actid: str)-> str:
+        return f'{stageid} {self.actids[actid]}'
+
+    def get_project_folder(self, type: str, item: str, suffix: str = '') -> str:
+        folderpath: str = ''
+        item: str = f'{self.projectfolders[item]}\\'
+        if (len(suffix) > 0):
+            item += f'{self.projectfolders[suffix]}\\'
+        match (type):
+            case 'Character':
+                folderpath = f'figure\\{item}'
+            case 'Stage':
+                folderpath= item
+
+        return folderpath
+
