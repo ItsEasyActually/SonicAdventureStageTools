@@ -27,10 +27,19 @@ namespace SAST.Lib.CAM.SA2
 		/// </summary>
 		public ContentFlags Content;
 
+		/// <summary>
+		/// <see cref="SA2CAMGroup"/> for <see cref="SA2CAMObject"/>s and <see cref="SA2PointObject"/>s for Single Player.
+		/// </summary>
 		public SA2CAMGroup SinglePlayerCameraGroup { get; set; } = new SA2CAMGroup();
 
+		/// <summary>
+		/// <see cref="SA2CAMGroup"/> for <see cref="SA2CAMObject"/>s and <see cref="SA2PointObject"/>s for the Demo.
+		/// </summary>
 		public SA2CAMGroup DemoCameraGroup { get; set; } = new SA2CAMGroup();
 
+		/// <summary>
+		/// <see cref="SA2CAMGroup"/> for <see cref="SA2CAMObject"/>s and <see cref="SA2PointObject"/>s for Multiplayer.
+		/// </summary>
 		public SA2CAMGroup MultiplayerCameraGroup { get; set; } = new SA2CAMGroup();
 
 		#endregion
@@ -198,6 +207,9 @@ namespace SAST.Lib.CAM.SA2
 				endianBinaryWriter.WriteObject(point);
 		}
 
+		/// <summary>
+		/// Swaps the Rotation order for the Camera Collision and the Camera Rotation from ZXY to XYZ.
+		/// </summary>
 		public void SwapRotations()
 		{
 			if (SinglePlayerCameraGroup.CameraCount > 0)
@@ -228,6 +240,9 @@ namespace SAST.Lib.CAM.SA2
 			}
 		}
 
+		/// <summary>
+		/// Swaps the Rotation order for the Camera Collision and the Camera Rotation from XYZ to ZXY.
+		/// </summary>
 		public void SwapRotationsBack()
 		{
 			if (SinglePlayerCameraGroup.CameraCount > 0)

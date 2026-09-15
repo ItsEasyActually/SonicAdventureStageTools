@@ -1,10 +1,4 @@
-﻿using SAST.Lib.CAM.SA1;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace SAST.Lib.CAM.SA2
 {
 	public class SA2CAMGroup

@@ -138,6 +138,10 @@ namespace SAST.Lib.SET
 			return vec;
 		}
 
+		/// <summary>
+		/// Directly sets the <see cref="Flags"/> underlying byte value.
+		/// </summary>
+		/// <param name="val"></param>
 		public void SetObjectFlags(int val) { flags = (byte)val; }
 
 		#endregion
