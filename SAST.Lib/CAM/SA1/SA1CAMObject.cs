@@ -40,12 +40,12 @@ namespace SAST.Lib.CAM.SA1
 
 		#region Constructors
 		/// <summary>
-		/// Default constructor for an <see cref="SA1CamObject"/>.
+		/// Default constructor for an <see cref="SA1CAMObject"/>.
 		/// </summary>
 		public SA1CAMObject() { }
 
 		/// <summary>
-		/// Creates a new <see cref="SA1CamObject"/> using the provided data.
+		/// Creates a new <see cref="SA1CAMObject"/> using the provided data.
 		/// </summary>
 		/// <param name="mode">Camera Mode</param>
 		/// <param name="priority">Camera's Priority</param>
@@ -88,7 +88,7 @@ namespace SAST.Lib.CAM.SA1
 
 		#region Functions
 		/// <summary>
-		/// <see cref="IBinarySerializable"/> method for reading <see cref="SA1CamObject"/>.
+		/// <see cref="IBinarySerializable"/> method for reading <see cref="SA1CAMObject"/>.
 		/// </summary>
 		/// <param name="endianBinaryReader"></param>
 		public void Read(BinaryObjectReader endianBinaryReader)
@@ -110,7 +110,7 @@ namespace SAST.Lib.CAM.SA1
 		}
 
 		/// <summary>
-		/// <see cref="IBinarySerializable"/> method for writing <see cref="SA1CamObject"/>.
+		/// <see cref="IBinarySerializable"/> method for writing <see cref="SA1CAMObject"/>.
 		/// </summary>
 		/// <param name="endianBinaryWriter"></param>
 		public void Write(BinaryObjectWriter endianBinaryWriter)
@@ -132,11 +132,16 @@ namespace SAST.Lib.CAM.SA1
 			endianBinaryWriter.WriteSingle(CameraDistance);
 		}
 
+		/// <summary>
+		/// Validates the input is a valid <see cref="SA1CamMode"/> and returns the correct enum. 
+		/// 
+		/// Defaults to <see cref="SA1CamMode.Follow"/> for invalid input.
+		/// </summary>
+		/// <param name="val"></param>
+		/// <returns></returns>
 		public static SA1CamMode GetCamModeFromString(string val)
 		{
-			bool parsed = Enum.TryParse<SA1CamMode>(val, out SA1CamMode result);
-
-			if (parsed)
+			if (Enum.TryParse<SA1CamMode>(val, out SA1CamMode result))
 				return result;
 			else
 			{
@@ -145,11 +150,16 @@ namespace SAST.Lib.CAM.SA1
 			}
 		}
 
+		/// <summary>
+		/// Validates the input is a valid <see cref="SA1CamAdjustMode"/> and returns the correct enum.
+		/// 
+		/// Defaults to <see cref="SA1CamAdjustMode.Relative3"/> for invalid input.
+		/// </summary>
+		/// <param name="val"></param>
+		/// <returns></returns>
 		public static SA1CamAdjustMode GetAdjustModeFromString(string val)
 		{
-			bool parsed = Enum.TryParse<SA1CamAdjustMode>(val, out SA1CamAdjustMode result);
-
-			if (parsed) 
+			if (Enum.TryParse<SA1CamAdjustMode>(val, out SA1CamAdjustMode result)) 
 				return result;
 			else
 			{
@@ -158,11 +168,16 @@ namespace SAST.Lib.CAM.SA1
 			}
 		}
 
+		/// <summary>
+		/// Validates the input is a valid <see cref="SA1CamCollisionShape"/> and returns the correct enum.
+		/// 
+		/// Defaults to <see cref="SA1CamCollisionShape.Block"/> for invalid input.
+		/// </summary>
+		/// <param name="val"></param>
+		/// <returns></returns>
 		public static SA1CamCollisionShape GetCollisionShapeFromString(string val)
 		{
-			bool parsed = Enum.TryParse<SA1CamCollisionShape>(val, out SA1CamCollisionShape result);
-
-			if (parsed)
+			if (Enum.TryParse<SA1CamCollisionShape>(val, out SA1CamCollisionShape result))
 				return result;
 			else
 			{
