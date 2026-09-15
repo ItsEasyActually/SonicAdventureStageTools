@@ -9,40 +9,40 @@ namespace SAST.Lib.CAM.SA1
 		#region Internal
 		#region Variables
 		/// <summary>
-		/// List of <see cref="SA1CamObject"/>.
+		/// List of <see cref="SA1CAMObject"/>.
 		/// </summary>
 		protected List<SA1CAMObject> Cameras = new List<SA1CAMObject>();
 
 		/// <summary>
-		/// Total number of <see cref="SA1CamObject"/>s in the <see cref="SA1CamFile"/>.
+		/// Total number of <see cref="SA1CAMObject"/>s in the <see cref="SA1CAMFile"/>.
 		/// </summary>
 		public int CameraCount { get { return Cameras.Count; } }
 
 		/// <summary>
-		/// Adds a <see cref="SA1CamObject"/> to the <see cref="SA1CamFile"/>'s Cameras.
+		/// Adds a <see cref="SA1CAMObject"/> to the <see cref="SA1CAMFile"/>'s Cameras.
 		/// </summary>
 		/// <param name="camera"></param>
 		public void AddCamera(SA1CAMObject camera) { Cameras.Add(camera); }
 
 		/// <summary>
-		/// Removes the supplied <see cref="SA1CamObject"/> from the <see cref="SA1CamFile"/>'s Cameras.
+		/// Removes the supplied <see cref="SA1CAMObject"/> from the <see cref="SA1CAMFile"/>'s Cameras.
 		/// </summary>
 		/// <param name="camera"></param>
 		public void RemoveCamera(SA1CAMObject camera) { Cameras.Remove(camera); }
 
 		/// <summary>
-		/// Removes the <see cref="SA1CamObject"/> at the supplied index from the <see cref="SA1CamFile"/>'s Cameras.
+		/// Removes the <see cref="SA1CAMObject"/> at the supplied index from the <see cref="SA1CAMFile"/>'s Cameras.
 		/// </summary>
 		/// <param name="index"></param>
 		public void RemoveCamera(int index) { Cameras.RemoveAt(index); }
 
 		/// <summary>
-		/// Clears the <see cref="SA1CamFile"/>'s Cameras.
+		/// Clears the <see cref="SA1CAMFile"/>'s Cameras.
 		/// </summary>
 		public void ClearCameras() { Cameras.Clear(); }
 
 		/// <summary>
-		/// Gets the <see cref="SA1CamFile"/>'s Cameras.
+		/// Gets the <see cref="SA1CAMFile"/>'s Cameras.
 		/// </summary>
 		/// <returns>A copy of the Cameras List.</returns>
 		public List<SA1CAMObject> GetCameras() { return Cameras; }
@@ -59,7 +59,7 @@ namespace SAST.Lib.CAM.SA1
 
 		#region Functions
 		/// <summary>
-		/// <see cref="IBinarySerializable"/> method for reading <see cref="SA1CamFile"/>.
+		/// <see cref="IBinarySerializable"/> method for reading <see cref="SA1CAMFile"/>.
 		/// </summary>
 		/// <param name="endianBinaryReader"></param>
 		public void Read(BinaryObjectReader endianBinaryReader)
@@ -73,7 +73,7 @@ namespace SAST.Lib.CAM.SA1
 		}
 
 		/// <summary>
-		/// <see cref="IBinarySerializable"/> method for writing <see cref="SA1CamFile"/>.
+		/// <see cref="IBinarySerializable"/> method for writing <see cref="SA1CAMFile"/>.
 		/// </summary>
 		/// <param name="endianBinaryWriter"></param>
 		public void Write(BinaryObjectWriter endianBinaryWriter)
