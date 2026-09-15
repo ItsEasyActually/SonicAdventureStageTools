@@ -2,7 +2,8 @@ import bpy
 from bpy.props import (
     EnumProperty,
     IntProperty,
-    FloatProperty
+    FloatProperty,
+    BoolProperty
 )
 
 from ...game.info import GameInfoManager
@@ -95,6 +96,15 @@ class SASTCAMObjectProperties(bpy.types.PropertyGroup):
         description='Priority of the volume for controlling the camera. Higher values take priority.',
         default=0
     )
+
+    #region SA1 Camera Properties
+    for_missionmode: BoolProperty(
+        name='Mission Mode',
+        description='Camera Object will be exported for Mission Mode layout instead of the main layout.',
+        default=False
+    )
+
+    #endregion
 
     #region SA2 Camera Properties
     int_prop1: IntProperty(

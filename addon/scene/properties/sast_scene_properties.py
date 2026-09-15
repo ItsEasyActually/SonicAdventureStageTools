@@ -198,6 +198,11 @@ class SASTSceneProperties(bpy.types.PropertyGroup):
 
     #endregion
 
+    #region Mission Mode Object List Functions
+    # Not populated with anything, made as a placeholder for future additions.
+
+    #endregion
+
     @staticmethod
     def get_properties():
         '''Returns the Sonic Adventure Stage Tools Properties for the current Scene.'''
