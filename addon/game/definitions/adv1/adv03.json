@@ -907,11 +907,11 @@
             "LoadDistance": 1000000
         },
         "BlenderInfo": {
-            "CommonName": "Fire",
+            "CommonName": "Fire (Sprite)",
             "RotationMode": "NONE",
             "ItemInfo": "",
-            "AssetName": "",
-            "AssetFile": "",
+            "AssetName": "PastFire",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\adv\\\\past\\\\PastFire.blend",
             "RelativeAssetFile": true,
             "PropertyInfo": {
                 "UseXAngleProperty": false,
@@ -920,10 +920,10 @@
                 "YAnglePropertyName": "",
                 "UseZAngleProperty": false,
                 "ZAnglePropertyName": "",
-                "UseXScaleProperty": false,
-                "XScalePropertyName": "",
-                "UseYScaleProperty": false,
-                "YScalePropertyName": "",
+                "UseXScaleProperty": true,
+                "XScalePropertyName": "X Scale",
+                "UseYScaleProperty": true,
+                "YScalePropertyName": "Y Scale",
                 "UseZScaleProperty": false,
                 "ZScalePropertyName": ""
             }
@@ -971,7 +971,7 @@
         "BlenderInfo": {
             "CommonName": "Fire Smoke",
             "RotationMode": "NONE",
-            "ItemInfo": "",
+            "ItemInfo": "Object is bugged in-game and will not display properly. It has been left as a ? block for now.",
             "AssetName": "",
             "AssetFile": "",
             "RelativeAssetFile": true,
