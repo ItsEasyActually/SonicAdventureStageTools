@@ -3,7 +3,8 @@ import os
 from bpy.props import (
     StringProperty,
     CollectionProperty,
-    EnumProperty
+    EnumProperty,
+    BoolProperty
 )
 from ...utilities.geonode.geometry_node_manager import GeometryNodeManager
 
@@ -26,6 +27,12 @@ class SASTExportBase(bpy.types.Operator):
             ('COLLECTION','Collection','Exports valid objects in the selected collection.')
         ],
         default='ALL'
+    )
+
+    big_endian: BoolProperty(
+        name='Big Endian',
+        description='Exports the file using Big Endian instead of Little Endian. Tick this for SA2BPC or GC related exports.',
+        default=False
     )
 
     def populate_object_collection(self, context: bpy.types.Context):

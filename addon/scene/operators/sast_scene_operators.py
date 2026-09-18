@@ -137,6 +137,7 @@ class SASTExportCameraManual(SASTExportBase):
 
     def draw(self, context: bpy.types.Context):
         layout: bpy.types.UILayout = self.layout
+        layout.prop(data=self, property='big_endian')
         layout.prop(data=self, property='collection_mode')
         if (self.collection_mode == 'COLLECTION'):
             layout.prop(data=self, property='object_collection')
@@ -166,6 +167,16 @@ class SASTExportSETManual(SASTExportBase):
     bl_idname='sastexport.setmanual'
     bl_label='Export SET File'
 
+    filter_glob: StringProperty(
+        default='*.bin;'
+    )
+
+    def draw(self, context: bpy.types.Context):
+        layout: bpy.types.UILayout = self.layout
+        layout.prop(data=self, property='big_endian')
+        if (self.collection_mode == 'COLLECTION'):
+            layout.prop(data=self, property='object_collection')
+
     @classmethod
     def poll(cls, constext: bpy.types.Context) -> bool:
         scene_props: SASTSceneProperties = SASTSceneProperties.get_properties()
@@ -183,7 +194,7 @@ class SASTExportSETManual(SASTExportBase):
 
             if (len(objs) > 0):
                 from ...utilities.io.sast_export import SASTExportManager
-                SASTExportManager.export_setfile(self.filepath, objs, False)
+                SASTExportManager.export_setfile(self.filepath, objs, self.big_endian)
         except Exception as error:
             raise error
 
