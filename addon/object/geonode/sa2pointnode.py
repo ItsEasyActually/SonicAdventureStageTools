@@ -21,7 +21,7 @@ class SA2PointNode(SASTGeonodeBase):
 
     @staticmethod
     def poll(obj: bpy.types.Object) -> bool:
-        return GeometryNodeManager.has_geometry_node(obj, SA2PointNode.modifier_name)
+        return GeometryNodeManager.has_named_geometry_node(obj, SA2PointNode.modifier_name)
 
     @staticmethod
     def make(obj: bpy.types.Object) -> bpy.types.NodesModifier:

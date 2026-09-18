@@ -32,7 +32,7 @@ class SA2CameraNode(SASTGeonodeBase):
 
     @staticmethod
     def poll(obj: bpy.types.Object) -> bool:
-        return GeometryNodeManager.has_geometry_node(obj, SA2CameraNode.modifier_name)
+        return GeometryNodeManager.has_named_geometry_node(obj, SA2CameraNode.modifier_name)
 
     @staticmethod
     def make(obj: bpy.types.Object) -> bpy.types.NodesModifier:

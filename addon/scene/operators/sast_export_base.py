@@ -63,7 +63,7 @@ class SASTExportBase(bpy.types.Operator):
         if (len(search_collection) > 0):
             for obj in search_collection:
                 if (obj.type == 'MESH'):
-                    if (GeometryNodeManager.has_geometry_node(obj, geonodename)):
+                    if (GeometryNodeManager.has_named_geometry_node(obj, geonodename)):
                         objs.append(obj)
 
         return objs

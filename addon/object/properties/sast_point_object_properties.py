@@ -15,7 +15,7 @@ class SASTPointObjectProperties(bpy.types.PropertyGroup):
     '''Sonic Adventure Stage Tools Point Object Properties'''
 
     def valid_object(self, object: bpy.types.Object):
-        if (GeometryNodeManager.has_geometry_node(object, SA2PointNode.modifier_name)):
+        if (GeometryNodeManager.has_named_geometry_node(object, SA2PointNode.modifier_name)):
             return True
         else:
             return False
