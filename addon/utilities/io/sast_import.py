@@ -366,7 +366,7 @@ class SASTImportManager:
         PyNetManager.load_dll()
         from SAST.Lib.Blender import ImportManager
         
-        SASTLogger.log(f'Importing SA1 Camera File: {file}')
+        SASTLogger.log(f'Importing SA2 Camera File: {file}')
         camfile = ImportManager.ImportSA2CAMFile(file)
         SASTImportManager.process_sa2_cam_groups(camfile, mesh, collection, context)     
 
@@ -378,7 +378,7 @@ class SASTImportManager:
 
         files = ImportManager.ImportSA2CAMFileAuto(directory, stage_id, sub_id)
         for file in files:
-            SASTLogger.log(f'Importing SA1 Camera File: {file}')
+            SASTLogger.log(f'Importing SA2 Camera File: {file}')
             SASTImportManager.process_sa2_cam_groups(file, SASTImportManager.get_mesh(), base_collection, context)
         
     #endregion
