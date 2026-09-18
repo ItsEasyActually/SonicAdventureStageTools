@@ -3,7 +3,7 @@ bl_info = {
 	"name": "Sonic Adventure Stage Tools",
 	"author": "ItsEasyActually",
 	"description": "Stage Editor Toolset for Sonic Adventure and Sonic Adventure 2.",
-	"version": (0, 3, 3),
+	"version": (0, 3, 4),
 	"blender": (5, 2, 0),
 	"location": "Tools Sidbar",
 	"category": "Tools"
