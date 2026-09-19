@@ -474,7 +474,7 @@
         },
         "BlenderInfo": {
             "CommonName": "Hint Monitor",
-            "RotationMode": "Y",
+            "RotationMode": "Z",
             "ItemInfo": "",
             "AssetName": "HintBox",
             "AssetFile": "blend\\\\set\\\\sa1\\\\common\\\\HintBox.blend",
