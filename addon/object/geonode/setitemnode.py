@@ -149,12 +149,12 @@ class SetItemNode(SASTGeonodeBase):
             if (len(x_angle_prop_name) > 0):
                 x_name = x_angle_prop_name
             layout.prop(data=self.node.properties.inputs.Socket_2, property='value', text=x_name)
-        if ((rotation_order.__contains__('Y') == False) and (use_y_angle == True)):
+        if ((rotation_order.__contains__('Z') == False) and (use_y_angle == True)):
             y_name: str = 'Y Angle Property'
             if (len(y_angle_prop_name) > 0):
                 y_name = y_angle_prop_name
             layout.prop(data=self.node.properties.inputs.Socket_3, property='value', text=y_name)
-        if ((rotation_order.__contains__('Z') == False) and (use_z_angle == True)):
+        if ((rotation_order.__contains__('Y') == False) and (use_z_angle == True)):
             z_name: str = 'Z Angle Property'
             if (len(z_angle_prop_name) > 0):
                 z_name = z_angle_prop_name
