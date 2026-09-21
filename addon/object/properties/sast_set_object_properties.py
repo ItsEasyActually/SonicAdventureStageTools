@@ -40,6 +40,8 @@ class SASTSETObjectProperties(bpy.types.PropertyGroup):
 
     def update_objectid(self, context: bpy.types.Context):
         obj: bpy.types.Object = bpy.context.active_object
+        if (obj == None):
+            return
         scene_props: SASTSceneProperties = SASTSceneProperties.get_properties()
         item: SASTSETDefinitionProperties = scene_props.objlist[int(self.objectid)]
         xr: float = 0 
