@@ -1,5 +1,3 @@
-from this import d
-
 import bpy
 from bpy.props import (
     StringProperty,
