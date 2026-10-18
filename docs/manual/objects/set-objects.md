@@ -1,7 +1,7 @@
 # SET Objects
 SET Objects are the interactable or "dressing" objects in a level for the player, ie springs, rings, spikes, enemies, etc. While many do get shared, there is a lot of variety in how they work across both games. 
 
-## General Info
+## General Information
 SET Objects are all handled using a base setup from a Geometry Node. The choice to use Geometry Nodes is due to it allowing a lot of leeway in creating custom gizmos and features for a SET object to make it look correct in a scene.
 
 ---
