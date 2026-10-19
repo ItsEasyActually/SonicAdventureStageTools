@@ -61,7 +61,18 @@ class SA1CameraNode(SASTGeonodeBase):
 
     def draw_ui(self, layout: bpy.types.UILayout, cammode: str):
         '''Draws the properties menu.'''
-        layout.prop(data=self.node.properties.Socket_4, property='value', text='Volume Shape')
+        layout.prop(data=self.node.properties.inputs.Socket_4, property='value', text='Volume Shape')
+        shape: int = self.get_collision_shape()
+        match (shape):
+            case 0:
+                layout.prop(data=self.node.properties.inputs.Socket_9, property='value', text='Radius')
+            case 1:
+                layout.prop(data=self.node.properties.inputs.Socket_8, property='value', text='Volume X Scale')
+                layout.prop(data=self.node.properties.inputs.Socket_10, property='value', text='Volume Y Scale')
+            case 2:
+                layout.prop(data=self.node.properties.inputs.Socket_8, property='value', text='Volume X Scale')
+                layout.prop(data=self.node.properties.inputs.Socket_10, property='value', text='Volume Y Scale')
+                layout.prop(data=self.node.properties.inputs.Socket_9, property='value', text='Volume Z Scale')
         layout.separator(factor=1, type='LINE')
         match (cammode):
             case 'Ashland' | 'AshlandI':
