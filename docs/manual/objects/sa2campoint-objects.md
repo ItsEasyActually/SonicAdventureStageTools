@@ -35,4 +35,6 @@ Retained for posterity, it appears to be a radius size for the camera within the
 When enabled, the point will be active an interactable with the player in the scene. If it is not enabled, the point is still available for linking but cannot be triggered by the player.
 
 #### Enable Player Tracking
-When a [Direction Point](#direction-point) is set, 
+When a [Direction Point](#direction-point) is set, this property changes the way the cameras will move through a Point based path. When it's enabled, it will attempt to keep the player within the view of the camera and track them. When disabled, the camera will follow the Point path and not fully track the player. 
+
+For in-game usage, you can see the setup used within Radical Highway.
