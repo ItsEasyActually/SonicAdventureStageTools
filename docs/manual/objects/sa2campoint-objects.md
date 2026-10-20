@@ -1,5 +1,5 @@
 # Camera Path Points (Sonic Adventure 2)
-The information here covers how the SA2 Space Camera Points are implemented within the SAST addon. For more information regarding the camera data, please [follow this](https://sadocs.unreliable.network/wiki/Sonic_Adventure_2/Camera_Information) link over to the SA Docs wiki.
+The information here covers how the SA2 Space Camera Points are implemented within the SAST addon. For more information regarding the camera data, please [follow this](https://sadocs.unreliable.network/wiki/Sonic_Adventure_2/Camera_Information#Camera_Point_Data) link over to the SA Docs wiki.
 
 ## General Information
 

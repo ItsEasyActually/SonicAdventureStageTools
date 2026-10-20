@@ -72,6 +72,7 @@ nav:
       - Scene Settings: 
         - manual/scene/index.md
         - manual/scene/settings.md
+        - manual/scene/object-definitions.md
         - manual/scene/object-list.md
       - Utilities:
         - manual/utilities/index.md
