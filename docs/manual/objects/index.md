@@ -19,7 +19,7 @@ This sets what the object represents in the scene.
 
 * None: This is the default for any mesh object in the scene. 
 * [Set Object](set-objects.md): This will make the object act as a SET object in the scene. This will remove any existing modifiers for the object and replace it with either the loaded Geometry Node for the SET item in slot 0 or the default set object if nothing is loaded.
-* Cam Object ([SA1](sa1cam-objects.md)) | ([SA2](a2cam-objects.md)): This will convert the object to a Camera object in the scene. This will switch context based on which game is selected as the Camera objects between both titles are not the same.
+* Cam Object ([SA1](sa1cam-objects.md)) | ([SA2](sa2cam-objects.md)): This will convert the object to a Camera object in the scene. This will switch context based on which game is selected as the Camera objects between both titles are not the same.
 * [Camera Point](sa2campoint-objects.md): **SA2 ONLY**, This will convert the object to a Camera point in the scene.
 
 #### Export Properties
