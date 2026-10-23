@@ -1,0 +1,4 @@
+
+# Zensical Local Build folders should be ignored.
+site/
+.cache/

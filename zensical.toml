@@ -1,0 +1,129 @@
+[project]
+site_url = "https://itseasyactually.github.io/SonicAdventureStageTools"
+site_name = "Sonic Adventure Stage Tools for Blender"
+site_description = "Usage manual and guides for the Sonic Adventure Stage Tools Blender Addon."
+site_author = "ItsEasyActually"
+
+extra_javascript = [
+  "https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js",
+  "_sitedev/javascript/tablesort.js",
+]
+
+copyright = "Documentation is licensed under Creative Commons NC-BY-SA. Zensical is licensed under MIT."
+
+repo_url = "https://github.com/ItsEasyActually/SonicAdventureStageTools/"
+repo_name = "SonicAdventureStageTools"
+# edit_uri = "edit/docs/docs/"
+
+nav = [
+  { "Home" = "index.md" },
+  { "Installation" = "installation/index.md" },
+  { "Manual" = [
+    "manual/index.md",
+    { "Editor Panel" = [
+      { "Scene Settings" = [
+        "manual/scene/index.md",
+        "manual/scene/settings.md",
+        "manual/scene/object-definitions.md",
+        "manual/scene/object-list.md"
+      ]},
+      { "Utilities" = "manual/utilities/index.md" },
+      { "Editor Objects" = [
+        "manual/objects/index.md",
+        { "CAM Objects" = [
+          "manual/objects/sa1cam-objects.md",
+          "manual/objects/sa2cam-objects.md",
+          "manual/objects/sa2campoint-objects.md"
+        ]},
+        { "SET Objects" = "manual/objects/set-objects.md" }
+      ]},
+      { "Addon Preferences" = "manual/preferences/index.md" }
+    ]},
+  ]},
+  { "Guides" = [
+    "guides/index.md",
+    { "General Usage" = "guides/general-usage.md" }
+  ]},
+  { "Contributing" = [
+    "contributing/index.md",
+    { "Contribution Guidelines" = [
+      "contributing/addon-contributing.md",
+      "contributing/docs-contributing.md"
+    ]}
+  ]}
+]
+
+[project.theme]
+# variant = "classic"
+# custom_dir = "overrides"
+favicon = "_sitedev/assets/svg/favicon.svg"
+language = "en"
+features = [
+  "navigation.instant",
+  "navigation.instant.prefetch",
+  "navigation.tabs",
+  "navigation.tabs.sticky",
+  "navigation.indexes",
+  "navigation.sections",
+  "navigation.code.annotate"
+]
+logo = "_sitedev/assets/svg/icon.svg"
+
+[project.theme.font]
+text = "Arimo"
+code = "Noto Sans Mono"
+
+[[project.theme.palette]]
+media = "(prefers-color-scheme: light)"
+scheme = "default"
+toggle.icon = "material/brightness-2"
+toggle.name = "Switch to dark mode"
+primary = "indigo"
+accent = "deep orange"
+
+[[project.theme.palette]]
+media = "(prefers-color-scheme: dark)"
+scheme = "slate"
+toggle.icon = "material/brightness-5"
+toggle.name = "Switch to system preference"
+primary = "blue"
+accent = "orange"
+
+[[project.extra.social]]
+icon = "fontawesome/brands/github"
+link = "https://github.com/ItsEasyActually/SonicAdventureStageTools/"
+
+[[project.extra.social]]
+icon = "fontawesome/brands/bluesky"
+link = "https://bsky.app/profile/itseasyactually.bsky.social"
+
+[project.markdown_extensions]
+abbr = {}
+admonition = {}
+attr_list = {}
+def_list = {}
+footnotes = {}
+md_in_html = {}
+toc.permalink = true
+pymdownx.arithmatex.generic = true
+pymdownx.betterem = {}
+pymdownx.caret = {}
+pymdownx.details = {}
+pymdownx.emoji.emoji_generator = "zensical.extensions.emoji.to_svg"
+pymdownx.emoji.emoji_index = "zensical.extensions.emoji.twemoji"
+pymdownx.highlight.anchor_linenums = true
+pymdownx.highlight.line_spans = "__span"
+pymdownx.highlight.pygments_lang_class = true
+pymdownx.inlinehilite = {}
+pymdownx.keys = {}
+pymdownx.magiclink = {}
+pymdownx.mark = {}
+pymdownx.smartsymbols = {}
+# pymdownx.snippets.base_path = "includes"
+pymdownx.superfences.custom_fences = [
+  { name = "mermaid", class = "mermaid", format = "pymdownx.superfences.fence_code_format" },
+]
+pymdownx.tabbed.alternate_style = true
+pymdownx.tabbed.combine_header_slug = true
+pymdownx.tasklist.custom_checkbox = true
+pymdownx.tilde = {}
