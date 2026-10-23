@@ -1,4 +1,4 @@
-name: Zensical Build
+name: build
 on:
   push:
     branches:
