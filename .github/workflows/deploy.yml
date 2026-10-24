@@ -19,8 +19,13 @@ jobs:
       - uses: actions/setup-python@v6
         with:
           python-version: 3.x
-      - run: pip install uv
-      - run: uv run zensical build --clean
+      - name: Install UV
+        uses: astral-sh/setup-uv@v4
+        with:
+          version: "latest"
+      - name: Run Zensical through UV.
+        run: |
+          uv run --with zensical build --clean
       - uses: actions/upload-pages-artifact@v5
         with:
           path: site
