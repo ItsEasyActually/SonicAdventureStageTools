@@ -23,9 +23,6 @@ jobs:
         uses: astral-sh/setup-uv@v4
         with:
           version: "latest"
-      - name: Generate Extension Index
-        run: |
-          blender --command extension server-generate --repo-dir=docs/extensions
       - name: Run Zensical through UV.
         run: |
           pip install zensical
