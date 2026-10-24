@@ -1,4 +1,4 @@
-from nt import mkdir
+import os
 from pathlib import Path
 import requests
 
@@ -31,6 +31,7 @@ def download_asset(release = None):
                     f.write(response.content)
 
 def main() -> None:
+    token = os.getenv("GITHUB_TOKEN")
     stable, dev = get_releases()
     if extensions_dir.exists() == False:
         extensions_dir.mkdir(parents=True, exist_ok=True)

@@ -29,6 +29,8 @@ jobs:
       - name: Run Scripts
         run: |
           uv run --with requests docs/_sitedev/build-repo.py
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
       - name: Generate Extension Index
         run: |
           blender --command extension server-generate --repo-dir=docs/extensions
