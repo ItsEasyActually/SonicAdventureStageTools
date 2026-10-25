@@ -1,3 +1,8 @@
+---
+hide:
+  - footer
+---
+
 # Documentation Contribution Guidelines
 
 [Documentation Source Code](https://github.com/ItsEasyActually/SonicAdventureStageTools/tree/docs)

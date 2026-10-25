@@ -27,7 +27,9 @@ nav = [
         "manual/scene/object-definitions.md",
         "manual/scene/object-list.md"
       ]},
-      { "Utilities" = "manual/utilities/index.md" },
+      { "Utilities" = [
+        "manual/utilities/index.md" 
+      ]},
       { "Editor Objects" = [
         "manual/objects/index.md",
         { "CAM Objects" = [
@@ -37,12 +39,21 @@ nav = [
         ]},
         { "SET Objects" = "manual/objects/set-objects.md" }
       ]},
-      { "Addon Preferences" = "manual/preferences/index.md" }
+      { "Addon Preferences" = [
+        "manual/preferences/index.md" 
+      ]}
     ]},
   ]},
   { "Guides" = [
     "guides/index.md",
-    { "General Usage" = "guides/general-usage.md" }
+    { "Getting Started" = [
+      "guides/getting-started/index.md",
+      { "Scene Setup" = "guides/getting-started/scene-setup.md" },
+      { "Object List" = "guides/getting-started/objectlist.md" },
+      { "Importing Objects" = "guides/getting-started/importing.md" },
+      { "Editing Objects" = "guides/getting-started/editing-objects.md" },
+      { "Exporting Objects" = "guides/getting-started/exporting.md" }
+    ]}
   ]},
   { "Contributing" = [
     "contributing/index.md",
@@ -61,11 +72,13 @@ language = "en"
 features = [
   "navigation.instant",
   "navigation.instant.prefetch",
+  "navigation.instant.progress",
   "navigation.tabs",
   "navigation.tabs.sticky",
   "navigation.indexes",
   "navigation.sections",
-  "navigation.code.annotate"
+  "navigation.code.annotate",
+  "navigation.footer"
 ]
 logo = "_sitedev/assets/svg/icon.svg"
 

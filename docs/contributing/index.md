@@ -1,6 +1,7 @@
 ---
 hide:
   - toc
+  - footer
 ---
 # Contributing to the Sonic Adventure Stage Tools
 
