@@ -225,24 +225,24 @@
             "LoadDistance": 0
         },
         "BlenderInfo": {
-            "CommonName": "",
-            "RotationMode": "NONE",
+            "CommonName": "Item Stand",
+            "RotationMode": "Z",
             "ItemInfo": "",
-            "AssetName": "",
-            "AssetFile": "",
+            "AssetName": "ItemStand",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\adv\\\\mysticruins\\\\ItemStand.blend",
             "RelativeAssetFile": true,
             "PropertyInfo": {
-                "UseXAngleProperty": true,
+                "UseXAngleProperty": false,
                 "XAnglePropertyName": "",
-                "UseYAngleProperty": true,
+                "UseYAngleProperty": false,
                 "YAnglePropertyName": "",
-                "UseZAngleProperty": true,
+                "UseZAngleProperty": false,
                 "ZAnglePropertyName": "",
                 "UseXScaleProperty": true,
-                "XScalePropertyName": "",
+                "XScalePropertyName": "Item Type",
                 "UseYScaleProperty": true,
-                "YScalePropertyName": "",
-                "UseZScaleProperty": true,
+                "YScalePropertyName": "Timer Speed",
+                "UseZScaleProperty": false,
                 "ZScalePropertyName": ""
             }
         }
@@ -256,24 +256,24 @@
             "LoadDistance": 0
         },
         "BlenderInfo": {
-            "CommonName": "",
-            "RotationMode": "NONE",
+            "CommonName": "Knuckles Dig Site 1",
+            "RotationMode": "Z",
             "ItemInfo": "",
-            "AssetName": "",
-            "AssetFile": "",
+            "AssetName": "DigPlace1",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\adv\\\\mysticruins\\\\DigPlace1.blend",
             "RelativeAssetFile": true,
             "PropertyInfo": {
-                "UseXAngleProperty": true,
+                "UseXAngleProperty": false,
                 "XAnglePropertyName": "",
-                "UseYAngleProperty": true,
+                "UseYAngleProperty": false,
                 "YAnglePropertyName": "",
-                "UseZAngleProperty": true,
+                "UseZAngleProperty": false,
                 "ZAnglePropertyName": "",
-                "UseXScaleProperty": true,
+                "UseXScaleProperty": false,
                 "XScalePropertyName": "",
-                "UseYScaleProperty": true,
+                "UseYScaleProperty": false,
                 "YScalePropertyName": "",
-                "UseZScaleProperty": true,
+                "UseZScaleProperty": false,
                 "ZScalePropertyName": ""
             }
         }
@@ -287,24 +287,24 @@
             "LoadDistance": 0
         },
         "BlenderInfo": {
-            "CommonName": "",
-            "RotationMode": "NONE",
+            "CommonName": "Knuckles Dig Site 2",
+            "RotationMode": "Z",
             "ItemInfo": "",
-            "AssetName": "",
-            "AssetFile": "",
+            "AssetName": "DigPlace2",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\adv\\\\mysticruins\\\\DigPlace2.blend",
             "RelativeAssetFile": true,
             "PropertyInfo": {
-                "UseXAngleProperty": true,
+                "UseXAngleProperty": false,
                 "XAnglePropertyName": "",
-                "UseYAngleProperty": true,
+                "UseYAngleProperty": false,
                 "YAnglePropertyName": "",
-                "UseZAngleProperty": true,
+                "UseZAngleProperty": false,
                 "ZAnglePropertyName": "",
-                "UseXScaleProperty": true,
+                "UseXScaleProperty": false,
                 "XScalePropertyName": "",
-                "UseYScaleProperty": true,
+                "UseYScaleProperty": false,
                 "YScalePropertyName": "",
-                "UseZScaleProperty": true,
+                "UseZScaleProperty": false,
                 "ZScalePropertyName": ""
             }
         }
@@ -318,24 +318,24 @@
             "LoadDistance": 0
         },
         "BlenderInfo": {
-            "CommonName": "",
-            "RotationMode": "NONE",
+            "CommonName": "Detonator",
+            "RotationMode": "Z",
             "ItemInfo": "",
-            "AssetName": "",
-            "AssetFile": "",
+            "AssetName": "EggmanDetonator",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\adv\\\\mysticruins\\\\EggmanDetonator.blend",
             "RelativeAssetFile": true,
             "PropertyInfo": {
-                "UseXAngleProperty": true,
+                "UseXAngleProperty": false,
                 "XAnglePropertyName": "",
-                "UseYAngleProperty": true,
+                "UseYAngleProperty": false,
                 "YAnglePropertyName": "",
-                "UseZAngleProperty": true,
+                "UseZAngleProperty": false,
                 "ZAnglePropertyName": "",
-                "UseXScaleProperty": true,
+                "UseXScaleProperty": false,
                 "XScalePropertyName": "",
-                "UseYScaleProperty": true,
+                "UseYScaleProperty": false,
                 "YScalePropertyName": "",
-                "UseZScaleProperty": true,
+                "UseZScaleProperty": false,
                 "ZScalePropertyName": ""
             }
         }
@@ -349,24 +349,24 @@
             "LoadDistance": 0
         },
         "BlenderInfo": {
-            "CommonName": "",
-            "RotationMode": "NONE",
+            "CommonName": "Monkey Cage",
+            "RotationMode": "Z",
             "ItemInfo": "",
-            "AssetName": "",
-            "AssetFile": "",
+            "AssetName": "MonkeyCage",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\adv\\\\mysticruins\\\\MonkeyCage.blend",
             "RelativeAssetFile": true,
             "PropertyInfo": {
-                "UseXAngleProperty": true,
+                "UseXAngleProperty": false,
                 "XAnglePropertyName": "",
-                "UseYAngleProperty": true,
+                "UseYAngleProperty": false,
                 "YAnglePropertyName": "",
-                "UseZAngleProperty": true,
+                "UseZAngleProperty": false,
                 "ZAnglePropertyName": "",
                 "UseXScaleProperty": true,
-                "XScalePropertyName": "",
-                "UseYScaleProperty": true,
+                "XScalePropertyName": "Monkey ID",
+                "UseYScaleProperty": false,
                 "YScalePropertyName": "",
-                "UseZScaleProperty": true,
+                "UseZScaleProperty": false,
                 "ZScalePropertyName": ""
             }
         }
@@ -380,24 +380,24 @@
             "LoadDistance": 0
         },
         "BlenderInfo": {
-            "CommonName": "",
-            "RotationMode": "NONE",
+            "CommonName": "Angel Island Door",
+            "RotationMode": "Z",
             "ItemInfo": "",
-            "AssetName": "",
-            "AssetFile": "",
+            "AssetName": "IslandDoor",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\adv\\\\mysticruins\\\\IslandDoor.blend",
             "RelativeAssetFile": true,
             "PropertyInfo": {
-                "UseXAngleProperty": true,
+                "UseXAngleProperty": false,
                 "XAnglePropertyName": "",
-                "UseYAngleProperty": true,
+                "UseYAngleProperty": false,
                 "YAnglePropertyName": "",
-                "UseZAngleProperty": true,
+                "UseZAngleProperty": false,
                 "ZAnglePropertyName": "",
-                "UseXScaleProperty": true,
+                "UseXScaleProperty": false,
                 "XScalePropertyName": "",
-                "UseYScaleProperty": true,
+                "UseYScaleProperty": false,
                 "YScalePropertyName": "",
-                "UseZScaleProperty": true,
+                "UseZScaleProperty": false,
                 "ZScalePropertyName": ""
             }
         }
@@ -411,24 +411,24 @@
             "LoadDistance": 250000
         },
         "BlenderInfo": {
-            "CommonName": "",
-            "RotationMode": "NONE",
+            "CommonName": "Eggman Base Door",
+            "RotationMode": "Z",
             "ItemInfo": "",
-            "AssetName": "",
-            "AssetFile": "",
+            "AssetName": "EggmanDoor",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\adv\\\\mysticruins\\\\EggmanDoor.blend",
             "RelativeAssetFile": true,
             "PropertyInfo": {
-                "UseXAngleProperty": true,
+                "UseXAngleProperty": false,
                 "XAnglePropertyName": "",
-                "UseYAngleProperty": true,
+                "UseYAngleProperty": false,
                 "YAnglePropertyName": "",
-                "UseZAngleProperty": true,
+                "UseZAngleProperty": false,
                 "ZAnglePropertyName": "",
-                "UseXScaleProperty": true,
+                "UseXScaleProperty": false,
                 "XScalePropertyName": "",
-                "UseYScaleProperty": true,
+                "UseYScaleProperty": false,
                 "YScalePropertyName": "",
-                "UseZScaleProperty": true,
+                "UseZScaleProperty": false,
                 "ZScalePropertyName": ""
             }
         }
@@ -442,24 +442,24 @@
             "LoadDistance": 0
         },
         "BlenderInfo": {
-            "CommonName": "",
-            "RotationMode": "NONE",
+            "CommonName": "Sandhill Switch",
+            "RotationMode": "Z",
             "ItemInfo": "",
-            "AssetName": "",
-            "AssetFile": "",
+            "AssetName": "SandSwitch",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\adv\\\\mysticruins\\\\SandSwitch.blend",
             "RelativeAssetFile": true,
             "PropertyInfo": {
-                "UseXAngleProperty": true,
+                "UseXAngleProperty": false,
                 "XAnglePropertyName": "",
-                "UseYAngleProperty": true,
+                "UseYAngleProperty": false,
                 "YAnglePropertyName": "",
-                "UseZAngleProperty": true,
+                "UseZAngleProperty": false,
                 "ZAnglePropertyName": "",
-                "UseXScaleProperty": true,
+                "UseXScaleProperty": false,
                 "XScalePropertyName": "",
-                "UseYScaleProperty": true,
+                "UseYScaleProperty": false,
                 "YScalePropertyName": "",
-                "UseZScaleProperty": true,
+                "UseZScaleProperty": false,
                 "ZScalePropertyName": ""
             }
         }
@@ -473,24 +473,24 @@
             "LoadDistance": 0
         },
         "BlenderInfo": {
-            "CommonName": "",
-            "RotationMode": "NONE",
+            "CommonName": "Red Mountain Entrance Gate",
+            "RotationMode": "Z",
             "ItemInfo": "",
-            "AssetName": "",
-            "AssetFile": "",
+            "AssetName": "MountainDoor",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\adv\\\\mysticruins\\\\MountainDoor.blend",
             "RelativeAssetFile": true,
             "PropertyInfo": {
-                "UseXAngleProperty": true,
+                "UseXAngleProperty": false,
                 "XAnglePropertyName": "",
-                "UseYAngleProperty": true,
+                "UseYAngleProperty": false,
                 "YAnglePropertyName": "",
-                "UseZAngleProperty": true,
+                "UseZAngleProperty": false,
                 "ZAnglePropertyName": "",
-                "UseXScaleProperty": true,
+                "UseXScaleProperty": false,
                 "XScalePropertyName": "",
-                "UseYScaleProperty": true,
+                "UseYScaleProperty": false,
                 "YScalePropertyName": "",
-                "UseZScaleProperty": true,
+                "UseZScaleProperty": false,
                 "ZScalePropertyName": ""
             }
         }
@@ -504,24 +504,24 @@
             "LoadDistance": 0
         },
         "BlenderInfo": {
-            "CommonName": "",
-            "RotationMode": "NONE",
+            "CommonName": "Icecap Door",
+            "RotationMode": "Z",
             "ItemInfo": "",
-            "AssetName": "",
-            "AssetFile": "",
+            "AssetName": "IcecapDoor",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\adv\\\\mysticruins\\\\IcecapDoor.blend",
             "RelativeAssetFile": true,
             "PropertyInfo": {
-                "UseXAngleProperty": true,
+                "UseXAngleProperty": false,
                 "XAnglePropertyName": "",
-                "UseYAngleProperty": true,
+                "UseYAngleProperty": false,
                 "YAnglePropertyName": "",
-                "UseZAngleProperty": true,
+                "UseZAngleProperty": false,
                 "ZAnglePropertyName": "",
-                "UseXScaleProperty": true,
+                "UseXScaleProperty": false,
                 "XScalePropertyName": "",
-                "UseYScaleProperty": true,
+                "UseYScaleProperty": false,
                 "YScalePropertyName": "",
-                "UseZScaleProperty": true,
+                "UseZScaleProperty": false,
                 "ZScalePropertyName": ""
             }
         }
@@ -535,24 +535,24 @@
             "LoadDistance": 360000
         },
         "BlenderInfo": {
-            "CommonName": "",
+            "CommonName": "Minecart",
             "RotationMode": "NONE",
             "ItemInfo": "",
-            "AssetName": "",
-            "AssetFile": "",
+            "AssetName": "Minecart",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\adv\\\\mysticruins\\\\Minecart.blend",
             "RelativeAssetFile": true,
             "PropertyInfo": {
-                "UseXAngleProperty": true,
+                "UseXAngleProperty": false,
                 "XAnglePropertyName": "",
-                "UseYAngleProperty": true,
+                "UseYAngleProperty": false,
                 "YAnglePropertyName": "",
-                "UseZAngleProperty": true,
+                "UseZAngleProperty": false,
                 "ZAnglePropertyName": "",
                 "UseXScaleProperty": true,
-                "XScalePropertyName": "",
-                "UseYScaleProperty": true,
+                "XScalePropertyName": "Minecart Type",
+                "UseYScaleProperty": false,
                 "YScalePropertyName": "",
-                "UseZScaleProperty": true,
+                "UseZScaleProperty": false,
                 "ZScalePropertyName": ""
             }
         }
@@ -566,24 +566,24 @@
             "LoadDistance": 360000
         },
         "BlenderInfo": {
-            "CommonName": "",
-            "RotationMode": "NONE",
+            "CommonName": "Rusty Gate",
+            "RotationMode": "Z",
             "ItemInfo": "",
-            "AssetName": "",
-            "AssetFile": "",
+            "AssetName": "RustyGate",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\adv\\\\mysticruins\\\\RustyGate.blend",
             "RelativeAssetFile": true,
             "PropertyInfo": {
-                "UseXAngleProperty": true,
+                "UseXAngleProperty": false,
                 "XAnglePropertyName": "",
-                "UseYAngleProperty": true,
+                "UseYAngleProperty": false,
                 "YAnglePropertyName": "",
-                "UseZAngleProperty": true,
+                "UseZAngleProperty": false,
                 "ZAnglePropertyName": "",
-                "UseXScaleProperty": true,
+                "UseXScaleProperty": false,
                 "XScalePropertyName": "",
-                "UseYScaleProperty": true,
+                "UseYScaleProperty": false,
                 "YScalePropertyName": "",
-                "UseZScaleProperty": true,
+                "UseZScaleProperty": false,
                 "ZScalePropertyName": ""
             }
         }
@@ -597,24 +597,24 @@
             "LoadDistance": 0
         },
         "BlenderInfo": {
-            "CommonName": "",
-            "RotationMode": "NONE",
+            "CommonName": "Chaos Emerald",
+            "RotationMode": "Z",
             "ItemInfo": "",
-            "AssetName": "",
-            "AssetFile": "",
+            "AssetName": "MRChaosEmerald",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\adv\\\\mysticruins\\\\MRChaosEmerald.blend",
             "RelativeAssetFile": true,
             "PropertyInfo": {
-                "UseXAngleProperty": true,
+                "UseXAngleProperty": false,
                 "XAnglePropertyName": "",
-                "UseYAngleProperty": true,
+                "UseYAngleProperty": false,
                 "YAnglePropertyName": "",
-                "UseZAngleProperty": true,
+                "UseZAngleProperty": false,
                 "ZAnglePropertyName": "",
                 "UseXScaleProperty": true,
-                "XScalePropertyName": "",
-                "UseYScaleProperty": true,
+                "XScalePropertyName": "Emerald Color",
+                "UseYScaleProperty": false,
                 "YScalePropertyName": "",
-                "UseZScaleProperty": true,
+                "UseZScaleProperty": false,
                 "ZScalePropertyName": ""
             }
         }
@@ -628,24 +628,24 @@
             "LoadDistance": 2250000
         },
         "BlenderInfo": {
-            "CommonName": "",
+            "CommonName": "Master Emerald",
             "RotationMode": "NONE",
             "ItemInfo": "",
-            "AssetName": "",
-            "AssetFile": "",
+            "AssetName": "MRMasterEmerald",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\adv\\\\mysticruins\\\\MRMasterEmerald.blend",
             "RelativeAssetFile": true,
             "PropertyInfo": {
-                "UseXAngleProperty": true,
+                "UseXAngleProperty": false,
                 "XAnglePropertyName": "",
-                "UseYAngleProperty": true,
+                "UseYAngleProperty": false,
                 "YAnglePropertyName": "",
-                "UseZAngleProperty": true,
+                "UseZAngleProperty": false,
                 "ZAnglePropertyName": "",
-                "UseXScaleProperty": true,
+                "UseXScaleProperty": false,
                 "XScalePropertyName": "",
-                "UseYScaleProperty": true,
+                "UseYScaleProperty": false,
                 "YScalePropertyName": "",
-                "UseZScaleProperty": true,
+                "UseZScaleProperty": false,
                 "ZScalePropertyName": ""
             }
         }
@@ -659,24 +659,24 @@
             "LoadDistance": 0
         },
         "BlenderInfo": {
-            "CommonName": "",
-            "RotationMode": "NONE",
-            "ItemInfo": "",
-            "AssetName": "",
-            "AssetFile": "",
+            "CommonName": "Mystic Ruins Key",
+            "RotationMode": "Z",
+            "ItemInfo": "Stores the Windy Key, Ice Key, and the Golden and Silver Echidna Statues.",
+            "AssetName": "HandyKey",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\adv\\\\mysticruins\\\\HandyKey.blend",
             "RelativeAssetFile": true,
             "PropertyInfo": {
-                "UseXAngleProperty": true,
+                "UseXAngleProperty": false,
                 "XAnglePropertyName": "",
-                "UseYAngleProperty": true,
+                "UseYAngleProperty": false,
                 "YAnglePropertyName": "",
-                "UseZAngleProperty": true,
+                "UseZAngleProperty": false,
                 "ZAnglePropertyName": "",
                 "UseXScaleProperty": true,
-                "XScalePropertyName": "",
-                "UseYScaleProperty": true,
+                "XScalePropertyName": "Key Type",
+                "UseYScaleProperty": false,
                 "YScalePropertyName": "",
-                "UseZScaleProperty": true,
+                "UseZScaleProperty": false,
                 "ZScalePropertyName": ""
             }
         }
@@ -690,24 +690,24 @@
             "LoadDistance": 0
         },
         "BlenderInfo": {
-            "CommonName": "",
-            "RotationMode": "NONE",
-            "ItemInfo": "",
-            "AssetName": "",
-            "AssetFile": "",
+            "CommonName": "Mystic Ruins Door Lock",
+            "RotationMode": "Z",
+            "ItemInfo": "Stores the locks for Windy Valley, Icecap, and Lost World.",
+            "AssetName": "DoorLock",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\adv\\\\mysticruins\\\\DoorLock.blend",
             "RelativeAssetFile": true,
             "PropertyInfo": {
-                "UseXAngleProperty": true,
+                "UseXAngleProperty": false,
                 "XAnglePropertyName": "",
-                "UseYAngleProperty": true,
+                "UseYAngleProperty": false,
                 "YAnglePropertyName": "",
-                "UseZAngleProperty": true,
+                "UseZAngleProperty": false,
                 "ZAnglePropertyName": "",
                 "UseXScaleProperty": true,
-                "XScalePropertyName": "",
-                "UseYScaleProperty": true,
+                "XScalePropertyName": "Lock Type",
+                "UseYScaleProperty": false,
                 "YScalePropertyName": "",
-                "UseZScaleProperty": true,
+                "UseZScaleProperty": false,
                 "ZScalePropertyName": ""
             }
         }
@@ -721,24 +721,24 @@
             "LoadDistance": 0
         },
         "BlenderInfo": {
-            "CommonName": "",
-            "RotationMode": "NONE",
+            "CommonName": "Final Egg Entrance",
+            "RotationMode": "Z",
             "ItemInfo": "",
-            "AssetName": "",
-            "AssetFile": "",
+            "AssetName": "FinalEggEntrance",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\adv\\\\mysticruins\\\\FinalEggEntrance.blend",
             "RelativeAssetFile": true,
             "PropertyInfo": {
-                "UseXAngleProperty": true,
+                "UseXAngleProperty": false,
                 "XAnglePropertyName": "",
-                "UseYAngleProperty": true,
+                "UseYAngleProperty": false,
                 "YAnglePropertyName": "",
-                "UseZAngleProperty": true,
+                "UseZAngleProperty": false,
                 "ZAnglePropertyName": "",
-                "UseXScaleProperty": true,
+                "UseXScaleProperty": false,
                 "XScalePropertyName": "",
-                "UseYScaleProperty": true,
+                "UseYScaleProperty": false,
                 "YScalePropertyName": "",
-                "UseZScaleProperty": true,
+                "UseZScaleProperty": false,
                 "ZScalePropertyName": ""
             }
         }
@@ -752,24 +752,24 @@
             "LoadDistance": 0
         },
         "BlenderInfo": {
-            "CommonName": "",
-            "RotationMode": "NONE",
+            "CommonName": "Lost World Entrance",
+            "RotationMode": "Z",
             "ItemInfo": "",
-            "AssetName": "",
-            "AssetFile": "",
+            "AssetName": "LostWorldEntrance",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\adv\\\\mysticruins\\\\LostWorldEntrance.blend",
             "RelativeAssetFile": true,
             "PropertyInfo": {
-                "UseXAngleProperty": true,
+                "UseXAngleProperty": false,
                 "XAnglePropertyName": "",
-                "UseYAngleProperty": true,
+                "UseYAngleProperty": false,
                 "YAnglePropertyName": "",
-                "UseZAngleProperty": true,
+                "UseZAngleProperty": false,
                 "ZAnglePropertyName": "",
-                "UseXScaleProperty": true,
+                "UseXScaleProperty": false,
                 "XScalePropertyName": "",
-                "UseYScaleProperty": true,
+                "UseYScaleProperty": false,
                 "YScalePropertyName": "",
-                "UseZScaleProperty": true,
+                "UseZScaleProperty": false,
                 "ZScalePropertyName": ""
             }
         }
@@ -783,24 +783,24 @@
             "LoadDistance": 0
         },
         "BlenderInfo": {
-            "CommonName": "",
-            "RotationMode": "NONE",
+            "CommonName": "Echidna Statue",
+            "RotationMode": "Z",
             "ItemInfo": "",
-            "AssetName": "",
-            "AssetFile": "",
+            "AssetName": "EchidnaStatute",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\adv\\\\mysticruins\\\\EchidnaStatute.blend",
             "RelativeAssetFile": true,
             "PropertyInfo": {
-                "UseXAngleProperty": true,
+                "UseXAngleProperty": false,
                 "XAnglePropertyName": "",
-                "UseYAngleProperty": true,
+                "UseYAngleProperty": false,
                 "YAnglePropertyName": "",
-                "UseZAngleProperty": true,
+                "UseZAngleProperty": false,
                 "ZAnglePropertyName": "",
-                "UseXScaleProperty": true,
+                "UseXScaleProperty": false,
                 "XScalePropertyName": "",
-                "UseYScaleProperty": true,
+                "UseYScaleProperty": false,
                 "YScalePropertyName": "",
-                "UseZScaleProperty": true,
+                "UseZScaleProperty": false,
                 "ZScalePropertyName": ""
             }
         }
@@ -814,24 +814,24 @@
             "LoadDistance": 0
         },
         "BlenderInfo": {
-            "CommonName": "",
-            "RotationMode": "NONE",
-            "ItemInfo": "",
-            "AssetName": "",
-            "AssetFile": "",
+            "CommonName": "Ladder",
+            "RotationMode": "Z",
+            "ItemInfo": "Short ladder with only 33 nodes the player climbs.",
+            "AssetName": "JungleLadder",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\adv\\\\mysticruins\\\\JungleLadder.blend",
             "RelativeAssetFile": true,
             "PropertyInfo": {
-                "UseXAngleProperty": true,
+                "UseXAngleProperty": false,
                 "XAnglePropertyName": "",
-                "UseYAngleProperty": true,
+                "UseYAngleProperty": false,
                 "YAnglePropertyName": "",
-                "UseZAngleProperty": true,
+                "UseZAngleProperty": false,
                 "ZAnglePropertyName": "",
-                "UseXScaleProperty": true,
+                "UseXScaleProperty": false,
                 "XScalePropertyName": "",
-                "UseYScaleProperty": true,
+                "UseYScaleProperty": false,
                 "YScalePropertyName": "",
-                "UseZScaleProperty": true,
+                "UseZScaleProperty": false,
                 "ZScalePropertyName": ""
             }
         }
@@ -845,24 +845,24 @@
             "LoadDistance": 0
         },
         "BlenderInfo": {
-            "CommonName": "",
-            "RotationMode": "NONE",
+            "CommonName": "Butterflies",
+            "RotationMode": "Z",
             "ItemInfo": "",
-            "AssetName": "",
-            "AssetFile": "",
+            "AssetName": "Butterflies",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\adv\\\\mysticruins\\\\Butterflies.blend",
             "RelativeAssetFile": true,
             "PropertyInfo": {
-                "UseXAngleProperty": true,
+                "UseXAngleProperty": false,
                 "XAnglePropertyName": "",
-                "UseYAngleProperty": true,
+                "UseYAngleProperty": false,
                 "YAnglePropertyName": "",
-                "UseZAngleProperty": true,
+                "UseZAngleProperty": false,
                 "ZAnglePropertyName": "",
                 "UseXScaleProperty": true,
-                "XScalePropertyName": "",
-                "UseYScaleProperty": true,
+                "XScalePropertyName": "Butterfly Type",
+                "UseYScaleProperty": false,
                 "YScalePropertyName": "",
-                "UseZScaleProperty": true,
+                "UseZScaleProperty": false,
                 "ZScalePropertyName": ""
             }
         }
@@ -876,24 +876,24 @@
             "LoadDistance": 0
         },
         "BlenderInfo": {
-            "CommonName": "",
-            "RotationMode": "NONE",
+            "CommonName": "Train",
+            "RotationMode": "Z",
             "ItemInfo": "",
-            "AssetName": "",
-            "AssetFile": "",
+            "AssetName": "MRTrain",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\adv\\\\mysticruins\\\\MRTrain.blend",
             "RelativeAssetFile": true,
             "PropertyInfo": {
-                "UseXAngleProperty": true,
+                "UseXAngleProperty": false,
                 "XAnglePropertyName": "",
-                "UseYAngleProperty": true,
+                "UseYAngleProperty": false,
                 "YAnglePropertyName": "",
-                "UseZAngleProperty": true,
+                "UseZAngleProperty": false,
                 "ZAnglePropertyName": "",
-                "UseXScaleProperty": true,
+                "UseXScaleProperty": false,
                 "XScalePropertyName": "",
-                "UseYScaleProperty": true,
+                "UseYScaleProperty": false,
                 "YScalePropertyName": "",
-                "UseZScaleProperty": true,
+                "UseZScaleProperty": false,
                 "ZScalePropertyName": ""
             }
         }
@@ -907,24 +907,24 @@
             "LoadDistance": 0
         },
         "BlenderInfo": {
-            "CommonName": "",
-            "RotationMode": "NONE",
+            "CommonName": "Raft",
+            "RotationMode": "Z",
             "ItemInfo": "",
-            "AssetName": "",
-            "AssetFile": "",
+            "AssetName": "MRRaft",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\adv\\\\mysticruins\\\\MRRaft.blend",
             "RelativeAssetFile": true,
             "PropertyInfo": {
-                "UseXAngleProperty": true,
+                "UseXAngleProperty": false,
                 "XAnglePropertyName": "",
-                "UseYAngleProperty": true,
+                "UseYAngleProperty": false,
                 "YAnglePropertyName": "",
-                "UseZAngleProperty": true,
+                "UseZAngleProperty": false,
                 "ZAnglePropertyName": "",
-                "UseXScaleProperty": true,
+                "UseXScaleProperty": false,
                 "XScalePropertyName": "",
-                "UseYScaleProperty": true,
+                "UseYScaleProperty": false,
                 "YScalePropertyName": "",
-                "UseZScaleProperty": true,
+                "UseZScaleProperty": false,
                 "ZScalePropertyName": ""
             }
         }
@@ -938,24 +938,24 @@
             "LoadDistance": 0
         },
         "BlenderInfo": {
-            "CommonName": "",
+            "CommonName": "Windy Valley Updraft",
             "RotationMode": "NONE",
             "ItemInfo": "",
-            "AssetName": "",
-            "AssetFile": "",
+            "AssetName": "WindyValleyLevelChanger",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\adv\\\\mysticruins\\\\WindyValleyLevelChanger.blend",
             "RelativeAssetFile": true,
             "PropertyInfo": {
-                "UseXAngleProperty": true,
+                "UseXAngleProperty": false,
                 "XAnglePropertyName": "",
-                "UseYAngleProperty": true,
+                "UseYAngleProperty": false,
                 "YAnglePropertyName": "",
-                "UseZAngleProperty": true,
+                "UseZAngleProperty": false,
                 "ZAnglePropertyName": "",
-                "UseXScaleProperty": true,
+                "UseXScaleProperty": false,
                 "XScalePropertyName": "",
-                "UseYScaleProperty": true,
+                "UseYScaleProperty": false,
                 "YScalePropertyName": "",
-                "UseZScaleProperty": true,
+                "UseZScaleProperty": false,
                 "ZScalePropertyName": ""
             }
         }
@@ -969,24 +969,24 @@
             "LoadDistance": 0
         },
         "BlenderInfo": {
-            "CommonName": "",
+            "CommonName": "Cave Updraft (Mystic Ruins to Angel Island)",
             "RotationMode": "NONE",
             "ItemInfo": "",
-            "AssetName": "",
-            "AssetFile": "",
+            "AssetName": "Act2SceneChanger",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\adv\\\\mysticruins\\\\Act2SceneChanger.blend",
             "RelativeAssetFile": true,
             "PropertyInfo": {
-                "UseXAngleProperty": true,
+                "UseXAngleProperty": false,
                 "XAnglePropertyName": "",
-                "UseYAngleProperty": true,
+                "UseYAngleProperty": false,
                 "YAnglePropertyName": "",
-                "UseZAngleProperty": true,
+                "UseZAngleProperty": false,
                 "ZAnglePropertyName": "",
-                "UseXScaleProperty": true,
+                "UseXScaleProperty": false,
                 "XScalePropertyName": "",
-                "UseYScaleProperty": true,
+                "UseYScaleProperty": false,
                 "YScalePropertyName": "",
-                "UseZScaleProperty": true,
+                "UseZScaleProperty": false,
                 "ZScalePropertyName": ""
             }
         }
@@ -1000,24 +1000,24 @@
             "LoadDistance": 0
         },
         "BlenderInfo": {
-            "CommonName": "",
+            "CommonName": "Cave Updraft (Angel Island to Mystic Ruins)",
             "RotationMode": "NONE",
             "ItemInfo": "",
-            "AssetName": "",
-            "AssetFile": "",
+            "AssetName": "Act2SceneChanger",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\adv\\\\mysticruins\\\\Act2SceneChanger.blend",
             "RelativeAssetFile": true,
             "PropertyInfo": {
-                "UseXAngleProperty": true,
+                "UseXAngleProperty": false,
                 "XAnglePropertyName": "",
-                "UseYAngleProperty": true,
+                "UseYAngleProperty": false,
                 "YAnglePropertyName": "",
-                "UseZAngleProperty": true,
+                "UseZAngleProperty": false,
                 "ZAnglePropertyName": "",
-                "UseXScaleProperty": true,
+                "UseXScaleProperty": false,
                 "XScalePropertyName": "",
-                "UseYScaleProperty": true,
+                "UseYScaleProperty": false,
                 "YScalePropertyName": "",
-                "UseZScaleProperty": true,
+                "UseZScaleProperty": false,
                 "ZScalePropertyName": ""
             }
         }
@@ -1062,24 +1062,24 @@
             "LoadDistance": 0
         },
         "BlenderInfo": {
-            "CommonName": "",
-            "RotationMode": "NONE",
+            "CommonName": "Eggman Base",
+            "RotationMode": "Z",
             "ItemInfo": "",
-            "AssetName": "",
-            "AssetFile": "",
+            "AssetName": "EggmanCity",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\adv\\\\mysticruins\\\\EggmanCity.blend",
             "RelativeAssetFile": true,
             "PropertyInfo": {
-                "UseXAngleProperty": true,
+                "UseXAngleProperty": false,
                 "XAnglePropertyName": "",
-                "UseYAngleProperty": true,
+                "UseYAngleProperty": false,
                 "YAnglePropertyName": "",
-                "UseZAngleProperty": true,
+                "UseZAngleProperty": false,
                 "ZAnglePropertyName": "",
-                "UseXScaleProperty": true,
+                "UseXScaleProperty": false,
                 "XScalePropertyName": "",
-                "UseYScaleProperty": true,
+                "UseYScaleProperty": false,
                 "YScalePropertyName": "",
-                "UseZScaleProperty": true,
+                "UseZScaleProperty": false,
                 "ZScalePropertyName": ""
             }
         }
@@ -1093,24 +1093,24 @@
             "LoadDistance": 0
         },
         "BlenderInfo": {
-            "CommonName": "",
-            "RotationMode": "NONE",
-            "ItemInfo": "",
-            "AssetName": "",
-            "AssetFile": "",
+            "CommonName": "Test Object (Pick up)",
+            "RotationMode": "Z",
+            "ItemInfo": "Test item that can be picked up by player characters.",
+            "AssetName": "TestHoldObjectS",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\adv\\\\mysticruins\\\\TestHoldObjectS.blend",
             "RelativeAssetFile": true,
             "PropertyInfo": {
-                "UseXAngleProperty": true,
+                "UseXAngleProperty": false,
                 "XAnglePropertyName": "",
-                "UseYAngleProperty": true,
+                "UseYAngleProperty": false,
                 "YAnglePropertyName": "",
-                "UseZAngleProperty": true,
+                "UseZAngleProperty": false,
                 "ZAnglePropertyName": "",
-                "UseXScaleProperty": true,
+                "UseXScaleProperty": false,
                 "XScalePropertyName": "",
-                "UseYScaleProperty": true,
+                "UseYScaleProperty": false,
                 "YScalePropertyName": "",
-                "UseZScaleProperty": true,
+                "UseZScaleProperty": false,
                 "ZScalePropertyName": ""
             }
         }
@@ -1124,24 +1124,24 @@
             "LoadDistance": 0
         },
         "BlenderInfo": {
-            "CommonName": "",
-            "RotationMode": "NONE",
-            "ItemInfo": "",
-            "AssetName": "",
-            "AssetFile": "",
+            "CommonName": "Test Object (Push/Pull)",
+            "RotationMode": "Z",
+            "ItemInfo": "Test item that can be pushed or pulled by player characters.",
+            "AssetName": "TestHoldObjectM",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\adv\\\\mysticruins\\\\TestHoldObjectM.blend",
             "RelativeAssetFile": true,
             "PropertyInfo": {
-                "UseXAngleProperty": true,
+                "UseXAngleProperty": false,
                 "XAnglePropertyName": "",
-                "UseYAngleProperty": true,
+                "UseYAngleProperty": false,
                 "YAnglePropertyName": "",
-                "UseZAngleProperty": true,
+                "UseZAngleProperty": false,
                 "ZAnglePropertyName": "",
-                "UseXScaleProperty": true,
+                "UseXScaleProperty": false,
                 "XScalePropertyName": "",
-                "UseYScaleProperty": true,
+                "UseYScaleProperty": false,
                 "YScalePropertyName": "",
-                "UseZScaleProperty": true,
+                "UseZScaleProperty": false,
                 "ZScalePropertyName": ""
             }
         }
@@ -1155,24 +1155,24 @@
             "LoadDistance": 0
         },
         "BlenderInfo": {
-            "CommonName": "",
-            "RotationMode": "NONE",
-            "ItemInfo": "",
-            "AssetName": "",
-            "AssetFile": "",
+            "CommonName": "Test Object (Large pick up object)",
+            "RotationMode": "Z",
+            "ItemInfo": "Test item that can be picked up by Big the Cat only.",
+            "AssetName": "TestHoldObjectL",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\adv\\\\mysticruins\\\\TestHoldObjectL.blend",
             "RelativeAssetFile": true,
             "PropertyInfo": {
-                "UseXAngleProperty": true,
+                "UseXAngleProperty": false,
                 "XAnglePropertyName": "",
-                "UseYAngleProperty": true,
+                "UseYAngleProperty": false,
                 "YAnglePropertyName": "",
-                "UseZAngleProperty": true,
+                "UseZAngleProperty": false,
                 "ZAnglePropertyName": "",
-                "UseXScaleProperty": true,
+                "UseXScaleProperty": false,
                 "XScalePropertyName": "",
-                "UseYScaleProperty": true,
+                "UseYScaleProperty": false,
                 "YScalePropertyName": "",
-                "UseZScaleProperty": true,
+                "UseZScaleProperty": false,
                 "ZScalePropertyName": ""
             }
         }
@@ -1186,24 +1186,24 @@
             "LoadDistance": 0
         },
         "BlenderInfo": {
-            "CommonName": "",
-            "RotationMode": "NONE",
-            "ItemInfo": "",
-            "AssetName": "",
-            "AssetFile": "",
+            "CommonName": "Test Object (Swing)",
+            "RotationMode": "Z",
+            "ItemInfo": "Test item that uses the swing flag.",
+            "AssetName": "TestHoldObjectSW",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\adv\\\\mysticruins\\\\TestHoldObjectSW.blend",
             "RelativeAssetFile": true,
             "PropertyInfo": {
-                "UseXAngleProperty": true,
+                "UseXAngleProperty": false,
                 "XAnglePropertyName": "",
-                "UseYAngleProperty": true,
+                "UseYAngleProperty": false,
                 "YAnglePropertyName": "",
-                "UseZAngleProperty": true,
+                "UseZAngleProperty": false,
                 "ZAnglePropertyName": "",
-                "UseXScaleProperty": true,
+                "UseXScaleProperty": false,
                 "XScalePropertyName": "",
-                "UseYScaleProperty": true,
+                "UseYScaleProperty": false,
                 "YScalePropertyName": "",
-                "UseZScaleProperty": true,
+                "UseZScaleProperty": false,
                 "ZScalePropertyName": ""
             }
         }
@@ -1465,24 +1465,24 @@
             "LoadDistance": 0
         },
         "BlenderInfo": {
-            "CommonName": "",
-            "RotationMode": "NONE",
+            "CommonName": "Big's Bed",
+            "RotationMode": "Z",
             "ItemInfo": "",
-            "AssetName": "",
-            "AssetFile": "",
+            "AssetName": "BigBed",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\adv\\\\mysticruins\\\\BigBed.blend",
             "RelativeAssetFile": true,
             "PropertyInfo": {
-                "UseXAngleProperty": true,
+                "UseXAngleProperty": false,
                 "XAnglePropertyName": "",
-                "UseYAngleProperty": true,
+                "UseYAngleProperty": false,
                 "YAnglePropertyName": "",
-                "UseZAngleProperty": true,
+                "UseZAngleProperty": false,
                 "ZAnglePropertyName": "",
-                "UseXScaleProperty": true,
+                "UseXScaleProperty": false,
                 "XScalePropertyName": "",
-                "UseYScaleProperty": true,
+                "UseYScaleProperty": false,
                 "YScalePropertyName": "",
-                "UseZScaleProperty": true,
+                "UseZScaleProperty": false,
                 "ZScalePropertyName": ""
             }
         }
@@ -1496,24 +1496,24 @@
             "LoadDistance": 0
         },
         "BlenderInfo": {
-            "CommonName": "",
+            "CommonName": "Sandhill Entrance",
             "RotationMode": "NONE",
-            "ItemInfo": "",
-            "AssetName": "",
-            "AssetFile": "",
+            "ItemInfo": "Hardcoded position, moving it in the scene will not do anything.",
+            "AssetName": "SandHillEntrance",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\adv\\\\mysticruins\\\\SandHillEntrance.blend",
             "RelativeAssetFile": true,
             "PropertyInfo": {
-                "UseXAngleProperty": true,
+                "UseXAngleProperty": false,
                 "XAnglePropertyName": "",
-                "UseYAngleProperty": true,
+                "UseYAngleProperty": false,
                 "YAnglePropertyName": "",
-                "UseZAngleProperty": true,
+                "UseZAngleProperty": false,
                 "ZAnglePropertyName": "",
-                "UseXScaleProperty": true,
+                "UseXScaleProperty": false,
                 "XScalePropertyName": "",
-                "UseYScaleProperty": true,
+                "UseYScaleProperty": false,
                 "YScalePropertyName": "",
-                "UseZScaleProperty": true,
+                "UseZScaleProperty": false,
                 "ZScalePropertyName": ""
             }
         }
@@ -1527,24 +1527,24 @@
             "LoadDistance": 1960000
         },
         "BlenderInfo": {
-            "CommonName": "",
-            "RotationMode": "NONE",
+            "CommonName": "Silver Egg Altar and Button",
+            "RotationMode": "Z",
             "ItemInfo": "",
-            "AssetName": "",
-            "AssetFile": "",
+            "AssetName": "EggHolder",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\adv\\\\mysticruins\\\\EggHolder.blend",
             "RelativeAssetFile": true,
             "PropertyInfo": {
-                "UseXAngleProperty": true,
+                "UseXAngleProperty": false,
                 "XAnglePropertyName": "",
-                "UseYAngleProperty": true,
+                "UseYAngleProperty": false,
                 "YAnglePropertyName": "",
-                "UseZAngleProperty": true,
+                "UseZAngleProperty": false,
                 "ZAnglePropertyName": "",
-                "UseXScaleProperty": true,
+                "UseXScaleProperty": false,
                 "XScalePropertyName": "",
-                "UseYScaleProperty": true,
+                "UseYScaleProperty": false,
                 "YScalePropertyName": "",
-                "UseZScaleProperty": true,
+                "UseZScaleProperty": false,
                 "ZScalePropertyName": ""
             }
         }
@@ -1558,24 +1558,24 @@
             "LoadDistance": 1440000
         },
         "BlenderInfo": {
-            "CommonName": "",
-            "RotationMode": "NONE",
+            "CommonName": "Palm Tree",
+            "RotationMode": "ZXY",
             "ItemInfo": "",
-            "AssetName": "",
-            "AssetFile": "",
+            "AssetName": "MRPalm",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\adv\\\\mysticruins\\\\MRPalm.blend",
             "RelativeAssetFile": true,
             "PropertyInfo": {
-                "UseXAngleProperty": true,
+                "UseXAngleProperty": false,
                 "XAnglePropertyName": "",
-                "UseYAngleProperty": true,
+                "UseYAngleProperty": false,
                 "YAnglePropertyName": "",
-                "UseZAngleProperty": true,
+                "UseZAngleProperty": false,
                 "ZAnglePropertyName": "",
-                "UseXScaleProperty": true,
+                "UseXScaleProperty": false,
                 "XScalePropertyName": "",
-                "UseYScaleProperty": true,
+                "UseYScaleProperty": false,
                 "YScalePropertyName": "",
-                "UseZScaleProperty": true,
+                "UseZScaleProperty": false,
                 "ZScalePropertyName": ""
             }
         }
@@ -1589,24 +1589,24 @@
             "LoadDistance": 422500
         },
         "BlenderInfo": {
-            "CommonName": "",
-            "RotationMode": "NONE",
+            "CommonName": "Tree",
+            "RotationMode": "YXZ",
             "ItemInfo": "",
-            "AssetName": "",
-            "AssetFile": "",
+            "AssetName": "TreeA",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\adv\\\\mysticruins\\\\TreeA.blend",
             "RelativeAssetFile": true,
             "PropertyInfo": {
-                "UseXAngleProperty": true,
+                "UseXAngleProperty": false,
                 "XAnglePropertyName": "",
-                "UseYAngleProperty": true,
+                "UseYAngleProperty": false,
                 "YAnglePropertyName": "",
-                "UseZAngleProperty": true,
+                "UseZAngleProperty": false,
                 "ZAnglePropertyName": "",
-                "UseXScaleProperty": true,
+                "UseXScaleProperty": false,
                 "XScalePropertyName": "",
-                "UseYScaleProperty": true,
+                "UseYScaleProperty": false,
                 "YScalePropertyName": "",
-                "UseZScaleProperty": true,
+                "UseZScaleProperty": false,
                 "ZScalePropertyName": ""
             }
         }
@@ -1620,24 +1620,24 @@
             "LoadDistance": 0
         },
         "BlenderInfo": {
-            "CommonName": "",
+            "CommonName": "Sound Zone",
             "RotationMode": "NONE",
             "ItemInfo": "",
-            "AssetName": "",
-            "AssetFile": "",
+            "AssetName": "MRSoundEffect",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\adv\\\\mysticruins\\\\MRSoundEffect.blend",
             "RelativeAssetFile": true,
             "PropertyInfo": {
                 "UseXAngleProperty": true,
-                "XAnglePropertyName": "",
-                "UseYAngleProperty": true,
+                "XAnglePropertyName": "Sound Effect",
+                "UseYAngleProperty": false,
                 "YAnglePropertyName": "",
-                "UseZAngleProperty": true,
+                "UseZAngleProperty": false,
                 "ZAnglePropertyName": "",
                 "UseXScaleProperty": true,
-                "XScalePropertyName": "",
-                "UseYScaleProperty": true,
+                "XScalePropertyName": "Sound Radius",
+                "UseYScaleProperty": false,
                 "YScalePropertyName": "",
-                "UseZScaleProperty": true,
+                "UseZScaleProperty": false,
                 "ZScalePropertyName": ""
             }
         }
@@ -1651,24 +1651,24 @@
             "LoadDistance": 0
         },
         "BlenderInfo": {
-            "CommonName": "",
-            "RotationMode": "NONE",
+            "CommonName": "Eggman Base Entrance Collision",
+            "RotationMode": "Z",
             "ItemInfo": "",
-            "AssetName": "",
-            "AssetFile": "",
+            "AssetName": "FinalWayCollision",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\adv\\\\mysticruins\\\\FinalWayCollision.blend",
             "RelativeAssetFile": true,
             "PropertyInfo": {
-                "UseXAngleProperty": true,
+                "UseXAngleProperty": false,
                 "XAnglePropertyName": "",
-                "UseYAngleProperty": true,
+                "UseYAngleProperty": false,
                 "YAnglePropertyName": "",
-                "UseZAngleProperty": true,
+                "UseZAngleProperty": false,
                 "ZAnglePropertyName": "",
-                "UseXScaleProperty": true,
+                "UseXScaleProperty": false,
                 "XScalePropertyName": "",
-                "UseYScaleProperty": true,
+                "UseYScaleProperty": false,
                 "YScalePropertyName": "",
-                "UseZScaleProperty": true,
+                "UseZScaleProperty": false,
                 "ZScalePropertyName": ""
             }
         }
@@ -1682,24 +1682,24 @@
             "LoadDistance": 0
         },
         "BlenderInfo": {
-            "CommonName": "",
-            "RotationMode": "NONE",
+            "CommonName": "Grass",
+            "RotationMode": "Z",
             "ItemInfo": "",
-            "AssetName": "",
-            "AssetFile": "",
+            "AssetName": "MRGrass",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\adv\\\\mysticruins\\\\MRGrass.blend",
             "RelativeAssetFile": true,
             "PropertyInfo": {
-                "UseXAngleProperty": true,
+                "UseXAngleProperty": false,
                 "XAnglePropertyName": "",
-                "UseYAngleProperty": true,
+                "UseYAngleProperty": false,
                 "YAnglePropertyName": "",
-                "UseZAngleProperty": true,
+                "UseZAngleProperty": false,
                 "ZAnglePropertyName": "",
-                "UseXScaleProperty": true,
+                "UseXScaleProperty": false,
                 "XScalePropertyName": "",
-                "UseYScaleProperty": true,
+                "UseYScaleProperty": false,
                 "YScalePropertyName": "",
-                "UseZScaleProperty": true,
+                "UseZScaleProperty": false,
                 "ZScalePropertyName": ""
             }
         }
@@ -1713,24 +1713,24 @@
             "LoadDistance": 0
         },
         "BlenderInfo": {
-            "CommonName": "",
-            "RotationMode": "NONE",
+            "CommonName": "Big Grass",
+            "RotationMode": "Z",
             "ItemInfo": "",
-            "AssetName": "",
-            "AssetFile": "",
+            "AssetName": "BigGrass",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\adv\\\\mysticruins\\\\BigGrass.blend",
             "RelativeAssetFile": true,
             "PropertyInfo": {
-                "UseXAngleProperty": true,
+                "UseXAngleProperty": false,
                 "XAnglePropertyName": "",
-                "UseYAngleProperty": true,
+                "UseYAngleProperty": false,
                 "YAnglePropertyName": "",
-                "UseZAngleProperty": true,
+                "UseZAngleProperty": false,
                 "ZAnglePropertyName": "",
-                "UseXScaleProperty": true,
+                "UseXScaleProperty": false,
                 "XScalePropertyName": "",
-                "UseYScaleProperty": true,
+                "UseYScaleProperty": false,
                 "YScalePropertyName": "",
-                "UseZScaleProperty": true,
+                "UseZScaleProperty": false,
                 "ZScalePropertyName": ""
             }
         }
@@ -1744,24 +1744,24 @@
             "LoadDistance": 0
         },
         "BlenderInfo": {
-            "CommonName": "",
+            "CommonName": "Big Leaf",
             "RotationMode": "NONE",
             "ItemInfo": "",
-            "AssetName": "",
-            "AssetFile": "",
+            "AssetName": "MRBigLeaf",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\adv\\\\mysticruins\\\\MRBigLeaf.blend",
             "RelativeAssetFile": true,
             "PropertyInfo": {
-                "UseXAngleProperty": true,
+                "UseXAngleProperty": false,
                 "XAnglePropertyName": "",
-                "UseYAngleProperty": true,
+                "UseYAngleProperty": false,
                 "YAnglePropertyName": "",
-                "UseZAngleProperty": true,
+                "UseZAngleProperty": false,
                 "ZAnglePropertyName": "",
-                "UseXScaleProperty": true,
+                "UseXScaleProperty": false,
                 "XScalePropertyName": "",
-                "UseYScaleProperty": true,
+                "UseYScaleProperty": false,
                 "YScalePropertyName": "",
-                "UseZScaleProperty": true,
+                "UseZScaleProperty": false,
                 "ZScalePropertyName": ""
             }
         }
@@ -1775,24 +1775,24 @@
             "LoadDistance": 0
         },
         "BlenderInfo": {
-            "CommonName": "",
+            "CommonName": "Small Leaf",
             "RotationMode": "NONE",
             "ItemInfo": "",
-            "AssetName": "",
-            "AssetFile": "",
+            "AssetName": "MRSmallLeaf",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\adv\\\\mysticruins\\\\MRSmallLeaf.blend",
             "RelativeAssetFile": true,
             "PropertyInfo": {
-                "UseXAngleProperty": true,
+                "UseXAngleProperty": false,
                 "XAnglePropertyName": "",
-                "UseYAngleProperty": true,
+                "UseYAngleProperty": false,
                 "YAnglePropertyName": "",
-                "UseZAngleProperty": true,
+                "UseZAngleProperty": false,
                 "ZAnglePropertyName": "",
-                "UseXScaleProperty": true,
+                "UseXScaleProperty": false,
                 "XScalePropertyName": "",
-                "UseYScaleProperty": true,
+                "UseYScaleProperty": false,
                 "YScalePropertyName": "",
-                "UseZScaleProperty": true,
+                "UseZScaleProperty": false,
                 "ZScalePropertyName": ""
             }
         }
@@ -1806,24 +1806,24 @@
             "LoadDistance": 0
         },
         "BlenderInfo": {
-            "CommonName": "",
+            "CommonName": "Wooden Board",
             "RotationMode": "NONE",
             "ItemInfo": "",
-            "AssetName": "",
-            "AssetFile": "",
+            "AssetName": "MRWoodenBoard",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\adv\\\\mysticruins\\\\MRWoodenBoard.blend",
             "RelativeAssetFile": true,
             "PropertyInfo": {
-                "UseXAngleProperty": true,
+                "UseXAngleProperty": false,
                 "XAnglePropertyName": "",
-                "UseYAngleProperty": true,
+                "UseYAngleProperty": false,
                 "YAnglePropertyName": "",
-                "UseZAngleProperty": true,
+                "UseZAngleProperty": false,
                 "ZAnglePropertyName": "",
-                "UseXScaleProperty": true,
+                "UseXScaleProperty": false,
                 "XScalePropertyName": "",
-                "UseYScaleProperty": true,
+                "UseYScaleProperty": false,
                 "YScalePropertyName": "",
-                "UseZScaleProperty": true,
+                "UseZScaleProperty": false,
                 "ZScalePropertyName": ""
             }
         }
@@ -1837,24 +1837,24 @@
             "LoadDistance": 122500
         },
         "BlenderInfo": {
-            "CommonName": "",
-            "RotationMode": "NONE",
-            "ItemInfo": "",
-            "AssetName": "",
-            "AssetFile": "",
+            "CommonName": "Long Ladder",
+            "RotationMode": "Z",
+            "ItemInfo": "Longer ladder with 79 points the player climbs.",
+            "AssetName": "LongLadder",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\adv\\\\mysticruins\\\\LongLadder.blend",
             "RelativeAssetFile": true,
             "PropertyInfo": {
-                "UseXAngleProperty": true,
+                "UseXAngleProperty": false,
                 "XAnglePropertyName": "",
-                "UseYAngleProperty": true,
+                "UseYAngleProperty": false,
                 "YAnglePropertyName": "",
-                "UseZAngleProperty": true,
+                "UseZAngleProperty": false,
                 "ZAnglePropertyName": "",
-                "UseXScaleProperty": true,
+                "UseXScaleProperty": false,
                 "XScalePropertyName": "",
-                "UseYScaleProperty": true,
+                "UseYScaleProperty": false,
                 "YScalePropertyName": "",
-                "UseZScaleProperty": true,
+                "UseZScaleProperty": false,
                 "ZScalePropertyName": ""
             }
         }
@@ -1868,25 +1868,25 @@
             "LoadDistance": 0
         },
         "BlenderInfo": {
-            "CommonName": "",
+            "CommonName": "Explorers",
             "RotationMode": "NONE",
             "ItemInfo": "",
-            "AssetName": "",
-            "AssetFile": "",
+            "AssetName": "MRPeople",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\adv\\\\mysticruins\\\\MRPeople.blend",
             "RelativeAssetFile": true,
             "PropertyInfo": {
                 "UseXAngleProperty": true,
-                "XAnglePropertyName": "",
-                "UseYAngleProperty": true,
+                "XAnglePropertyName": "Explorer Model",
+                "UseYAngleProperty": false,
                 "YAnglePropertyName": "",
-                "UseZAngleProperty": true,
+                "UseZAngleProperty": false,
                 "ZAnglePropertyName": "",
                 "UseXScaleProperty": true,
-                "XScalePropertyName": "",
-                "UseYScaleProperty": true,
+                "XScalePropertyName": "Range Out",
+                "UseYScaleProperty": false,
                 "YScalePropertyName": "",
                 "UseZScaleProperty": true,
-                "ZScalePropertyName": ""
+                "ZScalePropertyName": "Message ID"
             }
         }
     },
@@ -1992,24 +1992,24 @@
             "LoadDistance": 0
         },
         "BlenderInfo": {
-            "CommonName": "",
-            "RotationMode": "NONE",
-            "ItemInfo": "",
-            "AssetName": "",
-            "AssetFile": "",
+            "CommonName": "Crashed Tornado 2",
+            "RotationMode": "Z",
+            "ItemInfo": "This object is unused in the game, and will not load correctly unlike in the editor.",
+            "AssetName": "MRTornado2",
+            "AssetFile": "blend\\\\set\\\\sa1\\\\adv\\\\mysticruins\\\\MRTornado2.blend",
             "RelativeAssetFile": true,
             "PropertyInfo": {
-                "UseXAngleProperty": true,
+                "UseXAngleProperty": false,
                 "XAnglePropertyName": "",
-                "UseYAngleProperty": true,
+                "UseYAngleProperty": false,
                 "YAnglePropertyName": "",
-                "UseZAngleProperty": true,
+                "UseZAngleProperty": false,
                 "ZAnglePropertyName": "",
-                "UseXScaleProperty": true,
+                "UseXScaleProperty": false,
                 "XScalePropertyName": "",
-                "UseYScaleProperty": true,
+                "UseYScaleProperty": false,
                 "YScalePropertyName": "",
-                "UseZScaleProperty": true,
+                "UseZScaleProperty": false,
                 "ZScalePropertyName": ""
             }
         }
