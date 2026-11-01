@@ -20,11 +20,13 @@ def get_releases():
 
         return stable, dev
 
-def download_asset(release = None):
+def download_asset(release = None, token: str = None):
     if release != None:
         for asset in release['assets']:
             if asset['name'] == asset_name:
                 headers = {"Accept": "application/octet-stream"}
+                if token:
+                    headers["Authorization"] = f"token {token}"
                 response = requests.get(asset['url'], headers=headers, stream=True, timeout=60)
                 filepath = extensions_dir / asset_name
                 with filepath.open("wb") as f:
@@ -35,7 +37,7 @@ def main() -> None:
     stable, dev = get_releases()
     if extensions_dir.exists() == False:
         extensions_dir.mkdir(parents=True, exist_ok=True)
-    download_asset(dev)
+    download_asset(dev, token)
 
 if __name__ == "__main__":
     main()
