@@ -2,4 +2,9 @@
 # Zensical Local Build folders should be ignored.
 site/
 .cache/
+
+# Ignore scripts folder, internal use only.
 docs/_sitedev/scripts/
+
+# Ignore any zip files in the whole folder.
+*.zip
