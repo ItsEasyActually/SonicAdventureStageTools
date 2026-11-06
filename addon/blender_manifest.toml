@@ -1,0 +1,19 @@
+schema_version = "1.0.0"
+
+id = "sonic_adventure_stage_tools"
+version = "0.3.4"
+name = "Sonic Adventure Stage Tools"
+tagline = "Tool suite for editing various stage related objects for Sonic Adventure and Sonic Adventure 2."
+maintainer = "ItsEasyActually"
+type = "add-on"
+
+tags = ["Import-Export","Development","Object","Node"]
+
+blender_version_min = "5.3.0"
+
+license = [
+  "SPDX:GPL-3.0-or-later",
+]
+
+[permissions]
+files = "Import / Export binary files from/to disk"

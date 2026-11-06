@@ -402,3 +402,5 @@ FodyWeavers.xsd
 
 # Repo Specific
 build/*
+generate-release.bat
+*.zip
