@@ -1,0 +1,32 @@
+{
+    "version": "v1",
+    "blocklist": [],
+    "assetlib_auth_method": "PER_LIBRARY",
+    "data": [
+        {
+            "schema_version": "1.0.0",
+            "id": "sonic_adventure_stage_tools",
+            "name": "Sonic Adventure Stage Tools",
+            "tagline": "Tool suite for editing various stage related objects for Sonic Adventure and Sonic Adventure 2.",
+            "version": "0.4.0",
+            "type": "add-on",
+            "maintainer": "ItsEasyActually",
+            "license": [
+                "SPDX:GPL-3.0-or-later"
+            ],
+            "blender_version_min": "5.3.0",
+            "permissions": {
+                "files": "Import / Export binary files from/to disk"
+            },
+            "tags": [
+                "Import-Export",
+                "Development",
+                "Object",
+                "Node"
+            ],
+            "archive_url": "https://github.com/ItsEasyActually/SonicAdventureStageTools/releases/download/beta-0.4.0/SonicAdventureStageTools.zip",
+            "archive_size": 52625365,
+            "archive_hash": "sha256:36341518f3702fb855846ee64a23ec4e9a7930e64ee66f1676b02e177ccdf6e8"
+        }
+    ]
+}
