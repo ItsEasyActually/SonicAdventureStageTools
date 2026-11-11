@@ -164,7 +164,7 @@ class SetItemNode(SASTGeonodeBase):
         if (len(setitem.item_description) > 0):
             layout.label(text='Item Information:')
             box: bpy.types.UILayout = layout.box()
-            #box.label_multiline() - This is commented out until 5.3 is available.
+            box.label_multiline(text=setitem.item_description)
         raw_props_header: bpy.types.UILayout
         raw_props_layout: bpy.types.UILayout
         raw_props_header, raw_props_layout = layout.panel(idname='pt_rawitemprops', default_closed=True)
