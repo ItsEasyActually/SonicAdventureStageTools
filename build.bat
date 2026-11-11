@@ -42,6 +42,6 @@ echo Deleting *.blend1 files from %addon_dst%
 del /S *.blend1
 
 echo Applying Updates to addon
-xcopy /s /e /y %addon_dst%\* "%APPDATA%\Blender Foundation\Blender\5.2\scripts\addons\SonicAdventureStageTools"
+xcopy /s /e /y %addon_dst%\* "%APPDATA%\Blender Foundation\Blender\5.3\scripts\addons\SonicAdventureStageTools"
 
 :end
