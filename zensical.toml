@@ -78,7 +78,8 @@ features = [
   "navigation.indexes",
   "navigation.sections",
   "navigation.code.annotate",
-  "navigation.footer"
+  "navigation.footer",
+  "content.code.copy"
 ]
 logo = "_sitedev/assets/svg/icon.svg"
 

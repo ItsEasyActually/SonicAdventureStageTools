@@ -13,7 +13,7 @@ The SAST Addon hosts its own Extension repository through this website. The inst
 
 First, please copy the below url to the `index.json`.
 
-```
+``` { .copy }
 https://itseasyactually.github.io/SonicAdventureStageTools/extensions/index.json
 ```
 
