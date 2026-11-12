@@ -1,8 +1,6 @@
 name: Bug Report
 description: Report a bug within the SAST Addon
 labels: ["triage"]
-assignees:
-  - ItsEasyActually
 body:
   - type: markdown
     attributes:
