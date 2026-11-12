@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Sonic Adventure IO
+    url: https://github.com/X-Hax/SonicAdventureBlenderIO/
+    about: Any issues pertaining to SAIO should be reported here.
+  - name: SA Tools
+    url: https://github.com/X-Hax/sa_tools
+    about: Please report any issues pertaining to the other SA Tools here.

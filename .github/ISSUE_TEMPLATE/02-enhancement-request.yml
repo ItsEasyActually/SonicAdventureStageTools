@@ -1,0 +1,11 @@
+name: Enhancement Request
+description: Request a new feature or enhancement for the SAST Addon.
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: request
+    attributes:
+      label: Request Information
+      description: "Please provide all details about your feature request here. This includes information on what it pertains to, how it would work, and what benefits it brings to the addon as a whole."
+    validations:
+      required: true

@@ -1,0 +1,60 @@
+name: Bug Report
+description: Report a bug within the SAST Addon
+labels: ["triage"]
+assignees:
+  - ItsEasyActually
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for submitting a bug report. Be sure to include as much information, including reproduction steps, as possible in your report.
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Report Review
+      description: "Please read and perform the actions asked by each check box before ticking them and filing your report."
+      options:
+        - label: I have reviewed all open issues and have verified my issue is not currently report.
+          required: true
+        - label: I have verified that I am on the latest version of the addon
+          required: true
+  - type: textarea
+    id: report
+    attributes:
+      label: Please explain the bug in detail and include reproduction steps for the bug here.
+    validations:
+      required: true
+  - type: input
+    id: blenderversion
+    attributes:
+      label: Please provide the version of Blender you are using.
+      placeholder: "e.g. Blender 5.3"
+    validations:
+      required: true
+  - type: dropdown
+    id: os
+    attributes:
+      label: Select your Operating System
+      multiple: false
+      options:
+        - Windows
+        - Linux
+        - MacOS
+    validations:
+      required: true
+  - type: input
+    id: os-version
+    attributes:
+      label: Operating System Information
+      description: "Please provide details of your operating system below. If using WINE, Proton, or something similar, please include those details here as well."
+      placeholder: "e.g. Windows 10"
+    validations:
+      required: true
+  - type: textarea
+    id: extra-info
+    attributes:
+      label: Additional Information
+      description: "Please provide any additional information regarding the bug. This can include screenshots or files."
+      placeholder: ""
+    validations:
+      required: false

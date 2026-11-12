@@ -1,7 +1,13 @@
-# Sonic Adventure Stage Tools for Blender!
+![SAST Logo](https://itseasyactually.github.io/SonicAdventureStageTools/_sitedev/assets/images/logo.png)
 
-Blender Toolkit for modifying stage object and camera layouts for Sonic Adventure and Sonic Adventure 2.
+This is a tool suite for editing object layouts and camera layouts from Sonic Adventure and Sonic Adventure 2 directly in Blender.
 
-Please check out the manual [here](https://itseasyactually.github.io/SonicAdventureStageTools)
+## Quick Links
+[Addon Manual](https://itseasyactually.github.io/SonicAdventureStageTools)\
+[Installation Instructions](https://itseasyactually.github.io/SonicAdventureStageTools/installation/)
 
-This addon is for Blender 5.3+
+## Requirements
+**Minimum Blender Version: 5.3**\
+**Windows (Currently only supported OS)**\
+Note: Linux has planned support, but it is not a focus for support at this time.
+

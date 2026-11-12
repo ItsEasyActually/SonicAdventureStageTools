@@ -1,0 +1,30 @@
+name: Documentation Issue
+description: Report any issues, corrections, or feedback for documentation on the SAST Addon found in the manual.
+labels: ["documentation"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please be sure you have read through the [SAST Manual](https://itseasyactually.github.io/SonicAdventureStageTools) before filling out this report.
+  - type: dropdown
+    id: type
+    attributes:
+      label: Please select what this report is for regarding an issue with the documentation.
+      multiple: false
+      options:
+        - Incorrect information
+        - Difficult to understand
+        - Enhancement and/or correction
+  - type: textarea
+    id: info
+    attributes:
+      label: Please provide information regarding the issue you have with the documentation.
+      description: "This can include suggestions for enhancing the documentation."
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: Please provide the direct URL to the page where the documentation problems are found
+    validations:
+      required: true

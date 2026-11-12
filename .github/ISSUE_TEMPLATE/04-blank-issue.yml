@@ -1,0 +1,9 @@
+name: Blank Issue
+description: This is a blank template. Please only use this for issues that do not fall under any of the other covered templates.
+body:
+  - type: textarea
+    id: info
+    attributes:
+      label: Issue information
+    validations:
+      required: true
